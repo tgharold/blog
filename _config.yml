@@ -8,6 +8,7 @@ locale: en
 url:
 feed:
   path: atom.xml
+baseurl: "/blog"
 
 # Jekyll configuration
 
