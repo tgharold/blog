@@ -1,17 +1,10 @@
-# Skinny Bones Jekyll Starter
+# Tech Blog
 
-Just a little something I'm using to jump start a site refresh. I like to think of it as a starter for building your own Jekyll site. I purposely keep the styling minimal and bare to make it easier to add your own flare and markup.
+This content used to live at [tgharold.blogspot.com](http://tgharold.blogspot.com/), but I've been looking for time to move to jekyll+git.  The old Blogger.com interface has been getting harder to deal with and I've lost more than a few draft posts. 
 
-I'm currently using a variation of it on my personal website [Made Mistakes](http://mademistakes.com) with some modifications. To learn more about how to use the theme and install it check out the [Skinny Bones demo](http://mmistakes.github.io/skinny-bones-jekyll/) (*work in progress*).
+Redoing things in a git repo gives me more control, less dependency on a 3rd party (Jekyll files can be published anywhere), plus version control of the content.
 
-![screenshot of Skinny Bones](http://mmistakes.github.io/skinny-bones-jekyll/images/skinny-bones-theme-feature.jpg)
+## Skinny Bones Jekyll Starter
 
----
-
-## Notable Features
-
-* Jekyll 3.x and GitHub Pages compatible.
-* Stylesheet built using Sass.
-* Data files for easier customization of the site navigation/footer and for supporting multiple authors.
-* Optional Disqus comments, table of contents, social sharing links, and Google AdSense ads.
-* And more.
+This blog is based on the [Minimal Mistakes Skinny Bones](https://github.com/mmistakes/skinny-bones-jekyll/) template.
+It had to be adjusted slightly to account for GitHub pages putting the root of the GitHub repo at the "/blog" sub-directory.
