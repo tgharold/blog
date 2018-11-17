@@ -30,6 +30,4 @@ That package will also require some other things to be installed like subversion
 
 (This is so much easier than what I had to jump through on CentOS 5 and 6.  My thanks go out to the person that added the fsvs package to the Ubuntu package repository.)
 
----
-
 
