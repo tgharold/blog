@@ -1,10 +1,10 @@
 # Skinny Bones Gemfile
 source "https://rubygems.org"
 
-gem "jekyll"
-gem "jekyll-sitemap"
-gem "jekyll-gist"
-gem "jekyll-feed"
+gem "jekyll", "~> 4.3"
+gem "jekyll-sitemap", "~> 1.4"
+gem "jekyll-gist", "~> 1.5"
+gem "jekyll-feed", "~> 0.17"
 
 # Possible gems to use later
 # gem 'jekyll-archives'
