@@ -21,6 +21,10 @@ gem "base64", "~> 0.3"
 # Ruby 3.4+ compatibility: bigdecimal was removed from default gems
 gem "bigdecimal", "~> 3.1"
 
+# Bourbon and Neat CSS frameworks
+gem 'bourbon', '~> 6.0'
+gem 'neat', '~> 2.0'
+
 # Possible gems to use later
 # gem 'jekyll-archives'
 # gem 'jekyll-paginate'
