@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="/blog/atom.xml" rel="self" type="application/atom+xml" /><link href="/blog/" rel="alternate" type="text/html" /><updated>2026-04-10T08:44:46+00:00</updated><id>/blog/atom.xml</id><title type="html">Tech Blog</title><subtitle>Technical stuff.</subtitle><entry><title type="html">FSVS on Ubuntu Server 18.04.1</title><link href="/blog/sysadmin/fsvs-ubuntu-server-1810/" rel="alternate" type="text/html" title="FSVS on Ubuntu Server 18.04.1" /><published>2018-11-16T21:34:00+00:00</published><updated>2018-11-16T21:34:00+00:00</updated><id>/blog/sysadmin/fsvs-ubuntu-server-1810</id><content type="html" xml:base="/blog/sysadmin/fsvs-ubuntu-server-1810/"><![CDATA[<p>Under CentOS Server, there were some extra things that had to be installed at the start to use <a href="http://fsvs.tigris.org/">FSVS</a>.  This is the first time that I’m installing under Ubuntu Server.</p>
+
+<p>FSVS is a way of version controlling your entire server (or parts of it, like <code class="language-plaintext highlighter-rouge">/etc</code>) into Subversion (SVN).  For servers that you are not managing with puppet / chef / ansible / etc., it provides a way to track configuration changes over time.  Even with configuration systems like puppet/chef, it can still be useful for tracking configuration changes over time.  Since SVN is a very efficient over-the-wire protocol for binary files, it can also be used to backup those in addition to text-based configuration files.  It gets more efficient when multiple servers are all stored in the same SVN repository as you’ll get deduplication across the entire repo.</p>
+
+<hr />
+
+<p>I’m starting with a brand new install of Ubuntu Server 18.04.1 using the <code class="language-plaintext highlighter-rouge">ubuntu-18.04.1-live-server-amd64.iso</code> file.  This is being installed on a Synology NAS (plus series) with 1GB RAM and 1TB of drive space allocated for the VM.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo add-apt-repository universe
+sudo apt update
+</code></pre></div></div>
+
+<p>The default install only includes bionic, bionic-security and bionic-dates PPAs.  To get some other packages, you’ll need to install the “universe” PPA.  Once you have the universe installed, the following should work.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install fsvs
+</code></pre></div></div>
+
+<p>That package will also require some other things to be installed like subversion and a few other things.</p>
+
+<p>(This is so much easier than what I had to jump through on CentOS 5 and 6.  My thanks go out to the person that added the fsvs package to the Ubuntu package repository.)</p>]]></content><author><name>Thomas Harold</name></author><category term="[&quot;SysAdmin&quot;]" /><category term="FSVS" /><category term="Linux" /><summary type="html"><![CDATA[Under CentOS Server, there were some extra things that had to be installed at the start to use FSVS. This is the first time that I’m installing under Ubuntu Server.]]></summary></entry><entry><title type="html">Setting up Skinny Bones for GitHub Pages</title><link href="/blog/website/setting-up-skinny-bones/" rel="alternate" type="text/html" title="Setting up Skinny Bones for GitHub Pages" /><published>2018-06-27T12:39:00+00:00</published><updated>2018-06-27T12:39:00+00:00</updated><id>/blog/website/setting-up-skinny-bones</id><content type="html" xml:base="/blog/website/setting-up-skinny-bones/"><![CDATA[<p>Test</p>]]></content><author><name>Thomas Harold</name></author><category term="[&quot;Website&quot;]" /><category term="Jekyll" /><category term="Skinny Bones" /><summary type="html"><![CDATA[Test]]></summary></entry></feed>
