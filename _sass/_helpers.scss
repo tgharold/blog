@@ -1,5 +1,3 @@
-@use "sass:math";
-
 /* ==========================================================================
    Helpers and Utility Classes
    ========================================================================== */
@@ -56,7 +54,7 @@
 
 @include media($medium) {
   .shorten {
-    width: percentage(math.div(8, 12));
+    width: percentage(8/12);
   }
 }
 
