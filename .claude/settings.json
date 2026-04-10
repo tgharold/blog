@@ -3,7 +3,12 @@
     "allow": [
       "Bash(bundle exec jekyll build)",
       "Bash(bundle install --path vendor/bundle)",
-      "Bash(bundle exec jekyll serve)"
+      "Bash(bundle exec jekyll serve)",
+      "Bash(gem list:*)",
+      "Bash(ruby --version)",
+      "Bash(ruby -v)",
+      "Bash(./build.sh)",
+      "Bash(gem search:*)"
     ]
   }
 }
