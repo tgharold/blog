@@ -14,7 +14,12 @@ export BUNDLE_PATH="${BUNDLE_PATH:-vendor/bundle}"
 # Function to install dependencies
 install_deps() {
     echo "Installing dependencies..."
-    bundle install --path "$BUNDLE_PATH"
+    bundle config set path "$BUNDLE_PATH"
+
+    # Fix Ruby 4.0/3.4+ compatibility: csv, yaml, base64, and bigdecimal were removed from default gems
+    export RUBYOPT="-ruri -ryaml -rbase64"
+
+    bundle install
 }
 
 # Function to build the site
