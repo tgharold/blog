@@ -8,7 +8,9 @@
       "Bash(ruby --version)",
       "Bash(ruby -v)",
       "Bash(./build.sh)",
-      "Bash(gem search:*)"
+      "Bash(gem search:*)",
+      "WebSearch",
+      "Bash(bundle audit:*)"
     ]
   }
 }
