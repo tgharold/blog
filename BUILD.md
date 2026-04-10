@@ -10,43 +10,20 @@ This blog is built with Jekyll. Follow these steps to build it locally on macOS.
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-### 2. Install Ruby via rbenv
-
-Building Ruby from source on macOS can be problematic, especially on Apple Silicon. The recommended approach is to use rbenv with a pre-built Ruby version.
+### 2. Install Ruby via Homebrew
 
 ```bash
-# Install rbenv and ruby-build
-brew install rbenv ruby-build
+# Install Ruby (includes bundler)
+brew install ruby@3.2
 
-# Initialize rbenv in your shell (add to ~/.zshrc)
-echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc
-source ~/.zshrc
-
-# Install Ruby 3.2.x (compatible with this project's dependencies)
-rbenv install 3.2.11
-
-# Set as global default for this project
-cd /Users/tgh/projects/tgharold/blog
-rbenv local 3.2.11
+# Verify installation
+ruby --version
+gem --version
 ```
-
-### Alternative: Use portable-ruby (if rbenv build fails)
-
-If building Ruby with rbenv fails, you can use the pre-built portable-ruby:
-
-```bash
-brew install portable-ruby
-export PATH="/usr/local/opt/portable-ruby/bin:$PATH"
-```
-
-Note: portable-ruby 4.0.x may have compatibility issues with older bundler versions.
 
 ### 3. Install Dependencies
 
 ```bash
-# Install Bundler if not present
-gem install bundler
-
 # Install project dependencies
 bundle install
 ```
@@ -71,25 +48,18 @@ The built site will be in the `_site` directory.
 
 ## Troubleshooting
 
-### Ruby Build Failures
-
-If `rbenv install 3.2.11` fails with "BUILD FAILED":
-- This is common on macOS, especially Apple Silicon
-- Try installing Xcode command line tools: `xcode-select --install`
-- Consider using portable-ruby as an alternative
-
 ### Permission Errors
 
 If you see "Bundler requires sudo access":
 - You're trying to install gems system-wide
-- Make sure rbenv is properly initialized and active
-- Check with `rbenv version` - it should show the local Ruby
+- Use `bundle config set path 'vendor/bundle'` to install locally
 
 ### Bundler Version Mismatches
 
 If you see errors about bundler versions:
 ```bash
-bundle _1.16.2_ install
+bundle config set path 'vendor/bundle'
+bundle install
 ```
 
 ## Dependencies
