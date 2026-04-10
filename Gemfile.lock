@@ -120,7 +120,7 @@ DEPENDENCIES
   bigdecimal (~> 3.1)
   bourbon (~> 6.0)
   csv (~> 3.3)
-  jekyll (~> 4.3)
+  jekyll (~> 4.3.4)
   jekyll-feed (~> 0.17)
   jekyll-gist (~> 1.5)
   jekyll-sitemap (~> 1.4)
