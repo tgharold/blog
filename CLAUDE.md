@@ -45,3 +45,14 @@ When converting Blogger archive posts from `_archives/techblog/2003/06/` or simi
 3. Maintain original content while converting to markdown
 4. Follow existing post structure and naming conventions
 5. Place in appropriate `_posts/YYYY/` directory
+6. All 2003 archive posts have been converted using the enhanced conversion script
+
+## Using Conversion Tools
+To convert archive posts, use the provided conversion scripts:
+- Run `./convert-archive.sh <archive_file.shtml>` to convert a single archive file
+- The script uses `convert-archive.rb` for the actual conversion process
+- Conversion follows the skill documentation in `.claude/skills/convert-archive-posts.md`
+
+## Commit Guidelines
+When creating git commits for these conversions, please include the following co-authored by line:
+Co-Authored-By: Qwen3-Coder-30B-A3B-Instruct-MLX-6bit <Claude Code>
