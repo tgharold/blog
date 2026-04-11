@@ -30,8 +30,8 @@ build() {
 
 # Function to serve the site locally
 serve() {
-    echo "Starting development server..."
-    bundle exec jekyll serve --watch --force_polling
+    echo "Starting development server with drafts..."
+    bundle exec jekyll serve --watch --force_polling --drafts
 }
 
 # Main logic
