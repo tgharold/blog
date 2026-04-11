@@ -10,7 +10,7 @@ tags:
 ---
 
 
-If you recall, the [last time I tested hdparm on my Celeron 566MHz system](http://www.tgharold.com/techblog/2006/08/benchmarking-hdparm.shtml), I was getting very poor read performance on /dev/hda.  
+If you recall, the [last time I tested hdparm on my Celeron 566MHz system](/blog/2006-08-20-benchmarking-hdparm), I was getting very poor read performance on /dev/hda.  
 
 So I added in a HTP302 (HighPoint Rocket133) 2-port PCI card and moved hda over to the new card.
 

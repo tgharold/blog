@@ -13,7 +13,7 @@ tags:
 
 <i>Note: These directions are works-in-progress... in fact, they might not even work at all.  I got side-tracked before I could finish this and will re-visit it at some point in the future.</i>
 
-The folks who created cwRSync ([www.itefix.no](http://www.itefix.no/)) have now released a package called copSSH which is basically SSH for windows and works with cwRSync.  I'll be refering back to my old post about [installing cwRSync](http://www.tgharold.com/techblog/2004/06/installing-cwrsync-on-windows-2000.shtml).  The latest version I have is from late April 2005 and includes bug fixes for Windows Server 2003.
+The folks who created cwRSync ([www.itefix.no](http://www.itefix.no/)) have now released a package called copSSH which is basically SSH for windows and works with cwRSync.  I'll be refering back to my old post about [installing cwRSync](/blog/2004-06-10-installing-cwrsync-on-windows-2000).  The latest version I have is from late April 2005 and includes bug fixes for Windows Server 2003.
 
 Also see the [rsyncd.conf file for configuring rsync](http://rsync.samba.org/ftp/rsync/rsyncd.conf.html).
 

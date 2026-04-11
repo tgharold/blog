@@ -97,4 +97,4 @@ The key line in the above output is "Error -45702ms" which shows us how much the
 
 In my opinion, W32Time is "good enough" for most purposes.  At least for small offices or home networks.  If you're going to be dealing with more then a dozen servers or 50 workstations, then you should definitely look into setting up a real "ntpd" server.  (In reality, you should have at least 4 ntpd servers in your infrastructure so that they can keep an eye on each other and alert you to ntpd servers that are not keeping time properly.)
 
-Here's my previous posting dealing with time issues: [NTP daemons for Gentoo](http://www.tgharold.com/techblog/2005/11/ntp-daemons-for-gentoo.shtml)
+Here's my previous posting dealing with time issues: [NTP daemons for Gentoo](/2005-11-ntp-daemons-for-gentoo/)

@@ -57,7 +57,7 @@ Should be ready to chroot into the hard disk.
 
 <code># chroot /mnt/gentoo /bin/bash ; env-update</code>
 
-Gonna redo my kernel configuration (see [Gentoo 2004.3 on Gigabyte GA-6VA7+ (part 4)](http://www.tgharold.com/techblog/2005/04/gentoo-20043-on-gigabyte-g_111404509792475776.shtml)) because I suspect that something needed to be loaded in differently.
+Gonna redo my kernel configuration (see [Gentoo 2004.3 on Gigabyte GA-6VA7+ (part 4)](/2005-04-20-gentoo-20043-on-gigabyte-ga-6va7-part-4/)) because I suspect that something needed to be loaded in differently.
 
 <code># cd /usr/src/linux
 # make menuconfig</code>

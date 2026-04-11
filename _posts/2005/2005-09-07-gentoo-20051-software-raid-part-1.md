@@ -15,9 +15,9 @@ tags:
 
 Now that the 2005.1 release is out, I'm going to take yet another swing at getting a software RAID configuration up and running on a pair of ATA disks. I'm working on two different systems.
 
-<b>System A:</b> This is an older motherboard (AT power, 2 ISA slots, 3 PCI slots) running on a Celeron processor ([system details](http://www.tgharold.com/techblog/2005/03/gentoo-20050-on-gigabyte-ga-6va7-part.shtml)).  But in the meantime, I've upgraded the disks to (3) 120GB 5400rpm drives (these run cooler then the old 7200rpm drives and will have less issues with heat).
+<b>System A:</b> This is an older motherboard (AT power, 2 ISA slots, 3 PCI slots) running on a Celeron processor ([system details](/2005-03-31-gentoo-20050-on-gigabyte-ga-6va7-part-1/)).  But in the meantime, I've upgraded the disks to (3) 120GB 5400rpm drives (these run cooler then the old 7200rpm drives and will have less issues with heat).
 
-<b>System B:</b> The second system is [VIA EPIA ME6000](http://www.tgharold.com/techblog/2005/03/gentoo-epia-install-part-1.shtml) (EPIA M series), 600Mhz fanless CPU with a pair of 300GB PATA drives and a DVD-ROM.
+<b>System B:</b> The second system is [VIA EPIA ME6000](/2005-03-29-gentoo-epia-install-part-1/) (EPIA M series), 600Mhz fanless CPU with a pair of 300GB PATA drives and a DVD-ROM.
 
 Derik's Boot and Nuke (DBaN) seems like a good first step to make sure that any old data is wiped off of the 3 drives.  Data rates on the wipe process (running all 3 drives at the same time) is around 7.5MB/s per drive.  After having issues with an older configuration, I now always run DBaN for 2-3 passes with verification on all passes.  It drastically increases the amount of time required for the initial wipe but allows me to discover errors before I get into installing Gentoo.
 
