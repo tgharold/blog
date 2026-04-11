@@ -10,7 +10,7 @@ tags:
 ---
 
 
-([Previous post about fdisk and setting up the software RAID](/techblog/2004/06/gentoo-install-1-via-epia-me6000.shtml).)
+([Previous post about fdisk and setting up the software RAID](/blog/2004-06-15-gentoo-install-1-via-epia-me6000).)
 
 At this point, we've partitioned the disk and setup the "/etc/raidtab" file.  It's a good idea to jot down everything in that file and put it in a safe place.  You should also "cat /proc/mdstat" and jot that information down too.
 
@@ -78,7 +78,7 @@ Make the special directories to hold your temp file volumes (these require speci
 # mkdir /mnt/gentoo/proc
 # mount -t proc none /mnt/gentoo/proc</pre>
 
-We are now ready to [start installing Gentoo](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=5) (chapter 5 in the handbook).  Also see my [previous post about CFLAGS](http://www.tgharold.com/techblog/2004/04/gentoo-epia-install-part-2.shtml), which might explain why I've chosen some particular settings.  First, we need to extract the stage 1 tarball.
+We are now ready to [start installing Gentoo](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=5) (chapter 5 in the handbook).  Also see my [previous post about CFLAGS](/blog/2004-04-27-gentoo-epia-install-part-2), which might explain why I've chosen some particular settings.  First, we need to extract the stage 1 tarball.
 <pre># date
 # ls /mnt/cdrom/stages
 # cd /mnt/gentoo

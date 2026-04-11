@@ -10,7 +10,7 @@ tags:
 ---
 
 
-I'm a big fan of using a version control system in conjunction with system administration.  There's a great feeling to know that even if I screw up a configuration file, I have an easily accessible way to revert or track changes.  To accomplish this, I was using [SubVersion (SVN) as an administration tool](http://www.tgharold.com/techblog/2006/06/subversion-for-linux-administrators.shtml).
+I'm a big fan of using a version control system in conjunction with system administration.  There's a great feeling to know that even if I screw up a configuration file, I have an easily accessible way to revert or track changes.  To accomplish this, I was using [SubVersion (SVN) as an administration tool](/blog/2006-06-14-subversion-for-linux-administrators).
 
 However, SVN comes with some downsides, primarily the issue that it creates ".svn" folders in the directory tree.  Which can cause issues and maybe even lead to security holes (yes/no? unsure about this).
 

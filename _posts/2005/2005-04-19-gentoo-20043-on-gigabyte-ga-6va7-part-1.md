@@ -13,7 +13,7 @@ tags:
 
 <b>Note: These directions are works-in-progress... in fact, they might not even work at all until I find out why I'm ending up with non-bootable systems (looks like a bug in the 2.6 kernel).</b>
 
-This is a continuation of [Gentoo and Software RAID (2004.3)](/techblog/2005/04/gentoo-and-software-raid-20043.shtml), where I configured the disks and setup the RAID array.  I'm now picking up at the point where the RAID array has been configured and we're ready to start installing file systems.
+This is a continuation of [Gentoo and Software RAID (2004.3)](/blog/2005-04-19-gentoo-and-software-raid-20043), where I configured the disks and setup the RAID array.  I'm now picking up at the point where the RAID array has been configured and we're ready to start installing file systems.
 
 /dev/md0 - 128MB boot
 /dev/md1 - 2GB root partition
@@ -198,4 +198,4 @@ Change into the new system (note that we already mounted the proc filesystem ear
 
 This should update your portage tree to the latest version (and make take a while to run).
 
-([See the next step](http://www.tgharold.com/techblog/2005/04/gentoo-20043-on-gigabyte-ga-6va7-part.shtml))
+([See the next step](/2005-04-19-gentoo-20043-on-gigabyte-ga-6va7-part-1/))

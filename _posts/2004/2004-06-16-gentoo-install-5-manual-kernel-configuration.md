@@ -12,7 +12,7 @@ tags:
 
 ([previous post - building the kernel](/2004/06/gentoo-install-4-installing-kernel.shtml))
 
-Note: This is for a VIA EPIA ME6000 motherboard being used as a headless server.  All of the multimedia and graphic options are disabled.  (See my [previous install](/techblog/2004/04/gentoo-epia-install-part-5.shtml).)  If this is your first install, you should probably use the "genkernel" method rather then manual configuration.  The [Gentoo docs explain configuring the kernel](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=7#doc_chap3).  They recommend being familiar with the "<b>cat /proc/pci</b>" and "<b>lsmod</b>" commands which is something I missed on my [previous install](/2004/04/gentoo-epia-install-part-5.shtml).
+Note: This is for a VIA EPIA ME6000 motherboard being used as a headless server.  All of the multimedia and graphic options are disabled.  (See my [previous install](/2004-04-27-gentoo-epia-install-part-5/).)  If this is your first install, you should probably use the "genkernel" method rather then manual configuration.  The [Gentoo docs explain configuring the kernel](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=7#doc_chap3).  They recommend being familiar with the "<b>cat /proc/pci</b>" and "<b>lsmod</b>" commands which is something I missed on my [previous install](/2004-04-27-gentoo-epia-install-part-5/).
 <pre># cd /usr/src/linux
 # make menuconfig</pre>
 
@@ -93,7 +93,7 @@ I also need to emerge in LVM2 support as well as the "raidtools" package (per [G
 # emerge lvm2
 # emerge raidtools</pre>
 
-Time to edit the "/etc/fstab" table (see [8.a. Filesystem Information](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=8) and also refer back to [my mount commands from earlier](/techblog/2004/06/gentoo-install-2-via-epia-me6000.shtml)).  Here's my "/etc/fstab" file:
+Time to edit the "/etc/fstab" table (see [8.a. Filesystem Information](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=8) and also refer back to [my mount commands from earlier](/2004-06-15-gentoo-install-2-via-epia-me6000/)).  Here's my "/etc/fstab" file:
 <pre>/dev/md0 /boot ext2 noauto,noatime 1 2
 /dev/md2 / ext3 natime 0 1
 /dev/md1 none swap sw 0 0
@@ -121,7 +121,7 @@ Change your hostname, domainname, and the default run level.
 # nano -w /etc/rc.conf
 (change CLOCK="UTC" to CLOCK="local")</pre>
 
-Onward to [chapter 9, configuring the bootloader](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=9).  Here's where I ran into trouble; ["emerge grub" or "emerge lilo" failed with "cannot automatically mount your /boot partition"](/techblog/2004/06/gentoo-install-emerge-grub-or-emerge.shtml).
+Onward to [chapter 9, configuring the bootloader](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=9).  Here's where I ran into trouble; ["emerge grub" or "emerge lilo" failed with "cannot automatically mount your /boot partition"](/2004-06-16-gentoo-install-emerge-grub-or-emerge-lilo-fails-to-mount-boot/).
 <pre># emerge grub</pre>
 
-([continued in my next post](/techblog/2004/06/gentoo-install-6-grub-system-tools.shtml))
+([continued in my next post](/2004-06-16-gentoo-install-6-grub-system-tools-finalizing-the-install/))

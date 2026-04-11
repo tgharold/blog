@@ -10,7 +10,7 @@ tags:
 ---
 
 
-(Note: This has been mostly superseded by my newer post [FSVS: Install on CentOS 5.4](/techblog/2009/11/fsvs-install-on-centos-54.shtml))
+(Note: This has been mostly superseded by my newer post [FSVS: Install on CentOS 5.4](/blog/2009-11-27-fsvs-install-on-centos-54))
 
 The following should be enough (and is probably overkill) to install all of the dependencies that FSVS 1.1.16 needs on CentOS 5 (and CentOS 5.1)
 

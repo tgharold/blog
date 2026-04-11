@@ -10,7 +10,7 @@ tags:
 ---
 
 
-(Also see my older post on this: [FSVS - Install on CentOS 5](http://www.tgharold.com/techblog/2008/06/fsvs-install-on-centos-5.shtml).  Or the original post where I explained the power of [FSVS for sysadmins](http://www.tgharold.com/techblog/2007/05/fsvs-for-sysadmins.shtml).)
+(Also see my older post on this: [FSVS - Install on CentOS 5](/blog/2008-06-28-fsvs-install-on-centos-5).  Or the original post where I explained the power of [FSVS for sysadmins](/blog/2007-05-31-fsvs-for-sysadmins).)
 
 I'm going to start with the assumption that this is a base CentOS 5.4 install without *any* package groups selected during the initial install.  In my case, this is a DomU that I'm setting up under Xen to serve as testing server for web development.  The only thing I've done so far is setting the root password and configuring it to use a static IP address.
 
