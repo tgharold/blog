@@ -10,9 +10,9 @@ tags:
 ---
 
 
-([previous post about configuring the kernel and setting up the filesystem](/techblog/2004/06/gentoo-install-5-manual-kernel.shtml))
+([previous post about configuring the kernel and setting up the filesystem](/blog/2004-06-16-gentoo-install-5-manual-kernel-configuration/))
 
-Picking up with [9.b. Default: Using GRUB](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=9#doc_chap2) in the handbook.  (Also see my [older post about configuring grub](/techblog/2004/04/gentoo-epia-install-part-6.shtml).)  Also take a look at the end of the thread [](http://forums.gentoo.org/viewtopic.php?t=8813&amp;postdays=0&amp;postorder=asc&amp;highlight=raid&amp;start=100) on the gentoo forums (look for user "havoc") where it discusses how to setup grub on both the primary and secondary drives ([see the original article](http://lists.us.dell.com/pipermail/linux-poweredge/2003-July/014331.html)).  Now is also a good time to pull up the [official Software RAID HOWTO](http://unthought.net/Software-RAID.HOWTO/) and review that as well (especially section 7.3).
+Picking up with [9.b. Default: Using GRUB](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=9#doc_chap2) in the handbook.  (Also see my [older post about configuring grub](/blog/2004-04-28-gentoo-epia-install-part-6/).)  Also take a look at the end of the thread [](http://forums.gentoo.org/viewtopic.php?t=8813&amp;postdays=0&amp;postorder=asc&amp;highlight=raid&amp;start=100) on the gentoo forums (look for user "havoc") where it discusses how to setup grub on both the primary and secondary drives ([see the original article](http://lists.us.dell.com/pipermail/linux-poweredge/2003-July/014331.html)).  Now is also a good time to pull up the [official Software RAID HOWTO](http://unthought.net/Software-RAID.HOWTO/) and review that as well (especially section 7.3).
 <pre># grub --no-floppy
 grub&gt; find /grub/stage1
 (hd0,0)
@@ -35,7 +35,7 @@ title=Gentoo Linux 2.6.6 (June 16 2004)
 root (hd0,0)
 kernel /kernel-2.6.6-gentoo root=/dev/md2</pre>
 
-Refer to the handbook, [Installing Necessary System Tools](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=10), for the next few commands (I mostly used the defaults, but this is a cut-n-paste from my [previous install](/techblog/2004/04/gentoo-epia-install-part-6.shtml)).
+Refer to the handbook, [Installing Necessary System Tools](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=10), for the next few commands (I mostly used the defaults, but this is a cut-n-paste from my [previous install](/blog/2004-04-28-gentoo-epia-install-part-6/)).
 <pre># emerge syslog-ng
 # rc-update add syslog-ng default
 # emerge dcron

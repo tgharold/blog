@@ -30,7 +30,7 @@ Copy the following files to your rsync folder:
 cygpopt-0.dll
 rsync.exe</pre>
 
-[Create your rsync.conf file](/techblog/2004/07/rsyncconf-file-for-cygwin-environments.shtml) and put it in your rsync folder.
+[Create your rsync.conf file](/blog/2004-07-21-rsyncconf-file-for-cygwin-environments/) and put it in your rsync folder.
 
 Test out whether you've gotten rsync working (thanks to "[Aaron Johnson's page about rsync](http://www.cephas.net/blog/archives/000294.html)" for showing me what command line options to use).  To do this, type the following commands:
 <pre>c:

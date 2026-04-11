@@ -15,7 +15,7 @@ tags:
 
 Now that Nagios has upgraded to v3, I'm going to revisit my SELinux configuration for it.  Back when I first started I was somewhat clueless about SELinux (and still greatly so) and I created a lot of really bad policy modules.  They were a brute-force approach to fixing the issue using only audit2allow and ignoring labeling issues in the underlying filesystem.
 
-(See my older piece "[SELinux - troubleshooting file labeling issues](/techblog/2009/02/selinux-troubleshooting-file-labeling.shtml)".)
+(See my older piece "[SELinux - troubleshooting file labeling issues](/blog/2009-02-05-selinux---troubleshooting-file-labeling-issues/)".)
 
 First off, let's use <b>semodule</b> to take a look at what modules are loaded:
 

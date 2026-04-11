@@ -10,7 +10,7 @@ tags:
 ---
 
 
-This is a follow-up to [SELinux - dealing with exceptions](/techblog/2008/09/selinux-dealing-with-exceptions.shtml).
+This is a follow-up to [SELinux - dealing with exceptions](/blog/2008-09-30-selinux---dealing-with-exceptions/).
 
 First off, a few basics:
 

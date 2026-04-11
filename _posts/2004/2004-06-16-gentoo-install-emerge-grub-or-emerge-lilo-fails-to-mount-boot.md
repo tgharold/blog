@@ -25,7 +25,7 @@ Sometimes "emerge grub" or "emerge lilo" fails with the following error and you 
 
 (The error messages will be pretty much identical for both "lilo" and "grub".)
 
-The problem was, for me at least, that prior to doing the chroot into the new environment, I had failed to mkdir and mount the /boot partition.  ([See the start of step 2 in my install notes](/techblog/2004/06/gentoo-install-2-via-epia-me6000.shtml).)
+The problem was, for me at least, that prior to doing the chroot into the new environment, I had failed to mkdir and mount the /boot partition.  ([See the start of step 2 in my install notes](/blog/2004-06-15-gentoo-install-2-via-epia-me6000/).)
 
 Here's the quick-n-easy way that I fixed the problem.  I had to temporarily exit out of the chroot'd environment, back to the livecd bootup environment, mount the partition, and then chroot back.
 <pre>livecd / # exit
@@ -42,7 +42,7 @@ livecd / # emerge lilo
 (or if you're using grub...)
 livecd / # emerge grub</pre>
 
-Update: While this set of instructions did properly fixup the /boot partition with "grub", it really didn't treat the root cause of the entire mess.  (See [Troubleshooting Software RAID](/techblog/2004/06/troubleshooting-software-raid-boot.shtml).)
+Update: While this set of instructions did properly fixup the /boot partition with "grub", it really didn't treat the root cause of the entire mess.  (See [Troubleshooting Software RAID](/blog/2004-06-17-troubleshooting-software-raid-boot-problems/).)
 
 The root-cause was that back when I did the first part of the install, not only did I fail to mount the /mnt/gentoo and /mnt/gentoo/boot folders properly, but I then mounted them out-of-order when I did catch the error.  That causes all sorts of problems down the road, yet the install process will look like it's going off without a hitch (until you reboot).
 

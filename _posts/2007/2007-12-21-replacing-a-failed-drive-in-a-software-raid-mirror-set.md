@@ -10,7 +10,7 @@ tags:
 ---
 
 
-Like I wrote about last time, I have a [failing drive in my triple active RAID mirror set on my firewall box](/techblog/2007/12/failed-drive-slice-in-software-raid.shtml).  See also "[Failing hard drive in a Software RAID](/techblog/2006/06/failing-hard-drive-in-software-raid.shtml)".  I'm still trying to decide whether the disk has actually failed, or if it is just having issues.
+Like I wrote about last time, I have a [failing drive in my triple active RAID mirror set on my firewall box](/blog/2007-12-05-failed-drive-slice-in-a-software-raid-after-resync/).  See also "[Failing hard drive in a Software RAID](/blog/2006-06-11-failing-hard-drive-in-a-software-raid/)".  I'm still trying to decide whether the disk has actually failed, or if it is just having issues.
 
 <code># /sbin/badblocks -sv /dev/sdc2</code>
 

@@ -10,7 +10,7 @@ tags:
 ---
 
 
-([previous post](/techblog/2004/06/gentoo-install-2-via-epia-me6000.shtml))
+([previous post](/blog/2004-06-15-gentoo-install-2-via-epia-me6000/))
 
 Time to bootstrap the system (See [moving from stage 1 to stage 2](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=6)).  If you have multiple machines on the network, all with the same version of gcc, now is the when you'll want to [configure your distcc configuration](http://www.gentoo.org/doc/en/distcc.xml).
 <pre># cd /usr/portage
@@ -23,4 +23,4 @@ Once that finishes, run the following command.
 
 Which will also take a while to run (last time it took around 5.5 hours).  Update: Took around 4.5 hours this time.
 
-([next post](/techblog/2004/06/gentoo-install-4-installing-kernel.shtml))
+([next post](/blog/2004-06-16-gentoo-install-4-installing-the-kernel-sources/))

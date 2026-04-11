@@ -10,9 +10,9 @@ tags:
 ---
 
 
-Going to rebuild my VIA EPIA Gentoo linux server.  While the [current setup](/techblog/2004/04/gentoo-epia-install-part-1.shtml) was fine, I've decided that I want to switch to use a pair of matched 5400rpm drives and [software RAID1](/techblog/2004/06/lvm-and-software-raid.shtml).  The configuration is identical to the [old drive configuration](/techblog/2004/04/via-epia-gentoo-build.shtml), except that I'm now using a pair of 300GB 5400rpm Maxtor drives.  The power draw seems to be well within the limits of the tiny power-supply in the Morex Venus 668 case.
+Going to rebuild my VIA EPIA Gentoo linux server.  While the [current setup](/blog/2004-04-27-gentoo-epia-install-part-1/) was fine, I've decided that I want to switch to use a pair of matched 5400rpm drives and [software RAID1](/blog/2004-06-15-lvm-and-software-raid/).  The configuration is identical to the [old drive configuration](/blog/2004-04-27-via-epia-gentoo-build/), except that I'm now using a pair of 300GB 5400rpm Maxtor drives.  The power draw seems to be well within the limits of the tiny power-supply in the Morex Venus 668 case.
 
-I'm going to skip some of the [initial information about my setup](/techblog/2004/04/gentoo-epia-install-part-1.shtml) as all of that really hasn't changed.  Shared video memory is still only 32MB instead of the default 128MB, and I've turned off all of the ports and devices that I'm not going to use (leaving only ethernet, firewire and USB ports active).  I'm still using the Gentoo 2004.0 Universal CD as my bootstrap system.
+I'm going to skip some of the [initial information about my setup](/blog/2004-04-27-gentoo-epia-install-part-1/) as all of that really hasn't changed.  Shared video memory is still only 32MB instead of the default 128MB, and I've turned off all of the ports and devices that I'm not going to use (leaving only ethernet, firewire and USB ports active).  I'm still using the Gentoo 2004.0 Universal CD as my bootstrap system.
 
 Start by booting up the Gentoo Universal CD, as soon as you see the "<b>boot:</b>" prompt, enter the following command (which hopefully fixes the shutdown/lockup issue I had at the end of the last install):
 <pre>boot: gentoo nohotplug</pre>
@@ -134,4 +134,4 @@ Create the raid set(s).
 
 If you get the error message: "raid_disks + spare_disks != nr_disks" when attempting to create any of your RAID sets, go back and verify your "/etc/raidtab" file as well as verifying your disk partitions.  The RAID sets will build in the background and you should periodically monitor their progress using "<b>cat /proc/mdstat</b>".  Another possibility is that you have set the "chunk-size" setting to be too small or too large (e.g. "chunk-size 4" did not work for me, but "chunk size 8" worked fine).  
 
-Since it's going to take 150 minutes to prep that last RAID volume, I'm going to [pick this up again later](/techblog/2004/06/gentoo-install-1-via-epia-me6000.shtml).  Data rate according to "<b>cat /proc/mdstat</b>" is around 30MB/sec, which is about what I'd expect for a 5400rpm PATA drive.
+Since it's going to take 150 minutes to prep that last RAID volume, I'm going to [pick this up again later](/blog/2004-06-15-gentoo-install-1-via-epia-me6000/).  Data rate according to "<b>cat /proc/mdstat</b>" is around 30MB/sec, which is about what I'd expect for a 5400rpm PATA drive.

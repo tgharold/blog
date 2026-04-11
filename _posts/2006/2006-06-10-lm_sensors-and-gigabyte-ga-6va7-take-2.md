@@ -10,7 +10,7 @@ tags:
 ---
 
 
-A while back I had tried to [configure lm_sensors on an old Gigabyte GA-6VA7+ motherboard](/techblog/2005/11/lmsensors-and-gigabyte-ga-6va7.shtml).  That didn't work out so well, so I'm going to give it another shot.  Which is important because I had a drive overheat this week due to a failed fan.
+A while back I had tried to [configure lm_sensors on an old Gigabyte GA-6VA7+ motherboard](/blog/2005-11-28-lm_sensors-and-gigabyte-ga-6va7/).  That didn't work out so well, so I'm going to give it another shot.  Which is important because I had a drive overheat this week due to a failed fan.
 
 There's a new version of lm_sensors out (2.10) while I'm still running the old 2.09.  Most of the steps are the same, I'm simply emerging the new version and then following the instructions.  On my slow little 566Mhz Celeron box, this takes a while.  Especially since I'm also rebuilding a failed raid element (thank goodness for Software RAID).
 

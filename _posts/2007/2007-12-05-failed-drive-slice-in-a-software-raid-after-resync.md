@@ -29,7 +29,7 @@ echo check &gt; /sys/block/md6/md/sync_action</code>
 
 In this particular case, all of my RAID slices verified correctly, except for one of them.  In this particular situation I'm running a triple-active RAID1 array.  (Instead of using a hot-spare disk, I'm putting live data onto all three disks and using all three actively.)
 
-See also [Failing hard drive in a Software RAID](/techblog/2006/06/failing-hard-drive-in-software-raid.shtml)
+See also [Failing hard drive in a Software RAID](/blog/2006-06-11-failing-hard-drive-in-a-software-raid/)
 
 <code>$ cat /proc/mdstat
 Personalities : [raid1] 

@@ -19,7 +19,7 @@ Time to [install the bootloader](http://www.gentoo.org/doc/en/handbook/handbook-
 
 <code># emerge grub</code>
 
-Now to configure GRUB (refer to my [old post about GRUB](/techblog/2004/06/gentoo-install-6-grub-system-tools.shtml) for a more in-depth explanation of what I'm telling GRUB to do here).
+Now to configure GRUB (refer to my [old post about GRUB](/blog/2004-06-16-gentoo-install-6-grub-system-tools-finalizing-the-install/) for a more in-depth explanation of what I'm telling GRUB to do here).
 
 <code># grub --no-floppy
 grub&gt; find /grub/stage1

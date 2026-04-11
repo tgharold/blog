@@ -91,4 +91,4 @@ read only = false
 
 That allows <b>any client</b> who manages to authenticate with the rsync service to write the E:\Backup\Joe on the rsync server.  That is not exactly secure and you should take additional steps to lock it down through the use of "hosts allow", "auth users", "secrets file" and perhaps ssh.  Securing your box is a bit beyond the scope of this post.  It's also a bit beyond my experience level since I'm just getting started with rsync.
 
-(Update: See [Securing cwRSync](/techblog/2004/06/securing-cwrsync.shtml).)
+(Update: See [Securing cwRSync](/blog/2004-06-18-securing-cwrsync/).)

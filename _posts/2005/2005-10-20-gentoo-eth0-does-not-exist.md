@@ -14,7 +14,7 @@ So, oops.  When I built my Celeron box, I didn't include the driver for my Netge
 
 So I know it works, I just don't have it right and proper.  My original build for this kernel is:
 
-[Gentoo 2005.1 Software RAID (part 2) Celeron CPU](/techblog/2005/09/gentoo-20051-software-raid-part-2.shtml)
+[Gentoo 2005.1 Software RAID (part 2) Celeron CPU](/blog/2005-09-22-gentoo-20051-software-raid-part-2-celeron-cpu/)
 
 During that build, I didn't touch network devices at all. It had automatically selected the RealTek network device driver under the EISA option. 
 

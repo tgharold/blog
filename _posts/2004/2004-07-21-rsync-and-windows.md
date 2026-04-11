@@ -10,7 +10,7 @@ tags:
 ---
 
 
-This is a follow-up to my previous post about [Securing cwRSync](/techblog/2004/06/securing-cwrsync.shtml).  We were using the "[cwRSync package](http://www.itefix.no/)", but when running in server mode it doesn't know how to talk to clients over an SSH-encrypted connection. Which isn't a big deal if you're only talking to other servers on the local network, but is problematic in cases where you have to be wary of eavesdropping (across WiFi links or untrusted networks like the internet). So I've been looking off-and-on over the past month at figuring out how to get an rsync service running using SSH on a Windows server.
+This is a follow-up to my previous post about [Securing cwRSync](/blog/2004-06-18-securing-cwrsync/).  We were using the "[cwRSync package](http://www.itefix.no/)", but when running in server mode it doesn't know how to talk to clients over an SSH-encrypted connection. Which isn't a big deal if you're only talking to other servers on the local network, but is problematic in cases where you have to be wary of eavesdropping (across WiFi links or untrusted networks like the internet). So I've been looking off-and-on over the past month at figuring out how to get an rsync service running using SSH on a Windows server.
 
  One option is to install the full [Cygwin](http://cygwin.com/) package.  Which is a bit much for a server (or rather, I'm not comfortable installing Cygwin on a server... yet).
 

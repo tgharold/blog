@@ -10,11 +10,11 @@ tags:
 ---
 
 
-([previous post, samba round 2](/techblog/2004/05/gentoo-samba-round-2.shtml))
+([previous post, samba round 2](/blog/2004-05-01-gentoo-samba-round-2/))
 
 Well, after a busy week at work, I finally had time to log back into my little VIA EPIA server running Gentoo Linux.  In my previous post, I had re-emerged the latest version of samba (v3), but I never had time to go back and try things out again after the emerge finished.
 
-The original problem was that I [couldn't find the "net" command](/techblog/2004/05/gentoo-samba-with-ads.shtml), which turns out to be because I was using Samba v2 instead of Samba v3.  I just logged into the box, su'd to root, and typed "net".
+The original problem was that I [couldn't find the "net" command](/blog/2004-05-01-gentoo-samba-with-ads/), which turns out to be because I was using Samba v2 instead of Samba v3.  I just logged into the box, su'd to root, and typed "net".
 
 Bingo!  I now have a "net" command!
 

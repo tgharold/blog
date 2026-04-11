@@ -70,7 +70,7 @@ san1-azure ~ # </code>
 
 That should take all of about 0.1 seconds on this Athlon64 X2.  (I joke, slightly... the box is quite snappy even with only 7200rpm SATA drives.)
 
-Now I'm going to [configure SubVersion](/techblog/2006/06/subversion-for-linux-administrators.shtml).  There have been some changes in that process that I learned through trial and error.  Folders that I would recommend placing under version control are:
+Now I'm going to [configure SubVersion](/blog/2006-06-14-subversion-for-linux-administrators/).  There have been some changes in that process that I learned through trial and error.  Folders that I would recommend placing under version control are:
 
 /boot (most files)
 /etc (most files, especially configuration files)

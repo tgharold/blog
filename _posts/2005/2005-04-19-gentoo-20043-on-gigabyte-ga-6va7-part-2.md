@@ -10,7 +10,7 @@ tags:
 ---
 
 
-([Continuation of part 1](/techblog/2005/04/gentoo-20043-on-gigabyte-ga-6va7-part.shtml))
+([Continuation of part 1](/blog/2005-04-20-gentoo-20043-on-gigabyte-ga-6va7-part-3/))
 
 <code># ls -l /etc/make.profile</code>
 
@@ -25,4 +25,4 @@ This will take a while to run (I estimate a few hours, maybe even overnight).  O
 
 Which will also take a few hours.
 
-([next step](/techblog/2005/04/gentoo-20043-on-gigabyte-ga-6va7-part_20.shtml))
+([next step](/blog/2005-04-19-gentoo-20043-on-gigabyte-ga-6va7-part-2/))

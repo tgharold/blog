@@ -10,7 +10,7 @@ tags:
 ---
 
 
-I talked about this a few months ago in [Visual Basic Rnd() function tricks and traps](/techblog/2005/08/visual-basic-rnd-function-tricks-and.shtml), where I discovered that I wasn't getting a full 32bits of randomness out of VB's Rnd() function in my VBScript/Visual Basic pages.  At the time, I thought it was simply due to Rnd() returning a 32bit IEEE floating point value which really only has 30bits of data.
+I talked about this a few months ago in [Visual Basic Rnd() function tricks and traps](/blog/2005-08-30-visual-basic-rnd-function-tricks-and-traps/), where I discovered that I wasn't getting a full 32bits of randomness out of VB's Rnd() function in my VBScript/Visual Basic pages.  At the time, I thought it was simply due to Rnd() returning a 32bit IEEE floating point value which really only has 30bits of data.
 
 In reality, the situation is even worse:
 

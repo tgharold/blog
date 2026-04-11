@@ -12,7 +12,7 @@ tags:
 
 Currently, I was using a VIA EPIA system as my music server, but now I'm thinking about turning it into a smart router for the home office.  This will entail adding a ethernet card to the unit in addition to migrating my hard drives from a pair of 300GB drives to a pair of notebook drives (for less power).  Since I'm using Software RAID, moving from one set of disks to another should be nearly seamless.
 
-The hardware has changed a little bit since my [previous attempt at building the system back in March 2005](/techblog/2005/03/gentoo-epia-install-part-1.shtml), but the BIOS settings are identical.  The current hardware consists of:
+The hardware has changed a little bit since my [previous attempt at building the system back in March 2005](/blog/2005-03-29-gentoo-epia-install-part-1/), but the BIOS settings are identical.  The current hardware consists of:
 
 (1) VIA EPIA ME6000 (EPIA M series), 600Mhz fanless CPU
 (2) 300GB 5400rpm hard drives

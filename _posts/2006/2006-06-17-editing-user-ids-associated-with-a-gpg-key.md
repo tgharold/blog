@@ -53,7 +53,7 @@ Performing the key edit in WinPT:
 </li>
 </ol>
 
-For information on backing up a key, see [my previous post on GPG4Win](/techblog/2006/06/getting-started-with-gpg4win.shtml).
+For information on backing up a key, see [my previous post on GPG4Win](/blog/2006-06-12-getting-started-with-gpg4win/).
 
 Note #1: If you have multiple UIDs associated with a key, you can use the "PRIMARY" command to flag one of the UIDs as the default UID to display in the key list.  Simply select "PRIMARY" from the Command list, highlight the UID you want as the primary and click "OK".  However, this only works in WinPT... in most other implementations, the default UID is the last one added to the key.
 

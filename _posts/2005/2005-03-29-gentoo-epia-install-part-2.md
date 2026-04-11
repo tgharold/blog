@@ -13,7 +13,7 @@ tags:
 
 <b>Note: These directions are works-in-progress... in fact, they might not even work at all until I find out why I'm ending up with non-bootable systems (looks like a bug in the 2.6 kernel).</b>
 
-First up, still using the 2004.0 Gentoo Boot CD and referring to my [old notes from last year](/techblog/2004/04/gentoo-epia-install-part-1.shtml).  Also note that I rebuilt it in [June 2004](http://www.tgharold.com/techblog/2004_06_01_archive.shtml), so it may be better to look at those notes.  Especially the "gentoo nohotplug" command during the boot process.
+First up, still using the 2004.0 Gentoo Boot CD and referring to my [old notes from last year](/blog/2004-04-27-gentoo-epia-install-part-1/).  Also note that I rebuilt it in [June 2004](http://www.tgharold.com/techblog/2004_06_01_archive.shtml), so it may be better to look at those notes.  Especially the "gentoo nohotplug" command during the boot process.
 
 Going to use last June's installation notes for the most part, with a few notes here if I change anything.
 

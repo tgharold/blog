@@ -10,7 +10,7 @@ tags:
 ---
 
 
-Going back to the 2004.3 Gentoo Universal boot CD.  Trying to get past my previous issue [bd_claim issues when setting up a software RAID](/techblog/2005/03/installing-gentoo-on-software-raid.shtml).  This is on my Gigabyte GA-6VA7+ motherboard ([notes on the Gigabyte GA-6VA7+ motherboard and other hardware](/techblog/2005/03/gentoo-20050-on-gigabyte-ga-6va7-part.shtml)).
+Going back to the 2004.3 Gentoo Universal boot CD.  Trying to get past my previous issue [bd_claim issues when setting up a software RAID](/blog/2005-03-31-installing-gentoo-on-software-raid/).  This is on my Gigabyte GA-6VA7+ motherboard ([notes on the Gigabyte GA-6VA7+ motherboard and other hardware](/blog/2005-03-31-gentoo-20050-on-gigabyte-ga-6va7-part-1/)).
 
 Starting with the usual tricks:
 
