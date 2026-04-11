@@ -139,6 +139,41 @@ def find_new_markdown_paths(unique_old_urls_data):
         else:
             print(f"Warning: Unable to parse old_url format: {old_url}")
 
+
+def update_new_urls(unique_old_urls_data):
+    """Process unique_old_urls_data to create new_url values based on permalink style."""
+    import os
+
+    for data in unique_old_urls_data:
+        # Check if path_to_new_markdown_file exists
+        if data['path_to_new_markdown_file']:
+            # Extract the date and filename from the path
+            # Expected format: _posts/YYYY/YYYY-MM-DD-filename.md
+            file_path = data['path_to_new_markdown_file']
+            file_basename = os.path.basename(file_path)
+
+            # Parse the date from the filename (format: YYYY-MM-DD-*)
+            # Extract the date part from the filename
+            if '-' in file_basename:
+                # Split by hyphens to get components
+                parts = file_basename.split('-')
+                if len(parts) >= 4:
+                    try:
+                        year, month, day = parts[0], parts[1], parts[2]
+                        # Extract the title part (everything after YYYY-MM-DD-)
+                        title_parts = parts[3:]
+                        # Join title parts and remove extension
+                        filename_only = '-'.join(title_parts).split('.', 1)[0]
+                        data['new_url'] = f"/blog/{year}-{month}-{day}-{filename_only}/"
+                        print(f"  New URL created: {data['new_url']}")
+                    except Exception as e:
+                        print(f"  Warning: Could not parse date from filename {file_basename}: {e}")
+        else:
+            # If no path found, we'll leave new_url as empty
+            data['new_url'] = ""
+            print(f"  No path found for {data['old_url']}, leaving new_url empty")
+
+
 def main():
     search_dir = '_posts'
     output_file = 'convert_blogger_to_jekyll_url_mappings_results.csv'
@@ -174,6 +209,9 @@ def main():
 
     # Iterate over unique_old_urls_data to find new markdown file paths
     find_new_markdown_paths(unique_old_urls_data)
+
+    # Process the data to create new_url values
+    update_new_urls(unique_old_urls_data)
 
     write_unique_old_urls_csv(unique_old_urls_data, unique_output_file)
     print(f"Unique old_url values written to '{unique_output_file}'")
