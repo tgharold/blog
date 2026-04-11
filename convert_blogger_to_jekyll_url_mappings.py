@@ -106,7 +106,7 @@ def find_new_markdown_paths(unique_old_urls_data):
                     matches_and_scores.sort(key=lambda x: x[1], reverse=True)
 
                     if matches_and_scores:
-                        print(f"  Fuzzy matches found (with scores):")
+                        print(f"  {len(matches_and_scores)} fuzzy matches found (with scores):")
                         for base_name, score in matches_and_scores[:5]:  # Show top 5
                             print(f"    Fuzzy match: {base_name} (score: {score:.2f})")
 
@@ -122,7 +122,7 @@ def find_new_markdown_paths(unique_old_urls_data):
                         # For multiple matches, implement enhanced logic
                         elif len(matches_and_scores) > 1:
                             # If there's at least one high-quality match (score >= 0.8), use the best one
-                            high_quality_matches = [match for match in matches_and_scores if match[1] >= 0.8]
+                            high_quality_matches = [match for match in matches_and_scores if match[1] >= 0.75]
                             if high_quality_matches:
                                 # Use the highest scoring match among high-quality matches
                                 best_match = max(high_quality_matches, key=lambda x: x[1])
