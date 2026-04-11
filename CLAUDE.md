@@ -37,3 +37,11 @@ The workflow is designed with a separation between build and deploy jobs, follow
 - The base URL is configured as "/blog" in `_config.yml`
 - The deployment workflow uses official GitHub Actions for Jekyll site builds
 - The deploy step is gated to only run on master branch pushes (`if: github.ref == 'refs/heads/master'`)
+
+## Archive Conversion Process
+When converting Blogger archive posts from `_archives/techblog/2003/06/` or similar directories:
+1. Extract HTML content from `.shtml` files
+2. Convert to Jekyll markdown format with proper frontmatter
+3. Maintain original content while converting to markdown
+4. Follow existing post structure and naming conventions
+5. Place in appropriate `_posts/YYYY/` directory
