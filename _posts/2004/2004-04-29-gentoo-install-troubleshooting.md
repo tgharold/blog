@@ -20,23 +20,23 @@ GRUB is working, I get the boot selection screen with the 30 sec timer.  Error m
 
 So... time to put the LiveCD back in, walk through the commands to get me back to the building a kernel stage:
 
-mount /dev//hda2 /mnt/gentoo
-mount /dev/hda1 /mnt/gentoo/boot
-mount -t proc none /mnt/gentoo/proc 
+    mount /dev//hda2 /mnt/gentoo
+    mount /dev/hda1 /mnt/gentoo/boot
+    mount -t proc none /mnt/gentoo/proc 
 
-modprobe dm-mod
-vgchange -ay
+    modprobe dm-mod
+    vgchange -ay
 
-mount /dev/vgos/opt /mnt/gentoo/opt
-mount /dev/vgos/usr /mnt/gentoo/usr
-mount /dev/vgos/var /mnt/gentoo/var
-mount /dev/vguser/home /mnt/gentoo/home
-mount /dev/vgtmp/tmp /mnt/gentoo/tmp
-mount /dev/vgtmp/vartmp /mnt/gentoo/var/tmp 
+    mount /dev/vgos/opt /mnt/gentoo/opt
+    mount /dev/vgos/usr /mnt/gentoo/usr
+    mount /dev/vgos/var /mnt/gentoo/var
+    mount /dev/vguser/home /mnt/gentoo/home
+    mount /dev/vgtmp/tmp /mnt/gentoo/tmp
+    mount /dev/vgtmp/vartmp /mnt/gentoo/var/tmp 
 
-chroot /mnt/gentoo /bin/bash
-env-update
-source /etc/profile 
+    chroot /mnt/gentoo /bin/bash
+    env-update
+    source /etc/profile 
 
 At this point, I'm back to where I'm ready to configure the kernel ([previous attempt](/techblog/2004/04/gentoo-epia-install-part-5.shtml)).  I don't need to emerge the kernel sources again (AFAIK), just reconfigure.  Flip back to [chapter 7c in the gentoo handbook](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=7).  I think my old configuration should be in /usr/src/linux/.config (that's a hidden file).  First thing I did was make a copy of that file "cat .config &gt;&gt; my-first-config".  Then I did the "make menuconfig" command, which did load my existing settings from the .config file.
 

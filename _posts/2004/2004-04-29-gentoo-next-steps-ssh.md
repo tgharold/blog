@@ -20,9 +20,9 @@ I have a book called "Building Secure Servers with Linux", and it's extremely po
 
 The NCSA link is probably the most useful, except that on my gentoo linux system, configuration stuff is under /etc/ssh  instead of /etc/openssh.
 
-# /usr/bin/ssh-keygen -t dsa -b 1024 -f /etc/ssh/ssh_host_dsa_key -N ""
-# chmod 600 /etc/ssh/ssh_host_dsa_key
-# chmod 644 /etc/ssh/ssh_host_dsa_key.pub
+    # /usr/bin/ssh-keygen -t dsa -b 1024 -f /etc/ssh/ssh_host_dsa_key -N ""
+    # chmod 600 /etc/ssh/ssh_host_dsa_key
+    # chmod 644 /etc/ssh/ssh_host_dsa_key.pub
 
 (the two chmod commands weren't really necessary on my gentoo box, they had no effect on the permissions)
 

@@ -28,20 +28,20 @@ Steps that they say to use, but which did NOT work for me:
 
 Here's what my <b>broken</b> BOOT.INI file looks like (see [102873: BOOT.INI and ARC Path Naming Conventions and Usage](http://support.microsoft.com/default.aspx?scid=kb;EN-US;102873)):
 
-[boot loader]
-timeout=30
-default=multi(0)disk(0)rdisk(0)partition(1)\WINNT
-[operating systems]
-multi(0)disk(0)rdisk(0)partition(1)\WINNT="Microsoft Windows 2000 Server" /fastdetect
+    [boot loader]
+    timeout=30
+    default=multi(0)disk(0)rdisk(0)partition(1)\WINNT
+    [operating systems]
+    multi(0)disk(0)rdisk(0)partition(1)\WINNT="Microsoft Windows 2000 Server" /fastdetect
 
 Here's what my recovery BOOT.INI file looks like (note the change on the default= line, and the addition of a second multi(x) line under [operating systems], also note the long timeout value):
 
-[boot loader]
-timeout=120
-default=multi(1)disk(0)rdisk(0)partition(1)\WINNT
-[operating systems]
-multi(0)disk(0)rdisk(0)partition(1)\WINNT="Microsoft Windows 2000 Server" /fastdetect
-multi(1)disk(0)rdisk(0)partition(1)\WINNT="Microsoft Windows 2000 Server (HPT372N)" /fastdetect
+    [boot loader]
+    timeout=120
+    default=multi(1)disk(0)rdisk(0)partition(1)\WINNT
+    [operating systems]
+    multi(0)disk(0)rdisk(0)partition(1)\WINNT="Microsoft Windows 2000 Server" /fastdetect
+    multi(1)disk(0)rdisk(0)partition(1)\WINNT="Microsoft Windows 2000 Server (HPT372N)" /fastdetect
 
 Unfortunately, no matter what combination of scsi(x) or multi(x) I tried at the start of the line, or putting the driver file on the boot diskette (renamed as NTBootDD.SYS) would get me past the wonderful "Could not read from the selected boot disk" error.  At one point, I had a boot diskette with (8) different combinations of boot lines that I had tried.
 
