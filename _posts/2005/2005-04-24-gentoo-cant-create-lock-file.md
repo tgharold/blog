@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Gentoo: Can't create lock file'
+title: "Gentoo: Can't create lock file"
 date: '2005-04-24T00:10:00.000-05:00'
 author: Thomas Harold
 category:
