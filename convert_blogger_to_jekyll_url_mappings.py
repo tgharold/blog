@@ -41,6 +41,9 @@ def write_unique_old_urls_csv(unique_old_urls_data, output_file):
 
 def find_new_markdown_paths(unique_old_urls_data):
     """Iterate over unique_old_urls_data to find new markdown file paths based on old_url data."""
+    import glob
+    import os
+
     # This method will be used to find the new markdown file path based on the old_url data
     # For now, we'll just iterate over the records
     for data in unique_old_urls_data:
@@ -55,12 +58,22 @@ def find_new_markdown_paths(unique_old_urls_data):
             # Remove the .shtml extension from filename
             filename = filename_with_ext.rsplit('.', 1)[0] if '.' in filename_with_ext else filename_with_ext
 
+            # Build search pattern for markdown files in _posts/(year)/(year)-(month)-*
+            search_pattern = f"_posts/{year}/{year}-{month}-*.md"
+
+            # Find matching files
+            matching_files = glob.glob(search_pattern)
+
+            # Create a variable with the search results
+            found_files = matching_files
+
             # TODO: Implement the logic to find the new markdown file path
             # For now, we just iterate through the data and print the components
             print(f"Processing old_url: {old_url}")
             print(f"  Year: {year}")
             print(f"  Month: {month}")
             print(f"  Filename (without extension): {filename}")
+            print(f"  Found {len(found_files)} matching markdown files: {found_files}")
         else:
             print(f"Warning: Unable to parse old_url format: {old_url}")
 
