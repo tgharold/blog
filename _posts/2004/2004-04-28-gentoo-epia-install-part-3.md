@@ -10,7 +10,7 @@ tags:
 ---
 
 
-([Previous blog entry](/techblog/2004/04/gentoo-epia-install-part-2.shtml))
+([Previous blog entry](/blog/2004-04-27-gentoo-epia-install-part-2/))
 
 While I'm not exactly sure when the first phase finished overnight, it was probably around 8-12 hours.  I don't see any errors on the screen, so I'm assuming that I'm good to go for the [next step](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=6) in the handbook (chapter 6d).
 
@@ -20,4 +20,4 @@ Anyway, not much to this step, and it's another one that takes a while to run:
 
 emerge system
 
-Back in a few... ([next entry](/techblog/2004/04/gentoo-epia-install-part-4.shtml)).
+Back in a few... ([next entry](/blog/2004-04-28-gentoo-epia-install-part-4/)).

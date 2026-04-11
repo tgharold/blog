@@ -93,4 +93,4 @@ And the "proc" file system (last bit of chapter 4e in the handbook)
 mkdir /mnt/gentoo/proc
 mount -t proc none /mnt/gentoo/proc
 
-Taking a break for a bit. ([continued in next post](/techblog/2004/04/gentoo-epia-install-part-2.shtml))
+Taking a break for a bit. ([continued in next post](/blog/2004-04-27-gentoo-epia-install-part-2/))

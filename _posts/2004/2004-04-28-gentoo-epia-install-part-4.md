@@ -10,7 +10,7 @@ tags:
 ---
 
 
-([previous blog entry](/techblog/2004/04/gentoo-epia-install-part-3.shtml))
+([previous blog entry](/blog/2004-04-28-gentoo-epia-install-part-3/))
 
 Stage 2 compile is finished ([step 6d in the handbook](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=6)).  Not bad, emerge system took about 5.5 hours to run on my little VIA EPIA ME6000.  Now for [step 7, configuring the kernel](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=7)
 
@@ -55,4 +55,4 @@ Picking a kernel is tough... (make sure to read [gentoo kernel guide](http://www
 
 # emerge development-sources
 
-([next entry](/techblog/2004/04/gentoo-epia-install-part-3.shtml))
+([next entry](/blog/2004-04-28-gentoo-epia-install-part-3/))
