@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Linix distros for a mini-ITX server'
+title: 'Linux distros for a mini-ITX server'
 date: '2004-04-24T00:05:00.000-05:00'
 author: Thomas Harold
 category:
