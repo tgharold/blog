@@ -1,0 +1,39 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Repository Overview
+
+This is a Jekyll-based blog hosted on GitHub Pages, originally migrated from Blogger.com. The site uses the Skinny Bones Jekyll template with modifications to work in a "/blog" subdirectory on GitHub Pages.
+
+## Key Files and Structure
+
+- `_config.yml` - Main Jekyll configuration
+- `_posts/` - Blog post content in Jekyll format (YYYY-MM-DD-title.md)
+- `.github/workflows/jekyll.yml` - GitHub Actions workflow for building and deploying the site
+- `index.md` - Main index page
+- `README.md` - Project documentation
+
+## Development and Deployment
+
+### Building Locally
+To build the site locally for testing:
+```bash
+bundle install
+bundle exec jekyll build
+```
+
+### GitHub Actions Workflow
+The repository uses a GitHub Actions workflow in `.github/workflows/jekyll.yml` that:
+- Builds the site using `actions/jekyll-build-pages@v1`
+- Uploads the generated site as an artifact
+- Deploys only when changes are pushed to the `master` branch
+- Uses proper permissions for GitHub Pages deployment
+
+The workflow is designed with a separation between build and deploy jobs, following GitHub's official documentation for Jekyll sites hosted on GitHub Pages.
+
+### Deployment Details
+- The site is deployed to GitHub Pages from the `master` branch
+- The base URL is configured as "/blog" in `_config.yml`
+- The deployment workflow uses official GitHub Actions for Jekyll site builds
+- The deploy step is gated to only run on master branch pushes (`if: github.ref == 'refs/heads/master'`)
