@@ -45,7 +45,7 @@ When converting Blogger archive posts from `_archives/techblog/2003/06/` or simi
 3. Maintain original content while converting to markdown
 4. Follow existing post structure and naming conventions
 5. Place in appropriate `_posts/YYYY/` directory
-6. All 2003 archive posts have been converted using the enhanced conversion script
+6. All 2003 and 2004 archive posts have been converted using the enhanced conversion script
 
 ## Using Conversion Tools
 To convert archive posts, use the provided conversion scripts:
