@@ -43,7 +43,7 @@ def write_csv(file_paths, output_file):
 
 def main():
     search_dir = '_posts'
-    output_file = 'blogger_to_jekyll_mapping_filepaths.csv'
+    output_file = 'convert_blogger_to_jekyll_url_mappings_results.csv'
 
     # Check if search directory exists
     if not os.path.exists(search_dir):
