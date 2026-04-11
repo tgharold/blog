@@ -10,7 +10,7 @@ tags:
 ---
 
 
-Picking up at [chapter 5c of the Gentoo Handbook, Using a Stage from the LiveCD](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=5).  (Also see my [previous post](/techblog/2004/04/gentoo-epia-install-part-1.shtml) where I configured the disks.)  Here is where it gets fun...  I'm going to try starting with the x86 stage1 file:
+Picking up at [chapter 5c of the Gentoo Handbook, Using a Stage from the LiveCD](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=5).  (Also see my [previous post](/blog/2004-04-27-gentoo-epia-install-part-1/) where I configured the disks.)  Here is where it gets fun...  I'm going to try starting with the x86 stage1 file:
 
 cd /mnt/gentoo
 tar -xvjpf /mnt/cdrom/stages/stage1-x86-20040218.tar.bz2

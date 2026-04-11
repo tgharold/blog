@@ -10,7 +10,7 @@ tags:
 ---
 
 
-([previous entry](/techblog/2004/04/gentoo-epia-install-part-5.shtml))
+([previous entry](/blog/2004-04-28-gentoo-epia-install-part-5/))
 
 Now to start with [chapter 7e, installing extra kernel modules](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=7).  I didn't see any extra modules that needed to be emerge'd, so I skipped straight to the editing of the autoload file.  Actually I lie, I have to add in LVM2 module support.  So I need to follow the steps in [step 13 of the LVM install guide](http://www.gentoo.org/doc/en/lvm2.xml) and add LVM to the auto-load listing.
 
@@ -48,7 +48,7 @@ uhci
 ehci-hcd    
 usb-storage
 
-Don't forget to run "modules-update" when done.  Onward to [chapter 8, configuring your system](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=8).  First up is editing the "/etc/fstab" table, which controls what gets mounted at startup.  I'm using a rather complex partitioning system, plus LVM2, so this will look a bit wild.  It also helps to [refer back to the mount commands used earlier](/techblog/2004/04/gentoo-epia-install-part-4.shtml).
+Don't forget to run "modules-update" when done.  Onward to [chapter 8, configuring your system](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=8).  First up is editing the "/etc/fstab" table, which controls what gets mounted at startup.  I'm using a rather complex partitioning system, plus LVM2, so this will look a bit wild.  It also helps to [refer back to the mount commands used earlier](/blog/2004-04-28-gentoo-epia-install-part-4/).
 
 /dev/hda1 /boot ext2 noauto,noatime 1 2
 /dev/hda2 / ext3 natime 0 1
