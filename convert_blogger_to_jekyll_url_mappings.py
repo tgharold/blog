@@ -3,7 +3,7 @@ import os
 import csv
 import re
 
-def find_blogger_to_jekyll_mappings(search_dir):
+def find_markdown_files_with_blogger_links(search_dir):
     matching_files = []
 
     for root, dirs, files in os.walk(search_dir):
@@ -44,18 +44,13 @@ def find_new_markdown_paths(unique_old_urls_data):
     import glob
     import os
 
-    # This method will be used to find the new markdown file path based on the old_url data
-    # For now, we'll just iterate over the records
     for data in unique_old_urls_data:
         old_url = data['old_url']
-        # Extract year, month, and base filename from old_url
-        # Expected format: /techblog/YYYY/MM/filename.shtml
         url_parts = old_url.strip('/').split('/')
         if len(url_parts) >= 4 and url_parts[0] == 'techblog':
             year = url_parts[1]
             month = url_parts[2]
             filename_with_ext = url_parts[3]
-            # Remove the .shtml extension from filename
             filename = filename_with_ext.rsplit('.', 1)[0] if '.' in filename_with_ext else filename_with_ext
 
             print(f"Processing old_url: {old_url}")
@@ -72,12 +67,9 @@ def find_new_markdown_paths(unique_old_urls_data):
 
             exactly_matched_file = None
             for file_path in found_files:
-                # Extract just the filename without path and extension
                 file_basename = os.path.basename(file_path)
                 file_base_without_ext = file_basename.rsplit('.', 1)[0] if '.' in file_basename else file_basename
 
-                # If the original filename is contained in the markdown filename, consider it a match
-                # This handles cases where markdown filenames have date prefixes
                 if filename in file_base_without_ext:
                     exactly_matched_file = file_path
                     break
@@ -148,12 +140,10 @@ def update_new_urls(unique_old_urls_data):
         # Check if path_to_new_markdown_file exists
         if data['path_to_new_markdown_file']:
             # Extract the date and filename from the path
-            # Expected format: _posts/YYYY/YYYY-MM-DD-filename.md
             file_path = data['path_to_new_markdown_file']
             file_basename = os.path.basename(file_path)
 
             # Parse the date from the filename (format: YYYY-MM-DD-*)
-            # Extract the date part from the filename
             if '-' in file_basename:
                 # Split by hyphens to get components
                 parts = file_basename.split('-')
@@ -185,19 +175,19 @@ def main():
 
     print(f"Searching for files containing markdown links to '/techblog/' in '{search_dir}'...")
 
-    url_mappings = find_blogger_to_jekyll_mappings(search_dir)
+    markdown_files_with_blogger_links = find_markdown_files_with_blogger_links(search_dir)
 
-    print(f"Found {len(url_mappings)} URL mappings in files containing the pattern.")
+    print(f"Found {len(markdown_files_with_blogger_links)} URL mappings in files containing the pattern.")
 
     # Write the original CSV with file_path and old_url
-    write_csv(url_mappings, output_file)
+    write_csv(markdown_files_with_blogger_links, output_file)
     print(f"Results written to '{output_file}'")
 
     # Extract all unique old_url values
     unique_old_urls_data = []
     seen_old_urls = set()
 
-    for path, old_url in url_mappings:
+    for path, old_url in markdown_files_with_blogger_links:
         if old_url not in seen_old_urls:
             # Initialize path_to_new_markdown_file and new_url as empty for now
             unique_old_urls_data.append({
@@ -215,6 +205,8 @@ def main():
 
     write_unique_old_urls_csv(unique_old_urls_data, unique_output_file)
     print(f"Unique old_url values written to '{unique_output_file}'")
+
+    
 
 if __name__ == '__main__':
     main()
