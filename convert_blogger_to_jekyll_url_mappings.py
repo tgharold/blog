@@ -155,15 +155,16 @@ def update_new_urls(unique_old_urls_data):
             # Parse the date from the filename (format: YYYY-MM-DD-*)
             # Extract the date part from the filename
             if '-' in file_basename:
-                # Split by hyphens and take the first 3 parts as date (YYYY-MM-DD)
-                date_part = file_basename.split('-', 3)[:3]
-                if len(date_part) >= 3:
+                # Split by hyphens to get components
+                parts = file_basename.split('-')
+                if len(parts) >= 4:
                     try:
-                        year, month, day = date_part[0], date_part[1], date_part[2].split('.', 1)[0]
-                        # Create the Jekyll permalink format
-                        # Based on typical Jekyll blog structure: /YYYY/MM/DD/filename/
-                        filename_only = file_basename.split('-', 3)[3].split('.', 1)[0]
-                        data['new_url'] = f"/{year}/{month}/{day}/{filename_only}/"
+                        year, month, day = parts[0], parts[1], parts[2]
+                        # Extract the title part (everything after YYYY-MM-DD-)
+                        title_parts = parts[3:]
+                        # Join title parts and remove extension
+                        filename_only = '-'.join(title_parts).split('.', 1)[0]
+                        data['new_url'] = f"/blog/{year}-{month}-{day}-{filename_only}/"
                         print(f"  New URL created: {data['new_url']}")
                     except Exception as e:
                         print(f"  Warning: Could not parse date from filename {file_basename}: {e}")
