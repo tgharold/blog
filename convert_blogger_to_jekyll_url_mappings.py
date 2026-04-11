@@ -45,9 +45,24 @@ def find_new_markdown_paths(unique_old_urls_data):
     # For now, we'll just iterate over the records
     for data in unique_old_urls_data:
         old_url = data['old_url']
-        # TODO: Implement the logic to find the new markdown file path
-        # For now, we just iterate through the data
-        print(f"Processing old_url: {old_url}")
+        # Extract year, month, and base filename from old_url
+        # Expected format: /techblog/YYYY/MM/filename.shtml
+        url_parts = old_url.strip('/').split('/')
+        if len(url_parts) >= 4 and url_parts[0] == 'techblog':
+            year = url_parts[1]
+            month = url_parts[2]
+            filename_with_ext = url_parts[3]
+            # Remove the .shtml extension from filename
+            filename = filename_with_ext.rsplit('.', 1)[0] if '.' in filename_with_ext else filename_with_ext
+
+            # TODO: Implement the logic to find the new markdown file path
+            # For now, we just iterate through the data and print the components
+            print(f"Processing old_url: {old_url}")
+            print(f"  Year: {year}")
+            print(f"  Month: {month}")
+            print(f"  Filename (without extension): {filename}")
+        else:
+            print(f"Warning: Unable to parse old_url format: {old_url}")
 
 def main():
     search_dir = '_posts'
