@@ -58,41 +58,36 @@ def find_new_markdown_paths(unique_old_urls_data):
             # Remove the .shtml extension from filename
             filename = filename_with_ext.rsplit('.', 1)[0] if '.' in filename_with_ext else filename_with_ext
 
-            # Build search pattern for markdown files in _posts/(year)/(year)-(month)-*
+            print(f"Processing old_url: {old_url}")
+            print(f"  Year: {year}")
+            print(f"  Month: {month}")
+            print(f"  Filename (without extension): {filename}")
+
             search_pattern = f"_posts/{year}/{year}-{month}-*.md"
 
-            # Find matching files
             matching_files = glob.glob(search_pattern)
 
-            # Create a variable with the search results
             found_files = matching_files
+            print(f"  Found {len(found_files)} matching markdown files")
 
-            # Look for exact matches between the base filename and found files
             exactly_matched_file = None
             for file_path in found_files:
                 # Extract just the filename without path and extension
                 file_basename = os.path.basename(file_path)
                 file_base_without_ext = file_basename.rsplit('.', 1)[0] if '.' in file_basename else file_basename
 
-                # If there's an exact match, update the data element
-                if file_base_without_ext == filename:
+                # If the original filename is contained in the markdown filename, consider it a match
+                # This handles cases where markdown filenames have date prefixes
+                if filename in file_base_without_ext:
                     exactly_matched_file = file_path
                     break
 
-            # Update path_to_new_markdown_file if we found a match
             if exactly_matched_file:
                 data['path_to_new_markdown_file'] = exactly_matched_file
-                print(f"Match found: {filename} -> {exactly_matched_file}")
+                print(f"  Match found: {filename} -> {exactly_matched_file}")
             else:
-                print(f"No exact match found for {filename}")
+                print(f"  No exact match found for {filename}")
 
-            # TODO: Implement the logic to find the new markdown file path
-            # For now, we just iterate through the data and print the components
-            print(f"Processing old_url: {old_url}")
-            print(f"  Year: {year}")
-            print(f"  Month: {month}")
-            print(f"  Filename (without extension): {filename}")
-            print(f"  Found {len(found_files)} matching markdown files: {found_files}")
         else:
             print(f"Warning: Unable to parse old_url format: {old_url}")
 
