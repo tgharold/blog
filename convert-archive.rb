@@ -55,7 +55,7 @@ if date_match
   time_element = doc.css('.Byline a[title="permanent link"]').first
   time = time_element ? time_element.text : "00:00"
 
-  date_str = "#{year}-#{month_num}-#{day.pad_start(2, '0')}T#{time}:00.000-05:00"
+  date_str = "#{year}-#{month_num}-#{day.rjust(2, '0')}T#{time}:00.000-05:00"
 else
   puts "Warning: Could not parse date format, using fallback"
   date_str = "2003-01-01T00:00:00.000-05:00"

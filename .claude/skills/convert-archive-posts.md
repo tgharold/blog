@@ -4,9 +4,9 @@ This skill helps convert HTML archive posts from the Blogger backup into proper 
 
 ## Process Overview
 
-When converting archive posts from the `techblog/2003/06` directory (or similar), follow these steps:
+When converting archive posts from the `techblog/2003/06` or `techblog/2004/` directories (or similar), follow these steps:
 
-1. **Identify the source files**: Look for `.shtml` files in archive directories like `_archives/techblog/2003/06/`
+1. **Identify the source files**: Look for `.shtml` files in archive directories like `_archives/techblog/2003/06/` or `_archives/techblog/2004/`
 2. **Extract key information**:
    - Post title (from `<div class="BlogItemTitle">`)
    - Post date (from `<div class="BlogDateHeader">` or permalink)
