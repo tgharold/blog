@@ -1,18 +1,11 @@
 #!/usr/bin/env python3
-"""
-Script to extract markdown files containing the exact pattern '](' followed by '/techblog/'
-and output their relative paths to a CSV file.
-"""
-
 import os
 import csv
 import re
 
-def find_files_with_pattern(search_dir):
-    """Find all markdown files containing links to /techblog/."""
+def find_blogger_to_jekyll_mappings(search_dir):
     matching_files = []
 
-    # Walk through all files in the directory
     for root, dirs, files in os.walk(search_dir):
         for file in files:
             if file.endswith('.md'):
@@ -20,45 +13,38 @@ def find_files_with_pattern(search_dir):
                 try:
                     with open(file_path, 'r', encoding='utf-8') as f:
                         content = f.read()
-                        # Look for markdown links that contain /techblog/
-                        # Pattern: ]( followed by /techblog/
                         if re.search(r'\]\(/techblog/', content):
-                            # Get relative path from current directory
                             relative_path = os.path.relpath(file_path)
-                            matching_files.append(relative_path)
+                            old_url_matches = re.findall(r'\]\((/techblog/.*?\.shtml)\)', content)
+                            for old_url in old_url_matches:
+                                matching_files.append((relative_path, old_url))
                 except Exception as e:
                     print(f"Error reading {file_path}: {e}")
 
     return matching_files
 
-def write_csv(file_paths, output_file):
-    """Write file paths to a CSV file."""
+def write_csv(file_data, output_file):
     with open(output_file, 'w', newline='', encoding='utf-8') as csvfile:
         writer = csv.writer(csvfile)
-        # Write header
-        writer.writerow(['file_path'])
-        # Write each file path
-        for path in file_paths:
-            writer.writerow([path])
+        writer.writerow(['file_path', 'old_url'])
+        for path, old_url in file_data:
+            writer.writerow([path, old_url])
 
 def main():
     search_dir = '_posts'
     output_file = 'convert_blogger_to_jekyll_url_mappings_results.csv'
 
-    # Check if search directory exists
     if not os.path.exists(search_dir):
         print(f"Error: Directory '{search_dir}' does not exist.")
         return
 
     print(f"Searching for files containing markdown links to '/techblog/' in '{search_dir}'...")
 
-    # Find matching files
-    matching_files = find_files_with_pattern(search_dir)
+    url_mappings = find_blogger_to_jekyll_mappings(search_dir)
 
-    print(f"Found {len(matching_files)} files containing the pattern.")
+    print(f"Found {len(url_mappings)} URL mappings in files containing the pattern.")
 
-    # Write to CSV
-    write_csv(matching_files, output_file)
+    write_csv(url_mappings, output_file)
 
     print(f"Results written to '{output_file}'")
 
