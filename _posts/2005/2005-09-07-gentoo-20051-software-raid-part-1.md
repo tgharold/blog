@@ -99,7 +99,7 @@ I always use a slightly smaller size for the 4th partition then the maximum avai
 
 Key resource: [HOWTO Gentoo Install on Software RAID](http://gentoo-wiki.com/HOWTO_Gentoo_Install_on_Software_RAID)
 
-Now I need to configure software RAID. This is a bit easier then last year since I don't need to muck with the /etc/raidtab file (instead, I'm going to use mdadm).  This is based on research that I did while [using the 2004.3 CDs](/techblog/2005/04/gentoo-and-software-raid-20043.shtml)
+Now I need to configure software RAID. This is a bit easier then last year since I don't need to muck with the /etc/raidtab file (instead, I'm going to use mdadm).  This is based on research that I did while [using the 2004.3 CDs](/blog/2005-04-19-gentoo-and-software-raid-20043/)
 
 The following loads the 'md' module and creates the nodes (/dev/md*).
 
@@ -135,7 +135,7 @@ Seems to be working fine. You can choose to wait until all of the RAID arrays fi
 <code># mdadm --detail --scan &gt;&gt; /etc/mdadm.conf
 # nano -w /etc/mdadm.conf</code>
 
-Picking up again with [Chapter 4 of the installation handbook](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=4).  (This also matches what I did back in [June 2004 with Software RAID and LVM2](/techblog/2004/06/gentoo-install-2-via-epia-me6000.shtml) and [Gentoo 2004.3 on Gigabyte GA-6VA7+ (part 1)](/techblog/2005/04/gentoo-20043-on-gigabyte-ga-6va7-part.shtml).)
+Picking up again with [Chapter 4 of the installation handbook](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=4).  (This also matches what I did back in [June 2004 with Software RAID and LVM2](/blog/2004-06-15-gentoo-install-2-via-epia-me6000/) and [Gentoo 2004.3 on Gigabyte GA-6VA7+ (part 1)](/blog/2005-04-20-gentoo-20043-on-gigabyte-ga-6va7-part-3/).)
 
 <code># mke2fs /dev/md0
 # mkswap /dev/md1 ; swapon /dev/md1

@@ -10,7 +10,7 @@ tags:
 ---
 
 
-Working on setting up subversion on the box.  I've already emerged in the apache and subversion ebuilds, now I'm working on some other configuration information.  My plan is to store my respository in /svn, in it's own logical volume.  (Very similar to when I [created my "media" logical volume in the vgmedia volume group](/techblog/2004/04/gentoo-lvm2-stuff.shtml).)
+Working on setting up subversion on the box.  I've already emerged in the apache and subversion ebuilds, now I'm working on some other configuration information.  My plan is to store my respository in /svn, in it's own logical volume.  (Very similar to when I [created my "media" logical volume in the vgmedia volume group](/blog/2004-04-30-gentoo-lvm2-stuff/).)
 
     # lvcreate -L4G -nsvn vguser 
     # mke2fs -j -c /dev/vguser/svn

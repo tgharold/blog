@@ -10,7 +10,7 @@ tags:
 ---
 
 
-([Gentoo samba page](http://www.gentoo.org/doc/en/desktop.xml#doc_chap7), [attempt #1](/techblog/2004/05/gentoo-samba-with-ads.shtml))
+([Gentoo samba page](http://www.gentoo.org/doc/en/desktop.xml#doc_chap7), [attempt #1](/blog/2004-05-01-gentoo-samba-with-ads/))
 
 Well, rebuilding the kernel didn't really do anything other then teach me how to rebuild the kernel...  I'm still getting the "net: command not found" error when trying to add the box the AD domain.  (And I'm not sure what I missed during the installation.)
 

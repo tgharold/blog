@@ -10,7 +10,7 @@ tags:
 ---
 
 
-As I said [last time](/techblog/2006/08/gentoo-amd64-on-asus-m2n32-sli-deluxe.shtml), I'm setting this unit up with the following partitions on the 2-disk RAID1 set (sda and sdb):
+As I said [last time](/blog/2006-08-25-gentoo-amd64-on-asus-m2n32-sli-deluxe-part-2/), I'm setting this unit up with the following partitions on the 2-disk RAID1 set (sda and sdb):
 
 sda1 (md0) - 128MB for /boot
 sda2 (md1) - 8GB for the root partition (primary)

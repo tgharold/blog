@@ -42,7 +42,7 @@ ARRAY /dev/md2 level=raid1 num-devices=2 devices=/dev/hda3,/dev/hdc3
 ARRAY /dev/md1 level=raid1 num-devices=2 devices=/dev/hda2,/dev/hdc2                                
 ARRAY /dev/md0 level=raid1 num-devices=2 devices=/dev/hda1,/dev/hdc1 </code>
 
-Picking up again with [Chapter 4 of the installation handbook](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=4).  This is also very similar to what I did back in [June 2004 with Software RAID and LVM2](/techblog/2004/06/gentoo-install-2-via-epia-me6000.shtml).
+Picking up again with [Chapter 4 of the installation handbook](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=4).  This is also very similar to what I did back in [June 2004 with Software RAID and LVM2](/blog/2004-06-15-gentoo-install-2-via-epia-me6000/).
 
 <code># mke2fs /dev/md0
 # mke2fs -j /dev/md1

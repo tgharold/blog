@@ -13,7 +13,7 @@ tags:
 
 <b>Note: These directions are works-in-progress... in fact, they might not even work at all until I find out why I'm ending up with non-bootable systems (looks like a bug in the 2.6 kernel).</b>
 
-([previous step](/techblog/2005/04/gentoo-20043-on-gigabyte-ga-6va7-part_19.shtml))
+([previous step](/blog/2005-04-19-gentoo-20043-on-gigabyte-ga-6va7-part-1/))
 
 Time to configure the timezone and setup the kernel, this is [chapter 7 in the Gentoo handbook](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=7).
 

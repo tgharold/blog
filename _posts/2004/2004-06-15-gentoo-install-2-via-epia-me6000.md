@@ -111,4 +111,4 @@ Next we're ready to install the base system, see [6. Installing the Gentoo Base 
 # source /etc/profile
 # emerge sync</pre>
 
-Synchronization of the portage tree will take a while (depending on the speed of your internet connection and how fast your system is).  My system downloaded 60MB or so worth of updates and took 30-60 minutes (at a guess).  Meanwhile, I'll continue this topic in [my next post](/techblog/2004/06/gentoo-install-3-bootstrapping.shtml).
+Synchronization of the portage tree will take a while (depending on the speed of your internet connection and how fast your system is).  My system downloaded 60MB or so worth of updates and took 30-60 minutes (at a guess).  Meanwhile, I'll continue this topic in [my next post](/blog/2004-06-15-gentoo-install-3-bootstrapping/).

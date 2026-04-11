@@ -19,6 +19,6 @@ Failed to load mii
 Loading module via-rhine...
 Failed to load via-rhine</pre>
 
-The second error is because I had [configured the kernel](/techblog/2004/06/gentoo-install-5-manual-kernel.shtml) to load "via-rhine" as <b>built-in</b> and not as a <b>module</b>.  You can do one or the other, but not both.
+The second error is because I had [configured the kernel](/blog/2004-06-16-gentoo-install-5-manual-kernel-configuration/) to load "via-rhine" as <b>built-in</b> and not as a <b>module</b>.  You can do one or the other, but not both.
 
 Not sure about the "mii" error, I'll merely comment it out in the autoload config file for now and see what happens.

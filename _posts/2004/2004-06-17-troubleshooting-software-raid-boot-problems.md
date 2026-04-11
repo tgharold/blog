@@ -21,7 +21,7 @@ grub&gt; boot</pre>
 
 This starts the kernel boot process, which will then lead me to my second error.  In the meantime, if you use [shift-PgUp] and [shift-PgDn] you can scroll back and forth through the boot messages.  A minor problem is that since the raid didn't shutdown cleanly, there are numerous "md: md<i>x</i>: raid array is not clean -- starting background reconstruction" messages.  And I can't even begin to troubleshoot the "Kernel panic: No init found" error until resync is done (that's a 2.5-3.0 hour process).
 
-Looking back at my [kernel configuration](/techblog/2004/06/gentoo-install-5-manual-kernel.shtml), I see that Software RAID with RAID1 support was compiled as BUILTIN, and ext2/ext3 were installed by default if I remember correctly.  Those are two of the possible errors that could cause the kernel not to be able to read from the "/" (root) partition.
+Looking back at my [kernel configuration](/blog/2004-06-16-gentoo-install-5-manual-kernel-configuration/), I see that Software RAID with RAID1 support was compiled as BUILTIN, and ext2/ext3 were installed by default if I remember correctly.  Those are two of the possible errors that could cause the kernel not to be able to read from the "/" (root) partition.
 
 Also possible is that the "/" filesystem was not properly mounted during the install.  The following is what I've tried to do in order to fix the issue (or at least diagnose the issue).  <b>I would strongly recommend that you do not use the following on a production system unless you understand what everything does.</b>  Since I don't have any data on the system (other then config files), I have a good amount of latitude with regards to what I can do.  Hopefully, since /boot, /usr, /opt, /var and /home are intact, things will go quicker then the first install.
 
@@ -111,4 +111,4 @@ livecd / # emerge sync
 livecd / # cd /usr/portage
 livecd / # scripts/bootstrap.sh</pre>
 
-If bootstrap runs correctly (and it should now that I re-formatted the /opt, /usr, /var, /home, /tmp, and /var/tmp volumes), I can pick back up with the [rest of my original install process](/techblog/2004/06/gentoo-install-3-bootstrapping.shtml)
+If bootstrap runs correctly (and it should now that I re-formatted the /opt, /usr, /var, /home, /tmp, and /var/tmp volumes), I can pick back up with the [rest of my original install process](/blog/2004-06-15-gentoo-install-3-bootstrapping/)

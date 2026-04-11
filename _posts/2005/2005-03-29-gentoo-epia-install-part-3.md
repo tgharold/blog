@@ -10,7 +10,7 @@ tags:
 ---
 
 
-The RAID array has finally finished synchronizing.  Continuing on, referecing my [June 2004 notes about setting up LVM](/techblog/2004/06/gentoo-install-2-via-epia-me6000.shtml).
+The RAID array has finally finished synchronizing.  Continuing on, referecing my [June 2004 notes about setting up LVM](/blog/2004-06-15-gentoo-install-2-via-epia-me6000/).
 
 Things went well up until I started extracting the portage tree.  Then I started to get random errors, which means I need to stop and verify that the hardware is behaving properly.
 

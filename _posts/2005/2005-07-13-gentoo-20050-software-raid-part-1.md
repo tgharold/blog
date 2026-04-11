@@ -15,7 +15,7 @@ tags:
 
 Gentoo 2005.0 Software RAID (part 1) - Going to try again with Gentoo 2005.0 in a software RAID with LVM configuration.  There's a [post](http://forums.gentoo.org/viewtopic-t-358713.html) on the Gentoo forums that indicates it may now be possible to get it up and running (seems to indicate there was a bug with kernels prior to 2.6.12).
 
-The hardware that I'm using is a [VIA EPIA ME6000](/techblog/2005/03/gentoo-epia-install-part-1.shtml) (full details).  Basically 2x160GB drives, which will be mirrored.  
+The hardware that I'm using is a [VIA EPIA ME6000](/blog/2005-03-29-gentoo-epia-install-part-1/) (full details).  Basically 2x160GB drives, which will be mirrored.  
 
 Start with the usual first steps (I prefer to ssh into my box during the build, it allows me to keep a log file of all commands, errors, etc.).
 

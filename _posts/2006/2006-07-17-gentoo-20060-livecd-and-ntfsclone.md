@@ -10,7 +10,7 @@ tags:
 ---
 
 
-In the past, I've been using the [Knoppix LiveCD and NTFSClone](/techblog/2005/10/imaging-tecra-8200-windows-2000.shtml) to make snapshot images of Windows workstations.  However, since Knoppix 4.0.2 doesn't auto-detect the ethernet port on the Asus A8N-VM CSM motherboard, I tried out the Gentoo AMD64 2006.0 LiveCD instead.
+In the past, I've been using the [Knoppix LiveCD and NTFSClone](/blog/2005-10-17-imaging-a-tecra-8200-windows-2000-install-using-knoppix-ntfsclone-and-samba/) to make snapshot images of Windows workstations.  However, since Knoppix 4.0.2 doesn't auto-detect the ethernet port on the Asus A8N-VM CSM motherboard, I tried out the Gentoo AMD64 2006.0 LiveCD instead.
 
 The big trick with the newer LiveCDs is keeping them from booting into X.  At the <b>boot:</b> prompt you need to enter "<b>gentoo nox</b>" in order to prevent that from happening.  That gives you the normal command line that has root level access to the LiveCD and you can switch between sessions using [Alt-F1] and [Alt-F2].
 
