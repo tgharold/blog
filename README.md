@@ -8,3 +8,8 @@ Redoing things in a git repo gives me more control, less dependency on a 3rd par
 
 This blog is based on the [Minimal Mistakes Skinny Bones](https://github.com/mmistakes/skinny-bones-jekyll/) template.
 It had to be adjusted slightly to account for GitHub pages putting the root of the GitHub repo at the "/blog" sub-directory.
+
+## URL Mapping CSV Files
+Two CSV files are generated during the URL mapping process:
+1. `convert_blogger_to_jekyll_url_mappings_results.csv` - Contains all file_path/old_url mappings
+2. `convert_blogger_to_jekyll_url_mappings.csv` - Contains unique old_url values only
