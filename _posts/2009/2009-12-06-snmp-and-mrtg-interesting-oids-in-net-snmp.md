@@ -43,15 +43,15 @@ Note: Same issue as logging the number of users, MRTG only samples every 5 minut
 Here's a fragment from my MRTG configuration file that shows how I reported on the number of users and processes.  I could not get MRTG to resolve the plain names to OIDs automatically, so I had to put in the full numeric OIDs.
 
 ```
-### PROCESSES &amp; USERS
+### PROCESSES & USERS
 Options[_]: gauge, integer, noborder, noinfo, nolegend, noo, nopercent, pngdate, printrouter, transparent
 WithPeak[_]: ymw
 Legend2[_]:
 Legend3[_]:
 Legend4[_]:
 
-#Target[localhost.system.users]: hrSystemNumUsers.0&amp;hrSystemNumUsers.0:public@localhost
-Target[localhost.system.users]: .1.3.6.1.2.1.25.1.5.0&amp;.1.3.6.1.2.1.25.1.5.0:public@localhost
+#Target[localhost.system.users]: hrSystemNumUsers.0&hrSystemNumUsers.0:public@localhost
+Target[localhost.system.users]: .1.3.6.1.2.1.25.1.5.0&.1.3.6.1.2.1.25.1.5.0:public@localhost
 MaxBytes[localhost.system.users]: 50
 YLegend[localhost.system.users]: Users
 LegendI[localhost.system.users]: Users
@@ -62,8 +62,8 @@ PageTop[localhost.system.users]: &lt;h1&gt;firewall: Approximate System Users&lt
 &#160;&#160;&#160;&#160;&lt;div id="sysdetails"&gt;
 &#160;&#160;&#160;&#160;&lt;/div&gt;
 
-#Target[localhost.system.processes]: hrSystemProcesses.0&amp;hrSystemProcesses.0:public@localhost
-Target[localhost.system.processes]: .1.3.6.1.2.1.25.1.6.0&amp;.1.3.6.1.2.1.25.1.6.0:public@localhost
+#Target[localhost.system.processes]: hrSystemProcesses.0&hrSystemProcesses.0:public@localhost
+Target[localhost.system.processes]: .1.3.6.1.2.1.25.1.6.0&.1.3.6.1.2.1.25.1.6.0:public@localhost
 MaxBytes[localhost.system.processes]: 5000
 YLegend[localhost.system.processes]: Processes
 LegendI[localhost.system.processes]: Processes
@@ -124,7 +124,7 @@ HOST-RESOURCES-MIB::hrProcessorLoad.768 = INTEGER: 1
 HOST-RESOURCES-MIB::hrProcessorLoad.769 = INTEGER: 1
 ```
 
-So by looking at the hrProcessorLoad for nodes 768 &amp; 769, we can track the CPU utilization on this PC.  But unless you can get MRTG to load the MIBs, you'll need to use the numeric OID format.
+So by looking at the hrProcessorLoad for nodes 768 & 769, we can track the CPU utilization on this PC.  But unless you can get MRTG to load the MIBs, you'll need to use the numeric OID format.
 
 ```
 # snmpwalk -v 1 -c public localhost -On | egrep "(768|769)" | grep "INTEGER"

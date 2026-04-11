@@ -82,11 +82,11 @@ Okay, now for the analysis...
 
 1) Is there a "St Jude's Presbyterian Church" in East London?
 
-Not according to the "[Churches in East London](http://www.eastlondonsa.com/church.html)" web page.  The street address given, "72 Belgravia Crescent" matches the Assembly of God church which is not a Presbyterian church.  Google turns up a bunch of results for "[St. Jude's Presbyterian Church London](http://www.google.com/search?q=St.+Jude%27s+Presbyterian+Church+London&amp;hl=en&amp;lr=&amp;ie=UTF-8&amp;oe=UTF-8&amp;c2coff=1&amp;start=20&amp;sa=N)" none of which are matches.  Especially not with the address given.  Searching on "[Presbyterian Church Southernwood  London](http://www.google.com/search?hl=en&amp;ie=UTF-8&amp;oe=UTF-8&amp;q=Presbyterian+Church+Southernwood++London&amp;btnG=Google+Search)" turns up only 29 hits, again with no matches to a real church.
+Not according to the "[Churches in East London](http://www.eastlondonsa.com/church.html)" web page.  The street address given, "72 Belgravia Crescent" matches the Assembly of God church which is not a Presbyterian church.  Google turns up a bunch of results for "[St. Jude's Presbyterian Church London](http://www.google.com/search?q=St.+Jude%27s+Presbyterian+Church+London&hl=en&lr=&ie=UTF-8&oe=UTF-8&c2coff=1&start=20&sa=N)" none of which are matches.  Especially not with the address given.  Searching on "[Presbyterian Church Southernwood  London](http://www.google.com/search?hl=en&ie=UTF-8&oe=UTF-8&q=Presbyterian+Church+Southernwood++London&btnG=Google+Search)" turns up only 29 hits, again with no matches to a real church.
 
 2) What about the supposed death of John Ryerson on Feb 9 2002?
 
-Googling on "[+"john ryerson" +february](http://www.google.com/search?hl=en&amp;lr=&amp;ie=UTF-8&amp;oe=UTF-8&amp;c2coff=1&amp;q=%2B%22john+ryerson%22+%2Bfebruary&amp;btnG=Google+Search)" turns up some very interesting results, and a few verbatim copies of the e-mail that I just received.  These all pretty much score it up as a scam.
+Googling on "[+"john ryerson" +february](http://www.google.com/search?hl=en&lr=&ie=UTF-8&oe=UTF-8&c2coff=1&q=%2B%22john+ryerson%22+%2Bfebruary&btnG=Google+Search)" turns up some very interesting results, and a few verbatim copies of the e-mail that I just received.  These all pretty much score it up as a scam.
 
 [NOTIFICATION OF BEQUEST](http://www.mail-archive.com/archivio@pisa.amnesty.it/msg00679.html)
 - Identical contact information for Golden Source Chambers, except this letter purports to be from the solicitor.  Asks you to fax current telephone number and address to the solicitor.
@@ -111,9 +111,9 @@ What it looks like is either an attempt at identity theft, or a soft-sell in ord
 
 Other useful searches which turn up additional versions of the scam spam:
 
-"[Notification of Bequest](http://www.google.com/search?hl=en&amp;lr=&amp;ie=UTF-8&amp;oe=UTF-8&amp;c2coff=1&amp;q=%22Notification+of+Bequest%22&amp;btnG=Google+Search)"
-"[Golden Source Chambers](http://www.google.com/search?q=%22Golden+Source+Chambers%22&amp;btnG=Google+Search&amp;hl=en&amp;lr=&amp;ie=UTF-8&amp;oe=UTF-8&amp;c2coff=1)"
-"[John Ryerson made you a beneficiary to his will](http://www.google.com/search?hl=en&amp;lr=&amp;ie=UTF-8&amp;oe=UTF-8&amp;c2coff=1&amp;q=%22John+Ryerson+made+you+a+beneficiary+to+his+will%22&amp;btnG=Google+Search)"
-"[Being a widely traveled man](http://www.google.com/search?hl=en&amp;lr=&amp;ie=UTF-8&amp;oe=UTF-8&amp;c2coff=1&amp;q=%22Being+a+widely+traveled+man%22&amp;btnG=Google+Search)"
-"[former managing director and pioneer staff of a giant construction company](http://www.google.com/search?hl=en&amp;lr=&amp;ie=UTF-8&amp;oe=UTF-8&amp;c2coff=1&amp;q=%22former+managing+director+and+pioneer+staff+of+a+giant+construction+company%22&amp;btnG=Google+Search)"
-"[died on the 9th day of February 2002](http://www.google.com/search?hl=en&amp;lr=&amp;ie=UTF-8&amp;oe=UTF-8&amp;c2coff=1&amp;q=%22died+on+the+9th+day+of+February+2002%22&amp;btnG=Google+Search)"
+"[Notification of Bequest](http://www.google.com/search?hl=en&lr=&ie=UTF-8&oe=UTF-8&c2coff=1&q=%22Notification+of+Bequest%22&btnG=Google+Search)"
+"[Golden Source Chambers](http://www.google.com/search?q=%22Golden+Source+Chambers%22&btnG=Google+Search&hl=en&lr=&ie=UTF-8&oe=UTF-8&c2coff=1)"
+"[John Ryerson made you a beneficiary to his will](http://www.google.com/search?hl=en&lr=&ie=UTF-8&oe=UTF-8&c2coff=1&q=%22John+Ryerson+made+you+a+beneficiary+to+his+will%22&btnG=Google+Search)"
+"[Being a widely traveled man](http://www.google.com/search?hl=en&lr=&ie=UTF-8&oe=UTF-8&c2coff=1&q=%22Being+a+widely+traveled+man%22&btnG=Google+Search)"
+"[former managing director and pioneer staff of a giant construction company](http://www.google.com/search?hl=en&lr=&ie=UTF-8&oe=UTF-8&c2coff=1&q=%22former+managing+director+and+pioneer+staff+of+a+giant+construction+company%22&btnG=Google+Search)"
+"[died on the 9th day of February 2002](http://www.google.com/search?hl=en&lr=&ie=UTF-8&oe=UTF-8&c2coff=1&q=%22died+on+the+9th+day+of+February+2002%22&btnG=Google+Search)"

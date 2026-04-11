@@ -10,7 +10,7 @@ tags:
 ---
 
 
-Picking up with part 7c after [compiling the kernel](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=7).  Now you need to install your kernel into the boot partition. Change the "2.6.12-Sep2005" portion of the filenames to whatever you want.
+Picking up with part 7c after [compiling the kernel](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=7).  Now you need to install your kernel into the boot partition. Change the "2.6.12-Sep2005" portion of the filenames to whatever you want.
 
 ```
 # cp arch/i386/boot/bzImage /boot/kernel-2.6.12-Sep2005
@@ -66,7 +66,7 @@ proc /proc proc defaults 0 0
 shm /dev/shm tmpfs nodev,nosuid,noexec 0 0
 ```
 
-Now, some misc stuff (see [networking configuration](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=8#doc_chap2) for information on setting up DHCP or static IPs):
+Now, some misc stuff (see [networking configuration](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=8#doc_chap2) for information on setting up DHCP or static IPs):
 
 ```
 # nano -w /etc/conf.d/hostname

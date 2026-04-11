@@ -18,7 +18,7 @@ It's also a good idea to make a backup file of your prefs.js file prior to makin
 
 user_pref("mail.server.server<i>x</i>.trash_folder_name", "Deleted Items"); 
 
-Changing the default folder for saved copies of sent items from "Sent" to "Sent Items" is a bit easier.  Just right-click on the e-mail account and pick "Properties", then look in "Copies &amp; Folders" and change where Mozilla/Thunderbird stores copies of e-mails that you have sent.
+Changing the default folder for saved copies of sent items from "Sent" to "Sent Items" is a bit easier.  Just right-click on the e-mail account and pick "Properties", then look in "Copies & Folders" and change where Mozilla/Thunderbird stores copies of e-mails that you have sent.
 
 For the technically minded, the lines in "prefs.js" that are affected by this change are:
 

@@ -145,7 +145,7 @@ Seems to be working fine. You can choose to wait until all of the RAID arrays fi
 # nano -w /etc/mdadm.conf
 ```
 
-Picking up again with [Chapter 4 of the installation handbook](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=4).  (This also matches what I did back in [June 2004 with Software RAID and LVM2](/blog/2004-06-15-gentoo-install-2-via-epia-me6000/) and [Gentoo 2004.3 on Gigabyte GA-6VA7+ (part 1)](/blog/2005-04-20-gentoo-20043-on-gigabyte-ga-6va7-part-3/).)
+Picking up again with [Chapter 4 of the installation handbook](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=4).  (This also matches what I did back in [June 2004 with Software RAID and LVM2](/blog/2004-06-15-gentoo-install-2-via-epia-me6000/) and [Gentoo 2004.3 on Gigabyte GA-6VA7+ (part 1)](/blog/2005-04-20-gentoo-20043-on-gigabyte-ga-6va7-part-3/).)
 
 ```
 # mke2fs /dev/md0
@@ -187,7 +187,7 @@ If we're setting up LVM2, we need to now prep the 4th partition and setup the lo
 # chmod 1777 /mnt/gentoo/var/tmp
 ```
 
-Now we move into [Installation (chapter 5)](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=5) in the handbook. Verify your system date and then start extracting the tarballs.  Notice that the only stage available on the Universal CD is now <b>stage3</b>.
+Now we move into [Installation (chapter 5)](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=5) in the handbook. Verify your system date and then start extracting the tarballs.  Notice that the only stage available on the Universal CD is now <b>stage3</b>.
 
 ```
 # date
@@ -277,7 +277,7 @@ CXXFLAGS="${CFLAGS}"
 MAKEOPTS="-j2"
 ```
 
-Now to [Chapter 6 - Installing the Gentoo Base System](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=6).  Time to "chroot".
+Now to [Chapter 6 - Installing the Gentoo Base System](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=6).  Time to "chroot".
 
 ```
 # mirrorselect -i -o &gt;&gt; /mnt/gentoo/etc/make.conf
@@ -347,7 +347,7 @@ Added: postgres samba
 Added: -alsa -arts -bitmap-fonts -gtk2 -mikmod -motif -truetype-fonts -type1-fonts -X
 Removed: -gif -jpeg -mpeg -oggvorbis -pdflib -png 
 
-Since I'm starting with a stage 3 tarball, I'm skipping directly to [7. Configuring the Kernel](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=7) in the handbook.
+Since I'm starting with a stage 3 tarball, I'm skipping directly to [7. Configuring the Kernel](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=7) in the handbook.
 
 ```
 # ls /usr/share/zoneinfo

@@ -10,7 +10,7 @@ tags:
 ---
 
 
-After a few hours last night (and a lot of help from <i>DNS &amp; BIND Cookbook</i>) I finally got my DHCP server on the Gentoo box to automatically add records to my local LAN's DNS zone.  It's not terribly difficult to do, just a little tricky until you get all the ducks in a row and put everything in the right place.
+After a few hours last night (and a lot of help from <i>DNS & BIND Cookbook</i>) I finally got my DHCP server on the Gentoo box to automatically add records to my local LAN's DNS zone.  It's not terribly difficult to do, just a little tricky until you get all the ducks in a row and put everything in the right place.
 
 First off, I can't recommend enough making use of SubVersion to keep track of configuration / zone file changes.  It greatly simplifies things in case you have to revert to a previous version.  It's also a good way to get comfortable with SVN command-line usage because you're not doing anything complex (mostly 'svn add' and 'svn ci' commands).
 

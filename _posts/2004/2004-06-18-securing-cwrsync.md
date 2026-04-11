@@ -16,7 +16,7 @@ However, since the next step is that we want to setup pulling those log files au
 
 After digging around a bit here's what I've found:
 
-The <b>cwRSync Service</b> [does not support SSH](http://www.itefix.no/phpws/index.php?module=faq&amp;FAQ_op=view&amp;FAQ_id=22), so there's no way to connect securely to a rsync server that is using cwRSync as its daemon.  Future releases are expected to add [ssh support for cwRSync servers](http://www.itefix.no/phpws/index.php?module=faq&amp;FAQ_op=view&amp;FAQ_id=26).  Locking down through IP address and username/password is the limit of what you can do for security, all traffic is in the clear (unless you have IPSec between the two machines).
+The <b>cwRSync Service</b> [does not support SSH](http://www.itefix.no/phpws/index.php?module=faq&FAQ_op=view&FAQ_id=22), so there's no way to connect securely to a rsync server that is using cwRSync as its daemon.  Future releases are expected to add [ssh support for cwRSync servers](http://www.itefix.no/phpws/index.php?module=faq&FAQ_op=view&FAQ_id=26).  Locking down through IP address and username/password is the limit of what you can do for security, all traffic is in the clear (unless you have IPSec between the two machines).
 
 However, you <b>can</b> use cwRSync in a client-configuration and route the traffic over SSH to a SSH-capable rsync server.
 

@@ -52,4 +52,4 @@ The root-cause was that back when I did the first part of the install, not only 
 
 Links:
 
-[www.gentoo.pl](http://www.gentoo.pl/?id=forum&amp;id_watek=1669&amp;posty=1) - This page might've had the answer, but unfortunately it was written in polish.
+[www.gentoo.pl](http://www.gentoo.pl/?id=forum&id_watek=1669&posty=1) - This page might've had the answer, but unfortunately it was written in polish.

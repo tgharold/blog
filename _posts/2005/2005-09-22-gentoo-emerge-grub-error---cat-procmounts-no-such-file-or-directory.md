@@ -47,7 +47,7 @@ Most posters indicate that you must run the following command prior to entering 
 mount -t proc /proc /mnt/gentoo/proc 
 ```
 
-However, I can look back at my session logs and see that I already ran that particular command before entering the chroot.  Oh, wait... no I did not run that particular command. (This is where using a terminal program like SecureCRT comes in handy.)  This command should have been run just prior to entering the chroot environment.  ([See chapter 6 of the installation handbook.](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=6))
+However, I can look back at my session logs and see that I already ran that particular command before entering the chroot.  Oh, wait... no I did not run that particular command. (This is where using a terminal program like SecureCRT comes in handy.)  This command should have been run just prior to entering the chroot environment.  ([See chapter 6 of the installation handbook.](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=6))
 
 The fix should be as simple as:
 

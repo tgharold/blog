@@ -14,10 +14,10 @@ Shopping around for some removable drive bays (either PATA or SATA).  I definite
 
 It's a pity that their multi-bay SATA systems aren't ready yet, because that looks interesting.  (Holds 3 SATA drives in removable shells, takes up 2 5.25" drive bays, has a single large fan on the back.)
 
-[DRW115ATA](http://www.startech.com/ststore/itemdetail.cfm?ProductID=DRW115ATA&amp;topbar=topbara.htm)
-[DRW115ATABK](http://www.startech.com/ststore/itemdetail.cfm?ProductID=DRW115ATABK&amp;topbar=topbara.htm) - Black, aluminim, PATA, [~$60](http://shopper.cnet.com/StarTech_com_Professional_Aluminum_Black_IDE_Removable_Hard_Drive_Drawer_DRW115ATABK___storage_mobile_rack__frame_and_carrier_/4014-3014_9-30373780.html?tag=1htrdr&amp;q=DRW115ATABK)
-[DRW115SAT](http://www.startech.com/ststore/itemdetail.cfm?ProductID=DRW115SAT&amp;topbar=topbara.htm)
-[DRW115SATBK](http://www.startech.com/ststore/itemdetail.cfm?ProductID=DRW115SATBK&amp;topbar=topbara.htm) - SATA, aluminum, black, [~$60-70](http://shopper.cnet.com/StarTech_com_Serial_ATA_Drive_Drawer_with_Shock_Absorbers___Professional_Series___storage_bay_adapter_with_fan/4014-3014_9-30582372.html?tag=1htrdr&amp;q=drw115SATBK)
+[DRW115ATA](http://www.startech.com/ststore/itemdetail.cfm?ProductID=DRW115ATA&topbar=topbara.htm)
+[DRW115ATABK](http://www.startech.com/ststore/itemdetail.cfm?ProductID=DRW115ATABK&topbar=topbara.htm) - Black, aluminim, PATA, [~$60](http://shopper.cnet.com/StarTech_com_Professional_Aluminum_Black_IDE_Removable_Hard_Drive_Drawer_DRW115ATABK___storage_mobile_rack__frame_and_carrier_/4014-3014_9-30373780.html?tag=1htrdr&q=DRW115ATABK)
+[DRW115SAT](http://www.startech.com/ststore/itemdetail.cfm?ProductID=DRW115SAT&topbar=topbara.htm)
+[DRW115SATBK](http://www.startech.com/ststore/itemdetail.cfm?ProductID=DRW115SATBK&topbar=topbara.htm) - SATA, aluminum, black, [~$60-70](http://shopper.cnet.com/StarTech_com_Serial_ATA_Drive_Drawer_with_Shock_Absorbers___Professional_Series___storage_bay_adapter_with_fan/4014-3014_9-30582372.html?tag=1htrdr&q=drw115SATBK)
 
 Extra bays are $20-$30, extra caddies are $50-$60.
 

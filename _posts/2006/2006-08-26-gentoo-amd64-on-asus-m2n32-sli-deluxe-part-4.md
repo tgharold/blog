@@ -75,7 +75,7 @@ Linux Kernel v2.6.17-gentoo-r4 Configuration
 Now we can compile and copy the kernel to the /boot partition.
 
 ```
-# make &amp;&amp; make modules_install
+# make && make modules_install
 # ls -l /boot
 # ls -l arch/x86_64/boot
 # df
@@ -85,7 +85,7 @@ Now we can compile and copy the kernel to the /boot partition.
 # ls -l /boot
 ```
 
-Next is [Chapter 8, Configuring your System](http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?part=1&amp;chap=8).
+Next is [Chapter 8, Configuring your System](http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?part=1&chap=8).
 
 ```
 (chroot) livecd linux # nano -w /etc/fstab

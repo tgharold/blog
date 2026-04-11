@@ -30,7 +30,7 @@ There's also the (possible) issue that VNC is nowhere as efficient over the netw
 
 This is where I'm heading at the moment.  It uses SSH for authentication, so we can lock things down that way (forcing the use of public keys).
 
-Now, a word of caution.  A misconfigured SSH or X11 server is a security breach waiting to happen.  Pay close attention to chapter 9 in <i>SSH, The Secure Shell, The Definitive Guide</i> by Barrett, Silverman &amp; Byrnes (published by O'Reilly).
+Now, a word of caution.  A misconfigured SSH or X11 server is a security breach waiting to happen.  Pay close attention to chapter 9 in <i>SSH, The Secure Shell, The Definitive Guide</i> by Barrett, Silverman & Byrnes (published by O'Reilly).
 
 <b>Installing [Xming](http://www.straightrunning.com/XmingNotes/) on Windows</b>
 
@@ -95,7 +95,7 @@ If you haven't already ran Xming you should run XLaunch and just roll through th
 
 # xeyes
 
-And you should see the xeyes application open up on your Windows system.  If you want to continue to start up other X applications, put an ampersand (&amp;) at the end of the line.
+And you should see the xeyes application open up on your Windows system.  If you want to continue to start up other X applications, put an ampersand (&) at the end of the line.
 
 <b>More advanced stuff</b>
 <ol>

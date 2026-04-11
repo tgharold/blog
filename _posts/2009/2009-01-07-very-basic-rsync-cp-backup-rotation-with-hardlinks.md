@@ -69,4 +69,4 @@ References:
 
 [Easy Automated Snapshot-Style Backups with Linux and Rsync](http://www.mikerubel.org/computers/rsync_snapshots/)
 
-[Local incremental snap shots with rsync](http://www.synology.at/enu/forum/viewtopic.php?f=9&amp;t=11471&amp;p=48163)
+[Local incremental snap shots with rsync](http://www.synology.at/enu/forum/viewtopic.php?f=9&t=11471&p=48163)

@@ -10,7 +10,7 @@ tags:
 ---
 
 
-Time to [configure the Gentoo kernel](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=7).  I'm configuring this for my VIA EPIA ME6000 motherboard.  (Notice that I'm now including the LVM2 components as part of my base installation.)
+Time to [configure the Gentoo kernel](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=7).  I'm configuring this for my VIA EPIA ME6000 motherboard.  (Notice that I'm now including the LVM2 components as part of my base installation.)
 
 ```
 # emerge mdadm
@@ -68,5 +68,5 @@ Linux Kernel v2.6.11 Configuration
 Exit and save your configuration. Then build the kernel (the following command is for 2.6 kernels). Expect the compile to take about an hour.
 
 ```
-# make &amp;&amp; make modules_install
+# make && make modules_install
 ```

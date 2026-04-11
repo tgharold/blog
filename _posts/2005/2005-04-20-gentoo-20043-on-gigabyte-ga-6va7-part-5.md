@@ -15,7 +15,7 @@ tags:
 
 (previous step)
 
-Time to [install the bootloader](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=10).  I plan on using GRUB:
+Time to [install the bootloader](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=10).  I plan on using GRUB:
 
 ```
 # emerge grub

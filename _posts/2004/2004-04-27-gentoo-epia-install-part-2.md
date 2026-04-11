@@ -10,7 +10,7 @@ tags:
 ---
 
 
-Picking up at [chapter 5c of the Gentoo Handbook, Using a Stage from the LiveCD](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=5).  (Also see my [previous post](/blog/2004-04-27-gentoo-epia-install-part-1/) where I configured the disks.)  Here is where it gets fun...  I'm going to try starting with the x86 stage1 file:
+Picking up at [chapter 5c of the Gentoo Handbook, Using a Stage from the LiveCD](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=5).  (Also see my [previous post](/blog/2004-04-27-gentoo-epia-install-part-1/) where I configured the disks.)  Here is where it gets fun...  I'm going to try starting with the x86 stage1 file:
 
 	cd /mnt/gentoo
 	tar -xvjpf /mnt/cdrom/stages/stage1-x86-20040218.tar.bz2
@@ -35,4 +35,4 @@ Now, [supposedly GCC 3.3 allows](http://www.epiawiki.org/wiki/tiki-index.php?pag
 	USE=""
 	CXXFLAGS="$(CFLAGS)"
 
-Onward to step 6, [Installing the Gentoo Base System](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=6).  The mirrorselect application chose "pair.com" as my mirror (which is fine, that's where I downloaded the ISOs from).  Alternate site is datapipe.net.  Not going to muck with the default USE flags at the moment, instead I'm going to step right into 6c (progressing from stage1 to stage2).  This will take a while (if it works!).
+Onward to step 6, [Installing the Gentoo Base System](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=6).  The mirrorselect application chose "pair.com" as my mirror (which is fine, that's where I downloaded the ISOs from).  Alternate site is datapipe.net.  Not going to muck with the default USE flags at the moment, instead I'm going to step right into 6c (progressing from stage1 to stage2).  This will take a while (if it works!).

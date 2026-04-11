@@ -11,12 +11,12 @@ tags:
 
 
 
-[ [gentoo-user] Help with new system](http://groups.google.com/groups?hl=en&amp;lr=&amp;ie=UTF-8&amp;oe=UTF-8&amp;c2coff=1&amp;selm=16ucP-pC-7%40gated-at.bofh.it) (discusses partition sizes)
+[ [gentoo-user] Help with new system](http://groups.google.com/groups?hl=en&lr=&ie=UTF-8&oe=UTF-8&c2coff=1&selm=16ucP-pC-7%40gated-at.bofh.it) (discusses partition sizes)
 
 Possible partitions:
 
 /boot ext2 64MB 
-- [handbook](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=4) says 32MB
+- [handbook](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=4) says 32MB
 - [needs to be a primary partition](http://www.linuxforum.com/linux-partition/partition-4.html), type "linux native"
 - can be mounted read-only
 

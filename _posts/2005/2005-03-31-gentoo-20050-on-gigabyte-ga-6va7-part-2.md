@@ -72,7 +72,7 @@ Command: p
 Command: w
 ```
 
-This gives me a 128MB boot area, a 2GB swap area, a 2GB root area, with the rest of the disk set aside for my LVM partitions.  Repeat the above commands to configure the 2nd disk in the same fashion.  Note that I'm using a different partition type then that shown in [chapter 4.c](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=4).  The 'fd' partition type is what I need to use since all 4 partitions on hda/hdc are going to be put into a software RAID1 set.
+This gives me a 128MB boot area, a 2GB swap area, a 2GB root area, with the rest of the disk set aside for my LVM partitions.  Repeat the above commands to configure the 2nd disk in the same fashion.  Note that I'm using a different partition type then that shown in [chapter 4.c](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=4).  The 'fd' partition type is what I need to use since all 4 partitions on hda/hdc are going to be put into a software RAID1 set.
 
 The 3rd disk is a single primary partition with the '8E' (LVM) type.  (Need to verify this, but I'm pretty sure that's correct.)
 

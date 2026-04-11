@@ -12,7 +12,7 @@ tags:
 
 ([previous entry](/blog/2004-04-28-gentoo-epia-install-part-5/))
 
-Now to start with [chapter 7e, installing extra kernel modules](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=7).  I didn't see any extra modules that needed to be emerge'd, so I skipped straight to the editing of the autoload file.  Actually I lie, I have to add in LVM2 module support.  So I need to follow the steps in [step 13 of the LVM install guide](http://www.gentoo.org/doc/en/lvm2.xml) and add LVM to the auto-load listing.
+Now to start with [chapter 7e, installing extra kernel modules](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=7).  I didn't see any extra modules that needed to be emerge'd, so I skipped straight to the editing of the autoload file.  Actually I lie, I have to add in LVM2 module support.  So I need to follow the steps in [step 13 of the LVM install guide](http://www.gentoo.org/doc/en/lvm2.xml) and add LVM to the auto-load listing.
 
 nano -w /etc/modules.autoload.d/kernel-2.6
 
@@ -48,7 +48,7 @@ Following the [sample autoload file from the MP3 server article](http://www.ath0
     ehci-hcd    
     usb-storage
 
-Don't forget to run "modules-update" when done.  Onward to [chapter 8, configuring your system](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=8).  First up is editing the "/etc/fstab" table, which controls what gets mounted at startup.  I'm using a rather complex partitioning system, plus LVM2, so this will look a bit wild.  It also helps to [refer back to the mount commands used earlier](/blog/2004-04-28-gentoo-epia-install-part-4/).
+Don't forget to run "modules-update" when done.  Onward to [chapter 8, configuring your system](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=8).  First up is editing the "/etc/fstab" table, which controls what gets mounted at startup.  I'm using a rather complex partitioning system, plus LVM2, so this will look a bit wild.  It also helps to [refer back to the mount commands used earlier](/blog/2004-04-28-gentoo-epia-install-part-4/).
 
     /dev/hda1 /boot ext2 noauto,noatime 1 2
     /dev/hda2 / ext3 natime 0 1
@@ -71,7 +71,7 @@ The next big task is to edit the local configuration ("nano -w /etc/rc.conf").  
 
     CLOCK="local"
 
-Yeah... big changes!  Er, yah, um onward to [chapter 9, configuring the bootloader](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=9).
+Yeah... big changes!  Er, yah, um onward to [chapter 9, configuring the bootloader](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=9).
 
 I'm 99% sure I didn't turn on frame-buffer support, so skip the first section.  I'm also going to use GRUB instead of LILO (personal preference and I've heard that GRUB isn't as fragile as LILO, but on a single-boot system that might be a moot point).
 
@@ -83,7 +83,7 @@ I'm 99% sure I didn't turn on frame-buffer support, so skip the first section.  
     grub> setup (hd0)
     grub> quit
 
-The above assumes that your /boot partition is on /dev/hda1 (convert the 'hda' to 'hd0' and subtract 1 from '1' to get '0').  Edit your grub config file using "nano -w /boot/grub/grub.conf" and follow along in the [second half of 9b, configuring grub](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=9).  Here's what mine ended up looking like:
+The above assumes that your /boot partition is on /dev/hda1 (convert the 'hda' to 'hd0' and subtract 1 from '1' to get '0').  Edit your grub config file using "nano -w /boot/grub/grub.conf" and follow along in the [second half of 9b, configuring grub](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=9).  Here's what mine ended up looking like:
 
     default 0
     timeout 30
@@ -91,7 +91,7 @@ The above assumes that your /boot partition is on /dev/hda1 (convert the 'hda' t
     root (hd0,0)
     kernel /kernel-2.6.3-gentoo root=/dev/hda2
 
-Save, exit, on to [chapter 10, installing the system tools](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=10).  I went with a lot of defaults here, just going to short-list the commands.  (Info on [dcron](http://www.linuxfromscratch.org/hints/downloads/files/dcron.txt).)
+Save, exit, on to [chapter 10, installing the system tools](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=10).  I went with a lot of defaults here, just going to short-list the commands.  (Info on [dcron](http://www.linuxfromscratch.org/hints/downloads/files/dcron.txt).)
 
     emerge syslog-ng
     rc-update add syslog-ng default
@@ -99,7 +99,7 @@ Save, exit, on to [chapter 10, installing the system tools](http://www.gentoo.or
     rc-update add dcron default
     crontab /etc/crontab
 
-Okay, looks like getting close to the end.  [Chapter 11, finalizing the install](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=11).
+Okay, looks like getting close to the end.  [Chapter 11, finalizing the install](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=11).
 
     passwd
     useradd john -m -G users,wheel,audio -s /bin/bash
@@ -110,4 +110,4 @@ Okay, looks like getting close to the end.  [Chapter 11, finalizing the install]
     umount ... (insert list of mounted file systems)
     reboot
 
-Reboot, go into the BIOS and change the boot order to bypass the CD-ROM (or simply remove the LiveCD), and refer to [chapter 12, where do I go from here](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=12) in the gentoo handbook.  I might jot down some additional notes in the future, but we'll have to see.
+Reboot, go into the BIOS and change the boot order to bypass the CD-ROM (or simply remove the LiveCD), and refer to [chapter 12, where do I go from here](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=12) in the gentoo handbook.  I might jot down some additional notes in the future, but we'll have to see.

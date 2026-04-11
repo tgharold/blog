@@ -18,4 +18,4 @@ Just collecting some links that look interesting.  My plan is to use SSH as a VP
 
 [about.com - VPN Setup](http://compnetworking.about.com/cs/vpnsetup/)
 
-[Q&amp;A on using the VPN service (www.doc.ic.ac.uk/csg/faqs/)](http://www.doc.ic.ac.uk/csg/faqs/vpn.html)
+[Q&A on using the VPN service (www.doc.ic.ac.uk/csg/faqs/)](http://www.doc.ic.ac.uk/csg/faqs/vpn.html)

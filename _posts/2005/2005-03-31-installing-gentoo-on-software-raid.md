@@ -16,13 +16,13 @@ First off, some tips-n-tricks:
 
 1) <b>ifconfig</b> - find out the IP address of the box
 2) <b>passwd</b> - change the root password to something you know
-3) [Starting the SSH daemon](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=2) - The command is: <b>/etc/init.d/sshd start</b>
+3) [Starting the SSH daemon](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=2) - The command is: <b>/etc/init.d/sshd start</b>
 
 Now I'll be able to use SecureCRT and have an easier time of copy-n-paste.  (Pick 'keyboard interactive' and 'ssh2' under options when setting up the connection in SecureCRT.)
 
 Links:
 
-[Gentoo 2004.3 Software RAID Install HOWTO](http://forums.gentoo.org/viewtopic.php?t=257374&amp;highlight=mknod+dev+md0)
+[Gentoo 2004.3 Software RAID Install HOWTO](http://forums.gentoo.org/viewtopic.php?t=257374&highlight=mknod+dev+md0)
 [Gentoo.org - x86 tips and tricks (including software RAID)](http://www.gentoo.org/doc/en/gentoo-x86-tipsntricks.xml)
 [The Linux Documentation Project: Software RAID](http://www.tldp.org/HOWTO/Software-RAID-HOWTO.html)
 [An older gentoo.org thread on software raid](http://forums.gentoo.org/viewtopic.php?p=46458#46458)

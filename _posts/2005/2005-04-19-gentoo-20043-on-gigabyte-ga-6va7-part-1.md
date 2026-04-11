@@ -46,7 +46,7 @@ ARRAY /dev/md1 level=raid1 num-devices=2 devices=/dev/hda2,/dev/hdc2
 ARRAY /dev/md0 level=raid1 num-devices=2 devices=/dev/hda1,/dev/hdc1 
 ```
 
-Picking up again with [Chapter 4 of the installation handbook](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=4).  This is also very similar to what I did back in [June 2004 with Software RAID and LVM2](/blog/2004-06-15-gentoo-install-2-via-epia-me6000/).
+Picking up again with [Chapter 4 of the installation handbook](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=4).  This is also very similar to what I did back in [June 2004 with Software RAID and LVM2](/blog/2004-06-15-gentoo-install-2-via-epia-me6000/).
 
 ```
 # mke2fs /dev/md0
@@ -138,7 +138,7 @@ Make the special directories to hold your temp file volumes (these require speci
 # mount -t proc none /mnt/gentoo/proc
 ```
 
-Now we move into [Installation (chapter 5)](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=5) in the handbook.  Verify your system date and then start extracting the tarballs.
+Now we move into [Installation (chapter 5)](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=5) in the handbook.  Verify your system date and then start extracting the tarballs.
 
 ```
 # date
@@ -195,7 +195,7 @@ MAKEOPTS="-j2"
 USE="apache2 kerberos ldap -apm -gif -gnome -gtk -jpeg -kde -mad -mikmod -mpeg -oggvorbis -opengl -oss -pdflib -png -qt -quicktime -sdl -truetype -xmms -xv"
 ```
 
-Pick up again with [Installing the Gentoo Base System](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=6) in the handbook.  Where we pick a mirror and start the move from stage1 to stage3.  I see that the mirrorselect command has changed between 2004.0 and 2004.3.
+Pick up again with [Installing the Gentoo Base System](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=6) in the handbook.  Where we pick a mirror and start the move from stage1 to stage3.  I see that the mirrorselect command has changed between 2004.0 and 2004.3.
 
 ```
 # mirrorselect -i -o &gt;&gt; /mnt/gentoo/etc/make.conf

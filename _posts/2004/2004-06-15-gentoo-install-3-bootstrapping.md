@@ -12,7 +12,7 @@ tags:
 
 ([previous post](/blog/2004-06-15-gentoo-install-2-via-epia-me6000/))
 
-Time to bootstrap the system (See [moving from stage 1 to stage 2](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=6)).  If you have multiple machines on the network, all with the same version of gcc, now is the when you'll want to [configure your distcc configuration](http://www.gentoo.org/doc/en/distcc.xml).
+Time to bootstrap the system (See [moving from stage 1 to stage 2](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=6)).  If you have multiple machines on the network, all with the same version of gcc, now is the when you'll want to [configure your distcc configuration](http://www.gentoo.org/doc/en/distcc.xml).
 ```
 # cd /usr/portage
 # scripts/bootstrap.sh

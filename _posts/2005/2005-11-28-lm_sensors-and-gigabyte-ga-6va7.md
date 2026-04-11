@@ -36,7 +36,7 @@ Device drivers
 Now, make sure that /boot is mounted, then compile your new kernel.
 
 ```
-# make &amp;&amp; make modules_install
+# make && make modules_install
 # mount /boot
 # cp arch/i386/boot/bzImage /boot/kernel-2.6.13-28Nov2005-2037
 # cp System.map /boot/System.map-2.6.13-28Nov2005-2037

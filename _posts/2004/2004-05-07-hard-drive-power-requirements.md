@@ -15,7 +15,7 @@ Jottting down some of the V/A power-requirements for some hard-drives.  IBM is n
 [Hitachi Deskstar 180GXP](http://www.hitachigst.com/hdd/support/d180gxp/d180gxp.htm) (07N9685) 82.3GB
 7200rpm 8MB cache
 5V 500mA 12V 700mA (10.9W)
-- startup current is 2.0 (+12V) &amp; 0.83A (+5V) 28W, idle is 5.0W
+- startup current is 2.0 (+12V) & 0.83A (+5V) 28W, idle is 5.0W
 
 IBM Deskstar (not sure of model)
 7200rpm 8MB cache
@@ -31,7 +31,7 @@ IBM Deskstar (not sure of model)
 7200rpm 2MB or 8MB cache, ATA/133 or SATA/150
 5V 858mA 12V 662mA (12.2W)
 
-[Western Digital Caviar SE 250GB](http://www.scsi4me.com/index.php?menu=menu_sata&amp;pid=3190) ([WD site](http://www.westerndigital.com/en/products/current/drives.asp?Model=WD2500JD))
+[Western Digital Caviar SE 250GB](http://www.scsi4me.com/index.php?menu=menu_sata&pid=3190) ([WD site](http://www.westerndigital.com/en/products/current/drives.asp?Model=WD2500JD))
 7200rpm 8MB cache SATA/150
 5V 850 mA 12V 530mA (10.6 W), no startup current listed, idle is 10.0W
 
