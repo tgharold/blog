@@ -1,5 +1,7 @@
 {% if page.author %}
-  {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.owner %}
+  {% assign author = site.data.authors[page.author] %}
+{% else %}
+  {% assign author = site.owner %}
 {% endif %}
 
 {% if author.avatar %}
@@ -8,6 +10,10 @@
 </div><!-- ./author-image -->
 {% endif %}
 <div class="author-content">
-	<h3 class="author-name" >{{ site.data.messages.locales[site.locale].written_by }} {% if author.web %}<a href="{{ author.web }}" itemprop="author">{{ author.name }}</a>{% else %}<span itemprop="author">{{ author.name }}</span>{% endif %}</h3>
+	<h3 class="author-name">{{ site.data.messages.locales[site.locale].written_by }} {% if author.web %}<a
+			href="{{ author.web }}" itemprop="author">{{ author.name }}</a>{% else %}<span itemprop="author">{{
+			author.name }}</span>{% endif %}</h3>
+	{% if author.avatar %}
 	<p class="author-bio">{{ author.bio }}</p>
+	{% endif %}
 </div><!-- ./author-content -->
