@@ -16,7 +16,7 @@ Source links:
 [Windows Rsync Server Setup](http://www.gaztronics.net/rsync.php)
 [CygwinInstallationGuide ](http://twiki.complexfission.com/twiki/bin/view/Computer/CygwinInstallationGuide) (a wiki topic about the cygwin installation)
 
-<b>Note:</b> The following probably <b>doesn't work</b> (probably missing a package, or the fact that I have GNU's unix tools for Win32 installed is problematic), but I might come back and make it work later so I'm leaving it here for now.  I ran into trouble when trying to configure SSH.  Right now, I've gone back to my original plan of either [hacking apart the Cygwin files](/techblog/2004/07/hacking-together-minimal-rsync-for.shtml) and manually copying only the DLLs and EXEs that I need or using the [OpenSSH for Windows project at SourceForge](http://sshwindows.sourceforge.net/).
+<b>Note:</b> The following probably <b>doesn't work</b> (probably missing a package, or the fact that I have GNU's unix tools for Win32 installed is problematic), but I might come back and make it work later so I'm leaving it here for now.  I ran into trouble when trying to configure SSH.  Right now, I've gone back to my original plan of either [hacking apart the Cygwin files](2004-06-10-installing-cwrsync-on-windows-2000.md) and manually copying only the DLLs and EXEs that I need or using the [OpenSSH for Windows project at SourceForge](http://sshwindows.sourceforge.net/).
 
 1. Run the [Cygwin setup.exe](http://www.cygwin.com/setup.exe) file and start the instllation.  I chose to install to "c:\bin\cygwin", but left the rest of the options "as-is".  Pick your mirror (use the [Cygwin public mirrors page](http://cygwin.com/mirrors.html) to find one close to you).
 
