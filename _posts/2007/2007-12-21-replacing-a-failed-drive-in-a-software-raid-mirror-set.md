@@ -31,7 +31,7 @@ Well, after a few runs with that, the disk is no longer making "retry" noises.  
 And force mdadm to verify the sync:
 
 ```
-# echo check &gt; /sys/block/md1/md/sync_action
+# echo check > /sys/block/md1/md/sync_action
 ```
 
 It seems to be working.  I'm guessing that I finally convinced SMART to re-map the bad sector that was causing problems.

@@ -58,7 +58,7 @@ Installation:
 Getting started
 <ol>
 
-<li>Go to "Start" --&gt; "Programs" --&gt; GnuPG for Windows --&gt; WinPT
+<li>Go to "Start" --> "Programs" --> GnuPG for Windows --> WinPT
 
 </li>
 <li>That will start the WinPT application.
@@ -120,7 +120,7 @@ Configuring WinPT Options
 <li>Right-click on the WinPT icon in the System Tray
 
 </li>
-<li>Select Preferences --&gt; WinPT
+<li>Select Preferences --> WinPT
 
 </li>
 <li>Any options that I do not mention are optional and can be set to anything you desire.  (Meaning that I don't have a specific recommendation for that option.)
@@ -149,7 +149,7 @@ Configuring GnuPG Options
 <li>Right-click on the WinPT icon in the System Tray
 
 </li>
-<li>Select Preferences --&gt; GPG
+<li>Select Preferences --> GPG
 
 </li>
 <li>There's nothing in particular that I feel needs to be changed here, but it does let you add a comment line for ASCII armored files.

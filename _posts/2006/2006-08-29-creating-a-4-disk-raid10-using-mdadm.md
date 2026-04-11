@@ -40,7 +40,7 @@ mdadm: array /dev/md5 started.
 Personalities : [raid1] [raid10] 
 md5 : active raid10 sdf1[3] sde1[2] sdd1[1] sdc1[0]
       1465143808 blocks 32K chunks 2 near-copies [4/4] [UUUU]
-      [&gt;....................]  resync =  0.2% (3058848/1465143808) finish=159.3min speed=152942K/sec
+      [>....................]  resync =  0.2% (3058848/1465143808) finish=159.3min speed=152942K/sec
 ```
 
 As you can see, we get around 150MB/s from the RAID10 array.  The regular RAID1 arrays only have about 75MB/s throughput (same as a single 750GB drive).

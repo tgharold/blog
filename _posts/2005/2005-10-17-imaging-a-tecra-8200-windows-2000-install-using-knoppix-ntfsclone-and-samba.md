@@ -96,7 +96,7 @@ Notes:
 <b>Warning: VERIFY your commands before using them.</b>  It's very easy to blow away your operating system by accident when using the following tools.
 
 ```
-root@1[knoppix]# sfdisk -d /dev/hda &gt; /tmp/imagedest/myuser-hda.dump
+root@1[knoppix]# sfdisk -d /dev/hda > /tmp/imagedest/myuser-hda.dump
 root@1[knoppix]# dd if=/dev/hda bs=512 count=1 of=/tmp/imagedest/myuser-hda.mbr
 1+0 records in
 1+0 records out

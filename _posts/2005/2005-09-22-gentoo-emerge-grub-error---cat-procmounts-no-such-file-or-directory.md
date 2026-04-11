@@ -14,9 +14,9 @@ During my initial Gentoo installation, I ran into the following issue after tryi
 
 ```
 ...
-&gt;&gt;&gt; Completed installing grub-0.96-r2 into /var/tmp/portage/grub-0.96-r2/image/
+>>> Completed installing grub-0.96-r2 into /var/tmp/portage/grub-0.96-r2/image/
 
-&gt;&gt;&gt; Merging sys-boot/grub-0.96-r2 to /
+>>> Merging sys-boot/grub-0.96-r2 to /
 cat: /proc/mounts: No such file or directory
 cat: /proc/mounts: No such file or directory
  * 
@@ -59,7 +59,7 @@ exit
 livecd gentoo # mount -t proc none /mnt/gentoo/proc
 livecd gentoo # chroot /mnt/gentoo /bin/bash
 livecd / # env-update
-&gt;&gt;&gt; Regenerating /etc/ld.so.cache...
+>>> Regenerating /etc/ld.so.cache...
 livecd / # source /etc/profile
 livecd / # emerge grub
 ```

@@ -16,11 +16,11 @@ So after playing with the Motorola Q for a few more hours, I have the following 
 
 This is something that I didn't know when I bought the phone (that there are 2 versions of the Windows Mobile 5 OS).
 
-- In pictures & videos, go to Menu -&gt; Options -&gt; Camera where you can choose whether to save pictures in memory or on the storage card.
+- In pictures & videos, go to Menu -> Options -> Camera where you can choose whether to save pictures in memory or on the storage card.
 
 - Locking the keypad is "Home" then "Space", unlocking uses the left SoftKey followed by the [*] key (left side, middle).  
 
-- In Pictures & Videos, moving files requires Edit-&gt;Cut, Edit-Paste
+- In Pictures & Videos, moving files requires Edit->Cut, Edit-Paste
 
 - Found an SSH client (zaTelnet), but it doesn't do public key authentication.  That's going to be interesting, because entering passwords on the Q is tricky.  I'll probably buy either the "[Think Outside](http://mobilitytoday.com/news/moto_q_thinkoutside.html)" or "[Freedom](http://mobile.lockergnome.com/productAccessories.asp?id=5447)" Bluetooth folding keyboard.
 

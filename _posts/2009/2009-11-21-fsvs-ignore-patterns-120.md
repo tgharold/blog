@@ -24,10 +24,10 @@ So obviously, we want to version the Home folder under each user.  But we don't 
 
 ```
 # cd /
-# fsvs ignore dump &gt;&gt; /root/fsvs-ignore-yyyymmdd.txt
+# fsvs ignore dump >> /root/fsvs-ignore-yyyymmdd.txt
 ```
 
-That makes a backup of your current rules, just in case you decide that you don't like your changes (they can be reloaded with "fsvs ignore load &lt; filename").
+That makes a backup of your current rules, just in case you decide that you don't like your changes (they can be reloaded with "fsvs ignore load < filename").
 
 ```
 # cd /

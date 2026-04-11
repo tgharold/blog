@@ -141,7 +141,7 @@ Seems to be working fine. You can choose to wait until all of the RAID arrays fi
 [LinuxDevCenter article on mdadm](http://www.linuxdevcenter.com/pub/a/linux/2002/12/05/RAID.html) explains mdadm in a bit more detail, and shows how to create the config file semi-automatically.  Be sure to change '/dev/hda' and 'dev/hde' to match the 2 disks that you are attempting to RAID.
 
 ```
-# mdadm --detail --scan &gt;&gt; /etc/mdadm.conf
+# mdadm --detail --scan >> /etc/mdadm.conf
 # nano -w /etc/mdadm.conf
 ```
 
@@ -160,7 +160,7 @@ If we're setting up LVM2, we need to now prep the 4th partition and setup the lo
 ```
 # modprobe dm-mod
 # pvcreate /dev/md3
-# echo 'devices { filter=["r/cdrom/"] }' &gt; /etc/lvm/lvm.conf
+# echo 'devices { filter=["r/cdrom/"] }' > /etc/lvm/lvm.conf
 # vgcreate vgmirror /dev/md3
 # vgscan
 # lvcreate -L2G -ntmp vgmirror
@@ -280,8 +280,8 @@ MAKEOPTS="-j2"
 Now to [Chapter 6 - Installing the Gentoo Base System](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=6).  Time to "chroot".
 
 ```
-# mirrorselect -i -o &gt;&gt; /mnt/gentoo/etc/make.conf
-# mirrorselect -i -r -o &gt;&gt; /mnt/gentoo/etc/make.conf
+# mirrorselect -i -o >> /mnt/gentoo/etc/make.conf
+# mirrorselect -i -r -o >> /mnt/gentoo/etc/make.conf
 # cat /mnt/gentoo/etc/make.conf
 CFLAGS="-Os -mcpu=i686"
 CHOST="i386-pc-linux-gnu"
@@ -314,7 +314,7 @@ Time to choose a profile.  There shouldn't be much to do at this point since I p
 
 ```
 # ls -FGg /etc/make.profile
-lrwxrwxrwx  1 48 Sep 21 10:22 /etc/make.profile -&gt; ../usr/portage/profiles/default-linux/x86/2005.1/
+lrwxrwxrwx  1 48 Sep 21 10:22 /etc/make.profile -> ../usr/portage/profiles/default-linux/x86/2005.1/
 # ls -d /usr/portage/profiles/default-linux/x86/2005.1/2.4
 /usr/portage/profiles/default-linux/x86/2005.1/2.4
 ```
@@ -323,7 +323,7 @@ Configuring the USE variable comes next in the handbook.  You'll see that I'm us
 
 ```
 livecd / # ls -l /etc/make.profile
-lrwxrwxrwx  1 root root 48 Oct 22 21:04 /etc/make.profile -&gt; ../usr/portage/profiles/default-linux/x86/2005.1
+lrwxrwxrwx  1 root root 48 Oct 22 21:04 /etc/make.profile -> ../usr/portage/profiles/default-linux/x86/2005.1
 livecd / # cat /etc/make.profile/make.defaults
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
@@ -337,7 +337,7 @@ Here are my current customized USE flags (for a headless server with no GUI shel
 
 ```
 # less /usr/portage/profiles/use.desc
-# echo 'USE="apache2 kerberos ldap postgres samba -alsa -apm -arts -bitmap-fonts -gnome -gtk -gtk2 -kde -mad -mikmod -motif -opengl -oss -qt -quicktime -sdl -truetype -truetype-fonts -type1-fonts -X -xmms -xv"' &gt;&gt; /etc/make.conf
+# echo 'USE="apache2 kerberos ldap postgres samba -alsa -apm -arts -bitmap-fonts -gnome -gtk -gtk2 -kde -mad -mikmod -motif -opengl -oss -qt -quicktime -sdl -truetype -truetype-fonts -type1-fonts -X -xmms -xv"' >> /etc/make.conf
 # nano -w /etc/make.conf
 ```
 

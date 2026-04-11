@@ -83,7 +83,7 @@ AES Encryption plugin (a.k.a. DSM)
 <li>Extract the .DSM file to the program folder where you installed UltraVNC (usually: C:\Program Files\UltraVNC), see  "[DSM quick start](http://msrc4plugin.home.comcast.net/dsmplugins.html)" for more information.
 
 </li>
-<li>Re-open the "Default Local System Properties" window for the UltraVNC server (Start -&gt; UltraVNC -&gt; UltraVNC Server -&gt; Show Default Settings).  Alternately, start up the service helper systray app (Run Service Helper) and go to "Admin Properties")
+<li>Re-open the "Default Local System Properties" window for the UltraVNC server (Start -> UltraVNC -> UltraVNC Server -> Show Default Settings).  Alternately, start up the service helper systray app (Run Service Helper) and go to "Admin Properties")
 
 </li>
 <li>Under "DSM Plugin", turn ON the "Use:" checkbox and select "AESV2Plugin.dsm" from the list.

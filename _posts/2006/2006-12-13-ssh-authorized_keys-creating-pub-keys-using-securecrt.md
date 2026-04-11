@@ -20,13 +20,13 @@ Note #2: You can use a particular key file for multiple servers.  You should do 
 
 <b>Steps to create a public key pair in SecureCRT</b>
 
-1) Options -&gt; Global Options -&gt; SSH2.
+1) Options -> Global Options -> SSH2.
 
 Alternately, to create a session specific key (a better method).
 
 a) Click on the Connect button, highlight the Session for which you want to create a session key and choose Properties.
 
-b) Connection -&gt; Authentication -&gt; Primary -&gt; PublicKey -&gt; Properties
+b) Connection -> Authentication -> Primary -> PublicKey -> Properties
 
 2) Under "Public Key", choose "Use Identify File".  This file is the central storage location for all of your public/private SSH2 keys.  It should be placed somewhere secure and backed up frequently.  Your "My Documents" folder is probably a good place.
 

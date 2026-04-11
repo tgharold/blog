@@ -20,14 +20,14 @@ livecd linux # emerge (something)
         default-linux/x86/2005.0
 
 To upgrade do the following steps:
-# emerge -n '&gt;=sys-apps/portage-2.0.51'
+# emerge -n '>=sys-apps/portage-2.0.51'
 # cd /etc/
 # rm make.profile
 # ln -s ../usr/portage/profiles/default-linux/x86/2005.0 make.profile
 
 # Gentoo has switched to 2.6 as the defaults for headers/kernels.  If you wish
 # to use 2.4 headers/kernels, then you should do the following to upgrade:
-# emerge -n '&gt;=sys-apps/portage-2.0.51'
+# emerge -n '>=sys-apps/portage-2.0.51'
 # cd /etc/
 # rm make.profile
 # ln -s ../usr/portage/profiles/default-linux/x86/2005.0/2.4 make.profile

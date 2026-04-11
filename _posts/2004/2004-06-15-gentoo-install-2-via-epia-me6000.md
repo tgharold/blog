@@ -28,7 +28,7 @@ The following commands will format the boot and root partitions (/dev/md0 is /bo
 Next, initialize the 4th RAID set in preparation for LVM (pvcreate).  Create the "/etc/lvm/lvm.conf" file and create the volume group for the 4th RAID set (vgcreate).  Also see the [Gentoo LVM documentation](http://www.gentoo.org/doc/en/lvm2.xml).  If needed, use "<b>modprobe dm-mod</b>" to load the LVM module.
 ```
 # pvcreate /dev/md3
-# echo 'devices { filter=["r/cdrom/"] }' &gt;/etc/lvm/lvm.conf
+# echo 'devices { filter=["r/cdrom/"] }' >/etc/lvm/lvm.conf
 # vgcreate vgmirror /dev/md3
 # vgscan
 ```
@@ -115,7 +115,7 @@ MAKEOPTS="-j2"
 
 Next we're ready to install the base system, see [6. Installing the Gentoo Base System](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=6) in the Gentoo Handbook.
 ```
-# mirrorselect -a -s4 -o | grep -ve '^Netselect' &gt;&gt; /mnt/gentoo/etc/make.conf
+# mirrorselect -a -s4 -o | grep -ve '^Netselect' >> /mnt/gentoo/etc/make.conf
 # cp -L /mnt/gentoo/etc/make.conf /mnt/gentoo/boot/make.conf-backupcopy
 # cp -L /etc/resolv.conf /mnt/gentoo/etc/resolv.conf
 # cp -L /etc/raidtab /mnt/gentoo/etc/raidtab

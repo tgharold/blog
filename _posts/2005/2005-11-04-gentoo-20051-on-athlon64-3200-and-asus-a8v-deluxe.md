@@ -19,14 +19,14 @@ Now, I'm not sure that I can have both the onboard FastTrak and the SX6000 runni
 Tossed the Gentoo 2005.1 boot CD in.  The graphical splash screen loads, and it starts counting through devices.  At "Booting the system (64%)", I get a kernel panic and it stops booting.  The screen now reads (approximately):
 
 ```
-kernel BUG at &lt;bad filename&gt;:55433!
+kernel BUG at <bad filename>:55433!
 Invalid operand: 0000 [#1]
 PREEMPT SMP
 Modules linked in: ...
 (bunch of registers)
 Process swapper (pid: 0 ...
 (trace dump)
-&lt;0&gt; Kernel panic - not syncing: Fatal exception in interrupt
+<0> Kernel panic - not syncing: Fatal exception in interrupt
 ```
 
 Pressing [F2] does nothing at this point.

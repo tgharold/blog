@@ -36,7 +36,7 @@ Select "Skip" when asked about mounting the existing install at /mnt/sysimage.  
 
 Start up Software RAID on the key partitions (/boot, /, the backup /, and the backup partition). The following commands will (usually) startup your existing RAID devices automatically.
 
-    # mdadm --examine --scan &gt;&gt; /etc/mdadm.conf
+    # mdadm --examine --scan >> /etc/mdadm.conf
     # mdadm --assemble --scan
 
 In my case "md0" is /boot, "md2" is my base CentOS install, "md3" is the backup root partition, and "md5" is where I can store image files.  So let's double-check that.
@@ -48,9 +48,9 @@ If we then examine the output of "df -h" or by using "ls" on the mounted volumes
 
     # mkdir /mnt/backup ; mount /dev/md5 /mnt/backup
     # cd /mnt/backup ; mkdir images ; cd images
-    # dd if=/dev/md0 | gzip &gt; dd-md0-boot-20070525.img.gz &
-    # dd if=/dev/md2 | gzip &gt; dd-md2-root-20070525.img.gz &
-    # dd if=/dev/md3 | gzip &gt; dd-md3-bkproot-20070525.img.gz &
+    # dd if=/dev/md0 | gzip > dd-md0-boot-20070525.img.gz &
+    # dd if=/dev/md2 | gzip > dd-md2-root-20070525.img.gz &
+    # dd if=/dev/md3 | gzip > dd-md3-bkproot-20070525.img.gz &
 
 We should also backup the master boot records on each of the hard drives in the unit.
 

@@ -795,7 +795,7 @@ md3 : active raid1 hda4[0]
 
 md0 : active raid1 hde1[2] hda1[1]
       125376 blocks [2/1] [_U]
-      [=&gt;...................]  recovery =  9.7% (12928/125376) finish=0.5min speed=3232K/sec
+      [=>...................]  recovery =  9.7% (12928/125376) finish=0.5min speed=3232K/sec
 
 unused devices: <none>
 coppermine thomas #</none></none>
@@ -838,7 +838,7 @@ md2 : active raid1 hde3[0] hda3[1]
 
 md3 : active raid1 hde4[2] hda4[0]
       115926464 blocks [2/1] [U_]
-      [&gt;....................]  recovery =  0.0% (6656/115926464) finish=1153.4min speed=1664K/sec
+      [>....................]  recovery =  0.0% (6656/115926464) finish=1153.4min speed=1664K/sec
 
 md0 : active raid1 hde1[0] hda1[1]
       125376 blocks [2/2] [UU]

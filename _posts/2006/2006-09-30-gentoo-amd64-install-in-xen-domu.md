@@ -71,7 +71,7 @@ Now you're ready to prepare for the chroot.
 # mount -o bind /dev /mnt/gentoo/dev
 # chroot /mnt/gentoo /bin/bash
 # env-update
-&gt;&gt; Regenerating /etc/ld.so.cache...
+>> Regenerating /etc/ld.so.cache...
 # source /etc/profile
 # export PS1="(chroot) $PS1"
 # emerge --sync

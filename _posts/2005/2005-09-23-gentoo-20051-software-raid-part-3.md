@@ -21,7 +21,7 @@ Picking up with part 7c after [compiling the kernel](http://www.gentoo.org/doc/e
 If you are using LVM2, you will need to add a line at the end of the autoload file to automatically load the LMV2 module.  Note that you may also need to add a line for DHCP support (not 100% sure about that).  Since I'm using these boxes for servers with static IPs I don't concern myself with it.
 
 ```
-# echo 'dm-mod' &gt;&gt; /etc/modules.autoload.d/kernel-2.6
+# echo 'dm-mod' >> /etc/modules.autoload.d/kernel-2.6
 # cat /etc/modules.autoload.d/kernel-2.6
 ```
 
@@ -137,15 +137,15 @@ Now I fire up grub and install it onto the MBR of both disks.
 
 ```
 # grub --no-floppy
-grub&gt; find /grub/stage1
+grub> find /grub/stage1
 (hd0,0)
 (hd1,0)
-grub&gt; root (hd0,0)
-grub&gt; setup (hd0)
-grub&gt; device (hd0) /dev/hdc
-grub&gt; root (hd0,0)
-grub&gt; setup (hd0)
-grub&gt; quit
+grub> root (hd0,0)
+grub> setup (hd0)
+grub> device (hd0) /dev/hdc
+grub> root (hd0,0)
+grub> setup (hd0)
+grub> quit
 ```
 
 Time for the first reboot.  Now you need to unmount everything that you can (including LVM) prior to reboot.  Since I'm not using LVM2, this is rather simple.

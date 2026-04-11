@@ -58,4 +58,4 @@ e) If you find that ZIP is too slow, you may wish to change the "-u9" to "-u1" i
 
 f) I'm pretty sure the above script is foolproof and correct, but as always you should have a good backup before you attempt things like this.
 
-4) Create a shortcut link to "backupemail.cmd" and place it in your Programs -&gt; Startup folder.  That way it will run as soon as you login.
+4) Create a shortcut link to "backupemail.cmd" and place it in your Programs -> Startup folder.  That way it will run as soon as you login.
