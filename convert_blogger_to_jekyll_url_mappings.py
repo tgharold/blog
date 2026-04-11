@@ -30,16 +30,13 @@ def write_csv(file_data, output_file):
         for path, old_url in file_data:
             writer.writerow([path, old_url])
 
-def write_unique_old_urls_csv(old_urls, output_file):
-    """Write unique old_url values to a separate CSV file."""
-    unique_old_urls = list(set(old_urls))
-    unique_old_urls.sort()  # Sort for consistent output
-
+def write_unique_old_urls_csv(unique_old_urls_data, output_file):
+    """Write unique old_url values with additional properties to a separate CSV file."""
     with open(output_file, 'w', newline='', encoding='utf-8') as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerow(['old_url'])
-        for old_url in unique_old_urls:
-            writer.writerow([old_url])
+        writer.writerow(['old_url', 'path_to_new_markdown_file', 'new_url'])
+        for data in unique_old_urls_data:
+            writer.writerow([data['old_url'], data['path_to_new_markdown_file'], data['new_url']])
 
 def main():
     search_dir = '_posts'
@@ -60,9 +57,21 @@ def main():
     write_csv(url_mappings, output_file)
     print(f"Results written to '{output_file}'")
 
-    # Extract all old_url values and write unique ones to a separate CSV
-    old_urls = [old_url for _, old_url in url_mappings]
-    write_unique_old_urls_csv(old_urls, unique_output_file)
+    # Extract all unique old_url values
+    unique_old_urls_data = []
+    seen_old_urls = set()
+
+    for path, old_url in url_mappings:
+        if old_url not in seen_old_urls:
+            # Initialize path_to_new_markdown_file and new_url as empty for now
+            unique_old_urls_data.append({
+                'old_url': old_url,
+                'path_to_new_markdown_file': '',
+                'new_url': ''
+            })
+            seen_old_urls.add(old_url)
+
+    write_unique_old_urls_csv(unique_old_urls_data, unique_output_file)
     print(f"Unique old_url values written to '{unique_output_file}'")
 
 if __name__ == '__main__':
