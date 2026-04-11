@@ -36,36 +36,36 @@ Select "Skip" when asked about mounting the existing install at /mnt/sysimage.  
 
 Start up Software RAID on the key partitions (/boot, /, the backup /, and the backup partition). The following commands will (usually) startup your existing RAID devices automatically.
 
-# mdadm --examine --scan &gt;&gt; /etc/mdadm.conf
-# mdadm --assemble --scan
+    # mdadm --examine --scan &gt;&gt; /etc/mdadm.conf
+    # mdadm --assemble --scan
 
 In my case "md0" is /boot, "md2" is my base CentOS install, "md3" is the backup root partition, and "md5" is where I can store image files.  So let's double-check that.
 
-# mkdir /mnt/root ; mount /dev/md3 /mnt/root
-# mkdir /mnt/backuproot ; mount /dev/md3 /mnt/backuproot
+    # mkdir /mnt/root ; mount /dev/md3 /mnt/root
+    # mkdir /mnt/backuproot ; mount /dev/md3 /mnt/backuproot
 
 If we then examine the output of "df -h" or by using "ls" on the mounted volumes we can verify that we know which is which.  Let's mount our backup area and create image files.  I prefer to kick off the "dd" commands in the background so that I can monitor progress and keep multiple CPUs busy.
 
-# mkdir /mnt/backup ; mount /dev/md5 /mnt/backup
-# cd /mnt/backup ; mkdir images ; cd images
-# dd if=/dev/md0 | gzip &gt; dd-md0-boot-20070525.img.gz &amp;
-# dd if=/dev/md2 | gzip &gt; dd-md2-root-20070525.img.gz &amp;
-# dd if=/dev/md3 | gzip &gt; dd-md3-bkproot-20070525.img.gz &amp;
+    # mkdir /mnt/backup ; mount /dev/md5 /mnt/backup
+    # cd /mnt/backup ; mkdir images ; cd images
+    # dd if=/dev/md0 | gzip &gt; dd-md0-boot-20070525.img.gz &
+    # dd if=/dev/md2 | gzip &gt; dd-md2-root-20070525.img.gz &
+    # dd if=/dev/md3 | gzip &gt; dd-md3-bkproot-20070525.img.gz &
 
 We should also backup the master boot records on each of the hard drives in the unit.
 
-# for i in a b c; do dd if=/dev/sd$i count=1 bs=512 of=dd-sd$i-mbr-20070525.img; done
+    # for i in a b c; do dd if=/dev/sd$i count=1 bs=512 of=dd-sd$i-mbr-20070525.img; done
 
 Unfortunately, the CentOS5 DVD doesn't include tools like "G4L" (Ghost for Linux) or I'd make a second set of backup files using that.  I may boot my RIPLinuX CD and see what tools are there.  (Because you can never have too many backups.)
 
 Now I can dump the contents of "md2" (the original root) to "md3" (our backup root).  
 
-# dd if=/dev/md2 of=/dev/md3
+    # dd if=/dev/md2 of=/dev/md3
 
 Now for some cleanup stuff...
 
-# mount /dev/md3 /mnt/backuproot
-# vi /mnt/backuproot/etc/fstab
+    # mount /dev/md3 /mnt/backuproot
+    # vi /mnt/backuproot/etc/fstab
 
 We'll need to change any references of "md2" to "md3".  Basically flip them around so that "md3" is the official root when /etc/fstab gets processed.  I also like to change the prompt and system name to remind myself that I'm using the emergency system.  Again, our primary goal is to be able to get a box back up and operational in the case where the primary root partition is hosed.  Get it up quickly, then schedule some downtime to deal with it properly.
 
@@ -73,9 +73,9 @@ Now would also be a good time to tune the ext3 file system on your partitions.
 
 The last thing we need to do is edit GRUB's configuration so that we can select our backup root OS from the selection menu.
 
-# mkdir /mnt/boot
-# mount /dev/md0 /mnt/boot
-# vi /mnt/boot/grub/grub.conf
+    # mkdir /mnt/boot
+    # mount /dev/md0 /mnt/boot
+    # vi /mnt/boot/grub/grub.conf
 
 Things that we'll want to do here (you could also accomplish this by booting the server in normal mode and editing grub.conf there using a more comfortable text editor):
 
@@ -83,9 +83,9 @@ a) Change the timeout=5 value to timeout=15 (or 30 or 60).  By default, CentOS d
 
 b) Copy the latest "title" section and change "root=/dev/md2" to "root=/dev/md3".  I always make the "EMERGENCY" boot option the 2nd one in the list.
 
-# mkdir /mnt/backuproot
-# mount /dev/md3 /mnt/backuproot
-# vi /mnt/backuproot/etc/sysconfig/network
+    # mkdir /mnt/backuproot
+    # mount /dev/md3 /mnt/backuproot
+    # vi /mnt/backuproot/etc/sysconfig/network
 
 I like to change the hostname to have "-emergency" tacked onto the end.  Which should make it fairly obvious that we are booting up in emergency mode using the backup root partition.  I also edit root's .bash_profile to set PS1.
 

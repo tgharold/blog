@@ -31,10 +31,10 @@ Ah good, mdadm is *not* happy here (as expected).  It knows that one of the disk
 
 I recomend using "sfdisk" in dump mode to configure the new drive.  So if your failed drive is "sda" and one of the good ones is "sdb", you could use:
 
-# sfdisk -d /dev/sdb | sfdisk /dev/sda
+      # sfdisk -d /dev/sdb | sfdisk /dev/sda
 
 After which, you can use the "mdadm" command to add the new slices to the existing RAID arrays.
 
-# mdadm --add /dev/mdX /dev/sdYZ 
+      # mdadm --add /dev/mdX /dev/sdYZ 
 
 Last, don't forget to install GRUB to the MBR on the new disk.

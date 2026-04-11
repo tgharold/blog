@@ -40,8 +40,8 @@ In order to do X11 on Microsoft Windows, you need to install "X Server" software
 
 In order for the local X Server (Xming - running on your Windows system) to talk to the remote Linux server, you'll need to verify some settings on the Linux server.  First up is configuration of the sshd daemon (typically /etc/ssh/sshd_config for OpenSSH). Look for the following 2 lines and make sure they are configured correctly:
 
-X11Forwarding yes
-#X11UseLocalhost yes
+    X11Forwarding yes
+    #X11UseLocalhost yes
 
 By default, OpenSSH ships with X11Forwarding set to "no" but the default for X11UseLocalhost is "yes".  So you should only have to add the "X11Forwarding yes" line.
 
@@ -49,12 +49,12 @@ By default, OpenSSH ships with X11Forwarding set to "no" but the default for X11
 
 I'll make the assumption that you're going to use a PuTTY public-key pair.  If you need to install a generated PuTTY key (maybe you want to use a separate PuTTY key for X11 forwarding), then here are the directions for OpenSSH.
 
-(login as yourself or as root and then "su" to your username)
-# cd ~/.ssh
-# cat &gt; machinename@svn.pub
-(paste in PuTTY key)
-# ssh-keygen -i -f machinename@svn.pub &gt;&gt; authorized_keys
-(Ctrl-D to exit)
+    (login as yourself or as root and then "su" to your username)
+    # cd ~/.ssh
+    # cat &gt; machinename@svn.pub
+    (paste in PuTTY key)
+    # ssh-keygen -i -f machinename@svn.pub &gt;&gt; authorized_keys
+    (Ctrl-D to exit)
 <ol>
 
 <li>Right-click on the Pageant icon in the system tray and choose "New Session".  

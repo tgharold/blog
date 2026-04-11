@@ -55,9 +55,9 @@ Naturally, after talking about SSH keys, I'm only using the "svn+ssh" method of 
 
 On the SVN server, you should edit /etc/ssh/sshd_config and verify that the following are enforced in the SSH daemon configuration:
 
-AllowTcpForwarding no
-X11Forwarding no
-PermitTunnel no 
+    AllowTcpForwarding no
+    X11Forwarding no
+    PermitTunnel no 
 
 That eliminates most abuses that are possible, even if someone edits their ~/.ssh/authorized_key file on the SVN server.
 
@@ -69,15 +69,15 @@ A) On the client machine:
 
 Login as root (or "su" to root).
 
-# cd /root/
-(skip the next 2 commands if the .ssh subfolder already exists)
-# mkdir .ssh
-# chmod .ssh 700
-# cd .ssh
-# /usr/bin/ssh-keygen -N '' -C 'svn key for root@hostname' -t rsa -b 2048 -f root@hostname
-# cp /root/.ssh/root@svn /root/.ssh/id_rsa
-# cat root@hostname.pub
-(copy this into the clipboard or send it to the SVN server or the SVN server administrator)
+    # cd /root/
+    (skip the next 2 commands if the .ssh subfolder already exists)
+    # mkdir .ssh
+    # chmod .ssh 700
+    # cd .ssh
+    # /usr/bin/ssh-keygen -N '' -C 'svn key for root@hostname' -t rsa -b 2048 -f root@hostname
+    # cp /root/.ssh/root@svn /root/.ssh/id_rsa
+    # cat root@hostname.pub
+    (copy this into the clipboard or send it to the SVN server or the SVN server administrator)
 
 B) On the SVN server
 
@@ -85,23 +85,23 @@ Note: You should use some sort of random password creator (or the output of /dev
 
 (I know there's a better way to do make an account with an unguessable password, yet still allow SSH access via pub keys, but I can't find it at the moment.)
 
-# useradd -m username
-(i.e. "useradd -m sys-fw1-pri")
-# passwd username
-(paste in a super-long randomized password, such as a few bytes from /dev/urandom shoved through md5sum)
-# cd /home/username
-# su username
-$ mkdir .ssh
-$ chmod 700 .ssh
-$ cd .ssh
-$ cat &gt; root@hostname.pub
-(paste in the public key file from the client system)
-$ cat root@hostname.pub &gt;&gt; authorized_keys
-$ chmod 600 *
+    # useradd -m username
+    (i.e. "useradd -m sys-fw1-pri")
+    # passwd username
+    (paste in a super-long randomized password, such as a few bytes from /dev/urandom shoved through md5sum)
+    # cd /home/username
+    # su username
+    $ mkdir .ssh
+    $ chmod 700 .ssh
+    $ cd .ssh
+    $ cat &gt; root@hostname.pub
+    (paste in the public key file from the client system)
+    $ cat root@hostname.pub &gt;&gt; authorized_keys
+    $ chmod 600 *
 
 Now to lock the key down, edit the ~/.ssh/authorized_keys file and put the following on the front of the key line that will be used by the client machine:
 
-command="/usr/bin/svnserve -t -r /var/svn",no-agent-forwarding,no-pty 
+    command="/usr/bin/svnserve -t -r /var/svn",no-agent-forwarding,no-pty 
 
 This forces the connection to run the "svnserve" command in tunnel mode.  So this SSH key cannot be used to login or run any other commands on the server.  It also changes the SVN root path to /var/svn.  You will want to also add "no-port-forwarding" and "no-X11-forwarding" if you have not disabled those in your /etc/ssh/sshd_config file.
 
@@ -126,12 +126,12 @@ Note: I'm using "username", "hostname" and "machinename" fairly interchangeably 
 
 On the SVN server:
 
-# cd /var/svn
-(your repositories may be stored elsewhere)
-# svnadmin create /var/svn/sys-machinename
-# chmod -R 770 sys-machinename
-# chmod -R g+s sys-machinename/db
-# chown -R sys-machinename:sys-machinename sys-machinename
+    # cd /var/svn
+    (your repositories may be stored elsewhere)
+    # svnadmin create /var/svn/sys-machinename
+    # chmod -R 770 sys-machinename
+    # chmod -R g+s sys-machinename/db
+    # chown -R sys-machinename:sys-machinename sys-machinename
 
 Notes: 
 - A chmod of "770" allows read/write access to everyone in the same group.
@@ -142,7 +142,7 @@ Notes:
 
 You will need to customize the following URL to point at your SVN repository location.
 
-# svn info svn+ssh://sys-machinename@svn.intra.example.com/sys-machinename/
+    # svn info svn+ssh://sys-machinename@svn.intra.example.com/sys-machinename/
 
 That should prompt you to accept the server's public key, then display a response fron the SVN server.  If things don't work, then you've got connectivity (firewall), account (wrong name? wrong key?) or permissions (chmod or chown goofs?).
 
@@ -152,20 +152,20 @@ Notes:
 
 In order for the install to succeed, you must have installed the "subversion", "subversion-devel" "apr", "apr-devel", "gcc" and "ctags" packages.  Two others that you need are "gdbm" and "pcre" (and the associated developer packages).  There may be other dependencies that will also be installed that are required by those packages.  The following command worked for me on CentOS5:
 
-# yum install subversion subversion-devel ctags apr apr-devel gcc gdbm gdbm-devel pcre pcre-devel
+    # yum install subversion subversion-devel ctags apr apr-devel gcc gdbm gdbm-devel pcre pcre-devel
 
 Head on over to the official [project page](http://freshmeat.net/projects/fsvs/) at freshmeat.net and download the tarball.  This is currently "fsvs-1.14.tar.gz".  Extract the tarball to a folder somewhere (i.e. /root/fsvs-1.14.tar.gz) and use a terminal session to go to that folder.
 
-# cat README
-(look for the section that talks about the install)
-# cd src
-# make
-(you will receive a message that the Makefile has now been updated and that you need to run make again)
-# make
-(you should see a large stream of gcc output with the following at the end)
--rwxr-xr-x 1 root root 201510 May 31 09:54 fsvs
-(you must see the above line to know that you got a good compile)
-# cp fsvs /usr/local/bin
+    # cat README
+    (look for the section that talks about the install)
+    # cd src
+    # make
+    (you will receive a message that the Makefile has now been updated and that you need to run make again)
+    # make
+    (you should see a large stream of gcc output with the following at the end)
+    -rwxr-xr-x 1 root root 201510 May 31 09:54 fsvs
+    (you must see the above line to know that you got a good compile)
+    # cp fsvs /usr/local/bin
 
 At this point, FSVS *should* be installed correctly.
 
@@ -177,11 +177,11 @@ Note #1: I'm not sure how large /var/spool/fsvs will get.  You may eventually wa
 
 Note #2: You should read both the README and the output of "fsvs help urls".
 
-# mkdir -p /var/spool/fsvs
-# chmod 700 /var/spool/fsvs
-# cd /
-# fsvs urls svn+ssh://username@machine/path/to/repos
-(The "fsvs urls" won't display any confirmation text.)
+    # mkdir -p /var/spool/fsvs
+    # chmod 700 /var/spool/fsvs
+    # cd /
+    # fsvs urls svn+ssh://username@machine/path/to/repos
+    (The "fsvs urls" won't display any confirmation text.)
 
 The above will connect the root folder to the repository path.  You could also do multiple URLs and only link sub-folders (such as /etc, /usr, /home) up against the SVN repository.
 
@@ -191,23 +191,23 @@ After telling FSVS that we want to use "/" as our working copy, we'll want to al
 
 Make sure you read "fsvs-*/doc/IGNORING" and the output of "# fsvs help ignore".
 
-# fsvs ignore ./backup
-# fsvs ignore ./dev
-# fsvs ignore ./mnt
-# fsvs ignore './proc/*'
-# fsvs ignore ./sys
-# fsvs ignore ./tmp
-# fsvs ignore ./var/tmp
-# fsvs ignore ./var/spool
+    # fsvs ignore ./backup
+    # fsvs ignore ./dev
+    # fsvs ignore ./mnt
+    # fsvs ignore './proc/*'
+    # fsvs ignore ./sys
+    # fsvs ignore ./tmp
+    # fsvs ignore ./var/tmp
+    # fsvs ignore ./var/spool
 
 In addition you may wish to initially ignore all of the binary file directories (such as ./lib, ./lib64, ./sbin, ./usr, ./var) and focus solely on /etc, /home, /boot and /root.  That will give you a much slimmer listing when you "fsvs status" from the root directory.
 
 You can use the "fsvs ignore dump" and "fsvs ignore load" commands to backup your listing, edit it, then load it back into FSVS.  Note that you <b>must</b> be in the base directory of your working copy, otherwise "fsvs ignore dump" will return an empty listing.
 
-# cd /
-# fsvs ignore dump &gt; ~/fsvs-ignore.txt
-# vi ~/fsvs-ignore.txt
-# sort ~/fsvs-ignore.txt | fsvs ignore load
+    # cd /
+    # fsvs ignore dump &gt; ~/fsvs-ignore.txt
+    # vi ~/fsvs-ignore.txt
+    # sort ~/fsvs-ignore.txt | fsvs ignore load
 
 My initial listing on CentOS5 is:
 
@@ -228,22 +228,22 @@ My initial listing on CentOS5 is:
 
 Assuming that you setup FSVS where "/" (root) is the base of the working copy, we can now add the contents of /etc to SVN.
 
-# cd /
-# fsvs commit -m "Base check-in of /etc" /etc
-# fsvs commit -m "Base check-in of /boot" /boot
+    # cd /
+    # fsvs commit -m "Base check-in of /etc" /etc
+    # fsvs commit -m "Base check-in of /boot" /boot
 
 If you want to deep-commit a single folder (such as /usr/local/sbin) without doing the intervening folders:
 
-# cd /
-# fsvs commit -m "Base check-in" /usr/local/sbin
+    # cd /
+    # fsvs commit -m "Base check-in" /usr/local/sbin
 
 <b>Working with FSVS</b>
 
 Create a test file in /etc
 
-# cat &gt; /etc/testfile.txt
-foo
-# fsvs commit -m "Checking in a test file" /etc/testfile.txt
+    # cat &gt; /etc/testfile.txt
+    foo
+    # fsvs commit -m "Checking in a test file" /etc/testfile.txt
 
 Now delete the test file
 

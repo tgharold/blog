@@ -12,25 +12,25 @@ tags:
 
 This was a slightly tricky one.  I'm running CentOS5 with SELinux and I was trying to setup Squid to put its cache_dir on a LVM volume (to keep it from using up space on the root partition).
 
-# /etc/init.d/squid stop
-# cd /var/spool
-# lvcreate -L64G -nvar-spool-squid vg
-# mke2fs -j /dev/vg/var-spool-squid
-# mkdir /mnt/squid ; mount /dev/vg/var-spool-squid squid
-# cp -a /var/spool/squid/* /mnt/squid/
-# cd /var/spool/squid
-# rm -rf *
-# cd /var/spool
-# mount /dev/vg/var-spools-squid squid
-# /etc/init.d/squid start
+    # /etc/init.d/squid stop
+    # cd /var/spool
+    # lvcreate -L64G -nvar-spool-squid vg
+    # mke2fs -j /dev/vg/var-spool-squid
+    # mkdir /mnt/squid ; mount /dev/vg/var-spool-squid squid
+    # cp -a /var/spool/squid/* /mnt/squid/
+    # cd /var/spool/squid
+    # rm -rf *
+    # cd /var/spool
+    # mount /dev/vg/var-spools-squid squid
+    # /etc/init.d/squid start
 
-Starting squid: /etc/init.d/squid: line 53:  9440 Aborted                 $SQUID $SQUID_OPTS &gt;&gt;/var/log/squid/squid.out 2&gt;&amp;1
-                                                           [FAILED]
+    Starting squid: /etc/init.d/squid: line 53:  9440 Aborted                 $SQUID $SQUID_OPTS >>/var/log/squid/squid.out 2>&1
+                                                            [FAILED]
 
-# tail /var/log/messages
+    # tail /var/log/messages
 
-May 27 21:50:48 fw1-hosho setroubleshoot:      SELinux is preventing /usr/sbin/named (named_t) "write" access to named (named_conf_t).      For complete SELinux messages. run sealert -l 663ea169-d194-4c49-a5bb-a6a4bb707990
-May 27 22:39:26 fw1-hosho squid: cache_dir /var/spool/squid: (13) Permission denied
+    May 27 21:50:48 fw1-hosho setroubleshoot:      SELinux is preventing /usr/sbin/named (named_t) "write" access to named (named_conf_t).      For complete SELinux messages. run sealert -l 663ea169-d194-4c49-a5bb-a6a4bb707990
+    May 27 22:39:26 fw1-hosho squid: cache_dir /var/spool/squid: (13) Permission denied
 
 <code># /usr/bin/sealert -l 626e75b4-32aa-4a61-88f7-f36a68fecd35
 Summary
@@ -78,7 +78,7 @@ tcontext=user_u:object_r:file_t:s0 tty=(none) uid=23</code>
 
 So, the problem is that SELinux had not yet been told to look at the newly created volume (a LVM volume mounted on /var/spool/squid).  Fixing this was rather simple once you know about the restorecon command.
 
-# cd /var/spool/squid
-# /usr/sbin/squid -z
-# /sbin/restorecon -R *
-# /etc/init.d/squid start
+    # cd /var/spool/squid
+    # /usr/sbin/squid -z
+    # /sbin/restorecon -R *
+    # /etc/init.d/squid start

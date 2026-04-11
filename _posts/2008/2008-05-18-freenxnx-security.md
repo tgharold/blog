@@ -20,8 +20,8 @@ NX/FreeNX clients connect to your Linux server using a special user account (alw
 
 The server's key files are located under the following names on CentOS/RedHat:
 
-Public Key: /etc/nxserver/server.id_dsa.pub.key
-Private Key: /etc/nxserver/client.id_dsa.key
+    Public Key: /etc/nxserver/server.id_dsa.pub.key
+    Private Key: /etc/nxserver/client.id_dsa.key
 
 The <b>private</b> key is what needs to be handed out to your users.  They will then place this private key into their NX client configurations in order to login and talk to the NX server.
 
@@ -29,20 +29,20 @@ The official NX server has a "--keygen" command that can be used to create a new
 
 Note: DSA keys are always 1024 bits.
 
-<b># cd /etc/nxserver/
-# ssh-keygen -t dsa -f /etc/nxserver/new-dsa-key -N ''
-# mv client.id_dsa.key client.id_dsa.key.OLD
-# mv server.id_dsa.pub.key server.id_dsa.pub.key.OLD
-# mv new-dsa-key client.id_dsa.key
-# mv new-dsa-key.pub server.id_dsa.pub.key
-# service freenx-server restart
-# cat server.id_dsa.pub.key
-# /var/lib/nxserver/home/.ssh
-# vi authorized_keys2</b>
+    # cd /etc/nxserver/
+    # ssh-keygen -t dsa -f /etc/nxserver/new-dsa-key -N ''
+    # mv client.id_dsa.key client.id_dsa.key.OLD
+    # mv server.id_dsa.pub.key server.id_dsa.pub.key.OLD
+    # mv new-dsa-key client.id_dsa.key
+    # mv new-dsa-key.pub server.id_dsa.pub.key
+    # service freenx-server restart
+    # cat server.id_dsa.pub.key
+    # /var/lib/nxserver/home/.ssh
+    # vi authorized_keys2
 
 You will then need to change the old key line to match the new public key.  At this point, until you update any clients with the new private key file (client.id_dsa.key), they will be unable to connect to the server.
 
-<b># cat /etc/nxserver/client.id_dsa.key</b>
+    # cat /etc/nxserver/client.id_dsa.key
 
 Note: FreeNX seemingly stores the client.id_dsa.key in two places (/etc/nxserver and under /var/lib/nxserver/home/.ssh).
 
@@ -50,8 +50,8 @@ Note: FreeNX seemingly stores the client.id_dsa.key in two places (/etc/nxserver
 
 The default FreeNX install on CentOS/RedHat requires that your users can authenticate via passwords to SSH.  Obviously, not ideal, but we'll cover that in a few minutes.  For the moment, make sure that your /etc/ssh/sshd_config file contains the following settings:
 
-PermitRootLogin no
-PasswordAuthentication yes
+    PermitRootLogin no
+    PasswordAuthentication yes
 
 You should now be able to login using the NX client software to your server.  The username should be an account in /etc/passwd for which you know the password.
 
@@ -63,18 +63,18 @@ Probably one of the easiest fixes to avoid most brute-force attacks is to run SS
 
 1) Change the port number in /etc/ssh/sshd_config:
 
-#Port 22
-Port 9822
+    #Port 22
+    Port 9822
 
 2) Change /etc/nxserver/node.conf
 
-#SSHD_PORT=22
-SSHD_PORT=9822
+    #SSHD_PORT=22
+    SSHD_PORT=9822
 
 3) Restart the two services
 
-# service freenx-server restart
-# service sshd restart
+    # service freenx-server restart
+    # service sshd restart
 
 When you connect with the NX client, you will have to remember to specify the non-standard port number in the connection details.
 

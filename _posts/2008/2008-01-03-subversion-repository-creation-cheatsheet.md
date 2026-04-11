@@ -14,14 +14,14 @@ Whenever I setup new SVN repositories, I always create a unix group for people w
 
 I also generally designate a single user as the initial owner of the SVN repository folder under /var/svn.  Alternately, you could just leave the repository owned by root.
 
-# cd /var/svn
-(your repositories may be stored elsewhere)
-# /usr/sbin/groupadd svn-repositoryname
-# svnadmin create /var/svn/repositoryname
-# chmod -R 770 repositoryname
-# chmod -R g+s repositoryname/db
-# chown -R username:svn-repositoryname repositoryname
-# /usr/sbin/usermod -a -G svn-repositoryname username
+    # cd /var/svn
+    (your repositories may be stored elsewhere)
+    # /usr/sbin/groupadd svn-repositoryname
+    # svnadmin create /var/svn/repositoryname
+    # chmod -R 770 repositoryname
+    # chmod -R g+s repositoryname/db
+    # chown -R username:svn-repositoryname repositoryname
+    # /usr/sbin/usermod -a -G svn-repositoryname username
 
 Notes:
 <ul>

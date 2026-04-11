@@ -28,6 +28,7 @@ A) Install PuTTY on the Win2003 server
 
 3. Upload the public key to your SVN server, configure it in the authorized_keys file and restrict it to only allowing command="svnserve -t".
 
+```
 # su accountname
 # cd /home/accountname
 # mkdir .ssh
@@ -39,6 +40,7 @@ A) Install PuTTY on the Win2003 server
 # vi authorized_keys
 (add command="svnserve -t" to the front of the new key line)
 # chmod 600 *
+```
 
 4. Fire up PuTTY and attempt to connect to your SVN server.  That will cache the server's public key in PuTTY's records.
 
@@ -56,15 +58,20 @@ Variable value (can be anything at all): _svn
 
 5. Under User Variables, click "New":
 Variable name: SVN_SSH
+
+```
 plink -ssh -l user -pw password
 - "user" should be your username on the SVN server
 - the "-pw password" is optional if you did not put a passphrase on your key
+```
 
 C) Add the base set of directories to the server.
 
 1. Check connectivity to the SVN server
 
+```
 C:\ svn list svn+ssh://user@svn.example.com/var/svn/repos
+```
 
 (if that doesn't work, go back and verify SSH connectivity)
 
@@ -72,12 +79,12 @@ C:\ svn list svn+ssh://user@svn.example.com/var/svn/repos
 
 3. Do the default checkout to the root of C: and D:
 
-C:\ svn co svn+ssh://user@svn.example.com/var/svn/repos/C .
-D:\ svn co svn+ssh://user@svn.example.com/var/svn/repos/D .
-(note the "." at the end of the command)
+    C:\ svn co svn+ssh://user@svn.example.com/var/svn/repos/C .
+    D:\ svn co svn+ssh://user@svn.example.com/var/svn/repos/D .
+    (note the "." at the end of the command)
 
 4. Start adding folders and files to the SVN repository.
 
-C:\ svn add -N Data
-C:\ svn add -N Data\Logs
-C:\ svn ci -m "log folder"
+    C:\ svn add -N Data
+    C:\ svn add -N Data\Logs
+    C:\ svn ci -m "log folder"
