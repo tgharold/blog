@@ -51,18 +51,22 @@ I will assume that Knoppix boots properly on your system and that you end up at 
 
 5.  Fire up the command line.  To do this in Knoppix, go back to the "KNOPPIX" (penguin) icon and click on the "Root Shell" option.  You will see a terminal window open up with a prompt that looks like:
 
-<code>root@1[knoppix]#</code>
+```
+root@1[knoppix]#
+```
 
 6. Familiarize yourself with the partitions on the system:
 
-<code>root@1[knoppix]# cat /proc/partitions
+```
+root@1[knoppix]# cat /proc/partitions
 major minor  #blocks  name
    3     0   19535040 hda
    3     1   19535008 hda1
    8     0   60051600 sda
    8     1   32764536 sda1
  240     0    1942016 cloop0
-root@1[knoppix]# </code>
+root@1[knoppix]# 
+```
 
 The above listing shows that there is a ~18GB hard drive installed (hda) with a single partition (hda1) that fills most of the drive.  This drive (hda) is what we plan on backing up, if your system uses a different drive letter for the operating system drive, then you will need to adjust later commands.  Most ATA/IDE disk drives used for booting Windows are labeled as "hda".  You will generally only see "sda" used as the boot drive on systems that boot from SCSI drives.
 
@@ -70,10 +74,12 @@ Notice that there is also a 60GB USB drive attached (sda) with a single 32GB par
 
 7a. Create a mount point (/tmp/imagedest) and mount the Samba network share that you browsed to earlier.  Note the name as shown in the Konqueror browse window (smb://DOMAIN\account@servername/foldername).  This is typically case-sensitive, so you'll need to pay close attention to that.  Or you could mount the USB drive at this location.
 
-<code>root@1[knoppix]# mkdir /tmp/imagedest
+```
+root@1[knoppix]# mkdir /tmp/imagedest
 root@1[knoppix]# mount -t smbfs -o username=DOMAIN\\account //servername/foldername /tmp/imagedest
 Password: ******
-root@1[knoppix]#</code>
+root@1[knoppix]#
+```
 
 Notes:
 - You'll need a double-backslash between your domain name and your account name in the Windows domain.
@@ -89,20 +95,24 @@ Notes:
 
 <b>Warning: VERIFY your commands before using them.</b>  It's very easy to blow away your operating system by accident when using the following tools.
 
-<code>root@1[knoppix]# sfdisk -d /dev/hda &gt; /tmp/imagedest/myuser-hda.dump
+```
+root@1[knoppix]# sfdisk -d /dev/hda &gt; /tmp/imagedest/myuser-hda.dump
 root@1[knoppix]# dd if=/dev/hda bs=512 count=1 of=/tmp/imagedest/myuser-hda.mbr
 1+0 records in
 1+0 records out
 512 bytes transferred in 0.426934 seconds (1199 bytes/sec)
-root@1[knoppix]#</code>
+root@1[knoppix]#
+```
 
 Notes:
 - I'd recommend replacing "myuser" in the output filenames with a minimum of the date, the model/make of the system being imaged, and possibly the username associated with the system.
 
 9. Use <b>ntfsclone</b> to backup the individual NTFS partitions.  Note that this only works for NTFS partitions and may have unpredictable effects if you try to backup a FAT16 or FAT32 partition.  You will need to repeat this command for each NTFS partition that you want to save.  Notice that we are breaking the image into 4000MB chunks to allow these chunks to be easily placed onto DVD media for archival.  You can use smaller chunk sizes if you run into other issues, but it makes it slightly more difficult later to reconstruct the image.
 
-<code>root@1[knoppix]# ntfsclone -s -o - /dev/hda1 | gzip | split -b 1000m - /tmp/imagedest/myuser-diskimage-hda1.img.gz_
-root@1[knoppix]#</code>
+```
+root@1[knoppix]# ntfsclone -s -o - /dev/hda1 | gzip | split -b 1000m - /tmp/imagedest/myuser-diskimage-hda1.img.gz_
+root@1[knoppix]#
+```
 
 Notes:
 - There are two places in the command where a "-" appears by itself.  These are critical as they tell <b>ntfsclone</b> to pipe to standard output ("-o -") and that the <b>split</b> command should pull from standard input ("-" by itself).

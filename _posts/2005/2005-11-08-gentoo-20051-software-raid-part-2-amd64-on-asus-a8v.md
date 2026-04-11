@@ -14,10 +14,12 @@ This is a record of the kernel flags that I'm going to use for my AMD64 system. 
 
 In addition, I have even more hard drives hooked up to a Promise Ultra133 TX2 PCI card (PDC20269) and some HighPoint Rocket133SB PCI cards (HPT302).
 
-<code># emerge mdadm
+```
+# emerge mdadm
 # emerge lvm2
 # cd /usr/src/linux
-# make menuconfig</code>
+# make menuconfig
+```
 
 Linux Kernel v2.6.13-gentoo-r5 Configuration
 (C)ode maturity level options
@@ -69,11 +71,14 @@ Linux Kernel v2.6.13-gentoo-r5 Configuration
 
 Exit and save your configuration. Then build the kernel (the following command is for 2.6 kernels). Expect the compile to take almost no time at all on an AMD64 chip.  I used to wait an hour for all this to happen on my old VIA EPIA.
 
-<code># make &amp;&amp; make modules_install</code>
+```
+# make &amp;&amp; make modules_install
+```
 
 Once the code finishes compiling, you need to copy the kernel to your /boot partition.
 
-<code># mount /boot
+```
+# mount /boot
 # ls -l /boot
 # ls -l arch/x86_64/boot
 # df
@@ -81,7 +86,8 @@ Once the code finishes compiling, you need to copy the kernel to your /boot part
 # cp System.map /boot/System.map-2.6.13-9Nov2005
 # cp .config /boot/config-2.6.13-9Nov2005
 # ls -l /boot
-# nano -w /boot/grub/grub.conf</code>
+# nano -w /boot/grub/grub.conf
+```
 
 Add your new kernel.  I'd recommend always leaving the configuration for your old kernel in place and inserting the new config above the old one.  That way you get (2) benefits:
 
@@ -103,9 +109,11 @@ This is fixed by adding:
 
 1b) However, once you've turned on that particular driver (CONFIG_SCSI_SATA_PROMISE=y), your system will slow down and become very sluggish anytime that mdadm is rebuilding an array with drives attached to that controller.  You will also start to see the following messages in your "dmesg" output:
 
-<code>warning: many lost ticks.
+```
+warning: many lost ticks.
 Your time source seems to be instable or some driver is hogging interupts
-rip __do_softirq+0x48/0xb0</code>
+rip __do_softirq+0x48/0xb0
+```
 
 2) The disks attached to the PCI Rocket133 cards did not show up after the first boot.  Same deal as #1, worked with the LiveCD, but I didn't get the driver selection right when I built the first kernel.  On the upside, it allowed me to identify the (2) disks that are attached to the Promise PCI controller without any effort (hde and hdg are on the Promise card).
 
@@ -126,9 +134,11 @@ Probably the only one that matters is (CONFIG_BLK_DEV_HPT366=y):
 
 Yes, the Rocket 133SB (Rocket133SB) HPT302 chip is apparently supported by the HPT366.c file.  You can find this by grepping the kernel sources:
 
-<code># cd /usr/src/linux
+```
+# cd /usr/src/linux
 # find . -print | xargs grep -i 'hpt302'
-# grep -i 'hpt366' .config</code>
+# grep -i 'hpt366' .config
+```
 
 ...
 

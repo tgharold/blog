@@ -12,7 +12,8 @@ tags:
 
 During my initial Gentoo installation, I ran into the following issue after trying to "emerge grub".
 
-<code>...
+```
+...
 &gt;&gt;&gt; Completed installing grub-0.96-r2 into /var/tmp/portage/grub-0.96-r2/image/
 
 &gt;&gt;&gt; Merging sys-boot/grub-0.96-r2 to /
@@ -31,7 +32,8 @@ cat: /proc/mounts: No such file or directory
 
 !!! FAILED preinst: 1
 livecd linux # grub
-bash: grub: command not found</code>
+bash: grub: command not found
+```
 
 [This thread over at Short-Media](http://www.short-media.com/forum/archive/index.php/t-15576.html) has exactly this error listed.  However, that thread went nowhere and the user was redirected to search over at the Gentoo.org forums.
 
@@ -41,13 +43,16 @@ bash: grub: command not found</code>
 
 Most posters indicate that you must run the following command prior to entering the chroot environment.  
 
-<code>mount -t proc /proc /mnt/gentoo/proc </code>
+```
+mount -t proc /proc /mnt/gentoo/proc 
+```
 
 However, I can look back at my session logs and see that I already ran that particular command before entering the chroot.  Oh, wait... no I did not run that particular command. (This is where using a terminal program like SecureCRT comes in handy.)  This command should have been run just prior to entering the chroot environment.  ([See chapter 6 of the installation handbook.](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=6))
 
 The fix should be as simple as:
 
-<code>livecd linux # cat /proc/mounts
+```
+livecd linux # cat /proc/mounts
 cat: /proc/mounts: No such file or directory
 livecd linux # exit
 exit
@@ -56,4 +61,5 @@ livecd gentoo # chroot /mnt/gentoo /bin/bash
 livecd / # env-update
 &gt;&gt;&gt; Regenerating /etc/ld.so.cache...
 livecd / # source /etc/profile
-livecd / # emerge grub</code>
+livecd / # emerge grub
+```

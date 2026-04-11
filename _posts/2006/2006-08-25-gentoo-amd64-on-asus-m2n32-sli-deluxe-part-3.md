@@ -16,10 +16,12 @@ It's now time to start refering to the [Gentoo Installation Handbook](http://www
 
 This page starts with section 5 in the Gentoo handbook (Installing the Gentoo Installation Files).
 
-<code>livecd / # date
+```
+livecd / # date
 Fri Aug 25 21:23:52 UTC 2006
 livecd / # cd /mnt/gentoo
-livecd gentoo # links http://www.gentoo.org/main/en/mirrors.xml</code>
+livecd gentoo # links http://www.gentoo.org/main/en/mirrors.xml
+```
 
 Follow the directions on the Gentoo handbook page to download the correct stage3 tarball for your install.  The steps are roughly thus:
 
@@ -50,7 +52,8 @@ Follow the directions on the Gentoo handbook page to download the correct stage3
 
 Now you should have the tarball in /mnt/gentoo:
 
-<code>livecd gentoo # ls -l
+```
+livecd gentoo # ls -l
 total 105797
 drwxr-xr-x  3 root root      4096 Aug 25 21:11 backup
 drwxr-xr-x  3 root root      1024 Aug 25 20:46 boot
@@ -60,29 +63,37 @@ drwx------  2 root root     16384 Aug 25 20:47 lost+found
 drwxrwxrwt  3 root root      4096 Aug 25 20:59 tmp
 drwxr-xr-x  3 root root      4096 Aug 25 21:00 usr
 drwxr-xr-x  5 root root      4096 Aug 25 21:10 var
-livecd gentoo #</code>
+livecd gentoo #
+```
 
 Extract the tarball:
 
-<code>livecd gentoo # tar xvjpf stage3-*.tar.bz2</code>
+```
+livecd gentoo # tar xvjpf stage3-*.tar.bz2
+```
 
 You'll follow similar steps for the portage tarball.  In fact, we probably should've downloaded it at the same time to /mnt/gentoo.
 
-<code>livecd gentoo # tar xvjf /mnt/gentoo/portage-20060123.tar.bz2 -C /mnt/gentoo/usr</code>
+```
+livecd gentoo # tar xvjf /mnt/gentoo/portage-20060123.tar.bz2 -C /mnt/gentoo/usr
+```
 
 Setup your make flags.  Since I have an X2 CPU, I'm using "-j3" for MAKEOPTS.
 
-<code>livecd gentoo # vi /mnt/gentoo/etc/make.conf
+```
+livecd gentoo # vi /mnt/gentoo/etc/make.conf
 # These settings were set by the catalyst build script that automatically built this stage
 # Please consult /etc/make.conf.example for a more detailed example
 CFLAGS="-march=k8 -O2 -pipe"
 CHOST="x86_64-pc-linux-gnu"
 CXXFLAGS="${CFLAGS}"
-MAKEOPTS="-j3"</code>
+MAKEOPTS="-j3"
+```
 
 Now we start in on [Section 6 (Installing the Gentoo Base System)](http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?part=1&amp;chap=6).  Time to pick mirrors and other things.
 
-<code>livecd gentoo # mirrorselect -i -o &gt;&gt; /mnt/gentoo/etc/make.conf
+```
+livecd gentoo # mirrorselect -i -o &gt;&gt; /mnt/gentoo/etc/make.conf
 livecd gentoo # mirrorselect -i -r -o &gt;&gt; /mnt/gentoo/etc/make.conf
 livecd gentoo # cat /mnt/gentoo/etc/make.conf
 # These settings were set by the catalyst build script that automatically built this stage
@@ -95,26 +106,32 @@ MAKEOPTS="-j3"
 GENTOO_MIRRORS="http://gentoo.arcticnetwork.ca/ http://www.gtlib.gatech.edu/pub/gentoo http://gentoo.chem.wisc.edu/gentoo/ http://gentoo.mirrors.pair.com/ "
 
 SYNC="rsync://rsync.namerica.gentoo.org/gentoo-portage"
-livecd gentoo #</code>
+livecd gentoo #
+```
 
 Copy the resolv.conf file and mount /proc and /dev:
 
-<code>livecd gentoo # cp -L /etc/resolv.conf /mnt/gentoo/etc/resolv.conf
+```
+livecd gentoo # cp -L /etc/resolv.conf /mnt/gentoo/etc/resolv.conf
 livecd gentoo # mount -t proc none /mnt/gentoo/proc
-livecd gentoo # mount -o bind /dev /mnt/gentoo/dev</code>
+livecd gentoo # mount -o bind /dev /mnt/gentoo/dev
+```
 
 We're ready to chroot and start the build.
 
-<code>livecd gentoo # chroot /mnt/gentoo /bin/bash
+```
+livecd gentoo # chroot /mnt/gentoo /bin/bash
 livecd / # env-update
 &gt;&gt;&gt; Regenerating /etc/ld.so.cache...
 livecd / # source /etc/profile
 livecd / # export PS1="(chroot) $PS1"
-(chroot) livecd / #</code>
+(chroot) livecd / #
+```
 
 Read the next section carefully!  I use an extremely limited USE flag (that turns off all multimedia and graphical support).
 
-<code>(chroot) livecd / # emerge --sync
+```
+(chroot) livecd / # emerge --sync
 
 (chroot) livecd / # ls -FGg /etc/make.profile
 lrwxrwxrwx  1 50 Aug 25 22:10 /etc/make.profile -&gt; ../usr/portage/profiles/default-linux/amd64/2006.0/
@@ -124,10 +141,13 @@ USE="-alsa -apm -arts -bitmap-fonts -gnome -gtk -gtk2 -kde -mad -mikmod -motif -
 (chroot) livecd / # ln -sf /usr/share/zoneinfo/EST5EDT /etc/localtime
 (chroot) livecd / # date
 (chroot) livecd / # zdump GMT
-(chroot) livecd / # zdump EST5EDT</code>
+(chroot) livecd / # zdump EST5EDT
+```
 
 Read section 7 carefully.  I'm using the default "gentoo-sources" kernel.
 
-<code>(chroot) livecd / # USE="-doc symlink" emerge gentoo-sources</code>
+```
+(chroot) livecd / # USE="-doc symlink" emerge gentoo-sources
+```
 
 I'll cover configuration of the kernel in the next post.

@@ -14,10 +14,12 @@ This is a record of the kernel flags that I'm going to use for my AMD64 system. 
 
 In addition, I'll have even more hard drives hooked up to a  HighPoint RocketRAID 2300 PCIe card.  There's also a 3Com 3C905B PCI ethernet card installed along with a pair of Intel PRO/1000 PCIe gigabit NICs.
 
-<code># emerge mdadm
+```
+# emerge mdadm
 # emerge lvm2
 # cd /usr/src/linux
-# make menuconfig</code>
+# make menuconfig
+```
 
 Linux Kernel v2.6.17-gentoo-r4 Configuration
 <b>C</b>ode maturity level options
@@ -72,18 +74,22 @@ Linux Kernel v2.6.17-gentoo-r4 Configuration
 
 Now we can compile and copy the kernel to the /boot partition.
 
-<code># make &amp;&amp; make modules_install
+```
+# make &amp;&amp; make modules_install
 # ls -l /boot
 # ls -l arch/x86_64/boot
 # df
 # cp arch/x86_64/boot/bzImage /boot/kernel-2.6.17-25Aug2006-2300
 # cp System.map /boot/System.map-2.6.17-25Aug2006-2300
 # cp .config /boot/config-2.6.17-25Aug2006-2300
-# ls -l /boot</code>
+# ls -l /boot
+```
 
 Next is [Chapter 8, Configuring your System](http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?part=1&amp;chap=8).
 
-<code>(chroot) livecd linux # nano -w /etc/fstab</code>
+```
+(chroot) livecd linux # nano -w /etc/fstab
+```
 
 My fstab (there are lines not shown):
 
@@ -104,7 +110,8 @@ My fstab (there are lines not shown):
 
 Now for some final clean-up work:
 
-<code>(chroot) livecd linux # nano -w /etc/conf.d/hostname
+```
+(chroot) livecd linux # nano -w /etc/conf.d/hostname
 (chroot) livecd linux # nano -w /etc/conf.d/net
 config_eth7=( "192.168.142.100 netmask 255.255.255.0" ) 
 routes_eth7=( "default gw 192.168.142.1" )
@@ -133,11 +140,13 @@ passwd: password updated successfully
 (the key may take a a minute to generate)
 # chmod 600 /etc/ssh/ssh_host_dsa_key
 # chmod 644 /etc/ssh/ssh_host_dsa_key.pub
-# rc-update add sshd default</code>
+# rc-update add sshd default
+```
 
 Now it's time for grub.
 
-<code>(chroot) livecd init.d # emerge grub
+```
+(chroot) livecd init.d # emerge grub
 (chroot) livecd init.d # ls -l /boot
 total 3468
 -rw-r--r--  1 root root 1090703 Aug 26 00:35 System.map-2.6.17-25Aug2006-2300
@@ -169,11 +178,13 @@ grub&gt; setup (hd0)
 grub&gt; device (hd0) /dev/sdb
 grub&gt; root (hd0,0)
 grub&gt; setup (hd0)
-grub&gt; quit</code>
+grub&gt; quit
+```
 
 Time to exit the chroot, unmount everything, and try a reboot.
 
-<code>livecd / # cat /proc/mounts
+```
+livecd / # cat /proc/mounts
 rootfs / rootfs rw 0 0
 tmpfs / tmpfs rw 0 0
 /dev/hda /mnt/cdrom iso9660 ro 0 0
@@ -201,6 +212,7 @@ livecd / # unmount /mnt/gentoo/backup/system /mnt/gentoo/var/svn /mnt/gentoo/var
 livecd / # umount /mnt/gentoo/backup/system /mnt/gentoo/var/svn /mnt/gentoo/var/log /mnt/gentoo/usr/portage 
 livecd / # umount /mnt/gentoo/home /mnt/gentoo/var/tmp /mnt/gentoo/tmp
 livecd / # umount /mnt/gentoo/boot /mnt/gentoo/dev /mnt/gentoo/proc /mnt/gentoo
-livecd / # reboot</code>
+livecd / # reboot
+```
 
 Remove the LiveCD and cross your fingers.  Success!

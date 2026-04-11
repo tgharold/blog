@@ -22,7 +22,8 @@ Place the zip.exe and unzip.exe files in the C:\BIN folder.
 
 3) Locate your PST files.  Create the following as a text file in the same directory.  Name it as "backupemail.cmd".
 
-<code>@echo off
+```
+@echo off
 rem Backup my Outlook PST files
 
 IF NOT EXIST "X:\EMailBackup\*" GOTO quit
@@ -40,7 +41,8 @@ IF EXIST MyPSTs-2.zip REN MyPSTs-2.zip MyPSTs-3.zip
 IF EXIST MyPSTs-1.zip REN MyPSTs-1.zip MyPSTs-2.zip
 IF EXIST MyPSTs.zip REN MyPSTs.zip MyPSTs-1.zip
 
-:quit</code>
+:quit
+```
 
 Notes:
 

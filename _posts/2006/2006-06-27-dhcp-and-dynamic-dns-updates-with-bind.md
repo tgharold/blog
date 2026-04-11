@@ -51,7 +51,8 @@ The DNS zone for my internal network is "lan.example.com", so each machine will 
 
 B. Make sure /etc/bind and /etc/dhcp are in SubVersion
 
-<code># cd /etc
+```
+# cd /etc
 etc # svn add -N bind
 etc # svn add -N named
 etc # svn add -N dhcp
@@ -65,13 +66,15 @@ etc # svn add -N named
 etc # svn ci -m "initial entry of dynamic DNS configuration"
 etc # cd /var/bind
 bind # svn add *
-bind # svn ci -m "initial entry of dynamic DNS configuration"</code>
+bind # svn ci -m "initial entry of dynamic DNS configuration"
+```
 
 C. Create a symetric encryption (authentication?) key
 
 In order for the DHCP server to update the DNS zone files in a secure manner, you need to create a symetric key using the "dnssec-keygen" command.  This key can be anywhere from 1 to 512 bits but I would recommend at least 128 bits if not 256 bits.  The "dnssec-keygen" command will create a pair of files that contain the key (since it's symetric encryption both files will have the same key).
 
-<code># cd /etc/bind
+```
+# cd /etc/bind
 bind # dnssec-keygen -a HMAC-MD5 -b 256 -n HOST dhcp.lan.example.com
 Kdhcp.lan.example.com.+157+20479
 bind # ls -l Kdhcp*
@@ -91,7 +94,8 @@ Adding         bind/Kdhcp.lan.example.com.+157+20479.key
 Adding         bind/Kdhcp.lan.example.com.+157+20479.private
 Transmitting file data ..
 Committed revision 10.
-bind #</code>
+bind #
+```
 
 Nothing terribly complicated here.  Just make sure that you replace "dhcp.lan.example.com" with the name of your DHCP server's FQDN (fully qualified domain name).
 
@@ -99,7 +103,8 @@ D. Now we can construct the named.conf file.  I use a semi-complex method with s
 
 You'll need to replace 192.168.102.XXX with your local LAN address as well as changing "dhcp.lan.example.com" to match the name of your DHCP server's FQDN.
 
-<code>bind # vim named.conf
+```
+bind # vim named.conf
 options {
         directory "/var/named"; // sets root dir, use full path to escape
         statistics-file "/var/named/named.stats"; // stats are your friend
@@ -127,11 +132,13 @@ include "/var/named/conf/acls.conf";
 // Include custom
 include "/var/named/conf/lan.conf";
 include "/var/named/conf/reverse.conf";
-bind # svn ci -m "updating for DDNS"</code>
+bind # svn ci -m "updating for DDNS"
+```
 
 E. Create the logging.conf and acls.conf files in /var/bind/conf.
 
-<code># cd /var/bind/conf
+```
+# cd /var/bind/conf
 conf # vim logging.conf
 logging {
 
@@ -177,11 +184,13 @@ acl "our-networks" {
         192.168.102.0/24;
         127.0.0.1;
 };
-conf #</code>
+conf #
+```
 
 F. Create the two config files for the LAN and the reverse DNS.
 
-<code># cd /var/bind/conf
+```
+# cd /var/bind/conf
 conf # vim lan.conf
 zone "lan.example.com" { 
         type master; 
@@ -199,24 +208,28 @@ zone "102.168.192.in-addr.arpa" {
         };
 };
 conf # svn add *
-conf # svn ci -m "updating config for DDNS"</code>
+conf # svn ci -m "updating config for DDNS"
+```
 
 Make sure that you set the user/group ownership of the config files to "named"
 
-<code>conf # ls -l *.conf
+```
+conf # ls -l *.conf
 total 16
 -rw-r--r--  1 named named   70 Dec 12  2005 acls.conf
 -rw-r--r--  1 named named  214 Jun 27 18:28 lan.conf
 -rw-r--r--  1 named named 2662 Dec 12  2005 logging.conf
 -rw-r--r--  1 root  root   224 Jun 27 18:28 reverse.conf
 conf # chown named *.conf
-conf # chgrp named *.conf</code>
+conf # chgrp named *.conf
+```
 
 G. Create the zone files for the forward and reverse DNS zones
 
 Note: Remember to add folders and files to SubVersion and to assign the user/group to "named".
 
-<code># cd /var/bind/lan
+```
+# cd /var/bind/lan
 lan # vim lan.example.com
 $ORIGIN .
 $TTL 600        ; 10 minutes
@@ -250,7 +263,8 @@ $TTL 600
 ; static PTR records
 2.102.168.192.in-addr.arpa.     IN      PTR     servername.lan.example.com.
 2.102.168.192.in-addr.arpa.     IN      PTR     dhcp.lan.example.com.
-reverse #</code>
+reverse #
+```
 
 H. That should be it
 

@@ -24,24 +24,28 @@ So how do we verify that our fstab file makes sense prior to a reboot?  The answ
 
 Here's an example where everything is fine and dandy.
 
-<code># mount -fav
+```
+# mount -fav
 mount: /dev/md0 already mounted on /boot
 mount: devpts already mounted on /dev/pts
 mount: tmpfs already mounted on /dev/shm
 mount: proc already mounted on /proc
 mount: sysfs already mounted on /sys
 mount: /dev/md4 already mounted on /var/log
-nothing was mounted</code>
+nothing was mounted
+```
 
 Same example, except that I screwed up the name of /dev/md4 in the fstab file:
 
-<code># mount -fav   
+```
+# mount -fav   
 mount: /dev/md0 already mounted on /boot
 mount: devpts already mounted on /dev/pts
 mount: tmpfs already mounted on /dev/shm
 mount: proc already mounted on /proc
 mount: sysfs already mounted on /sys
 /dev/md4x on /var/log type ext3 (rw,noatime)
-nothing was mounted</code>
+nothing was mounted
+```
 
 Now, there's probably a better way to do this, but this serves as at least a moderate check against shooting yourself in the foot.

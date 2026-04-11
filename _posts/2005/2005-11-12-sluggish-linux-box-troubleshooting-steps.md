@@ -14,7 +14,8 @@ Time to sit down and jot some things down so I can figure out which device/drive
 
 Back when I finally booted into the AMD64 LiveCD, I got the following information from /proc/partitions:
 
-<code>livecd ~ # cat /proc/partitions
+```
+livecd ~ # cat /proc/partitions
 major minor #blocks name
 
 7 0 49712 loop0
@@ -26,7 +27,8 @@ major minor #blocks name
 3 0 293057352 hda - 300GB 7200rpm PATA (motherboard primary IDE)
 8 0 293057352 sda - 300GB 7200rpm PATA (PDC20378 m/b)
 8 16 199148544 sdb - 200GB 7200rpm SATA (m/b SATA)
-livecd ~ #</code>
+livecd ~ #
+```
 
 Key:
 HPT302 = HighPoint Rocket133SB PCI cards (1 PATA port per card)
@@ -37,11 +39,14 @@ So, that tells me that if I manage to get my kernel configured properly, I shoul
 
 I found the kernel configuration for the LiveCD by booting the LiveCD and looking at the compressed file /proc/config.gz.  You can see the contents of this file by using the command:
 
-<code># cat /proc/config.gz | gzip -d | less</code>
+```
+# cat /proc/config.gz | gzip -d | less
+```
 
 So I went and looked at the differences between my Nov 8th kernel (which works, except for support for the onboard Promise chip and the HPT302s) and my problematic Nov 9th kernel.
 
-<code>nogitsune linux # diff /boot/config-2.6.13-8Nov2005 /boot/config-2.6.13-9Nov2005
+```
+nogitsune linux # diff /boot/config-2.6.13-8Nov2005 /boot/config-2.6.13-9Nov2005
 4c4
 &lt; # Tue Nov  8 18:19:03 2005
 ---
@@ -54,7 +59,8 @@ So I went and looked at the differences between my Nov 8th kernel (which works, 
 &lt; # CONFIG_SCSI_SATA_PROMISE is not set
 ---
 &gt; CONFIG_SCSI_SATA_PROMISE=y
-nogitsune linux #</code>
+nogitsune linux #
+```
 
 That's it.  Just two changes to the .config file.  So I'm currently undoing the "CONFIG_CHR_DEV_SG=y" line and leaving the Promise SATA line in.  I've recompiled and I'm getting ready to reboot to see if it recognizes the PATA disk connected to the PDC20378 chip on the motherboard.
 
@@ -62,7 +68,8 @@ It did, but still didn't fix the issue of sluggishness.
 
 Useful steps to know about when booting off the LiveCD for my system.  I manually reassemble the RAID items and mount all of my LVM2 partitions.
 
-<code>livecd ~ # modprobe md
+```
+livecd ~ # modprobe md
 livecd ~ # modprobe dm-mod
 livecd ~ # modprobe raid1
 livecd ~ # for i in 0 1 2 3; do mknod /dev/md$i b 9 $i; done
@@ -93,11 +100,13 @@ livecd ~ # mount -t proc none /mnt/gentoo/proc
 livecd ~ # chroot /mnt/gentoo /bin/bash
 livecd / # env-update
 &gt;&gt;&gt; Regenerating /etc/ld.so.cache...
-livecd / # source /etc/profile</code>
+livecd / # source /etc/profile
+```
 
 Modules that get loaded on the 2005.1 AMD64 LiveCD on my system:
 
-<code>livecd linux # cat /proc/modules
+```
+livecd linux # cat /proc/modules
 raid1 14720 4 - Live 0xffffffff880f9000
 md 36480 5 raid1, Live 0xffffffff880ef000
 ipv6 212928 10 - Live 0xffffffff880ba000
@@ -128,4 +137,5 @@ usb_storage 55616 0 - Live 0xffffffff88026000
 usbhid 27680 0 - Live 0xffffffff8801e000
 ehci_hcd 25864 0 - Live 0xffffffff88016000
 usbcore 86008 7 sl811_hcd,ohci_hcd,uhci_hcd,usb_storage,usbhid,ehci_hcd, Live 0xffffffff88000000
-livecd linux #</code>
+livecd linux #
+```

@@ -12,13 +12,16 @@ tags:
 
 So, I've got a system that isn't booting yet.  The boot error is:
 
-<code>* Mounting proc at /proc [ ok ]
+```
+* Mounting proc at /proc [ ok ]
 * Mounting sysfs at /sys [ !! ]
-can't create lock file /etc/mtab~944: Read-only file system (use -n flag to override)</code>
+can't create lock file /etc/mtab~944: Read-only file system (use -n flag to override)
+```
 
 First, I have to go back to the boot CD and get up and running:
 
-<code>livecd root # passwd
+```
+livecd root # passwd
 livecd root # /etc/init.d/sshd start
 livecd root # ifconfig
 (at this point, I switch over to using SecureCRT on the other system)
@@ -28,22 +31,26 @@ livecd root # for i in 0 1 2 3; do mknod /dev/md$i b 9 $i; done
 livecd root # mdadm --assemble /dev/md0 /dev/hda1 /dev/hdc1
 livecd root # mdadm --assemble /dev/md1 /dev/hda2 /dev/hdc2
 livecd root # mdadm --assemble /dev/md2 /dev/hda3 /dev/hdc3
-livecd root # mdadm --assemble /dev/md3 /dev/hda4 /dev/hdc4</code>
+livecd root # mdadm --assemble /dev/md3 /dev/hda4 /dev/hdc4
+```
 
 That gets the raid arrays up and running.
 
-<code>livecd root # swapon /dev/md2
+```
+livecd root # swapon /dev/md2
 livecd root # mount /dev/md1 /mnt/gentoo
 livecd root # mount /dev/md0 /mnt/gentoo/boot
 livecd root # modprobe dm-mod
 livecd root # mkdir /etc/lvm
 livecd root # echo 'devices { filter=["r/cdrom/"] }' &gt;/etc/lvm/lvm.conf
 livecd / # lvscan
-livecd / # lvchange -ay vgmirror</code>
+livecd / # lvchange -ay vgmirror
+```
 
 Which gets the LVM2 up and running (and the logical volumes set to active).
 
-<code># mount /dev/vgmirror/opt /mnt/gentoo/opt
+```
+# mount /dev/vgmirror/opt /mnt/gentoo/opt
 # mount /dev/vgmirror/usr /mnt/gentoo/usr
 # mount /dev/vgmirror/var /mnt/gentoo/var
 # mount /dev/vgmirror/home /mnt/gentoo/home
@@ -51,20 +58,26 @@ Which gets the LVM2 up and running (and the logical volumes set to active).
 # chmod 1777 /mnt/gentoo/tmp
 # mount /dev/vgmirror/vartmp /mnt/gentoo/var/tmp
 # chmod 1777 /mnt/gentoo/var/tmp
-# mount -t proc none /mnt/gentoo/proc</code>
+# mount -t proc none /mnt/gentoo/proc
+```
 
 Should be ready to chroot into the hard disk.
 
-<code># chroot /mnt/gentoo /bin/bash ; env-update</code>
+```
+# chroot /mnt/gentoo /bin/bash ; env-update
+```
 
 Gonna redo my kernel configuration (see [Gentoo 2004.3 on Gigabyte GA-6VA7+ (part 4)](/2005-04-20-gentoo-20043-on-gigabyte-ga-6va7-part-4/)) because I suspect that something needed to be loaded in differently.
 
-<code># cd /usr/src/linux
-# make menuconfig</code>
+```
+# cd /usr/src/linux
+# make menuconfig
+```
 
 Going to switch the LVM2 from loading as a "module" and change it to being "built-in".  Could be an error on the Gentoo LVM2 page according to a [note I see in the gentoo wiki](http://gentoo-wiki.com/HOWTO_Gentoo_Install_on_Software_RAID_mirror_and_LVM2_on_top_of_RAID).
 
-<code># make &amp;&amp; make modules_install
+```
+# make &amp;&amp; make modules_install
 # cp arch/i386/boot/bzImage /boot/kernel-2.6.11-gentoo-Apr20
 # cp System.map /boot/System.map-2.6.11-gentoo-Apr20
 # cp .config /boot/config-2.6.11-gentoo-Apr20
@@ -81,12 +94,15 @@ livecd / # umount ... (insert list of mounted file systems)
 livecd / # vgchange -an vgmirror
 livecd / # reboot
 
-(remove the gentoo boot CD)</code>
+(remove the gentoo boot CD)
+```
 
 Now to see if it works.  No luck.  Redoing the above, but going to re-do my LVM2, but changing to be 'static' per the wiki.
 
-<code># echo 'sys-fs/lvm2 static' &gt;&gt; /etc/portage/package.use
-# emerge lvm2</code>
+```
+# echo 'sys-fs/lvm2 static' &gt;&gt; /etc/portage/package.use
+# emerge lvm2
+```
 
 No joy here either.  Time to go do some more searching.
 

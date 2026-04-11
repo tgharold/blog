@@ -12,7 +12,9 @@ tags:
 
 I'm currently plagued by the following showing up in my error console in Thunderbird 2.0.0.17 (20080914).
 
-<code>Error: uncaught exception: [Exception... "Component returned failure code: 0x80550006 [nsIMsgFolder.getMsgDatabase]"  nsresult: "0x80550006 (<unknown>)"  location: "JS frame :: chrome://messenger/content/mailWidgets.xml :: parseFolder :: line 2061"  data: no]</unknown></code>
+```
+Error: uncaught exception: [Exception... "Component returned failure code: 0x80550006 [nsIMsgFolder.getMsgDatabase]"  nsresult: "0x80550006 (<unknown>)"  location: "JS frame :: chrome://messenger/content/mailWidgets.xml :: parseFolder :: line 2061"  data: no]</unknown>
+```
 
 The other thing that happens is that eventually, Thunderbird stops talking (hangs) to my IMAP mail server (over SSL).  So I'm unable to send e-mail messages over SMTP/SSL (port 465), or am I able to retrieve any messages from our IMAP (Dovecot over SSL) server until I restart Thunderbird.
 

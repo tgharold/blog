@@ -17,10 +17,12 @@ tags:
 
 Time to [configure the kernel](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=7).
 
-<code># emerge lvm2
+```
+# emerge lvm2
 # emerge mdadm
 # cd /usr/src/linux
-# make menuconfig</code>
+# make menuconfig
+```
 
 Linux Kernel v2.6.11 Configuration
 (C)ode maturity level options
@@ -55,21 +57,28 @@ Linux Kernel v2.6.11 Configuration
 
 Exit and save your configuration. Then build the kernel (the following is for 2.6 kernels). Expect the compile to take about an hour.
 
-<code># make &amp;&amp; make modules_install</code>
+```
+# make &amp;&amp; make modules_install
+```
 
 Now you need to install your kernel into the boot partition. Change the "2.6.6-gentoo" portion of the filenames to whatever you want.
 
-<code># cp arch/i386/boot/bzImage /boot/kernel-2.6.11-gentoo-Apr20
+```
+# cp arch/i386/boot/bzImage /boot/kernel-2.6.11-gentoo-Apr20
 # cp System.map /boot/System.map-2.6.11-gentoo-Apr20
-# cp .config /boot/config-2.6.11-gentoo-Apr20</code>
+# cp .config /boot/config-2.6.11-gentoo-Apr20
+```
 
 Now we need to configure LVM to auto-load.
 
-<code># nano -w /etc/modules.autoload.d/kernel-2.6</code>
+```
+# nano -w /etc/modules.autoload.d/kernel-2.6
+```
 
 Here is what my autoload file looks like:
 
-<code># /etc/modules.autoload.d/kernel-2.6:  kernel modules to load when system boots.
+```
+# /etc/modules.autoload.d/kernel-2.6:  kernel modules to load when system boots.
 # $Header: /home/cvsroot/gentoo-src/rc-scripts/etc/modules.autoload.d/kernel-2.6,v 1.1 2003/07/16 18:13:45 azarah Exp $
 #
 # Note that this file is for 2.6 kernels.
@@ -81,11 +90,13 @@ Here is what my autoload file looks like:
 # For example:
 # 3c59x
 
-dm-mod</code>
+dm-mod
+```
 
 Now, edit the /etc/fstab file:
 
-<code># /etc/fstab: static file system information.
+```
+# /etc/fstab: static file system information.
 # $Header: /home/cvsroot/gentoo-src/rc-scripts/etc/fstab,v 1.14 2003/10/13 20:03:38 azarah Exp $
 #
 # noatime turns off atimes for increased performance (atimes normally aren't
@@ -118,11 +129,13 @@ none                    /proc           proc            defaults                
 #  use almost no memory if not populated with files)
 # Adding the following line to /etc/fstab should take care of this:
 
-none                    /dev/shm        tmpfs           defaults                0 0</code>
+none                    /dev/shm        tmpfs           defaults                0 0
+```
 
 Now, some misc stuff:
 
-<code># echo yourhostname &gt; /etc/hostname
+```
+# echo yourhostname &gt; /etc/hostname
 # echo yourdnsname &gt; /etc/dnsdomainname
 # rc-update add domainname default
 # nano -w /etc/conf.d/net
@@ -138,6 +151,7 @@ Now, some misc stuff:
 # useradd -m -G users,wheel,audio -s /bin/bash john
 # passwd john
 
-(add a user called 'john' and set a password)</code>
+(add a user called 'john' and set a password)
+```
 
 (next step)

@@ -12,7 +12,8 @@ tags:
 
 Got the following error while trying to emerge samba into my Gentoo box.
 
-<code>Compiling torture/rpctorture.c
+```
+Compiling torture/rpctorture.c
 make: *** Waiting for unfinished jobs....
 torture/rpctorture.c:27: error: `global_myname' redeclared as different kind of symbol
 include/proto.h:1019: error: previous declaration of `global_myname'
@@ -57,11 +58,13 @@ LOG FILE = "/var/log/sandbox/sandbox-net-fs_-_samba-3.0.14a-r2-21241.log"
 
 access_wr: /etc/krb5.conf
 --------------------------------------------------------------------------------
-# </code>
+# 
+```
 
 Here are my current USE flags:
 
-<code># cat /etc/make.conf
+```
+# cat /etc/make.conf
 
 # These settings were set by the catalyst build script that automatically built this stage
 # Please consult /etc/make.conf.example for a more detailed example
@@ -82,7 +85,8 @@ USE="apache2 kerberos ldap postgres samba -alsa -apm -arts -bitmap-fonts -gnome 
 # $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/2005.1/make.defaults,v 1.4 2005/08/29 22:20:25 wolf31o2 Exp $
 
 USE="alsa apm arts avi berkdb bitmap-fonts crypt cups eds emboss encode fortran foomaticdb gdbm gif gnome gpm gstreamer gtk gtk2 imlib ipv6 jpeg kde libg++ libwww mad mikmod motif mp3 mpeg ncurses nls ogg oggvorbis opengl oss pam pdflib perl png python qt quicktime readline sdl spell ssl tcpd truetype truetype-fonts type1-fonts vorbis X xml2 xmms xv zlib"
-#</code>
+#
+```
 
 I'm still searching for a solution to this issue.  I've heard it has to do with trying to use the kerberos USE flag (which is not an optional flag for me).  The closest possible solution in Google is on the Gentoo forums ([Problems upgrading to Samba 3.0.14a-r2!](http://forums.gentoo.org/viewtopic-t-367341.html)).  The user, "jpnag", posts a solution.
 
@@ -92,7 +96,8 @@ By default, portage downloads and installs packages under the "/usr/portage/" tr
 
 Now to create the backup copy of the broken Samba ebuild.  If you have not already added "PORTDIR_OVERLAY=" to your "make.conf" file, you should also do this.
 
-<code># cd /etc
+```
+# cd /etc
 etc # echo 'PORTDIR_OVERLAY="/usr/local/portage"' &gt;&gt; /etc/make.conf
 etc # cd /usr/local
 local # ls /usr/portage/net-fs/samba/
@@ -101,7 +106,8 @@ portage # mkdir net-fs ; cd net-fs
 net-fs # mkdir samba ; cd samba
 samba # cp -a /usr/portage/net-fs/samba/* .
 samba # ls -l samba-3.0.14a-r2.ebuild
-samba # nano -w samba-3.0.14a-r2.ebuild</code>
+samba # nano -w samba-3.0.14a-r2.ebuild
+```
 
 Now hit [Ctrl-W] and type "src_compile", which will take you straight to the following code block:
 
@@ -139,7 +145,8 @@ Somewhere towards the start of the funciton, add the line "addpredict /etc/krb5.
 
 Create the ebuild digest (MD5 signatures) for the patched package.
 
-<code>samba # ebuild /usr/local/portage/net-fs/samba/samba-3.0.14a-r2.ebuild digest 
+```
+samba # ebuild /usr/local/portage/net-fs/samba/samba-3.0.14a-r2.ebuild digest 
 &gt;&gt;&gt; Generating digest file...
 &lt;&lt;&lt; samba-3.0.14a.tar.gz
 &lt;&lt;&lt; samba-vscan-0.3.6.tar.bz2
@@ -171,6 +178,7 @@ Total size of downloads: 0 kB
 Portage overlays:
  [1] /usr/local/portage
 
-samba # emerge samba</code>
+samba # emerge samba
+```
 
 (crosses fingers)

@@ -12,7 +12,8 @@ tags:
 
 At some point, I need to upgrade my Gentoo profile from 2004.3 to 2005.0.  Here's the error message that you see on screen when you need to do this.
 
-<code>livecd linux # emerge (something)
+```
+livecd linux # emerge (something)
 
 !!! Your current profile is deprecated and not supported anymore.
 !!! Please upgrade to the following profile if possible:
@@ -33,4 +34,5 @@ To upgrade do the following steps:
 
 # More information can be found at the following URLs:
 # http://www.gentoo.org/doc/en/gentoo-upgrading.xml
-# http://www.gentoo.org/doc/en/migration-to-2.6.xml</code>
+# http://www.gentoo.org/doc/en/migration-to-2.6.xml
+```

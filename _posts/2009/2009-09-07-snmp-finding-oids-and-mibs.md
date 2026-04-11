@@ -12,15 +12,20 @@ tags:
 
 The key tool in the toolbox for exploring MIBs and finding things in SNMP is either "snmpwalk" or looking at the actual MIB text definitions.  On CentOS 5 (and RHEL 5), the net-snmp package installs a default set of MIBs to "/usr/share/snmp/mibs/".
 
-<code># snmpwalk -v 2c -c public localhost diskIONReadX</code>
+```
+# snmpwalk -v 2c -c public localhost diskIONReadX
+```
 
 That particular command uses version "2c" of the SNMP protocol to talk to the "public" community on the localhost and looks for "diskIONReadX" (which is a 64bit counter value column from the diskIOTable).
 
-<code># snmptranslate -m +ALL -IR -Td diskIONReadX</code>
+```
+# snmptranslate -m +ALL -IR -Td diskIONReadX
+```
 
 Here, we use "snmptranslate" to report on full details (-Td) of the diskIONReadX property.  When looking up SNMP attributes by labels, you'll want to use the above format, but you can change "-Td" to other "-T" options or a "-O" option.  Some common choices are:
 
-<code># snmptranslate -m +ALL -IR <b>-Td</b> diskIONReadX
+```
+# snmptranslate -m +ALL -IR <b>-Td</b> diskIONReadX
 UCD-DISKIO-MIB::diskIONReadX
 diskIONReadX OBJECT-TYPE
   -- FROM       UCD-DISKIO-MIB
@@ -39,4 +44,5 @@ diskIONReadX OBJECT-TYPE
 
 # snmptranslate -m +ALL -IR <b>-Ou</b> diskIONReadX
 enterprises.ucdavis.ucdExperimental.ucdDiskIOMIB.diskIOTable.
-    diskIOEntry.diskIONReadX</code>
+    diskIOEntry.diskIONReadX
+```

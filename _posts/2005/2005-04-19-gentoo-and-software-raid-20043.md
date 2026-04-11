@@ -21,7 +21,8 @@ Starting with the usual tricks:
 
 Since these drives were nuked since my last attempt, I have to re-configure the partitions.
 
-<code># fdisk /dev/hda
+```
+# fdisk /dev/hda
 
 Command: n
 Command action: p
@@ -61,7 +62,8 @@ Hex code: fd
 
 Command: p
 
-Command: w</code>
+Command: w
+```
 
 This gives me a 128MB boot area, a 2GB swap area, a 2GB root area, with the rest of the disk set aside for my LVM2 partitions. Repeat the above commands to configure the 2nd disk in the same fashion (/dev/hdc for me).
 
@@ -69,16 +71,19 @@ Now I need to configure software RAID.  This is a bit easier then last year sinc
 
 The following loads the 'md' module and creates the nodes (/dev/md*).
 
-<code># modprobe md
+```
+# modprobe md
 # ls /dev/md*
 ls: /dev/md*: No such file or directory
 # for i in 0 1 2 3; do mknod /dev/md$i b 9 $i; done
 # ls /dev/md*
-/dev/md0 /dev/md1 /dev/md2 /dev/md3</code>
+/dev/md0 /dev/md1 /dev/md2 /dev/md3
+```
 
 Now, we create our RAID1 sets.
 
-<code># modprobe raid1
+```
+# modprobe raid1
 # mdadm --create /dev/md0 --level=1 --raid-devices=2 /dev/hda1 /dev/hdc1 
 mdadm: array /dev/md0 started.
 # mdadm --create /dev/md1 --level=1 --raid-devices=2 /dev/hda2 /dev/hdc2
@@ -91,11 +96,14 @@ md1 : active raid1 hdc2[1] hda2[0]
 md0 : active raid1 hdc1[1] hda1[0]
       125376 blocks [2/2] [UU]
 
-unused devices: &lt;none&gt;</code>
+unused devices: &lt;none&gt;
+```
 
 Seems to be working fine.  Once each RAID set finishes initialization, I'll create the next one in the series using the following commands:
 
-<code># mdadm --create /dev/md2 --level=1 --raid-devices=2 /dev/hda3  /dev/hdc3
-# mdadm --create /dev/md3 --level=1 --raid-devices=2 /dev/hda4 /dev/hdc4</code>
+```
+# mdadm --create /dev/md2 --level=1 --raid-devices=2 /dev/hda3  /dev/hdc3
+# mdadm --create /dev/md3 --level=1 --raid-devices=2 /dev/hda4 /dev/hdc4
+```
 
 The last RAID set will take a while to initialize (2 hours?), so I'm going to go work on other things while it runs.  I also need to go back and review the documentation to see what else I need to do when doing software RAID.

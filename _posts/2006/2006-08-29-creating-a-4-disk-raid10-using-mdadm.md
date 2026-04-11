@@ -16,17 +16,22 @@ I'm going to create a 4-disk RAID10 array using Linux Software RAID and mdadm.  
 
 1) Create the /dev/mdN node for the new RAID10 array.  In my case, I already have /dev/md0 to /dev/md4 so I'm going to create /dev/md5 (note that "5" appears twice in the command).
 
-<code># mknod /dev/md5 b 9 5</code>
+```
+# mknod /dev/md5 b 9 5
+```
 
 2) Use fdisk on the (4) drives, create a single primary partition of type "fd" (Linux raid autodetect).  Note that I have *nothing* on these brand new drives, so I don't care if it wipes out data.
 
 3) Create the mdadm RAID set using 4 devices and a level of RAID10.
 
-<code># mdadm --create /dev/md5 -v --raid-devices=4 --chunk=32 --level=raid10 /dev/sdc1 /dev/sdd1 /dev/sde1 /dev/sdf1</code>
+```
+# mdadm --create /dev/md5 -v --raid-devices=4 --chunk=32 --level=raid10 /dev/sdc1 /dev/sdd1 /dev/sde1 /dev/sdf1
+```
 
 Which will result in the following output:
 
-<code>mdadm: layout defaults to n1
+```
+mdadm: layout defaults to n1
 mdadm: size set to 732571904K
 mdadm: array /dev/md5 started.
 
@@ -35,7 +40,8 @@ mdadm: array /dev/md5 started.
 Personalities : [raid1] [raid10] 
 md5 : active raid10 sdf1[3] sde1[2] sdd1[1] sdc1[0]
       1465143808 blocks 32K chunks 2 near-copies [4/4] [UUUU]
-      [&gt;....................]  resync =  0.2% (3058848/1465143808) finish=159.3min speed=152942K/sec</code>
+      [&gt;....................]  resync =  0.2% (3058848/1465143808) finish=159.3min speed=152942K/sec
+```
 
 As you can see, we get around 150MB/s from the RAID10 array.  The regular RAID1 arrays only have about 75MB/s throughput (same as a single 750GB drive).
 

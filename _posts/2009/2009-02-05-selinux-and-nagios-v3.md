@@ -19,24 +19,30 @@ Now that Nagios has upgraded to v3, I'm going to revisit my SELinux configuratio
 
 First off, let's use <b>semodule</b> to take a look at what modules are loaded:
 
-<code># semodule -l | grep "nagios"
+```
+# semodule -l | grep "nagios"
 nagios  1.1.0
 nagios20080426  1.0
 nagios20080522  1.0
-nagios20080725  1.0</code>
+nagios20080725  1.0
+```
 
 What you see here is the base nagios module as provided by RedHat/CentOS (nagios 1.1.0) along with three modules that I created using audit2allow.  The contents of those modules are pretty immaterial, so I'm going to remove them and recreate the exceptions from scratch.
 
-<code># semodule -r nagios20080426
+```
+# semodule -r nagios20080426
 # semodule -r nagios20080522
-# semodule -r nagios20080725</code>
+# semodule -r nagios20080725
+```
 
 Now, if I were to startup Nagios right now, it would throw a lot of errors because I have SELinux set to Enforcing mode at the moment.  So what we're going to do is <i>temporarily</i> put SELinux in "permissive" mode instead of "enforcing" mode.  This will cause SELinux to log AVC denial messages to /var/log/audit/audit.log where we can look at them and use audit2allow to create a better exception policy.
 
-<code># getenforce
+```
+# getenforce
 Enforcing
 # setenforce Permissive
 # getenforce
-Permissive</code>
+Permissive
+```
 
 Now we can startup Nagios, taking careful note of the time.

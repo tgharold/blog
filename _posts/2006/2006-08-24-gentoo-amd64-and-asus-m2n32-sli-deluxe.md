@@ -18,12 +18,16 @@ Update: It was actually easier to put the BIOS update on a USB flash drive and c
 
 Update #2: I had to boot the kernel using:
 
-<code>boot: <b>gentoo noapic noacpi</b></code>
+```
+boot: <b>gentoo noapic noacpi</b>
+```
 
 Which gets me past the hang at:
 
-<code>io scheduler noop registered
-io scheduler deadline registered</code>
+```
+io scheduler noop registered
+io scheduler deadline registered
+```
 
 I'm also using a very old PCI video card so I have to specify my video mode at the prompt (I usually pick 80x43).
 
@@ -31,7 +35,9 @@ Instead it now hangs at "Letting udev process events".  Could be time to try the
 
 Time for plan B... seeing if the latest Ubuntu 6.06 CD works on this system.  That may give me some hints.  From what I'm reading I have to use the "apic=off" option on the Ubuntu 6.06 CD.  Hmm... that hung as well.
 
-<code># gentoo-nofb noapic noacpi nolapic</code>
+```
+# gentoo-nofb noapic noacpi nolapic
+```
 
 Hmm... still hangs.  Off to do some more research.
 

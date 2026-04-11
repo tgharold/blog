@@ -26,13 +26,16 @@ All of which means that whenever we update Dovecot with "yum update", we need to
 
 So let's figure out which "deliver" we need to fix up each time:
 
-<code># find / -name deliver
+```
+# find / -name deliver
 /usr/local/libexec/dovecot/lda/deliver
-/usr/libexec/dovecot/deliver</code>
+/usr/libexec/dovecot/deliver
+```
 
 Alternately, look at Postfix's master.cf file:
 
-<code># grep "deliver" /etc/postfix/master.cf
+```
+# grep "deliver" /etc/postfix/master.cf
 # grep "deliver" /etc/postfix/master.cf
 # Many of the following services use the Postfix pipe(8) delivery
 # The Cyrus deliver program has changed incompatibly, multiple times.
@@ -40,15 +43,19 @@ Alternately, look at Postfix's master.cf file:
   user=cyrus argv=/usr/lib/cyrus-imapd/deliver -e -r ${sender} -m ${extension} ${user}
 # Other external delivery methods.
      flags=DRhu user=vmail:vmail argv=/usr/local/libexec/dovecot/lda/deliver -f ${sender} -d ${recipient}
-#    flags=DRhu user=vmail:vmail argv=/usr/lib/dovecot/deliver -d ${recipient}</code>
+#    flags=DRhu user=vmail:vmail argv=/usr/lib/dovecot/deliver -d ${recipient}
+```
 
 The key line in that jumble being:
 
-<code>flags=DRhu user=vmail:vmail argv=/usr/local/libexec/dovecot/lda/deliver -f ${sender} -d ${recipient}</code>
+```
+flags=DRhu user=vmail:vmail argv=/usr/local/libexec/dovecot/lda/deliver -f ${sender} -d ${recipient}
+```
 
 If we take a look at the file size, ownership, attributes and security settings (for SELinux):
 
-<code># cd /usr/libexec/dovecot/
+```
+# cd /usr/libexec/dovecot/
 # ls -la deliver 
 -rwxr-xr-x 1 root root 802824 Jul 24 06:32 deliver
 # ls -lZ deliver 
@@ -65,7 +72,8 @@ drwx------  vmail vmail system_u:object_r:bin_t          lda
 # ls -la deliver
 -rwsr-xr-x 1 root root 802824 Aug 12 18:12 deliver
 # ls -lZ deliver
--rwsr-xr-x  root root system_u:object_r:dovecot_deliver_exec_t deliver</code>
+-rwsr-xr-x  root root system_u:object_r:dovecot_deliver_exec_t deliver
+```
 
 What we see here is a couple of things regarding how the Dovecot LDA is setup.
 

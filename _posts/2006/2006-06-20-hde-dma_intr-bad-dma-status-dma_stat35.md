@@ -12,7 +12,8 @@ tags:
 
 Getting the following messages in my system log:
 
-<code>nogitsune etc # grep 'Jun 16 07' /var/log/messages
+```
+nogitsune etc # grep 'Jun 16 07' /var/log/messages
 Jun 16 07:38:51 nogitsune ntpd[6095]: peer 205.166.121.66 now invalid
 Jun 16 07:52:27 nogitsune ntpd[6095]: peer 205.166.121.66 now valid
 Jun 16 07:07:52 nogitsune hde: dma_intr: bad DMA status (dma_stat=35)
@@ -57,7 +58,8 @@ Jun 16 07:52:03 nogitsune ide: failed opcode was: unknown
 Jun 16 07:56:23 nogitsune hde: dma_intr: bad DMA status (dma_stat=35)
 Jun 16 07:56:23 nogitsune hde: dma_intr: status=0x50 { DriveReady SeekComplete }
 Jun 16 07:56:23 nogitsune ide: failed opcode was: unknown
-nogitsune etc #</code>
+nogitsune etc #
+```
 
 Basically, they happen anytime that I put a sustained load onto the 2 drives attached to that PCI card.  At the moment, I'm not sure (might be in the archives) which IDE host adapter I'm using for hde and hdg.
 

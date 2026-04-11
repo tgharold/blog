@@ -16,7 +16,8 @@ There's a new version of lm_sensors out (2.10) while I'm still running the old 2
 
 Output of the end of the emerge process:
 
-<code>&gt;&gt;&gt; /etc/init.d/fancontrol
+```
+&gt;&gt;&gt; /etc/init.d/fancontrol
  * 
  * Next you need to run:
  *   /usr/sbin/sensors-detect
@@ -64,11 +65,13 @@ No package files given... Grabbing a set.
  * IMPORTANT: 14 config files in /etc need updating.
  * Type emerge --help config to learn how to update config files.
 
-#</code>
+#
+```
 
 Output of the sensors-detect phase:
 
-<code># /usr/sbin/sensors-detect
+```
+# /usr/sbin/sensors-detect
 # sensors-detect revision 1.413 (2006/01/19 20:28:00)
 
 This program will help you determine which I2C/SMBus modules you need to
@@ -191,7 +194,8 @@ Probing for `Winbond W83627EHF/EHG Super IO Sensors'
  (FAQ #4.24.3) for further information.
  If you find out what chips are on your board, see
  http://secure.netroedge.com/~lm78/newdrivers.html for driver status.
-#</code>
+#
+```
 
 Mmm, doesn't look good, does it?
 

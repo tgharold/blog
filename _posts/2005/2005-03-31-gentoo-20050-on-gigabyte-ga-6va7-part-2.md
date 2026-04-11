@@ -17,16 +17,19 @@ Okay, tossed the new 2005.0 boot CD in, and I'm booting it up.  Just trying a st
 
 Load the RAID modules, and verify some things:
 
-<code># modprobe md
+```
+# modprobe md
 # modprobe dm-mod
 # ifconfig         { verifies that the ethernet card is working }
-# ls -l /dev/hd*</code>
+# ls -l /dev/hd*
+```
 
 Now, use <b>fdisk</b> to blow away and setup partitions.  (Note: You will lose all data on these disks when you perform this step.)  Use the 'w' command to confirm the destruction of all partitions when you're finished.
 
 Setup the new partitions:
 
-<code># fdisk /dev/hda
+```
+# fdisk /dev/hda
 
 Command: n
 Command action: p
@@ -66,7 +69,8 @@ Hex code: fd
 
 Command: p
 
-Command: w</code>
+Command: w
+```
 
 This gives me a 128MB boot area, a 2GB swap area, a 2GB root area, with the rest of the disk set aside for my LVM partitions.  Repeat the above commands to configure the 2nd disk in the same fashion.  Note that I'm using a different partition type then that shown in [chapter 4.c](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=4).  The 'fd' partition type is what I need to use since all 4 partitions on hda/hdc are going to be put into a software RAID1 set.
 
@@ -74,7 +78,8 @@ The 3rd disk is a single primary partition with the '8E' (LVM) type.  (Need to v
 
 Create your "/etc/raidtab" configuration file (I used "<b>nano -w /etc/raidtab</b>", but other text editors will work).
 
-<code># this config is for mirroring /dev/hda with /dev/hdc
+```
+# this config is for mirroring /dev/hda with /dev/hdc
 # /boot (RAID1)
 raiddev                 /dev/md0
 raid-level              1
@@ -123,14 +128,17 @@ raid-disk               0
 device                  /dev/hdc4
 raid-disk               1 
 
-# end of /etc/raidtab</code>
+# end of /etc/raidtab
+```
 
 Create the raid set(s).
 
-<code># mkraid /dev/md0
+```
+# mkraid /dev/md0
 # mkraid /dev/md1
 # mkraid /dev/md2
-# mkraid /dev/md3</code>
+# mkraid /dev/md3
+```
 
 If you get the error message: "raid_disks + spare_disks != nr_disks" when attempting to create any of your RAID sets, go back and verify your "/etc/raidtab" file as well as verifying your disk partitions. The RAID sets will build in the background and you should periodically monitor their progress using "<b>cat /proc/mdstat</b>". Another possibility is that you have set the "chunk-size" setting to be too small or too large (e.g. "chunk-size 4" did not work for me, but "chunk size 8" worked fine).
 

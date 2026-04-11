@@ -14,9 +14,11 @@ Trying to setup a backup job (kicked off by a .cmd file) on Windows 2003.  I hav
 
 Looking at the log (Scheduled Tasks - Advanced - View Log) will show: 
 
-<code>Unable to start task.
+```
+Unable to start task.
 The specific error is:
-0x80070005: Access is denied.</code>
+0x80070005: Access is denied.
+```
 
 ["Access is denied" error message when you run a batch job on a Windows Server 2003-based computer](http://support.microsoft.com/?kbid=867466)
 

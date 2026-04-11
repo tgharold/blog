@@ -17,11 +17,14 @@ tags:
 
 Time to [install the bootloader](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=10).  I plan on using GRUB:
 
-<code># emerge grub</code>
+```
+# emerge grub
+```
 
 Now to configure GRUB (refer to my [old post about GRUB](/blog/2004-06-16-gentoo-install-6-grub-system-tools-finalizing-the-install/) for a more in-depth explanation of what I'm telling GRUB to do here).
 
-<code># grub --no-floppy
+```
+# grub --no-floppy
 grub&gt; find /grub/stage1
 (hd0,0)
 (hd1,0)
@@ -31,33 +34,41 @@ grub&gt; device (hd0) /dev/hdc
 grub&gt; root (hd0,0)       
 grub&gt; setup (hd0)
 grub&gt; quit
-#</code>
+#
+```
 
 Now, edit your config file for grub:
 
-<code># nano -w /boot/grub/grub.conf</code>
+```
+# nano -w /boot/grub/grub.conf
+```
 
 Here is what mine looks like.  Yours may be different, depending on how you configured things (and remember that I'm using Software RAID).
 
-<code># cat /boot/grub/grub.conf
+```
+# cat /boot/grub/grub.conf
 default 0
 timeout 30
 title=Gentoo Linux 2.6.11 (April 20 2005)
 root (hd0,0)
 kernel /kernel-2.6.11-gentoo-Apr20 root=/dev/md2
-#</code>
+#
+```
 
 Now I install various system tools (see the handbook):
 
-<code># emerge syslog-ng
+```
+# emerge syslog-ng
 # rc-update add syslog-ng default
 # emerge dcron
 # rc-update add dcron default
-# crontab /etc/crontab</code>
+# crontab /etc/crontab
+```
 
 Note: Now you need to unmount everything that you can (including LVM), possibly shutdown the RAID as well prior to reboot.
 
-<code>livecd gentoo # exit
+```
+livecd gentoo # exit
 livecd / # cd /
 livecd / # cat /proc/mounts
 
@@ -66,7 +77,8 @@ livecd / # cat /proc/mounts
 livecd / # umount ... (insert list of mounted file systems)
 
 livecd / # vgchange -an vgmirror
-livecd / # reboot</code>
+livecd / # reboot
+```
 
 Pull the CD-ROM at this point, otherwise the LiveCD will probably boot.
 
