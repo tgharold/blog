@@ -22,6 +22,6 @@ Since I'm not ready to tackle writing a guide, I'll settle for a few links:
 
 [About.com: Linux backup](http://linux.about.com/od/softbackup/) - A collection of links to backup software.
 
-[Unix SysAdm Resources: Backup &amp; Archival Software for Unix](http://www.stokely.com/unix.sysadm.resources/backup.html) (Stokely Consulting) - Listing of backup software for unix.
+[Unix SysAdm Resources: Backup & Archival Software for Unix](http://www.stokely.com/unix.sysadm.resources/backup.html) (Stokely Consulting) - Listing of backup software for unix.
 
 [Linux Backups Mini-FAQ](http://kmself.home.netcom.com/Linux/FAQs/backups.html) (Karsten M. Self) - Good article on simply using "tar".

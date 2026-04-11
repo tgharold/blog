@@ -16,7 +16,7 @@ I don't expect it to be difficult to resolve, might have to rebuild the kernel a
 
 Okay, specific error message notes as the boot screen flies by:
 
-GRUB is working, I get the boot selection screen with the 30 sec timer.  Error message that DEVFS support is required to be built into the kernel.  Not much other details then that.  I then get a bunch of messages that various LVM2-hosted file systems did not mount properly (No such file or directory while trying to open /dev/.../ and complaints about missing superblocks).  According to [google for DEVFS](http://www.google.com/search?q=linux+kernel+DEVFS+support&amp;btnG=Search&amp;hl=en&amp;lr=&amp;ie=UTF-8&amp;oe=UTF-8&amp;c2coff=1), it stands for "device file system".  
+GRUB is working, I get the boot selection screen with the 30 sec timer.  Error message that DEVFS support is required to be built into the kernel.  Not much other details then that.  I then get a bunch of messages that various LVM2-hosted file systems did not mount properly (No such file or directory while trying to open /dev/.../ and complaints about missing superblocks).  According to [google for DEVFS](http://www.google.com/search?q=linux+kernel+DEVFS+support&btnG=Search&hl=en&lr=&ie=UTF-8&oe=UTF-8&c2coff=1), it stands for "device file system".  
 
 So... time to put the LiveCD back in, walk through the commands to get me back to the building a kernel stage:
 
@@ -38,7 +38,7 @@ So... time to put the LiveCD back in, walk through the commands to get me back t
     env-update
     source /etc/profile 
 
-At this point, I'm back to where I'm ready to configure the kernel ([previous attempt](/blog/2004-04-28-gentoo-epia-install-part-5/)).  I don't need to emerge the kernel sources again (AFAIK), just reconfigure.  Flip back to [chapter 7c in the gentoo handbook](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=7).  I think my old configuration should be in /usr/src/linux/.config (that's a hidden file).  First thing I did was make a copy of that file "cat .config &gt;&gt; my-first-config".  Then I did the "make menuconfig" command, which did load my existing settings from the .config file.
+At this point, I'm back to where I'm ready to configure the kernel ([previous attempt](/blog/2004-04-28-gentoo-epia-install-part-5/)).  I don't need to emerge the kernel sources again (AFAIK), just reconfigure.  Flip back to [chapter 7c in the gentoo handbook](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=7).  I think my old configuration should be in /usr/src/linux/.config (that's a hidden file).  First thing I did was make a copy of that file "cat .config &gt;&gt; my-first-config".  Then I did the "make menuconfig" command, which did load my existing settings from the .config file.
 
 Under (F)ile systems, (P)seudo filesystems, I had to turn on "/dev file system suppport (OBSOLETE)".  Apparently, while obsolete, it's still required by 2.6.3.  I also turned on "Automatically mount at boot".  Exited, saved changes, re-make the kernel, re-install the kernel.
 

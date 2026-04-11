@@ -24,7 +24,7 @@ Msg: The Active Directory Installation Wizard cannot continue because the forest
 
 ------------------------
 
-So... off we go to research this.  The server already exists as a member server within our Windows 2000 domain.  A good search term is probably going to be "[forest is not prepared for installing Windows Server 2003](http://www.google.com/search?num=20&amp;hl=en&amp;lr=&amp;safe=off&amp;c2coff=1&amp;q=%2B%22forest+is+not+prepared+for+installing+Windows+Server+2003%22&amp;btnG=Search)".
+So... off we go to research this.  The server already exists as a member server within our Windows 2000 domain.  A good search term is probably going to be "[forest is not prepared for installing Windows Server 2003](http://www.google.com/search?num=20&hl=en&lr=&safe=off&c2coff=1&q=%2B%22forest+is+not+prepared+for+installing+Windows+Server+2003%22&btnG=Search)".
 
 [Error message when you run the Active Directory Installation Wizard: ...](http://support.microsoft.com/?kbid=917385) (Microsoft)
 [Dcpromo.exe and Winnt32.exe log errors when you...](http://support.microsoft.com/?id=278875)

@@ -36,7 +36,7 @@ During that build, I didn't touch network devices at all. It had automatically s
 Now, make sure that /boot is mounted, then compile your new kernel.
 
 ```
-# make &amp;&amp; make modules_install
+# make && make modules_install
 # cp arch/i386/boot/bzImage /boot/kernel-2.6.12-Oct2005
 # cp System.map /boot/System.map-2.6.12-Oct2005
 # cp .config /boot/config-2.6.12-Oct2005

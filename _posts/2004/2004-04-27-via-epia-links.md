@@ -11,7 +11,7 @@ tags:
 
 
 
-[Identify Ezra-T/Nehemiah M10000](http://forums.viaarena.com/messageview.cfm?catid=32&amp;threadid=36416) (finding out if you have the Ezra or Nehemiah CPU core, I already know I have a Samuel 2 by doing a "cat /proc/cpuinfo")
+[Identify Ezra-T/Nehemiah M10000](http://forums.viaarena.com/messageview.cfm?catid=32&threadid=36416) (finding out if you have the Ezra or Nehemiah CPU core, I already know I have a Samuel 2 by doing a "cat /proc/cpuinfo")
 
 [linITX.org forums: Processor family](http://www.linitx.org/forum/viewtopic.php?t=1099) (discusses the -march=C3 flag for GCC)
 

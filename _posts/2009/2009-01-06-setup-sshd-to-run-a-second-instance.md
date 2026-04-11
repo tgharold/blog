@@ -34,8 +34,8 @@ Change the following lines:
     SSHD=/usr/sbin/sshd<b>_nx</b>
     PID_FILE=/var/run/sshd<b>_nx</b>.pid
     OPTIONS="-f /etc/ssh/sshd_nx_config -o PidFile=${PID_FILE} ${OPTIONS}"
-    [ "$RETVAL" = 0 ] &amp;&amp; touch /var/lock/subsys/sshd<b>_nx</b>
-    [ "$RETVAL" = 0 ] &amp;&amp; rm -f /var/lock/subsys/sshd<b>_nx</b>
+    [ "$RETVAL" = 0 ] && touch /var/lock/subsys/sshd<b>_nx</b>
+    [ "$RETVAL" = 0 ] && rm -f /var/lock/subsys/sshd<b>_nx</b>
     if [ -f /var/lock/subsys/sshd<b>_nx</b> ] ; then
 
 Note: The OPTIONS= line is probably new and will have to be added right after the PID_FILE= line in the file.  There are also multiple lines that reference /var/lock/subsys/sshd, you will need to change all of them.

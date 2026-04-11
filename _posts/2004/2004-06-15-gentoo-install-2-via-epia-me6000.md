@@ -90,7 +90,7 @@ Make the special directories to hold your temp file volumes (these require speci
 # mount -t proc none /mnt/gentoo/proc
 ```
 
-We are now ready to [start installing Gentoo](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=5) (chapter 5 in the handbook).  Also see my [previous post about CFLAGS](/blog/2004-04-27-gentoo-epia-install-part-2), which might explain why I've chosen some particular settings.  First, we need to extract the stage 1 tarball.
+We are now ready to [start installing Gentoo](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=5) (chapter 5 in the handbook).  Also see my [previous post about CFLAGS](/blog/2004-04-27-gentoo-epia-install-part-2), which might explain why I've chosen some particular settings.  First, we need to extract the stage 1 tarball.
 ```
 # date
 # ls /mnt/cdrom/stages
@@ -103,7 +103,7 @@ We are now ready to [start installing Gentoo](http://www.gentoo.org/doc/en/handb
 # nano -w /mnt/gentoo/etc/make.conf
 ```
 
-Now we need to configure the base compile options.  Here's the content of my make.conf file (<b>use at your own risk</b>).  Be sure to go look at [5.e. Configuring the Compile Options](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=5) in the Gentoo Handbook.  Also look at [Gentoo USE flags](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=2&amp;chap=1) and [Gentoo Linux USE Variable Descriptions](http://www.gentoo.org/dyn/use-index.xml).  I've set some very aggressive USE flags in my make.conf file (anything to do with graphics or multimedia since this is a headless file server) and I don't know whether it's proper to remove all of those USE flags yet.  Note that even though the USE= line shown here is spread across two lines, it should be all one line in the actual make.conf file (the line break here is for visual clarity only).
+Now we need to configure the base compile options.  Here's the content of my make.conf file (<b>use at your own risk</b>).  Be sure to go look at [5.e. Configuring the Compile Options](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=5) in the Gentoo Handbook.  Also look at [Gentoo USE flags](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=2&chap=1) and [Gentoo Linux USE Variable Descriptions](http://www.gentoo.org/dyn/use-index.xml).  I've set some very aggressive USE flags in my make.conf file (anything to do with graphics or multimedia since this is a headless file server) and I don't know whether it's proper to remove all of those USE flags yet.  Note that even though the USE= line shown here is spread across two lines, it should be all one line in the actual make.conf file (the line break here is for visual clarity only).
 ```
 CFLAGS="-Os -march=i586 -m3dnow -fomit-frame-pointer"
 CHOST="i586-pc-linux-gnu"
@@ -113,7 +113,7 @@ CXXFLAGS="$(CFLAGS)"
 MAKEOPTS="-j2"
 ```
 
-Next we're ready to install the base system, see [6. Installing the Gentoo Base System](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=6) in the Gentoo Handbook.
+Next we're ready to install the base system, see [6. Installing the Gentoo Base System](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=6) in the Gentoo Handbook.
 ```
 # mirrorselect -a -s4 -o | grep -ve '^Netselect' &gt;&gt; /mnt/gentoo/etc/make.conf
 # cp -L /mnt/gentoo/etc/make.conf /mnt/gentoo/boot/make.conf-backupcopy

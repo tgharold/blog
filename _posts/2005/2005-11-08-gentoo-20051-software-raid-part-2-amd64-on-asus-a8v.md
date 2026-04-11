@@ -72,7 +72,7 @@ Linux Kernel v2.6.13-gentoo-r5 Configuration
 Exit and save your configuration. Then build the kernel (the following command is for 2.6 kernels). Expect the compile to take almost no time at all on an AMD64 chip.  I used to wait an hour for all this to happen on my old VIA EPIA.
 
 ```
-# make &amp;&amp; make modules_install
+# make && make modules_install
 ```
 
 Once the code finishes compiling, you need to copy the kernel to your /boot partition.
@@ -97,7 +97,7 @@ Add your new kernel.  I'd recommend always leaving the configuration for your ol
 
 <b>Bugs and goofs</b>:
 
-1) The disks attached to the onboard Promise PDC20378 RAID controller are not recognized by my first kernel (although they show up when I booted the LiveCD).  So I'm missing a kernel option.  Possibly I haven't [turned SCSI on](http://www.gentoo-wiki.com/index.php?title=HARDWARE_SATA&amp;redirect=no) which allows me to pick the Promise SATA driver.
+1) The disks attached to the onboard Promise PDC20378 RAID controller are not recognized by my first kernel (although they show up when I booted the LiveCD).  So I'm missing a kernel option.  Possibly I haven't [turned SCSI on](http://www.gentoo-wiki.com/index.php?title=HARDWARE_SATA&redirect=no) which allows me to pick the Promise SATA driver.
 
 This is fixed by adding:
 

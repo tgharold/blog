@@ -70,7 +70,7 @@ First up is BIOS settings:
 - Onboard Fast IR: Disabled
 
 <b>Power Management Setup</b>
-- ACPI Suspend Type: S1&amp;S3
+- ACPI Suspend Type: S1&S3
 - HDD Power Down: Disabled
 - Power Management Timer: Disabled
 - Video Off Option: Suspend -&gt; Off

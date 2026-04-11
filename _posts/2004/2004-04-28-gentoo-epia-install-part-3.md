@@ -12,7 +12,7 @@ tags:
 
 ([Previous blog entry](/blog/2004-04-27-gentoo-epia-install-part-2/))
 
-While I'm not exactly sure when the first phase finished overnight, it was probably around 8-12 hours.  I don't see any errors on the screen, so I'm assuming that I'm good to go for the [next step](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=6) in the handbook (chapter 6d).
+While I'm not exactly sure when the first phase finished overnight, it was probably around 8-12 hours.  I don't see any errors on the screen, so I'm assuming that I'm good to go for the [next step](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=6) in the handbook (chapter 6d).
 
 One of the things I"m not sure about at this stage in the game is how to set the root password or what would happen if a reboot would occur.  Poking around on the hard drive failed to turn up the passwd command, although I can see that the root account has already been assigned a password in the shadow password file.   I'm guessing that I'd boot the LiveCD again, skip to the part where I chroot from the CD to the hard disk (after mounting all of my volumes by hand), then pickup whereever I left off.
 

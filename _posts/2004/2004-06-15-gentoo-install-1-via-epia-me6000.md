@@ -32,7 +32,7 @@ It's possible that your ethernet card on the VIA EPIA ME6000 will not be detecte
 # ifconfig
 ```
 
-Create partitions using fdisk.  I want a 64MB /boot partition, a 2048MB swap partition, a 2048MB root partition, and the rest set aside for LVM.  Also see the [gentoo install documentation](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=4) section on preparing the disks.
+Create partitions using fdisk.  I want a 64MB /boot partition, a 2048MB swap partition, a 2048MB root partition, and the rest set aside for LVM.  Also see the [gentoo install documentation](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=4) section on preparing the disks.
 ```
 # ls /dev/hd*
 # fdisk /dev/hda

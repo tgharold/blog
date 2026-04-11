@@ -10,7 +10,7 @@ tags:
 ---
 
 
-Time to [configure the Gentoo kernel](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=7).  I'm configuring this for my Celeron motherboard.
+Time to [configure the Gentoo kernel](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=7).  I'm configuring this for my Celeron motherboard.
 
 Note the use of "emerge lvm2" since I'm using LVM2 on this system during the initial installation.
 
@@ -70,5 +70,5 @@ Linux Kernel v2.6.11 Configuration
 Exit and save your configuration. Then build the kernel (the following command is for 2.6 kernels). Expect the compile to take about an hour.
 
 ```
-# make &amp;&amp; make modules_install
+# make && make modules_install
 ```

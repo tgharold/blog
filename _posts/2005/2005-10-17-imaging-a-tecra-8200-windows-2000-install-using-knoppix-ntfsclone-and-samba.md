@@ -14,7 +14,7 @@ One of the more annoying things that our users do is to get their Windows workst
 
 (I do use Acronis True Image on a few of my systems.  It's good for making more frequent snapshots without having to reboot to a seperate operating system.  It also has an incremental mode that can be used to keep a single image up to date.  For user simplicity, it's hands-down the winner over Ghost.)
 
-First off, you will need to download and burn the Knoppix Boot CD.  I'm using version 4.0.2 which hopefully has what I need (see this Slashdot comment, "[where is ntfsclone](http://linux.slashdot.org/comments.pl?sid=125853&amp;cid=10543386)", from Oct 2004).  The version that shows up on the 4.0.2 Knoppix CD is "ntfsclone v1.11.3-WIP" so I should be good to go.
+First off, you will need to download and burn the Knoppix Boot CD.  I'm using version 4.0.2 which hopefully has what I need (see this Slashdot comment, "[where is ntfsclone](http://linux.slashdot.org/comments.pl?sid=125853&cid=10543386)", from Oct 2004).  The version that shows up on the 4.0.2 Knoppix CD is "ntfsclone v1.11.3-WIP" so I should be good to go.
 
 You should also browse the following links:
 

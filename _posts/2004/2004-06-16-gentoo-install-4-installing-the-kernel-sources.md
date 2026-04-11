@@ -12,7 +12,7 @@ tags:
 
 ([previous post](/blog/2004-06-15-gentoo-install-3-bootstrapping/))
 
-Picking up with [7. Configuring the Kernel](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=7).  If your system crashes after this point, I do have a few notes jotted down on [how to get back to here without rebuilding everything](/blog/2004-04-28-gentoo-epia-install-part-4/).  (Since this is where I screwed up last time and put the machine into an unusable state.)
+Picking up with [7. Configuring the Kernel](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=7).  If your system crashes after this point, I do have a few notes jotted down on [how to get back to here without rebuilding everything](/blog/2004-04-28-gentoo-epia-install-part-4/).  (Since this is where I screwed up last time and put the machine into an unusable state.)
 
 Timezone for me is EST5EDT, so here's how to set that up.
 ```

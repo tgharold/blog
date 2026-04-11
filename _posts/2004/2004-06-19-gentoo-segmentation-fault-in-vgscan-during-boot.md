@@ -60,9 +60,9 @@ Save, shutdown the raid (<b>raidstop -a /dev/md0</b> for each /dev/md* device), 
 
 Links:
 
-[Re: mkfs.xfs on software raid5 (2.6.5 kernel) - MD array /dev/md2 not in clean state ](http://groups.google.com/groups?hl=en&amp;lr=&amp;ie=UTF-8&amp;c2coff=1&amp;selm=Sb%25zc.38791%24ih7.31403%40fe2.columbus.rr.com) (alt.os.linux.gentoo) - Shows the exact error message that I'm seeing.
+[Re: mkfs.xfs on software raid5 (2.6.5 kernel) - MD array /dev/md2 not in clean state ](http://groups.google.com/groups?hl=en&lr=&ie=UTF-8&c2coff=1&selm=Sb%25zc.38791%24ih7.31403%40fe2.columbus.rr.com) (alt.os.linux.gentoo) - Shows the exact error message that I'm seeing.
 
-[Re: [gentoo-user] LVM2 ](http://groups.google.com/groups?hl=en&amp;lr=&amp;ie=UTF-8&amp;c2coff=1&amp;threadm=1FXah-4Up-49%40gated-at.bofh.it&amp;rnum=2&amp;prev=/groups%3Fq%3D%252Blvm%2B%252B%2522software%2Braid%2522%2B%252Blinux%2B%252Bgentoo%2B%252Border%26hl%3Den%26lr%3D%26ie%3DUTF-8%26c2coff%3D1%26selm%3D1FXah-4Up-49%2540gated-at.bofh.it%26rnum%3D2) Date: 2004-03-31 15:40:13 PST (linux.gentoo.user) - Talks about the ordering in which software RAID and the LVM modules load.
+[Re: [gentoo-user] LVM2 ](http://groups.google.com/groups?hl=en&lr=&ie=UTF-8&c2coff=1&threadm=1FXah-4Up-49%40gated-at.bofh.it&rnum=2&prev=/groups%3Fq%3D%252Blvm%2B%252B%2522software%2Braid%2522%2B%252Blinux%2B%252Bgentoo%2B%252Border%26hl%3Den%26lr%3D%26ie%3DUTF-8%26c2coff%3D1%26selm%3D1FXah-4Up-49%2540gated-at.bofh.it%26rnum%3D2) Date: 2004-03-31 15:40:13 PST (linux.gentoo.user) - Talks about the ordering in which software RAID and the LVM modules load.
 
 [Example of lvm.conf file](https://www.redhat.com/archives/linux-lvm/2003-December/msg00009.html) - shows a more complex lvm.conf file, complete with multiple filters.
 

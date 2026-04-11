@@ -90,7 +90,7 @@ CXXFLAGS="${CFLAGS}"
 MAKEOPTS="-j3"
 ```
 
-Now we start in on [Section 6 (Installing the Gentoo Base System)](http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?part=1&amp;chap=6).  Time to pick mirrors and other things.
+Now we start in on [Section 6 (Installing the Gentoo Base System)](http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?part=1&chap=6).  Time to pick mirrors and other things.
 
 ```
 livecd gentoo # mirrorselect -i -o &gt;&gt; /mnt/gentoo/etc/make.conf

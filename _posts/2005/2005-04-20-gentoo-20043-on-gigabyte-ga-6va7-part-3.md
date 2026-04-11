@@ -15,7 +15,7 @@ tags:
 
 ([previous step](/blog/2005-04-19-gentoo-20043-on-gigabyte-ga-6va7-part-1/))
 
-Time to configure the timezone and setup the kernel, this is [chapter 7 in the Gentoo handbook](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=7).
+Time to configure the timezone and setup the kernel, this is [chapter 7 in the Gentoo handbook](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=7).
 
 Timezone for me is EST5EDT, so here's how to set that up.
 

@@ -22,11 +22,11 @@ Oh look, Pocket Quicken now supports the non-touchscreen phones like MotoQ.  Bas
 
 <b>[CityTime Alarms](http://www.codecity.net/prodctappc.htm)</b>
 
-Only works with Windows Mobile 5 &amp; 6, or the PPC 2003 version. But there are also versions for SmartPhones and Palm OS.
+Only works with Windows Mobile 5 & 6, or the PPC 2003 version. But there are also versions for SmartPhones and Palm OS.
 
 <b>[Agenda One](http://www.developerone.com/agendaone/)</b>
 
-Windows Mobile 5 &amp; 6.
+Windows Mobile 5 & 6.
 
 <b>[IM+](http://www.shapeservices.com/en/products/details.php?product=im)</b>
 

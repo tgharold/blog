@@ -77,7 +77,7 @@ Gonna redo my kernel configuration (see [Gentoo 2004.3 on Gigabyte GA-6VA7+ (par
 Going to switch the LVM2 from loading as a "module" and change it to being "built-in".  Could be an error on the Gentoo LVM2 page according to a [note I see in the gentoo wiki](http://gentoo-wiki.com/HOWTO_Gentoo_Install_on_Software_RAID_mirror_and_LVM2_on_top_of_RAID).
 
 ```
-# make &amp;&amp; make modules_install
+# make && make modules_install
 # cp arch/i386/boot/bzImage /boot/kernel-2.6.11-gentoo-Apr20
 # cp System.map /boot/System.map-2.6.11-gentoo-Apr20
 # cp .config /boot/config-2.6.11-gentoo-Apr20

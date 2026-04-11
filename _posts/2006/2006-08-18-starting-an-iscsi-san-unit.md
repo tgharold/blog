@@ -21,7 +21,7 @@ $0050 misc parts (fans, cables)
 $0182 MB-BA22658 AMD Athlon64 X2 4200+ AM2 (WINDSOR)
 $0200 XXXXXXXXXX Asus M2N32-SLI DLX
 $0138 XXXXXXXXXX Mwave 2GB DDR2 533 (1GB x 2)
-$0009 XXXXXXXXXX Assemble &amp; Test
+$0009 XXXXXXXXXX Assemble & Test
 
 The motherboard is a ASUS M2N32-SLI with multiple PCIe slots (2 x16, 1 x4, 1 x1), 2 PCI slots, 8 SATA-II ports, and dual-NICs on an nForce 590 chipset.  I plan on using the expansion slots as follows:
 

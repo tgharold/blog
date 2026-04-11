@@ -85,6 +85,6 @@ major minor  #blocks  name
 livecd ~ #
 ```
 
-Basically, hda &amp; sda are my (2) 7200rpm 300GB drives that I'm going to use as my primary RAID1.  The sdb drive is my 200GB 7200rpm SATA which I plan on using for a scratch drive.  The rest of the drives (all ending in "160" blocks) are 5400rpm 300GB IDEs hooked to the Highpoint / Promise PCI cards.
+Basically, hda & sda are my (2) 7200rpm 300GB drives that I'm going to use as my primary RAID1.  The sdb drive is my 200GB 7200rpm SATA which I plan on using for a scratch drive.  The rest of the drives (all ending in "160" blocks) are 5400rpm 300GB IDEs hooked to the Highpoint / Promise PCI cards.
 
 Now I can go ahead and build my system.

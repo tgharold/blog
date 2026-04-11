@@ -11,9 +11,9 @@ tags:
 
 
 
-[Setting up SSHD on Gentoo](http://www.gentoo.org/proj/en/infrastructure/config-ssh.xml) (which just covers the basics, also see the [sshd manpage](http://www.cs.usyd.edu.au/cgi-bin/man.cgi?section=8&amp;topic=sshd) and [OpenSSH.org](http://www.openssh.com/)).
+[Setting up SSHD on Gentoo](http://www.gentoo.org/proj/en/infrastructure/config-ssh.xml) (which just covers the basics, also see the [sshd manpage](http://www.cs.usyd.edu.au/cgi-bin/man.cgi?section=8&topic=sshd) and [OpenSSH.org](http://www.openssh.com/)).
 
-I have a book called "Building Secure Servers with Linux", and it's extremely poor with regards to actually setting up the sshd system.  (Specifically, it completely ignores the topic of how to create the public/private DSA key for the sshd process.)  Googling around for [how to create the ssh_host_dsa_key](http://www.google.com/search?hl=en&amp;lr=&amp;ie=UTF-8&amp;oe=UTF-8&amp;c2coff=1&amp;q=%2Bsshd+%2Bkeygen+%2Bssh_host_dsa_key&amp;btnG=Search) netted me a few useful articles.
+I have a book called "Building Secure Servers with Linux", and it's extremely poor with regards to actually setting up the sshd system.  (Specifically, it completely ignores the topic of how to create the public/private DSA key for the sshd process.)  Googling around for [how to create the ssh_host_dsa_key](http://www.google.com/search?hl=en&lr=&ie=UTF-8&oe=UTF-8&c2coff=1&q=%2Bsshd+%2Bkeygen+%2Bssh_host_dsa_key&btnG=Search) netted me a few useful articles.
 
 [NCSA OpenSSH Installation Guide](http://www.ncsa.uiuc.edu/UserInfo/Resources/Software/ssh/openssh_install.html)
 [20020124: setting up sshd on Linux](http://www.unidata.ucar.edu/projects/coohl/mhonarc/MailArchives/platforms/msg00389.html)

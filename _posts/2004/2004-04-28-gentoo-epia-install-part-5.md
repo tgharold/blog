@@ -12,7 +12,7 @@ tags:
 
 ([previous entry](/blog/2004-04-27-gentoo-epia-install-part-4/))
 
-Well, that took somewhere around 2 hours to import and build the kernel from the development-sources package.    Now I need to [configure the kernel](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=7) (per chapter 7c of the handbook).  There are also notes over at [epiawiki.org](http://www.epiawiki.org/wiki/tiki-index.php?page=EpiaTheEpiaKernel) and [building a small MP3 server](http://www.ath0.com/meta/prose/mp3-server/part3.html) about configuring that I'll need to investigate (specifically looking at [their copy of the make config file](http://www.ath0.com/meta/prose/mp3-server/m10000-kernel-config-meta) which goes in "/usr/src/linux/.config").
+Well, that took somewhere around 2 hours to import and build the kernel from the development-sources package.    Now I need to [configure the kernel](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=7) (per chapter 7c of the handbook).  There are also notes over at [epiawiki.org](http://www.epiawiki.org/wiki/tiki-index.php?page=EpiaTheEpiaKernel) and [building a small MP3 server](http://www.ath0.com/meta/prose/mp3-server/part3.html) about configuring that I'll need to investigate (specifically looking at [their copy of the make config file](http://www.ath0.com/meta/prose/mp3-server/m10000-kernel-config-meta) which goes in "/usr/src/linux/.config").
 
 I'm going with the manual option, so "cd /usr/src/linux" then "make menuconfig".  Anywhere I say "turn ON" means to use the "Y" key to turn an option on as built-in, I'll specifically say MODULE if I loaded the option as a module.
 
@@ -51,7 +51,7 @@ I'm going with the manual option, so "cd /usr/src/linux" then "make menuconfig".
 	(C)ryptographic options (turned ON, then turned ON the HMAC, everything else as MODULE)
 	(L)ibrary routines
 
-Hit "Exit" when done and save your new kernel configuration.  Use "make &amp;&amp; make modules_install" to build the kernel, then follow the instructions to install the kernel (last part of chapter 7c).  I should also go back and do a genkernel (section 7d) and compare it to what I picked.  The kernel took under an hour to compile.  The last few commands of section 7c:
+Hit "Exit" when done and save your new kernel configuration.  Use "make && make modules_install" to build the kernel, then follow the instructions to install the kernel (last part of chapter 7c).  I should also go back and do a genkernel (section 7d) and compare it to what I picked.  The kernel took under an hour to compile.  The last few commands of section 7c:
 
 	# cp arch/i386/boot/bzImage /boot/kernel-2.6.3-gentoo
 	# cp System.map /boot/System.map-2.6.3-gentoo

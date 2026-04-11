@@ -12,7 +12,7 @@ tags:
 
 ([previous blog entry](/blog/2004-04-28-gentoo-epia-install-part-3/))
 
-Stage 2 compile is finished ([step 6d in the handbook](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=6)).  Not bad, emerge system took about 5.5 hours to run on my little VIA EPIA ME6000.  Now for [step 7, configuring the kernel](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=7)
+Stage 2 compile is finished ([step 6d in the handbook](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=6)).  Not bad, emerge system took about 5.5 hours to run on my little VIA EPIA ME6000.  Now for [step 7, configuring the kernel](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=7)
 
 Oh heck, I was trying to see what is in the various timezone files and now my screen fonts are screwed.  So now I guess I get to find out what happens if I reboot at this point!  First thing I did was "passwd" and set the root password to something that I know, then I do a "shutdown -h now" to take the box down immediately.  I also changed memory modules (to use an older 512MB ECC PC2100 stick).  The motherboard seems to be okay with the ECC memory, not sure if it actually supports the ECC functionality or not.
 
