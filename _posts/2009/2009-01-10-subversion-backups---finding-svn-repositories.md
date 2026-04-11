@@ -62,7 +62,8 @@ Which puts a list of directory names into the DIRS varaible in our bash script.
 
 Here's our basic script.
 
-<pre>#!/bin/bash
+```
+#!/bin/bash
 BASE="/var/svn/"
 HOTCOPY="/var/svn-hotcopy/"
 DIRS=`find ${BASE} -name uuid | grep 'db/uuid$' | sed 's:/db/uuid$::' | sed 's:^/var/svn/::'`
@@ -72,18 +73,22 @@ do
     echo "svnadmin hotcopy ${BASE}${DIR} to ${HOTCOPY}${DIR}"
     rm -r ${HOTCOPY}${DIR}
     svnadmin hotcopy ${BASE}${DIR} ${HOTCOPY}${DIR}
-done</pre>
+done
+```
 
 However, we're not quite done yet because the svn hotcopy command doesn't like it when the destination folder does not exist.  So let's add the following scrap of code into the loop.
 
-<pre>if ! test -d ${HOTCOPY}${DIR}
+```
+if ! test -d ${HOTCOPY}${DIR}
 then
     mkdir -p ${HOTCOPY}${DIR}
-fi</pre>
+fi
+```
 
 <b>The final script</b>
 
-<pre>#!/bin/bash
+```
+#!/bin/bash
 
 BASE="/var/svn/"
 HOTCOPY="/var/svn-hotcopy/"
@@ -109,6 +114,7 @@ do
     $SVNADMIN hotcopy ${BASE}${DIR} ${HOTCOPY}${DIR}
 done
 
-# insert rdiff-backup line here</pre>
+# insert rdiff-backup line here
+```
 
 Hopefully that works out.  Note the use of "rm -r", which could cause data loss if there are errors in the script.  You will want  to be very careful while working on the script.

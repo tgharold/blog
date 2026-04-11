@@ -11,13 +11,15 @@ tags:
 
 
 First problem is that the system boots straight into "grub".  Probably due to a missing "grub.conf" file, which I'm pretty sure I had written to the proper location earlier in the install. So I'll load the kernel by hand and fix the config file once I get the box to boot properly.
-<pre>grub&gt;
+```
+grub&gt;
 grub&gt; cat /boot/grub/grub.conf
 (no file found)
 
 grub&gt; root (hd0,0)
 grub&gt; kernel /kernel-2.6.6-gentoo root=/dev/md2
-grub&gt; boot</pre>
+grub&gt; boot
+```
 
 This starts the kernel boot process, which will then lead me to my second error.  In the meantime, if you use [shift-PgUp] and [shift-PgDn] you can scroll back and forth through the boot messages.  A minor problem is that since the raid didn't shutdown cleanly, there are numerous "md: md<i>x</i>: raid array is not clean -- starting background reconstruction" messages.  And I can't even begin to troubleshoot the "Kernel panic: No init found" error until resync is done (that's a 2.5-3.0 hour process).
 
@@ -30,16 +32,19 @@ This repair process is basically a complete reinstall because nothing else under
 <b>Note: The following steps assume that you have nothing on your partitions worth keeping, or that you've already backed everything up.</b>  I tried doing it without formatting the "/" partition, but the bootstrap.sh file keeps dying on line 84.  So I'm going to do a format of the "/" partition as well as /opt, /usr, /var, /tmp, and /var/tmp.
 
 Boot the LiveCD, at the boot prompt be sure to pick the boot kernel and pass the arguments that you want, then load the raid and LVM modules.
-<pre>boot: gentoo -nohotplug
+```
+boot: gentoo -nohotplug
 (gentoo kernel now loads)
 
 livecd root # modprobe md
 livecd root # modprobe dm-mod
 livecd root # modprobe via-rhine    (if your network adapter failed to autoload)
-livecd root # net-setup eth0        (if your network adapter failed to autoload)</pre>
+livecd root # net-setup eth0        (if your network adapter failed to autoload)
+```
 
 If you have a copy of your /etc/raidtab file on floppy, copy it in now, otherwise you'll have to re-key your /etc/raidtab by hand.  If you need, you can temporarly mount partitions to copy files from.
-<pre>livecd root # nano -w /etc/raidtab
+```
+livecd root # nano -w /etc/raidtab
 livecd root # raidstart -a
 livecd root # cat /proc/mdstat
 (verify that all raid sets are up and running)
@@ -109,6 +114,7 @@ livecd / # env-update
 livecd / # source /etc/profile
 livecd / # emerge sync
 livecd / # cd /usr/portage
-livecd / # scripts/bootstrap.sh</pre>
+livecd / # scripts/bootstrap.sh
+```
 
 If bootstrap runs correctly (and it should now that I re-formatted the /opt, /usr, /var, /home, /tmp, and /var/tmp volumes), I can pick back up with the [rest of my original install process](/blog/2004-06-15-gentoo-install-3-bootstrapping/)

@@ -13,8 +13,10 @@ tags:
 ([previous post - building the kernel](/2004/06/gentoo-install-4-installing-kernel.shtml))
 
 Note: This is for a VIA EPIA ME6000 motherboard being used as a headless server.  All of the multimedia and graphic options are disabled.  (See my [previous install](/2004-04-27-gentoo-epia-install-part-5/).)  If this is your first install, you should probably use the "genkernel" method rather then manual configuration.  The [Gentoo docs explain configuring the kernel](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=7#doc_chap3).  They recommend being familiar with the "<b>cat /proc/pci</b>" and "<b>lsmod</b>" commands which is something I missed on my [previous install](/2004-04-27-gentoo-epia-install-part-5/).
-<pre># cd /usr/src/linux
-# make menuconfig</pre>
+```
+# cd /usr/src/linux
+# make menuconfig
+```
 
 Anywhere in the following list where I say "turn ON" means to use the "Y" key to turn an option on as built-in, I'll specifically say MODULE if I loaded the option as a module.
 
@@ -72,29 +74,38 @@ Anywhere in the following list where I say "turn ON" means to use the "Y" key to
 (L)ibrary routines
 
 Exit and save your configuration.  Then build the kernel (the following is for 2.6 kernels).  Expect the compile to take about an hour.
-<pre>make &amp;&amp; make modules_install</pre>
+```
+make &amp;&amp; make modules_install
+```
 
 Now you need to install your kernel into the boot partition.  Change the "2.6.6-gentoo" portion of the filenames to whatever you want.
-<pre># cp arch/i386/boot/bzImage /boot/kernel-2.6.6-gentoo
+```
+# cp arch/i386/boot/bzImage /boot/kernel-2.6.6-gentoo
 # cp System.map /boot/System.map-2.6.6-gentoo
-# cp .config /boot/config-2.6.6-gentoo</pre>
+# cp .config /boot/config-2.6.6-gentoo
+```
 
 Next is [7.e. Installing Separate Kernel Modules](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=7#kernel_modules), which is where we specify which modules from above that we configured as "MODULE" instead of "BUILT-IN" get loaded at bootup.  Use the command "<b>nano -w /etc/modules.autoload.d/kernel-2.6</b>" to edit your config file.  Here is what mine looked like (yours will probably be different).
-<pre># autoloads the following modules at boot time
+```
+# autoloads the following modules at boot time
 #LVM2 (logical volume manager)
 dm-mod
 
 #ethernet
 #mii (not needed?)
-#via-rhine (compiled as built-in)</pre>
+#via-rhine (compiled as built-in)
+```
 
 I also need to emerge in LVM2 support as well as the "raidtools" package (per [Gentoo x86 Installation Tips &amp; Tricks](http://www.gentoo.org/doc/en/gentoo-x86-tipsntricks.xml#software-raid)).
-<pre># modules-update
+```
+# modules-update
 # emerge lvm2
-# emerge raidtools</pre>
+# emerge raidtools
+```
 
 Time to edit the "/etc/fstab" table (see [8.a. Filesystem Information](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=8) and also refer back to [my mount commands from earlier](/2004-06-15-gentoo-install-2-via-epia-me6000/)).  Here's my "/etc/fstab" file:
-<pre>/dev/md0 /boot ext2 noauto,noatime 1 2
+```
+/dev/md0 /boot ext2 noauto,noatime 1 2
 /dev/md2 / ext3 natime 0 1
 /dev/md1 none swap sw 0 0
 /dev/cdroms/cdrom0 /mnt/cdrom auto noauto,user 0 0
@@ -107,10 +118,12 @@ Time to edit the "/etc/fstab" table (see [8.a. Filesystem Information](http://ww
 /dev/vgmirror/vartmp /var/tmp ext2 noatime 0 3
 
 none /proc proc defaults 0 0
-none /dev/shm tmpfs defaults 0 0</pre>
+none /dev/shm tmpfs defaults 0 0
+```
 
 Change your hostname, domainname, and the default run level.
-<pre># echo yourhostname &gt; /etc/hostname
+```
+# echo yourhostname &gt; /etc/hostname
 # echo yourdnsname &gt; /etc/dnsdomainname
 # rc-update add domainname default
 # nano -w /etc/conf.d/net
@@ -119,9 +132,12 @@ Change your hostname, domainname, and the default run level.
 # cat /etc/resolv.conf
 (verify your DNS servers if you specified a static IP)
 # nano -w /etc/rc.conf
-(change CLOCK="UTC" to CLOCK="local")</pre>
+(change CLOCK="UTC" to CLOCK="local")
+```
 
 Onward to [chapter 9, configuring the bootloader](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=9).  Here's where I ran into trouble; ["emerge grub" or "emerge lilo" failed with "cannot automatically mount your /boot partition"](/2004-06-16-gentoo-install-emerge-grub-or-emerge-lilo-fails-to-mount-boot/).
-<pre># emerge grub</pre>
+```
+# emerge grub
+```
 
 ([continued in my next post](/2004-06-16-gentoo-install-6-grub-system-tools-finalizing-the-install/))

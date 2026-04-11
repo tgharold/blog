@@ -12,7 +12,8 @@ tags:
 
 Looks like there are two basic choices (according to "emerge -s ntp"), [ntp](http://www.ntp.org/) and [openntpd](http://openntpd.org/).
 
-<pre>*  net-misc/ntp
+```
+*  net-misc/ntp
       Latest version available: 4.2.0.20040617-r3
       Latest version installed: [ Not Installed ]
       Size of downloaded files: 2,403 kB
@@ -26,7 +27,8 @@ Looks like there are two basic choices (according to "emerge -s ntp"), [ntp](htt
       Size of downloaded files: 133 kB
       Homepage:    http://www.openntpd.org/
       Description: Lightweight NTP server ported from OpenBSD
-      License:     BSD</pre>
+      License:     BSD
+```
 
 I decided to go with OpenNTPD because it seemed to be smaller and less troublesome then the official NTP daemon.  (As one of the lines on the OpenNTPD page says... I'm not after microsecond accuracy.)
 

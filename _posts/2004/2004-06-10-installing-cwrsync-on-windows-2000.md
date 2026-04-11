@@ -69,12 +69,14 @@ You need to configure the rsyncd.conf file and set up your first "module" (a.k.a
 Next, we need to start setting up "modules" in the rsyncd.conf file.  "Modules" are basically the same concept as a Windows share, except that you have to use rsync to access the files within the "module".  Ignore what it says on the [cwRSync install page](http://www.itefix.no/phpws/index.php?module=pagemaster&amp;PAGE_user_op=view_page&amp;PAGE_id=8&amp;MMN_position=32:23) about rsync modules having to be sub-directories under the cwrsync folder.  If you grant correct directory permissions to the cwRSync service account, then the service daemon will be able to read or read/write to the target folders without problems.
 
 The default module installed is called "test".  Go ahead and comment it out with '#' symbols and save the file.  From my (limited) testing, it does not appear to be necessary to restart the rsync service in order for it to see changes in the rsyncd.conf file.
-<pre>
+```
+
 [test]
 path = /cygdrive/c/cwrsync/data
 read only = false
 transfer logging = yes
-</pre>
+
+```
 
 There are two basic ways to use rsync and this will affect how you grant permissions to the rsync service account.
 
@@ -83,11 +85,13 @@ The first is a read-only ("pull") setup, where the clients can only pull files f
 The second is a "push" setup where clients are writing changes to the rsync server.  The rsync service account will require "modify" permissions for the shared directory tree. Under your module configuration section in the rsyncd.conf file, a "push" setup must have "read only = false".
 
 Now, for every directory tree on the rsync server that you wish to share, create a new module section (e.g. "[logs]" or "[web]" or "[joes_backup]").  Verify that the cwRSync service account has proper permissions to the file system tree.  Then add the following options (at a minimum) below the module section name:
-<pre>
+```
+
 [joes_backup]
 path = /cygdrive/e/backup/joe
 read only = false
-</pre>
+
+```
 
 That allows <b>any client</b> who manages to authenticate with the rsync service to write the E:\Backup\Joe on the rsync server.  That is not exactly secure and you should take additional steps to lock it down through the use of "hosts allow", "auth users", "secrets file" and perhaps ssh.  Securing your box is a bit beyond the scope of this post.  It's also a bit beyond my experience level since I'm just getting started with rsync.
 

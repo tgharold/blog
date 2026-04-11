@@ -113,7 +113,8 @@ It's important to understand a little bit how "svn add" and "svn commit" work ha
 
 For the first example, I'm going to push the contents of /boot into the Subversion repository.
 
-<pre>nogitsune / # mount /boot
+```
+nogitsune / # mount /boot
 nogitsune / # ls -la /boot
 total 41261
 drwxr-xr-x   4 root root    2048 Nov 29  2005 .
@@ -258,7 +259,8 @@ Adding  (bin)  boot/grub/xfs_stage1_5
 Adding  (bin)  boot/kernel-2.6.17-25Aug2006-2300
 Transmitting file data ......................
 Committed revision 1.
-nogitsune / # </pre>
+nogitsune / # 
+```
 
 Most of that should be self explanatory.  You can see that I use "svn add -N boot" from the / (root) directory to add the /boot directory, then I move into the /boot folder and issue a selective "svn add".  Pay attention to the "-N" option which prevents the add from recursing down through subdirectories.  You should also take care to only add files that you control as an administrator to the svn repository (avoid adding things like "lost+found" or "._cfg*" files).
 

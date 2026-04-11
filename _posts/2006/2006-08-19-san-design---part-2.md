@@ -12,7 +12,8 @@ tags:
 
 Trying to decide how to allocate disks within the SAN unit.  I have (14) or (17) slots.  For now, I'll assume that the 5:3 bay units work which will give me a total of 17 disks.
 
-<pre>-------------------------------------------------
+```
+-------------------------------------------------
 BAYS / DRIVE CONFIGURATION (2 INT, 15 BAY-COOLER)
 -------------------------------------------------
 INT1    M/B      RAID1(A)    RAID1(A)
@@ -31,7 +32,8 @@ BCC1    ''       ''          ''
 BCC2    ''       RAID1 (C3)  ''
 BCC3    ''       ''          ''
 BCC4    ''       RAID1 (C4)  ''
-BCC5    ''       ''          ''</pre>
+BCC5    ''       ''          ''
+```
 
 INTx - Internal drive bay at back of case
 BCAx - 5:3 bay cooler

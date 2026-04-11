@@ -12,10 +12,12 @@ tags:
 
 Ran into this issue today when the pgsql folks updated their repository.  All of our CentOS 5 machines are behind a transparent HTTP proxy cache server (squid).
 
-<pre>filelists.sqlite.bz2      100% |=========================| 157 kB    00:00     
+```
+filelists.sqlite.bz2      100% |=========================| 157 kB    00:00     
 http://yum.pgsqlrpms.org/8.3/redhat/rhel-5-x86_64/repodata/filelists.sqlite.bz2: [Errno -1] Metadata file does not match checksum
 Trying other mirror.
-Error: failure: repodata/filelists.sqlite.bz2 from pgdg83: [Errno 256] No more mirrors to try.</pre>
+Error: failure: repodata/filelists.sqlite.bz2 from pgdg83: [Errno 256] No more mirrors to try.
+```
 
 It doesn't really matter what the package name is, the primary issue is the "[Errno -1] Metadata file does not match checksum" error message.
 

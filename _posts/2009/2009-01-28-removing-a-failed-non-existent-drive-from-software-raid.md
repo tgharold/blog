@@ -14,13 +14,17 @@ So, you have a drive that has failed, you've replaced the drive on the fly (usin
 
 For example:
 
-<pre>md0 : active raid1 sdi1[0] sdc1[2] sdb1[3](F) sda1[1]
-      264960 blocks [3/3] [UUU]</pre>
+```
+md0 : active raid1 sdi1[0] sdc1[2] sdb1[3](F) sda1[1]
+      264960 blocks [3/3] [UUU]
+```
 
 In this case, sdb1 is marked as failed, and sdi1 was the slice from the newly added drive (via SATA hot-plug).  So we want to remove it with mdadm's remove command:
 
-<pre># mdadm /dev/md0 --remove /dev/sdb1
-mdadm: cannot find /dev/sdb1: No such file or directory</pre>
+```
+# mdadm /dev/md0 --remove /dev/sdb1
+mdadm: cannot find /dev/sdb1: No such file or directory
+```
 
 Oops, we can't do that because we already swapped out the failed drive (sdb).  
 
@@ -32,7 +36,9 @@ The answer is found in the mdadm man page for the remove feature:
 
 So instead of specifying the name of the failed RAID slice we should instead us the following command:
 
-<pre># mdadm /dev/md0 -r detached  
-mdadm: hot removed 8:17</pre>
+```
+# mdadm /dev/md0 -r detached  
+mdadm: hot removed 8:17
+```
 
 And there you have it, the failed raid slice that is no longer connected to the system has been removed.  It will not show up in "/proc/mdstat" any more.

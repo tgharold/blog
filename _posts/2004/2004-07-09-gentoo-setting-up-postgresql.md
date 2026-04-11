@@ -11,7 +11,8 @@ tags:
 
 
 Getting PostgreSQL installed really isn't that difficult on Gentoo Linux.
-<pre># emerge -s postgresql
+```
+# emerge -s postgresql
 # emerge postgresql
 (install takes a while, didn't time it)
 # ebuild /var/db/pkg/dev-db/postgresql-7.4.2-r1/postgresql-7.4.2-r1.ebuild config
@@ -20,29 +21,38 @@ Getting PostgreSQL installed really isn't that difficult on Gentoo Linux.
  * Please edit /etc/sysctl.conf and set this value to at least 134217728.
  * 
  *   kernel.shmmax = 134217728
- * </pre>
+ * 
+```
 
 Fire up nano... see [for an explanation of why we need to edit sysctl.conf](http://developer.postgresql.org/docs/postgres/kernel-resources.html).  The short version is that the 2.6 linux kernel has a default value (shared memory limits) that is too small to be compatible with PostgreSQL.
-<pre># nano -w /etc/sysctl.conf</pre>
+```
+# nano -w /etc/sysctl.conf
+```
 
 (add the following lines)
-<pre>#Kernel parameters for PostgreSQL
+```
+#Kernel parameters for PostgreSQL
 #default is 32MB, PostGreSQL needs 128MB
 kernel.shmmax = 134217728
-kernel.shmall = 134217728</pre>
+kernel.shmall = 134217728
+```
 
 Now manually update the current values and start the server.
-<pre># echo 134217728 &gt;/proc/sys/kernel/shmall
+```
+# echo 134217728 &gt;/proc/sys/kernel/shmall
 # echo 134217728 &gt;/proc/sys/kernel/shmmax
 # rc-update add postgresql default
-# /etc/init.d/postgresql start</pre>
+# /etc/init.d/postgresql start
+```
 
 Now I'm off to explore the [PostgreSQL documentation](http://www.postgresql.org/docs/7.4/interactive/).
 
 The default Gentoo install seems to already include a "postgres" user in /etc/passwd.  To get logged in as the postgres user account, you will (I think) first need to switch to root.  
-<pre># su
+```
+# su
 # cd /usr/local
-# su - postgres</pre>
+# su - postgres
+```
 
 Now you can continue with [section 16](http://www.postgresql.org/docs/7.4/interactive/creating-cluster.html).  Skip the page about creating the database cluster, it's already been created in "<b>/var/lib/postgresql/data</b>" back when you ran the "ebuild config" command.  You can verify this by looking at the config file ("<b>cat /etc/conf.d/postgresql</b>"), where the <b>PGDATA=</b> line indicates the location of the database.  
 

@@ -16,7 +16,8 @@ Jul  4 05:01:04 fw1-hosho setroubleshoot:      SELinux is preventing /usr/sbin/n
 
 Here's the output of the sealert command:
 
-<pre># sealert -l 663ea169-d194-4c49-a5bb-a6a4bb707990
+```
+# sealert -l 663ea169-d194-4c49-a5bb-a6a4bb707990
 Summary
     SELinux is preventing /usr/sbin/named (named_t) "write" access to named
     (named_conf_t).
@@ -69,6 +70,7 @@ avc: denied { write } for comm="named" dev=md1 egid=25 euid=25
 exe="/usr/sbin/named" exit=-13 fsgid=25 fsuid=25 gid=25 items=0 name="named"
 pid=2628 scontext=system_u:system_r:named_t:s0 sgid=25
 subj=system_u:system_r:named_t:s0 suid=25 tclass=dir
-tcontext=root:object_r:named_conf_t:s0 tty=(none) uid=25</pre>
+tcontext=root:object_r:named_conf_t:s0 tty=(none) uid=25
+```
 
 The most helpful web page that I've found so far is the thread "[Permissions Issue starting Bind 9.3.1](http://www.webservertalk.com/message1323968.html)".  The gist seems to be that RedHat (and CentOS) are using a chroot bind installation in conjunction with an SELinux policy that expects the bind configuration files to be in a non-chroot setup.  But there aren't very clear instructions there on fixing it.

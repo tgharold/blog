@@ -15,19 +15,26 @@ Going to rebuild my VIA EPIA Gentoo linux server.  While the [current setup](/bl
 I'm going to skip some of the [initial information about my setup](/blog/2004-04-27-gentoo-epia-install-part-1/) as all of that really hasn't changed.  Shared video memory is still only 32MB instead of the default 128MB, and I've turned off all of the ports and devices that I'm not going to use (leaving only ethernet, firewire and USB ports active).  I'm still using the Gentoo 2004.0 Universal CD as my bootstrap system.
 
 Start by booting up the Gentoo Universal CD, as soon as you see the "<b>boot:</b>" prompt, enter the following command (which hopefully fixes the shutdown/lockup issue I had at the end of the last install):
-<pre>boot: gentoo nohotplug</pre>
+```
+boot: gentoo nohotplug
+```
 
 The LiveCD will then boot up, now load the md and dm-mod modules.  Prior to loading these two modules, "/proc/mdstat" will not exist:
-<pre># modprobe md
-# modprobe dm-mod</pre>
+```
+# modprobe md
+# modprobe dm-mod
+```
 
 It's possible that your ethernet card on the VIA EPIA ME6000 will not be detected.  To fix this, you'll need to load the via-rhine module by hand, and then reconfigure your network adapters.
-<pre># modprobe via-rhine
+```
+# modprobe via-rhine
 # net-setup eth0
-# ifconfig</pre>
+# ifconfig
+```
 
 Create partitions using fdisk.  I want a 64MB /boot partition, a 2048MB swap partition, a 2048MB root partition, and the rest set aside for LVM.  Also see the [gentoo install documentation](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=4) section on preparing the disks.
-<pre># ls /dev/hd*
+```
+# ls /dev/hd*
 # fdisk /dev/hda
 
 Command: n
@@ -66,16 +73,20 @@ Command: t
 Partition number: 4
 Hex code: fd
 
-Command: p</pre>
+Command: p
+```
 
 Verify your configuration.  My system had (4) primary partitions, with the first partition marked as active ('*' under the "Boot" column).  Now, write the partition table to disk (<b>be sure everything is correct</b>).
-<pre>Command: w
-#</pre>
+```
+Command: w
+#
+```
 
 Repeat the above for the 2nd disk in the array (/dev/hdc in my case).
 
 Create your "/etc/raidtab" configuration file (I used "<b>nano -w /etc/raidtab</b>", but other text editors will work).
-<pre># this config is for mirroring /dev/hda with /dev/hdc
+```
+# this config is for mirroring /dev/hda with /dev/hdc
 # /boot (RAID1)
 raiddev                 /dev/md0
 raid-level              1
@@ -124,13 +135,16 @@ raid-disk               0
 device                  /dev/hdc4
 raid-disk               1 
 
-# end of /etc/raidtab</pre>
+# end of /etc/raidtab
+```
 
 Create the raid set(s).
-<pre># mkraid /dev/md0
+```
+# mkraid /dev/md0
 # mkraid /dev/md1
 # mkraid /dev/md2
-# mkraid /dev/md3</pre>
+# mkraid /dev/md3
+```
 
 If you get the error message: "raid_disks + spare_disks != nr_disks" when attempting to create any of your RAID sets, go back and verify your "/etc/raidtab" file as well as verifying your disk partitions.  The RAID sets will build in the background and you should periodically monitor their progress using "<b>cat /proc/mdstat</b>".  Another possibility is that you have set the "chunk-size" setting to be too small or too large (e.g. "chunk-size 4" did not work for me, but "chunk size 8" worked fine).  
 

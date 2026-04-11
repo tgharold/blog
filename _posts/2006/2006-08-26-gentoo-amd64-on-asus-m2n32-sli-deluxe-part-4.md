@@ -93,7 +93,8 @@ Next is [Chapter 8, Configuring your System](http://www.gentoo.org/doc/en/handbo
 
 My fstab (there are lines not shown):
 
-<pre>/dev/md0                /boot           ext2            noauto,noatime  1 2        
+```
+/dev/md0                /boot           ext2            noauto,noatime  1 2        
 /dev/md1                /               ext3            noatime         0 1        
 /dev/md3                none            swap            sw              0 0        
 /dev/cdroms/cdrom0      /mnt/cdrom      iso9660         noauto,ro       0 0
@@ -106,7 +107,8 @@ My fstab (there are lines not shown):
 /dev/vgmirror/portage   /usr/portage            ext3    noatime         0 3
 
 /dev/vgmirror/svn       /var/svn                ext3    noatime         0 4        
-/dev/vgmirror/backupsys /backup/system          ext3    noatime         0 4</pre>
+/dev/vgmirror/backupsys /backup/system          ext3    noatime         0 4
+```
 
 Now for some final clean-up work:
 

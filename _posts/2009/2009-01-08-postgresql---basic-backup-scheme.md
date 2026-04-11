@@ -23,17 +23,20 @@ Which is about 24-25 copies of the data, stored on the hard drive.  So you'll ne
 Most of the grunt work is handled by the include script, the daily / weekly / monthly backup scripts simply setup a few variables and then call the main include script.
 
 <b>backup_daily.sh</b>
-<pre>#!/bin/bash
+```
+#!/bin/bash
 # DAILY BACKUPS (writes to a daily folder each day)
 DAYNR=`date +%w`
 echo $DAYNR
 DIR=/backup/pgsql/daily/$DAYNR/
 echo $DIR
 
-source ~/bin/include_backup_compressed.sh</pre>
+source ~/bin/include_backup_compressed.sh
+```
 
 <b>backup_weekly.sh</b>
-<pre>#!/bin/bash
+```
+#!/bin/bash
 # WEEKLY BACKUPS
 # Backups go to a five directories based on the day of the month
 # converted into 1-5 based on modulus arithmetic.  The fifth week
@@ -46,10 +49,12 @@ echo $WEEKNR
 DIR=/backup/pgsql/weekly/$WEEKNR/
 echo $DIR
 
-source ~/bin/include_backup_compressed.sh</pre>
+source ~/bin/include_backup_compressed.sh
+```
 
 <b>backup_monthly.sh</b>
-<pre>#!/bin/bash
+```
+#!/bin/bash
 # MONTHLY BACKUPS
 # Backups go to three directories based on the month of year
 # converted into 1-3 based on modulus arithmetic.
@@ -60,10 +65,12 @@ echo $MONTHNR
 DIR=/backup/pgsql/monthly/$MONTHNR/
 echo $DIR
 
-source ~/bin/include_backup_compressed.sh</pre>
+source ~/bin/include_backup_compressed.sh
+```
 
 <b>backup_quarterly.sh</b>
-<pre>#!/bin/bash
+```
+#!/bin/bash
 # QUARTERLY BACKUPS
 # Backups go to a four directories based on the quarter of the year
 # converted into 1-4 based on modulus arithmetic.
@@ -74,20 +81,24 @@ echo $QTRNR
 DIR=/backup/pgsql/quarterly/$QTRNR/
 echo $DIR
 
-source ~/bin/include_backup_compressed.sh</pre>
+source ~/bin/include_backup_compressed.sh
+```
 
 <b>backup_yearly.sh</b>
-<pre>#!/bin/bash
+```
+#!/bin/bash
 # ANNUAL BACKUPS
 YEARNR=`date +%Y`
 echo $YEARNR
 DIR=/backup/pgsql/yearly/$YEARNR/
 echo $DIR
 
-source ~/bin/include_backup_compressed.sh</pre>
+source ~/bin/include_backup_compressed.sh
+```
 
 <b>include_backup_compressed.sh</b>
-<pre>#!/bin/bash
+```
+#!/bin/bash
 # Compressed backups to $DIR
 echo $DIR
 DBS=$(psql -l | grep '|' | awk '{ print $1}' | grep -vE '^-|^Name|template[0|1]')
@@ -117,6 +128,7 @@ do
             fi
         done
     done
-done</pre>
+done
+```
 
 We tried using gzip instead of bzip2, but found that bzip2 worked a little better even though it uses up more CPU.  We use a block size of only 200k for bzip2 in order to be more friendly to an rsync push to an external server.

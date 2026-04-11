@@ -111,7 +111,8 @@ samba # nano -w samba-3.0.14a-r2.ebuild
 
 Now hit [Ctrl-W] and type "src_compile", which will take you straight to the following code block:
 
-<pre>rc_compile() {
+```
+rc_compile() {
         ebegin "Running autoconf"
                 autoconf
         eend $?
@@ -123,11 +124,13 @@ Now hit [Ctrl-W] and type "src_compile", which will take you straight to the fol
         if use xml || use xml2 ;
         then   
                 mymods="xml,${mymods}"
-        fi</pre>
+        fi
+```
 
 Somewhere towards the start of the funciton, add the line "addpredict /etc/krb5.conf".
 
-<pre>src_compile() {
+```
+src_compile() {
         ebegin "Running autoconf"
                 autoconf
         eend $?
@@ -141,7 +144,8 @@ Somewhere towards the start of the funciton, add the line "addpredict /etc/krb5.
         if use xml || use xml2 ;
         then
                 mymods="xml,${mymods}"
-        fi</pre>
+        fi
+```
 
 Create the ebuild digest (MD5 signatures) for the patched package.
 
