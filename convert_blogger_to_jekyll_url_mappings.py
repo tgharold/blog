@@ -68,7 +68,7 @@ def find_new_markdown_paths(unique_old_urls_data):
             found_files = matching_files
 
             # Look for exact matches between the base filename and found files
-            matched_file = None
+            exactly_matched_file = None
             for file_path in found_files:
                 # Extract just the filename without path and extension
                 file_basename = os.path.basename(file_path)
@@ -76,13 +76,13 @@ def find_new_markdown_paths(unique_old_urls_data):
 
                 # If there's an exact match, update the data element
                 if file_base_without_ext == filename:
-                    matched_file = file_path
+                    exactly_matched_file = file_path
                     break
 
             # Update path_to_new_markdown_file if we found a match
-            if matched_file:
-                data['path_to_new_markdown_file'] = matched_file
-                print(f"Match found: {filename} -> {matched_file}")
+            if exactly_matched_file:
+                data['path_to_new_markdown_file'] = exactly_matched_file
+                print(f"Match found: {filename} -> {exactly_matched_file}")
             else:
                 print(f"No exact match found for {filename}")
 
