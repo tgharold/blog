@@ -11,7 +11,8 @@ tags:
 
 
 Sometimes "emerge grub" or "emerge lilo" fails with the following error and you are attempting to mount "/boot" on a software RAID1 partition:
-<pre>*
+```
+*
 * Cannot automatically mount your /boot partition.
 * Your boot partition has to be mounted rw before the installation
 * can continue. lilo needs to install important files there.
@@ -21,14 +22,16 @@ Sometimes "emerge grub" or "emerge lilo" fails with the following error and you 
 !!! Function mount-boot_mount_boot_partition, Line 53, Exitcode 0
 !!! Please mount your /boot partition manually!
 
-!!! FAILED preinst: 1</pre>
+!!! FAILED preinst: 1
+```
 
 (The error messages will be pretty much identical for both "lilo" and "grub".)
 
 The problem was, for me at least, that prior to doing the chroot into the new environment, I had failed to mkdir and mount the /boot partition.  ([See the start of step 2 in my install notes](/blog/2004-06-15-gentoo-install-2-via-epia-me6000/).)
 
 Here's the quick-n-easy way that I fixed the problem.  I had to temporarily exit out of the chroot'd environment, back to the livecd bootup environment, mount the partition, and then chroot back.
-<pre>livecd / # exit
+```
+livecd / # exit
 livecd / # mkdir /mnt/gentoo/boot
 livecd / # mount /dev/md0 /mnt/gentoo/boot
 livecd / # cat /proc/mounts
@@ -40,7 +43,8 @@ livecd / # source /etc/profile
 
 livecd / # emerge lilo
 (or if you're using grub...)
-livecd / # emerge grub</pre>
+livecd / # emerge grub
+```
 
 Update: While this set of instructions did properly fixup the /boot partition with "grub", it really didn't treat the root cause of the entire mess.  (See [Troubleshooting Software RAID](/blog/2004-06-17-troubleshooting-software-raid-boot-problems/).)
 

@@ -20,7 +20,8 @@ Microsoft Articles:
 
 An extremely good page that shows you [whether W32Time is configured properly to sync against an external server](http://www.anotherurl.com/library/network_time.htm).  The basic idea is that you <b>stop</b> the "Windows Time" service and the execute the following command at the prompt.
 
-<pre>w32tm -once
+```
+w32tm -once
 ... (content snipped for brevity) ...
 W32Time: BEGIN:TimeSync
 W32Time:    BEGIN:FGetType
@@ -91,7 +92,8 @@ W32Time:          Computed stagger is 0ms, bias is 0ms
 W32Time:          Time until next sync - 2699.960s
 W32Time:       END:Line 816
 W32Time:    END:Line 221
-W32Time: END:Line 196</pre>
+W32Time: END:Line 196
+```
 
 The key line in the above output is "Error -45702ms" which shows us how much the Windows server's clock is going to be adjusted by.  You should also look in your System Log (filter for W32Time events) for messages after using the above command (or after stopping/starting the time service).  Those messages in the system log will help you determine why you may not be able to synchronize to an external time server (via 123/udp).
 

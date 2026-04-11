@@ -30,7 +30,8 @@ For file labels, look at the file_context* files under:
 
 For example, I want to see what file contexts are defined for Nagios:
 
-<pre># grep -h "nagios" /etc/selinux/targeted/contexts/files/file_contexts*
+```
+# grep -h "nagios" /etc/selinux/targeted/contexts/files/file_contexts*
 /usr/lib(64)?/nagios/cgi(/.*)?  system_u:object_r:httpd_nagios_script_exec_t:s0
 /usr/lib(64)?/nagios/plugins(/.*)?      system_u:object_r:bin_t:s0
 /usr/lib(64)?/nagios/cgi-bin(/.*)?      system_u:object_r:httpd_nagios_script_exec_t:s0
@@ -41,7 +42,8 @@ For example, I want to see what file contexts are defined for Nagios:
 /var/log/netsaint(/.*)? system_u:object_r:nagios_log_t:s0
 /var/spool/nagios(/.*)? system_u:object_r:nagios_spool_t:s0
 /usr/bin/nagios --      system_u:object_r:nagios_exec_t:s0
-/etc/nagios/nrpe\.cfg   --      system_u:object_r:nrpe_etc_t:s0</pre>
+/etc/nagios/nrpe\.cfg   --      system_u:object_r:nrpe_etc_t:s0
+```
 
 You can also use the <b>seinfo</b> tool:
 

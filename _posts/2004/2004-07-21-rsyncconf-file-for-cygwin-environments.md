@@ -15,11 +15,13 @@ You should definitely refer to the [official rsync website](http://rsync.samba.o
 Locate your /etc folder under where you installed Cygwin.  Since I installed Cygwin to C:\bin\cygwin, my /etc folder is C:\bin\cygwin\etc.  For a fresh install, you'll need to create the "rsyncd.conf" file in that folder (C:\bin\cygwin\etc\rsyncd.conf).
 
 (minimal rsyncd.conf file)
-<pre>use chroot = false
+```
+use chroot = false
 strict modes = false
 log file = rsyncd.log
 
 [test]
 path = /cygdrive/d/rsync/test
 read only = false
-transfer logging = yes</pre>
+transfer logging = yes
+```

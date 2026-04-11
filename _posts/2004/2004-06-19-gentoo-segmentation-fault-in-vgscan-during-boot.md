@@ -11,7 +11,8 @@ tags:
 
 
 Now for the other error that I got during the initial bootup.
-<pre>* Using /etc/modules.autoload.d/kernel-2.6 as config:
+```
+* Using /etc/modules.autoload.d/kernel-2.6 as config:
 * Loading module dm-mod...                                                 [ ok ]
 * Autoloaded 1 module(s)
 * Setting up the Logical Volume Manager...
@@ -28,7 +29,8 @@ is corrupt and you might try running e2fsck with an alternate superblock:
     e2fsck -b 8193 <device>
 
 ("No such file or directory..." error repeats for all of the other 
-logical volumes in the volume group(s) on the system)</device></pre>
+logical volumes in the volume group(s) on the system)</device>
+```
 
 My initial guess is that the software RAID is not loading up prior to the LVM stuff trying to load.  Possibly, I'll have to edit the ordering in "/etc/init.d/checkfs", however since RAID is compiled into the kernel as built-in, and the LVM stuff is a module, the RAID should've already started prior to the LVM stuff.
 
@@ -45,10 +47,12 @@ Flipped back to the [Gentoo LVM2 documents](http://www.gentoo.org/doc/en/lvm2.xm
 Did a look at the "/etc/lvm" folder on the root volume using "<b>ls -la /etc/lvm</b>" and saw something surprising.  There is a ".cache" file which is <b>huge</b> (mine was 10881785 in size).  Doing a "cat" of the contents, I see some entries like "/dev/discs/disc2/discs/disc2.../disc2/md/254" which looks like a recursive loop of some sort.  
 
 Hint #2, run "vgdisplay -vv" and I see the error message "Too many levels of symbolic links" after each of those long entries.  I also see this problem if I run "vgscan -vv".  I finally changed my "/etc/lvm/lvm.conf" file to look like the following, and vgscan and vgdisplay are very quick at finding the volume group on my raid array and no longer segfault while looking at other items:
-<pre>devices = {
+```
+devices = {
     scan=["/dev/md"]
     filter=["a|^/dev/md/3$|","r/.*/"]
-    }</pre>
+    }
+```
 
 Note that this filter only allows vgscan to scan the "md3" device.    This keeps vgscan from scanning other devices that don't need to be scanned on my system (and fixes the segfault issue where it goes into infinite recursion on certain devices).  If you need to scan other RAID devices (/dev/md1, etc.) or other physical partitions, then you'll need to adjust the "accept" portion of the filter.
 

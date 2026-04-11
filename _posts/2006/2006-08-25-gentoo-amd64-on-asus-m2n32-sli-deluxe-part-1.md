@@ -45,7 +45,8 @@ I'm also not ready to spend $500-$600 on a redundant PSU until I know whether th
 
 For the install, I plan on a partition layout like so (both sda and sdb are configured identically and then mirrored together):
 
-<pre>Disk /dev/sda: 750.1 GB, 750156374016 bytes
+```
+Disk /dev/sda: 750.1 GB, 750156374016 bytes
 255 heads, 63 sectors/track, 91201 cylinders
 Units = cylinders of 16065 * 512 = 8225280 bytes
 
@@ -55,7 +56,8 @@ Units = cylinders of 16065 * 512 = 8225280 bytes
 /dev/sda3            1016        2013     8016435   fd  Linux raid autodetect
 /dev/sda4            2014       91201   716402610    5  Extended
 /dev/sda5            2014        2512     4008186   fd  Linux raid autodetect
-/dev/sda6            2513       91201   712394361   fd  Linux raid autodetect</pre>
+/dev/sda6            2513       91201   712394361   fd  Linux raid autodetect
+```
 
 Partition #1 is the boot partition.  I generally go with 128MB as it allows me to have a dozen or so kernels setup in grub.
 

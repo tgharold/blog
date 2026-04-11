@@ -45,38 +45,49 @@ Guy. </i>
 
 So basically, we need to look at the context of the existing /var/lib/pgsql folder and then make our new directories to match that.  We'll start by looking at /var/lib/pgsql:
 
-<pre># ls -Z /var/lib/
-drwx------  postgres  postgres system_u:object_r:var_lib_t      pgsql</pre>
+```
+# ls -Z /var/lib/
+drwx------  postgres  postgres system_u:object_r:var_lib_t      pgsql
+```
 
 Let's compare this to our new location:
 
-<pre># ls -Z /var/
-drwxr-xr-x  root   root   system_u:object_r:file_t         pgsql</pre>
+```
+# ls -Z /var/
+drwxr-xr-x  root   root   system_u:object_r:file_t         pgsql
+```
 
 Yeah, that's definitely not correct.  So let's fix it:
 
-<pre># chown postgres:postgres /var/pgsql
+```
+# chown postgres:postgres /var/pgsql
 # chmod 700 /var/pgsql
 # chcon system_u:object_r:var_t /var/pgsql
 # ls -Z /var/
-drwx------  postgres postgres system_u:object_r:var_lib_t      pgsql</pre>
+drwx------  postgres postgres system_u:object_r:var_lib_t      pgsql
+```
 
 Which now matches exactly what we saw for /var/lib/pgsql.  Now we need to do the same thing for the contents of /var/pgsql as compared to /var/lib/pgsql.
 
-<pre># ls -Z /var/lib/pgsql
+```
+# ls -Z /var/lib/pgsql
 drwx------  postgres postgres system_u:object_r:var_lib_t      backups
 drwx------  postgres postgres system_u:object_r:postgresql_db_t data
--rw-------  postgres postgres system_u:object_r:postgresql_log_t pgstartup.log</pre>
+-rw-------  postgres postgres system_u:object_r:postgresql_log_t pgstartup.log
+```
 
 As compared to:
 
-<pre># ls -Z /var/pgsql
+```
+# ls -Z /var/pgsql
 drwx------  postgres postgres user_u:object_r:var_log_t        data
-drwx------  root     root     system_u:object_r:file_t         lost+found</pre>
+drwx------  root     root     system_u:object_r:file_t         lost+found
+```
 
 Once again, things need to be fixed up.
 
-<pre># su postgres
+```
+# su postgres
 $ mkdir /var/pgsql/backups
 $ chmod 700 /var/pgsql/backups
 $ chcon system_u:object_r:var_t /var/pgsql/backups
@@ -92,13 +103,15 @@ drwx------  root     root     system_u:object_r:file_t         lost+found
 $ ls -Z /var/lib/pgsql
 drwx------  postgres postgres system_u:object_r:var_lib_t      backups
 drwx------  postgres postgres system_u:object_r:postgresql_db_t data
--rw-------  postgres postgres system_u:object_r:postgresql_log_t pgstartup.log</pre>
+-rw-------  postgres postgres system_u:object_r:postgresql_log_t pgstartup.log
+```
 
 Which looks correct.  At least our ownership, file attributes and file context all match the original.  Note that I left the context of some things as system_u:object_r:var_t instead of system_u:object_r:var_lib_t.
 
 Now for the hard part, we have to look at ALL of the subdirectory contents under /var/lib/pgsql and match them up in the new location:
 
-<pre>$ cd /var/lib/pgsql ; ls -RZ
+```
+$ cd /var/lib/pgsql ; ls -RZ
 .:
 drwx------  postgres postgres system_u:object_r:var_lib_t      backups
 drwx------  postgres postgres system_u:object_r:postgresql_db_t data
@@ -508,7 +521,8 @@ drwx------  postgres postgres user_u:object_r:postgresql_db_t  offsets
 drwx------  postgres postgres user_u:object_r:postgresql_db_t  archive_status
 
 ./data/pg_xlog/archive_status:
-$</pre>
+$
+```
 
 Keep that list open in a text editor, or something else because you'll need to refer to it frequently.  We can fix most of it by making everything set to context "user_u:object_r:postgresql_db_t" to start.  Which is a brute-force approach.
 
@@ -516,14 +530,16 @@ $ chcon -R user_u:object_r:postgresql_db_t *
 
 Now we can go and start fixing things that should not be that particular context.  Now, it's quite probable that this is overkill, but I believe in being thorough.
 
-<pre>$ chcon system_u:object_r:postgresql_db_t postmaster.opts
+```
+$ chcon system_u:object_r:postgresql_db_t postmaster.opts
 $ find . -name pg_internal.init -exec chcon system_u:object_r:postgresql_db_t {} \;
 $ chcon system_u:object_r:postgresql_db_t global/pg_auth
 $ chcon system_u:object_r:postgresql_db_t global/pg_database
 $ chcon system_u:object_r:postgresql_db_t global/pg_fsm.cache
 (file may not exist)
 $ chcon system_u:object_r:postgresql_db_t global/pgstat.stat
-$ chcon system_u:object_r:postgresql_db_t pg_log/postgresql-*.log</pre>
+$ chcon system_u:object_r:postgresql_db_t pg_log/postgresql-*.log
+```
 
 At this point, your postgresql data directory SHOULD be configured correctly.  (No guarantees!)  So now you can restart postgresql (/etc/init.d/postgresql start) and it will work properly in the new location.
 

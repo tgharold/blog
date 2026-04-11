@@ -12,7 +12,8 @@ tags:
 
 I was a bit perplexed... I had created a LV called /dev/vg/svn, had it mounted, was reading/writing data to it with no issues.  But after I rebooted the CentOS5 server, I'm unable to mount the LV.
 
-<pre>[root@localhost /]# /usr/sbin/pvscan
+```
+[root@localhost /]# /usr/sbin/pvscan
 PV /dev/md6   VG vg   lvm2 [144.78 GB / 59.78 GB free]
 Total: 1 [144.78 GB] / in use: 1 [144.78 GB] / in no VG: 0 [0   ]
 [root@localhost /]# /usr/sbin/vgscan
@@ -35,7 +36,8 @@ Segments               1
 Allocation             inherit
 Read ahead sectors     0
 
-[root@localhost /]# </pre>
+[root@localhost /]# 
+```
 
 So lvdisplay knows that the LV is there, but only if I tell it to look at the VG named "vg".
 
@@ -43,7 +45,9 @@ So lvdisplay knows that the LV is there, but only if I tell it to look at the VG
 
 Turns out that it's an SELinux issue.  Because SELinux was blocking access to the /etc/lvm/.cache file, it was causing problems.  Fixing it was as simple as:
 
-<pre># cd /etc/lvm
+```
+# cd /etc/lvm
 # /sbin/restorecon -v .cache
 # /usr/sbin/lvscan
-inactive          '/dev/vg/svn' [85.00 GB] inherit</pre>
+inactive          '/dev/vg/svn' [85.00 GB] inherit
+```

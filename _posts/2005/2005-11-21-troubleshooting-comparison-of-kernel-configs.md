@@ -26,50 +26,61 @@ Now for the comparison files.  These were created by GNU's diff3 tool on my WinX
 
 Lines that are the same between the LiveCD and the sample config, but *different* on my config would show up as:
 
-<pre>1:35c
+```
+1:35c
 3:35c
   CONFIG_HOTPLUG=y
 2:36c
-  # CONFIG_HOTPLUG is not set</pre>
+  # CONFIG_HOTPLUG is not set
+```
 
 CONFIG_HOTPLUG is set as "y" in both the LiveCD kernel config and Anton's kernel config, but not defined in my kernel config.  Naturally, my first pass through the comparison is looking for instances like this and then researching the option to understand whether it should be uniquely set on my system.
 
 Now for the details, I've identified a few troublespots in my kernel config that could be causing issues (these are comparisons against the Scharf config).  What I'm finding is that there are very few places in my config where I'm doing something different then the Scharf config (but the LiveCD is the same as the Scharf config).:
 
-<pre>1:35c
+```
+1:35c
 3:35c
   CONFIG_HOTPLUG=y
 2:36c
-  # CONFIG_HOTPLUG is not set</pre>
+  # CONFIG_HOTPLUG is not set
+```
 
 Both Anton/Scharf configs set this the same way as the LiveCD.
 
-<pre>1:61c
+```
+1:61c
 3:60c
   # CONFIG_MODULE_FORCE_UNLOAD is not set
 2:62c
-  CONFIG_MODULE_FORCE_UNLOAD=y</pre>
+  CONFIG_MODULE_FORCE_UNLOAD=y
+```
 
 Both Anton/Scharf configs set this the same way as the LiveCD.
 
-<pre>1:110c
+```
+1:110c
 3:102c
   # CONFIG_SOFTWARE_SUSPEND is not set
 2:120,121c
   CONFIG_SOFTWARE_SUSPEND=y
-  CONFIG_PM_STD_PARTITION=""</pre>
+  CONFIG_PM_STD_PARTITION=""
+```
 
 The software suspend option is probably not the cause of my troubles.  Anton's config uses software suspend to a dedicated partition.  However, I should still plan on turning this off since I'm not going to use software suspend.
 
-<pre>1:211c
+```
+1:211c
 3:189c
   # CONFIG_IA32_AOUT is not set
 2:211c
-  CONFIG_IA32_AOUT=y</pre>
+  CONFIG_IA32_AOUT=y
+```
 
 Anton configuration has this set to "Y", the Scharf has it not set.
 
-<pre>1:895c
+```
+1:895c
 3:613c
   # CONFIG_NETCONSOLE is not set
 2:591,595c
@@ -77,16 +88,19 @@ Anton configuration has this set to "Y", the Scharf has it not set.
   CONFIG_NETPOLL=y
   # CONFIG_NETPOLL_RX is not set
   # CONFIG_NETPOLL_TRAP is not set
-  CONFIG_NET_POLL_CONTROLLER=y</pre>
+  CONFIG_NET_POLL_CONTROLLER=y
+```
 
 Mine is the only config to set this to "Y".
 
-<pre>1:1597c
+```
+1:1597c
 3:1334c
   # CONFIG_PROFILING is not set
 2:1089,1090c
   CONFIG_PROFILING=y
-  CONFIG_OPROFILE=y</pre>
+  CONFIG_OPROFILE=y
+```
 
 Probably not an issue.  The Anton config sets this to "Y"/"M" instead of "Y"/"Y".
 

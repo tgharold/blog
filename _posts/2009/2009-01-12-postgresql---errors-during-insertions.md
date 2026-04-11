@@ -38,7 +38,8 @@ All of my terminate statements are due to "signal 6: aborted", so I don't think 
 
     # grep "Could not open file" /var/lib/pgsql/data/pg_log/*.log
 
-<pre>postgresql-2009-01-11_000000.log:DETAIL:  Could not open file "pg_clog/0050": No such file or directory.
+```
+postgresql-2009-01-11_000000.log:DETAIL:  Could not open file "pg_clog/0050": No such file or directory.
 
 postgresql-2009-01-11_000000.log:DETAIL:  Could not open file "pg_clog/0050": No such file or directory.
 
@@ -46,7 +47,8 @@ postgresql-2009-01-11_170257.log:DETAIL:  Could not open file "pg_clog/0050": No
 
 postgresql-2009-01-11_172436.log:DETAIL:  Could not open file "pg_clog/0050": No such file or directory.
 
-postgresql-2009-01-12_000000.log:DETAIL:  Could not open file "pg_clog/0050": No such file or directory.</pre>
+postgresql-2009-01-12_000000.log:DETAIL:  Could not open file "pg_clog/0050": No such file or directory.
+```
 
 Which is the errors that I'm seeing.  They started on Jan 11th.
 

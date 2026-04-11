@@ -26,7 +26,8 @@ Here's a very basic script that I use with RSync that makes use of hard links to
 
 - I make no guarantees that permissions or ownership will be preserved.  But since the source server strips all of that information in the process of sending the files over the wire with scp, it's a moot point for our current situation.  (rdiff-backup is probably a better choice for that.)
 
-<pre>#!/bin/bash
+```
+#!/bin/bash
 # DAILY BACKUPS (writes to a daily folder each day)
 DAYNR=`date +%w`
 echo DAYNR=${DAYNR}
@@ -49,7 +50,8 @@ do
     rsync -a --delete-after ${SRCDIR} ${DESTDIR}
 
     echo "Done." 
-done</pre>
+done
+```
 
 It's not pretty, but it will work better once the source server starts pushing the daily changes via rsync instead of completely overwriting the "current" directory every day.
 
