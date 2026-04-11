@@ -15,15 +15,15 @@ tags:
 Picking up with [9.b. Default: Using GRUB](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=9#doc_chap2) in the handbook.  (Also see my [older post about configuring grub](/blog/2004-04-28-gentoo-epia-install-part-6/).)  Also take a look at the end of the thread [](http://forums.gentoo.org/viewtopic.php?t=8813&postdays=0&postorder=asc&highlight=raid&start=100) on the gentoo forums (look for user "havoc") where it discusses how to setup grub on both the primary and secondary drives ([see the original article](http://lists.us.dell.com/pipermail/linux-poweredge/2003-July/014331.html)).  Now is also a good time to pull up the [official Software RAID HOWTO](http://unthought.net/Software-RAID.HOWTO/) and review that as well (especially section 7.3).
 ```
 # grub --no-floppy
-grub&gt; find /grub/stage1
+grub> find /grub/stage1
 (hd0,0)
 (hd1,0)
-grub&gt; root (hd0,0)
-grub&gt; setup (hd0)
-grub&gt; device (hd0) /dev/hdc
-grub&gt; root (hd0,0)       
-grub&gt; setup (hd0)
-grub&gt; quit
+grub> root (hd0,0)
+grub> setup (hd0)
+grub> device (hd0) /dev/hdc
+grub> root (hd0,0)       
+grub> setup (hd0)
+grub> quit
 ```
 
 The above is a little tricky to follow.  The first "root" and "setup" commands specify that grub should boot from the first partition on hd0 (which is /dev/hda in my config) and "setup" installs the MBR record to the drive.

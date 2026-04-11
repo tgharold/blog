@@ -73,7 +73,7 @@ W32Time:       ClockError --45702
 W32Time:    END  Line 2542
 W32Time:    BEGIN:FCheckTimeSanity
 W32Time:       Adjusting time by 45702 ms. No eventlog messages since time diffe
-rence is 0 &lt;1 minute
+rence is 0 <1 minute
 W32Time:    END  Line 570
 W32Time:    BEGIN:SetTimeNow
 W32Time:       Time 12/20/2005   2:20:53:970

@@ -73,7 +73,7 @@ First up is BIOS settings:
 - ACPI Suspend Type: S1&S3
 - HDD Power Down: Disabled
 - Power Management Timer: Disabled
-- Video Off Option: Suspend -&gt; Off
+- Video Off Option: Suspend -> Off
 - Power Off by PWRBTN: Delay 4 Sec
 - Run VGABIOS if S3 Resume: Auto
 - AC Loss Auto Restart: On

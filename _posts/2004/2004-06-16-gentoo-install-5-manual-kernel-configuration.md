@@ -23,54 +23,54 @@ Anywhere in the following list where I say "turn ON" means to use the "Y" key to
 <b>Linux Kernel v2.6.6 Configuration</b>
 (C)ode maturity level options
 (G)eneral setup
---&gt; (C)onfigure standard kernel features for small systems (<b>turn ON</b>)
---&gt; --&gt; (O)ptimize for size (<b>turn ON</b>)
+--> (C)onfigure standard kernel features for small systems (<b>turn ON</b>)
+--> --> (O)ptimize for size (<b>turn ON</b>)
 (L)oadable module support
 (P)rocessor type and features
---&gt; (P)rocessor family (<b>changed to "CyrixIII/VIA-C3"</b>)
---&gt; (S)ymetric multi-processing support (<b>turned this one OFF</b>)
---&gt; M(a)chine Check Exception (<b>turned this OFF</b>)
+--> (P)rocessor family (<b>changed to "CyrixIII/VIA-C3"</b>)
+--> (S)ymetric multi-processing support (<b>turned this one OFF</b>)
+--> M(a)chine Check Exception (<b>turned this OFF</b>)
 (P)ower management options (ACPI, APM)
-(B)us options (PCI, PCMCIA, EISA&lt; MCA, ISA)
+(B)us options (PCI, PCMCIA, EISA< MCA, ISA)
 (E)xecutable file formats
 (D)evice drivers
---&gt; (P)arallel port support (<b>turned OFF</b>)
---&gt; (A)TA/ATAPI/MFM/RLL support (<b>turned ON the VIA82CXXX chipset support as BUILT-IN</b>)
---&gt; M(u)lti-device support (<b>turn it ON</b>)
---&gt; --&gt; (R)AID support (<b>turn it ON as BUILT-IN</b>)
---&gt; --&gt; --&gt; (R)AID-1 mirroring mode (<b>turn it ON as BUILT-IN</b>)
---&gt; --&gt; (D)evice mapper support (<b>set to MODULE</b>, [per section 13 of LVM2 guide](http://www.gentoo.org/doc/en/lvm2.xml))
---&gt; N(e)tworking support
---&gt; --&gt; N(e)twork device support, (E)thernet 10/100Mbit
---&gt; --&gt; --&gt; (R)ealTek RTL-8139 PCI (<b>turn OFF</b>)
---&gt; --&gt; --&gt; (V)IA Rhine (<b>turn ON as BUILT-IN</b>)
---&gt; --&gt; --&gt; --&gt; (U)se MMIO instead of PIO (<b>turn ON</b>)
---&gt; (C)haracter Devices 
---&gt; --&gt; (I)ntel/AMD/VIA HW Random Number Generator (<b>turn ON as BUILT-IN</b>)
---&gt; --&gt; /(d)ev/agpgart AGP Support
---&gt; --&gt; --&gt; (I)ntel 440LX/BX/GX I8xx E7x05 (<b>turn OFF</b>)
---&gt; --&gt; --&gt; (V)IA chipset support (<b>turn ON as BUILT-IN</b>)
---&gt; (I)2C support (<b>turn ON</b>, heavily reliant on [building an MP3 server](http://www.ath0.com/meta/prose/mp3-server/part3.html) for these options)
---&gt; --&gt; (I)2C device interface (<b>turned ON as BUILT-IN</b>, epiawiki says "on", MP3 server article says "off")
---&gt; --&gt; (I)2C Algorithms 
---&gt; --&gt; --&gt; (I)2C bit-banging interface (<b>turn ON as BUILT-IN</b>)
---&gt; --&gt; (I)2C Hardware Bus support
---&gt; --&gt; --&gt; (V)IA 82C586B support (<b>turn on as BUILT-IN</b>)
---&gt; --&gt; (I)2C Hardware Sensors Chip 
---&gt; --&gt; --&gt; (V)IA686A (<b>turn on as BUILT-IN</b>)
---&gt; (S)ound
---&gt; --&gt; (S)ound card support (<b>turn OFF</b>)
+--> (P)arallel port support (<b>turned OFF</b>)
+--> (A)TA/ATAPI/MFM/RLL support (<b>turned ON the VIA82CXXX chipset support as BUILT-IN</b>)
+--> M(u)lti-device support (<b>turn it ON</b>)
+--> --> (R)AID support (<b>turn it ON as BUILT-IN</b>)
+--> --> --> (R)AID-1 mirroring mode (<b>turn it ON as BUILT-IN</b>)
+--> --> (D)evice mapper support (<b>set to MODULE</b>, [per section 13 of LVM2 guide](http://www.gentoo.org/doc/en/lvm2.xml))
+--> N(e)tworking support
+--> --> N(e)twork device support, (E)thernet 10/100Mbit
+--> --> --> (R)ealTek RTL-8139 PCI (<b>turn OFF</b>)
+--> --> --> (V)IA Rhine (<b>turn ON as BUILT-IN</b>)
+--> --> --> --> (U)se MMIO instead of PIO (<b>turn ON</b>)
+--> (C)haracter Devices 
+--> --> (I)ntel/AMD/VIA HW Random Number Generator (<b>turn ON as BUILT-IN</b>)
+--> --> /(d)ev/agpgart AGP Support
+--> --> --> (I)ntel 440LX/BX/GX I8xx E7x05 (<b>turn OFF</b>)
+--> --> --> (V)IA chipset support (<b>turn ON as BUILT-IN</b>)
+--> (I)2C support (<b>turn ON</b>, heavily reliant on [building an MP3 server](http://www.ath0.com/meta/prose/mp3-server/part3.html) for these options)
+--> --> (I)2C device interface (<b>turned ON as BUILT-IN</b>, epiawiki says "on", MP3 server article says "off")
+--> --> (I)2C Algorithms 
+--> --> --> (I)2C bit-banging interface (<b>turn ON as BUILT-IN</b>)
+--> --> (I)2C Hardware Bus support
+--> --> --> (V)IA 82C586B support (<b>turn on as BUILT-IN</b>)
+--> --> (I)2C Hardware Sensors Chip 
+--> --> --> (V)IA686A (<b>turn on as BUILT-IN</b>)
+--> (S)ound
+--> --> (S)ound card support (<b>turn OFF</b>)
 (F)ile systems
---&gt; (P)seudo filesystems
---&gt; --&gt; /(d)ev file system support OBSOLETE (<b>turn ON</b>)
---&gt; --&gt; --&gt; (A)utomatically mount at boot (<b>turn ON</b>)
+--> (P)seudo filesystems
+--> --> /(d)ev file system support OBSOLETE (<b>turn ON</b>)
+--> --> --> (A)utomatically mount at boot (<b>turn ON</b>)
 (P)rofiling support
 (K)ernel hacking
 (S)ecurity options
 (C)ryptographic options 
---&gt; (C)ryptographic API (<b>turn ON</b>)
---&gt; --&gt; (H)MAC support (<b>turn ON</b>)
---&gt; --&gt; (<b>turn ON the others as MODULE</b>)
+--> (C)ryptographic API (<b>turn ON</b>)
+--> --> (H)MAC support (<b>turn ON</b>)
+--> --> (<b>turn ON the others as MODULE</b>)
 (L)ibrary routines
 
 Exit and save your configuration.  Then build the kernel (the following is for 2.6 kernels).  Expect the compile to take about an hour.
@@ -123,8 +123,8 @@ none /dev/shm tmpfs defaults 0 0
 
 Change your hostname, domainname, and the default run level.
 ```
-# echo yourhostname &gt; /etc/hostname
-# echo yourdnsname &gt; /etc/dnsdomainname
+# echo yourhostname > /etc/hostname
+# echo yourdnsname > /etc/dnsdomainname
 # rc-update add domainname default
 # nano -w /etc/conf.d/net
 (either use iface_eth0="dhcp" or configure your IP and gateway)

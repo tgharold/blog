@@ -25,15 +25,15 @@ Now to configure GRUB (refer to my [old post about GRUB](/blog/2004-06-16-gentoo
 
 ```
 # grub --no-floppy
-grub&gt; find /grub/stage1
+grub> find /grub/stage1
 (hd0,0)
 (hd1,0)
-grub&gt; root (hd0,0)
-grub&gt; setup (hd0)
-grub&gt; device (hd0) /dev/hdc
-grub&gt; root (hd0,0)       
-grub&gt; setup (hd0)
-grub&gt; quit
+grub> root (hd0,0)
+grub> setup (hd0)
+grub> device (hd0) /dev/hdc
+grub> root (hd0,0)       
+grub> setup (hd0)
+grub> quit
 #
 ```
 

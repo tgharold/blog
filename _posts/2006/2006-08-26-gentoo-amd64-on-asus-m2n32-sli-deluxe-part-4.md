@@ -26,50 +26,50 @@ Linux Kernel v2.6.17-gentoo-r4 Configuration
 <b>G</b>eneral setup
 <b>L</b>oadable module support
 <b>P</b>rocessor type and features
---&gt; <b>P</b>rocessor family (changed to "AMD-Opteron/Athlon64")
---&gt; <b>P</b>reemption Model (No Forced Preemption (Server))
+--> <b>P</b>rocessor family (changed to "AMD-Opteron/Athlon64")
+--> <b>P</b>reemption Model (No Forced Preemption (Server))
 <b>P</b>ower management options (ACPI, APM)
 <b>B</b>us options (PCI, etc.)
 <b>E</b>xecutable file formats
 <b>D</b>evice drivers
---&gt; ATA/ATAPI/MFM/RLL support
---&gt; --&gt; <b>g</b>eneric/default IDE chipset support (should already be ON)
---&gt; --&gt; --&gt; <b>A</b>TI IXP chipset IDE support (turn OFF)
---&gt; --&gt; --&gt; <b>I</b>ntel PIIXn chipsets support (turn OFF)
---&gt; --&gt; --&gt; <b>I</b>T821X IDE support  (turn OFF)
---&gt; <b>S</b>CSI device support
---&gt; --&gt; <b>S</b>CSI generic support (turn this ON)
---&gt; --&gt; <b>S</b>CSI low-level drivers
---&gt; --&gt; --&gt; <b>S</b>erial ATA (SATA) support (should already be ON)
---&gt; --&gt; --&gt; --&gt; <b>I</b>ntel PIIX/ICH SATA support (turn OFF)
---&gt; --&gt; --&gt; --&gt; <b>S</b>ilicon Image SATA support (turn OFF)
---&gt; --&gt; --&gt; --&gt; <b>S</b>ilicon Image 3124/3132 SATA support (turn ON as BUILT-IN)
---&gt; --&gt; --&gt; --&gt; <b>V</b>IA SATA support (turn OFF)
---&gt; M<b>u</b>lti-device support (should already be ON)
---&gt; --&gt; <b>R</b>AID support (turn it ON as BUILT-IN)
---&gt; --&gt; --&gt; <b>R</b>AID-1 mirroring mode (turn it ON as BUILT-IN)
---&gt; --&gt; --&gt; <b>R</b>AID-10 mirroring striping mode (turn it ON as BUILT-IN)
---&gt; --&gt; <b>D</b>evice mapper support (turn ON as BUILT-IN)
---&gt; N<b>e</b>tworking support
---&gt; --&gt; <b>E</b>thernet (1000Mbit)
---&gt; --&gt; --&gt; <b>I</b>ntel<b>.</b> PRO/1000 Gigabit Ethernet support (turn ON)
---&gt; --&gt; --&gt; <b>B</b>roadcom Tigon3 support (turn OFF)
---&gt; <b>C</b>haracter Devices
---&gt; --&gt; <b>I</b>ntel/AMD/VIA HW Random Number Generator (should be ON)
---&gt; --&gt; <b>I</b>ntel 440LX/BX/GX, I8xx and E7x05 chipset support (turn it OFF)
---&gt; <b>S</b>ound
---&gt; --&gt; <b>S</b>ound card support (turn OFF)
+--> ATA/ATAPI/MFM/RLL support
+--> --> <b>g</b>eneric/default IDE chipset support (should already be ON)
+--> --> --> <b>A</b>TI IXP chipset IDE support (turn OFF)
+--> --> --> <b>I</b>ntel PIIXn chipsets support (turn OFF)
+--> --> --> <b>I</b>T821X IDE support  (turn OFF)
+--> <b>S</b>CSI device support
+--> --> <b>S</b>CSI generic support (turn this ON)
+--> --> <b>S</b>CSI low-level drivers
+--> --> --> <b>S</b>erial ATA (SATA) support (should already be ON)
+--> --> --> --> <b>I</b>ntel PIIX/ICH SATA support (turn OFF)
+--> --> --> --> <b>S</b>ilicon Image SATA support (turn OFF)
+--> --> --> --> <b>S</b>ilicon Image 3124/3132 SATA support (turn ON as BUILT-IN)
+--> --> --> --> <b>V</b>IA SATA support (turn OFF)
+--> M<b>u</b>lti-device support (should already be ON)
+--> --> <b>R</b>AID support (turn it ON as BUILT-IN)
+--> --> --> <b>R</b>AID-1 mirroring mode (turn it ON as BUILT-IN)
+--> --> --> <b>R</b>AID-10 mirroring striping mode (turn it ON as BUILT-IN)
+--> --> <b>D</b>evice mapper support (turn ON as BUILT-IN)
+--> N<b>e</b>tworking support
+--> --> <b>E</b>thernet (1000Mbit)
+--> --> --> <b>I</b>ntel<b>.</b> PRO/1000 Gigabit Ethernet support (turn ON)
+--> --> --> <b>B</b>roadcom Tigon3 support (turn OFF)
+--> <b>C</b>haracter Devices
+--> --> <b>I</b>ntel/AMD/VIA HW Random Number Generator (should be ON)
+--> --> <b>I</b>ntel 440LX/BX/GX, I8xx and E7x05 chipset support (turn it OFF)
+--> <b>S</b>ound
+--> --> <b>S</b>ound card support (turn OFF)
 <b>F</b>ile systems
---&gt; N<b>e</b>twork File Systems
---&gt; --&gt; <b>S</b>MB file system support (turn ON as BUILT-IN)
---&gt; --&gt; <b>C</b>IFS support (turn ON as BUILT-IN)
+--> N<b>e</b>twork File Systems
+--> --> <b>S</b>MB file system support (turn ON as BUILT-IN)
+--> --> <b>C</b>IFS support (turn ON as BUILT-IN)
 <b>P</b>rofiling support
 <b>K</b>ernel hacking
 <b>S</b>ecurity options
 <b>C</b>ryptographic options
---&gt; <b>C</b>ryptographic API (turn ON)
---&gt; --&gt; HM<b>A</b>C support (NEW) (turn ON as BUILT-IN)
---&gt; --&gt; (turn ON all other options as MODULE)
+--> <b>C</b>ryptographic API (turn ON)
+--> --> HM<b>A</b>C support (NEW) (turn ON as BUILT-IN)
+--> --> (turn ON all other options as MODULE)
 <b>L</b>ibrary routines
 
 Now we can compile and copy the kernel to the /boot partition.
@@ -152,7 +152,7 @@ Now it's time for grub.
 (chroot) livecd init.d # ls -l /boot
 total 3468
 -rw-r--r--  1 root root 1090703 Aug 26 00:35 System.map-2.6.17-25Aug2006-2300
-lrwxrwxrwx  1 root root       1 Aug 25 18:09 boot -&gt; .
+lrwxrwxrwx  1 root root       1 Aug 25 18:09 boot -> .
 -rw-r--r--  1 root root   28714 Aug 26 00:35 config-2.6.17-25Aug2006-2300
 drwxr-xr-x  2 root root    1024 Aug 26 01:03 grub
 -rw-r--r--  1 root root 2397504 Aug 26 00:35 kernel-2.6.17-25Aug2006-2300
@@ -172,15 +172,15 @@ title=Gentoo Linux 2.6.17 (Aug 25 2006) BASE NOAPIC
 root (hd0,0)
 kernel /kernel-2.6.17-25Aug2006-2300 root=/dev/md1 noapic
 (chroot) livecd init.d # grub --no-floppy
-grub&gt; find /grub/stage1
+grub> find /grub/stage1
 (hd0,0)
 (hd1,0)
-grub&gt; root (hd0,0)
-grub&gt; setup (hd0)
-grub&gt; device (hd0) /dev/sdb
-grub&gt; root (hd0,0)
-grub&gt; setup (hd0)
-grub&gt; quit
+grub> root (hd0,0)
+grub> setup (hd0)
+grub> device (hd0) /dev/sdb
+grub> root (hd0,0)
+grub> setup (hd0)
+grub> quit
 ```
 
 Time to exit the chroot, unmount everything, and try a reboot.

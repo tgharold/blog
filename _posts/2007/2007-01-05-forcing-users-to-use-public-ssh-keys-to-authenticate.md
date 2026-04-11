@@ -20,9 +20,9 @@ Here are the steps I use when I create a new user account on a secure SSH server
     $ mkdir .ssh
     $ chmod 700 .ssh
     $ cd .ssh
-    $ cat &gt; username@linux.pub
+    $ cat > username@linux.pub
     (paste in the public key file from SecureCRT)
-    $ ssh-keygen -i -f username@linux.pub &gt;&gt; authorized_keys
+    $ ssh-keygen -i -f username@linux.pub >> authorized_keys
     $ chmod 600 *
 
 At this point, the user should be able to login via SecureCRT using their private/public key pair.  There's no need for them to know the password that you assigned to them on the server (so use something random and at least 30+ characters).

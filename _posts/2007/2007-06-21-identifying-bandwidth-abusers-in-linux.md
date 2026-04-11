@@ -15,7 +15,7 @@ tags:
 
 This Linux command will display information about your interfaces.  When doing network analysis, the primary information that we're interested in is whether the interface is running in promiscuous mode.  An adapter that is running in promiscuous mode can capture any packets that pass by on the wire, not just the ones destined for its MAC address.  Here's an example of a ethernet adapter that is in promiscuous mode:
 
-3: eth0: &lt;BROADCAST,MULTICAST,<b>PROMISC</b>,UP&gt; mtu 1500 qdisc pfifo_fast qlen 1000
+3: eth0: <BROADCAST,MULTICAST,<b>PROMISC</b>,UP> mtu 1500 qdisc pfifo_fast qlen 1000
     link/ether 00:16:ff:ff:ff:25 brd ff:ff:ff:ff:ff:ff
 
 If you're in a situation where there are multiple hosts on the WAN side and you want to monitor traffic for them, you'll need to use an interface in promiscuous mode.  You'll also need to be connected to the same hub as those units, or connected to the same switch where your port is configured in monitoring mode.

@@ -74,7 +74,7 @@ GnuPG needs to construct a user ID to identify your key.
 Real name:
 ```
 
-For personal use, I suggest just entering your name (i.e. "Thomas Harold").  But if you're creating a key for corporate/business use, I suggest adding a bit more information in this field to make things easier for others if they have more then one key with similar names.  I recommend against using parenthesis in this field as it can be confusing later on.  Square brackets "[]", curly braces "{}", or angle brackets "&lt;&gt;" are all good choices to set elements off from each other.  Some examples:
+For personal use, I suggest just entering your name (i.e. "Thomas Harold").  But if you're creating a key for corporate/business use, I suggest adding a bit more information in this field to make things easier for others if they have more then one key with similar names.  I recommend against using parenthesis in this field as it can be confusing later on.  Square brackets "[]", curly braces "{}", or angle brackets "<>" are all good choices to set elements off from each other.  Some examples:
 
 Thomas Harold, Acme Inc.
 Thomas Harold [Acme]
@@ -155,7 +155,7 @@ pub  3200R/AAFA2876  created: 2009-11-21  expires: 2009-12-16  usage: SC
 sub  3200R/1972B360  created: 2009-11-21  expires: 2009-12-16  usage: E
 [ultimate] (1). Thomas Harold [Acme] (Acme Corporate Sales - www.acme.corp) <tgh>
 
-Command&gt;</tgh>
+Command></tgh>
 ```
 
 This shows us a bunch of information.  The line that starts with "pub" gives us the following information:
@@ -177,7 +177,7 @@ quit - exit without making changes
 By default, all operations will occur to the primary key (the "pub" line) in this keyset.  So before you edit a subkey, you need to tell GnuPG to work with that key.  These keys are simply numbered 1-N as they are shown in the list.  
 
 ```
-Command&gt; key 1
+Command> key 1
 
 pub  3200R/AAFA2876  created: 2009-11-21  expires: 2009-12-16  usage: SC
                      trust: ultimate      validity: ultimate
@@ -187,7 +187,7 @@ sub* 3200R/1972B360  created: 2009-11-21  expires: 2009-12-16  usage: E
 This puts an asterisk by the "sub*" line telling us that we're going to work on the subkey with ID "1972B360".
 
 ```
-Command&gt; expire
+Command> expire
 Changing expiration time for a subkey.
 Please specify how long the key should be valid.
          0 = key does not expire
@@ -208,7 +208,7 @@ pub  3200R/AAFA2876  created: 2009-11-21  expires: 2009-12-16  usage: SC
 sub* 3200R/1972B360  created: 2009-11-21  expires: 2010-05-20  usage: E</tgh></n></n></n></n>
 ```
 
-As you can see, the subkey's expiration date changed from "2009-12-16" to "2010-05-20".  If we had wanted to change the primary key's expiration date, we would've entered "key 0" then "expire" at the "Command&gt;" prompt.
+As you can see, the subkey's expiration date changed from "2009-12-16" to "2010-05-20".  If we had wanted to change the primary key's expiration date, we would've entered "key 0" then "expire" at the "Command>" prompt.
 
 Once you are happy with the new expiration dates, enter "save" to save and quit the key editor.
 
@@ -223,7 +223,7 @@ gpg --edit-key AaFa2876
 Then you'll issue the "adduid" command.
 
 ```
-Command&gt; adduid
+Command> adduid
 Real name: Thomas Harold [Example]
 Email address: tgh@example.com
 Comment: www.example.com
@@ -246,9 +246,9 @@ sub  3200R/1972B360  created: 2009-11-21  expires: 2010-05-20  usage: E
 Now that we have two User IDs associated with this key, we should flag one of them as the primary.
 
 ```
-Command&gt; uid 2
-Command&gt; primary
-Command&gt; uid 0
+Command> uid 2
+Command> primary
+Command> uid 0
 
 pub  3200R/AAFA2876  created: 2009-11-21  expires: 2012-11-20  usage: SC
                      trust: ultimate      validity: ultimate
@@ -264,13 +264,13 @@ The asterisk by the number in parenthesis is the currently selected user ID.  If
 The following command allows you to export your secret key to an ASCII armored text file.  
 
 ```
-gpg -a --export-secret-keys aafa2876 &gt;&gt; my-secret-key.asc
+gpg -a --export-secret-keys aafa2876 >> my-secret-key.asc
 ```
 
 You should also export your currently usable public encryption key.
 
 ```
-gpg -a --export aafa2876 &gt;&gt; my-public-key.asc
+gpg -a --export aafa2876 >> my-public-key.asc
 ```
 
 You should print these files out as well as keeping an electronic copy in a secure location such as a safe or safe-deposit box.  Don't leave the secret key ASCII file laying around.  A sealed security envelope with a phrase and the current date written across the sealed flap and then covered with transparent tape is a good countermeasure to detect tampering.

@@ -27,27 +27,27 @@ Time to [configure the kernel](http://www.gentoo.org/doc/en/handbook/handbook-x8
 Linux Kernel v2.6.11 Configuration
 (C)ode maturity level options
 (G)eneral setup
---&gt; (C)onfigure standard kernel features for small systems (turn ON)
---&gt; --&gt; (O)ptimize for size (turn ON)
+--> (C)onfigure standard kernel features for small systems (turn ON)
+--> --> (O)ptimize for size (turn ON)
 (L)oadable module support
 (P)rocessor type and features
---&gt; (P)rocessor family (changed to "Pentium-III...")
---&gt; (S)ymetric multi-processing support (turned this one OFF)
---&gt; M(a)chine Check Exception (turned this OFF)
+--> (P)rocessor family (changed to "Pentium-III...")
+--> (S)ymetric multi-processing support (turned this one OFF)
+--> M(a)chine Check Exception (turned this OFF)
 (P)ower management options (ACPI, APM)
-(B)us options (PCI, PCMCIA, EISA&lt; MCA, ISA)
+(B)us options (PCI, PCMCIA, EISA< MCA, ISA)
 (E)xecutable file formats
 (D)evice drivers
---&gt; (P)arallel port support (turned OFF)
---&gt; (A)TA/ATAPI/MFM/RLL support (turned ON the PDC20262 chipset support as BUILT-IN)
---&gt; M(u)lti-device support (turn it ON)
---&gt; --&gt; (R)AID support (turn it ON as BUILT-IN)
---&gt; --&gt; --&gt; (R)AID-1 mirroring mode (turn it ON as BUILT-IN)
---&gt; --&gt; (D)evice mapper support (set to MODULE, per section 13 of LVM2 guide)
---&gt; (C)haracter Devices
---&gt; --&gt; (I)ntel/AMD/VIA HW Random Number Generator (turn ON as BUILT-IN)
---&gt; (S)ound
---&gt; --&gt; (S)ound card support (turn OFF)
+--> (P)arallel port support (turned OFF)
+--> (A)TA/ATAPI/MFM/RLL support (turned ON the PDC20262 chipset support as BUILT-IN)
+--> M(u)lti-device support (turn it ON)
+--> --> (R)AID support (turn it ON as BUILT-IN)
+--> --> --> (R)AID-1 mirroring mode (turn it ON as BUILT-IN)
+--> --> (D)evice mapper support (set to MODULE, per section 13 of LVM2 guide)
+--> (C)haracter Devices
+--> --> (I)ntel/AMD/VIA HW Random Number Generator (turn ON as BUILT-IN)
+--> (S)ound
+--> --> (S)ound card support (turn OFF)
 (F)ile systems
 (P)rofiling support
 (K)ernel hacking
@@ -104,7 +104,7 @@ Now, edit the /etc/fstab file:
 # efficiency).  It's safe to drop the noatime options if you want and to
 # switch between notail and tail freely.
 
-# &lt;fs&gt;                  &lt;mountpoint&gt;    &lt;type&gt;          &lt;opts&gt;                  &lt;dump/pass&gt;
+# <fs>                  <mountpoint>    <type>          <opts>                  <dump/pass>
 
 # NOTE: If your BOOT partition is ReiserFS, add the notail option to opts.
 /dev/md0                /boot           ext2            noauto,noatime          1 2
@@ -135,8 +135,8 @@ none                    /dev/shm        tmpfs           defaults                
 Now, some misc stuff:
 
 ```
-# echo yourhostname &gt; /etc/hostname
-# echo yourdnsname &gt; /etc/dnsdomainname
+# echo yourhostname > /etc/hostname
+# echo yourdnsname > /etc/dnsdomainname
 # rc-update add domainname default
 # nano -w /etc/conf.d/net
 (either use iface_eth0="dhcp" or configure your IP and gateway)

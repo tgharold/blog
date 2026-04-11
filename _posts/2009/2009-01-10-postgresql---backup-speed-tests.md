@@ -30,7 +30,7 @@ pg_dump -a -b -O -t $s.$t -x $d -f $DIR/$d/$s.$t.sql
 
 gzip (default compression level of "6")
 
-pg_dump -a -b -O -t $s.$t -x $d | gzip -c &gt; $DIR/$d/$s.$t.sql
+pg_dump -a -b -O -t $s.$t -x $d | gzip -c > $DIR/$d/$s.$t.sql
 
 CPU usage is pegged at 100% on one of the four CPUs in the box during this operation (due to gzip compressing the streams).  So we are bottlenecked by the somewhat slow CPUs in the server.
 
@@ -46,7 +46,7 @@ So we burned up a lot more CPU time (user 2m 17s) compared to the plain text dum
 
 gzip (compression level of "9")
 
-pg_dump -a -b -O -t $s.$t -x $d | gzip -c9 &gt; $DIR/$d/$s.$t.sql.gz
+pg_dump -a -b -O -t $s.$t -x $d | gzip -c9 > $DIR/$d/$s.$t.sql.gz
 
 We're likely to be even more CPU-limited here due to telling gzip to "try harder".  The resulting backups are 369MB (376944 KB), which is basically the same size.
 
@@ -60,7 +60,7 @@ So we burn up 3.2x more CPU time, but we don't really change the backup size.  P
 
 bzip2
 
-pg_dump -a -b -O -t $s.$t -x $d | bzip2 -c9 &gt; $DIR/$d/$s.$t.sql.bz2
+pg_dump -a -b -O -t $s.$t -x $d | bzip2 -c9 > $DIR/$d/$s.$t.sql.bz2
 
 real    19m45.280s
 user    3m52.559s

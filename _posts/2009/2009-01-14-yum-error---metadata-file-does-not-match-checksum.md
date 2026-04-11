@@ -33,4 +33,4 @@ http_caching=packages
 
 <b>References:</b>
 
-[FedoraForum.org &gt; Fedora Support  &gt; Installation Help &gt; yum "Metadata file does not match checksum" problem](http://forums.fedoraforum.org/showthread.php?t=67591&page=2)
+[FedoraForum.org > Fedora Support  > Installation Help > yum "Metadata file does not match checksum" problem](http://forums.fedoraforum.org/showthread.php?t=67591&page=2)

@@ -14,7 +14,7 @@ One of the tools that we use on our desktop machines is [Second Copy 7](http://w
 
 However, if things are strange, you'll find that Second Copy will end up making repeated copies of files in the "older copies" location every time the profile runs.
 
-The primary problem that causes this is if the Windows desktop's clock does not exactly match the server's clock.  You will see this problem frequently if you use "time.windows.com" as your clock source.  (In Windows XP; Control Panel -&gt; Date and Time -&gt; Internet Time tab.)  The "time.windows.com" clock source is generally horribly inaccurate compared to the time that your Linux boxes running Samba get their time from (usually from the pool.ntp.org servers).
+The primary problem that causes this is if the Windows desktop's clock does not exactly match the server's clock.  You will see this problem frequently if you use "time.windows.com" as your clock source.  (In Windows XP; Control Panel -> Date and Time -> Internet Time tab.)  The "time.windows.com" clock source is generally horribly inaccurate compared to the time that your Linux boxes running Samba get their time from (usually from the pool.ntp.org servers).
 
 So the solution is either to sync your Windows boxes to a better clock source (such as "us.pool.ntp.org" or an internal NTP time server), or to adjust Second Copy to be much more tolerant of time differences.  SC's default is a 2 sec time difference allowance.  You may wish to increase this to as much as 30 or 60 seconds.  This is a hidden option in the Second Copy profiles.dat file.  
 

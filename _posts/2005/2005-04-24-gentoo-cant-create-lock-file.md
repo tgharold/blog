@@ -26,7 +26,7 @@ can't create lock file /etc/mtab~944: Read-only file system (use -n flag to over
 * Checking root filesystem...
 ext2fs_check_if_mount: No such file or directory while determining whether /dev/md2 is mounted.
 fsck.ext3: No such file or directory while trying to open /dev/md2
-/dev/md2: The superblock could not be read or does not describe a correct ext2 filesystem. If the device is valid and it really contains an ext2 filesystem (and not swap or ufs or something else), then the superblock is corrupt, and you might try running e2fsck -b 8193 &lt;device&gt;
+/dev/md2: The superblock could not be read or does not describe a correct ext2 filesystem. If the device is valid and it really contains an ext2 filesystem (and not swap or ufs or something else), then the superblock is corrupt, and you might try running e2fsck -b 8193 <device>
 * Filesystem couldn't be fixed :( [ !! ]
 
 Give root password for maintenance

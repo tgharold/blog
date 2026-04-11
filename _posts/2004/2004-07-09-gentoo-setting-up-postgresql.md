@@ -39,8 +39,8 @@ kernel.shmall = 134217728
 
 Now manually update the current values and start the server.
 ```
-# echo 134217728 &gt;/proc/sys/kernel/shmall
-# echo 134217728 &gt;/proc/sys/kernel/shmmax
+# echo 134217728 >/proc/sys/kernel/shmall
+# echo 134217728 >/proc/sys/kernel/shmmax
 # rc-update add postgresql default
 # /etc/init.d/postgresql start
 ```

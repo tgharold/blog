@@ -94,9 +94,9 @@ Note: You should use some sort of random password creator (or the output of /dev
     $ mkdir .ssh
     $ chmod 700 .ssh
     $ cd .ssh
-    $ cat &gt; root@hostname.pub
+    $ cat > root@hostname.pub
     (paste in the public key file from the client system)
-    $ cat root@hostname.pub &gt;&gt; authorized_keys
+    $ cat root@hostname.pub >> authorized_keys
     $ chmod 600 *
 
 Now to lock the key down, edit the ~/.ssh/authorized_keys file and put the following on the front of the key line that will be used by the client machine:
@@ -205,7 +205,7 @@ In addition you may wish to initially ignore all of the binary file directories 
 You can use the "fsvs ignore dump" and "fsvs ignore load" commands to backup your listing, edit it, then load it back into FSVS.  Note that you <b>must</b> be in the base directory of your working copy, otherwise "fsvs ignore dump" will return an empty listing.
 
     # cd /
-    # fsvs ignore dump &gt; ~/fsvs-ignore.txt
+    # fsvs ignore dump > ~/fsvs-ignore.txt
     # vi ~/fsvs-ignore.txt
     # sort ~/fsvs-ignore.txt | fsvs ignore load
 
@@ -243,7 +243,7 @@ If you want to deep-commit a single folder (such as /usr/local/sbin) without doi
 
 Create a test file in /etc
 
-    # cat &gt; /etc/testfile.txt
+    # cat > /etc/testfile.txt
     foo
     # fsvs commit -m "Checking in a test file" /etc/testfile.txt
 

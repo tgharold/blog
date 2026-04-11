@@ -17,12 +17,12 @@ tags:
 HTML and CSS ([see what it looks like](/techblog/css_4panel_layout_example2_Jun2004.shtml), [short-body version](/techblog/css_4panel_layout_example2short_Jun2004.shtml)):
 ```
 
-&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd"&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;CSS 4-panel layout example #2 (June 2004)&lt;/title&gt;
-&lt;style media="screen" type="text/css"&gt;
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>CSS 4-panel layout example #2 (June 2004)</title>
+<style media="screen" type="text/css">
 body {
 background-color: White;
 color: Black;
@@ -46,17 +46,17 @@ background-color: Purple;
 clear: right;
 padding: 2px;
 }
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div id="TopNav"&gt;foo foo foo foo foo foo&lt;/div&gt;
-&lt;div id="SideBar"&gt;sidebar&lt;br&gt;sidebar&lt;br&gt;&lt;br&gt;sidebar&lt;br&gt;sidebar&lt;br&gt;sidebar&lt;br&gt;sidebar&lt;/div&gt;
-&lt;div id="BlogBody"&gt;
+</style>
+</head>
+<body>
+<div id="TopNav">foo foo foo foo foo foo</div>
+<div id="SideBar">sidebar<br>sidebar<br><br>sidebar<br>sidebar<br>sidebar<br>sidebar</div>
+<div id="BlogBody">
 blog body blog body blog
-&lt;/div&gt;
-&lt;div id="Footer"&gt;footer-copyright&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+</div>
+<div id="Footer">footer-copyright</div>
+</body>
+</html>
 
 ```
 Bugs:<ol>

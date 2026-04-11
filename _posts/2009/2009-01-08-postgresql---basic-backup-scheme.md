@@ -122,9 +122,9 @@ do
             echo $d.$s.$t
             if [ $s = 'public' ]
             then
-                pg_dump -a -b -O -t $t -x $d | bzip2 -c2 &gt; $DIR/$d/$s.$t.sql.bz2
+                pg_dump -a -b -O -t $t -x $d | bzip2 -c2 > $DIR/$d/$s.$t.sql.bz2
             else
-                pg_dump -a -b -O -t $s.$t -x $d | bzip2 -c2 &gt; $DIR/$d/$s.$t.sql.bz2
+                pg_dump -a -b -O -t $s.$t -x $d | bzip2 -c2 > $DIR/$d/$s.$t.sql.bz2
             fi
         done
     done
