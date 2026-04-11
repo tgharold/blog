@@ -38,6 +38,17 @@ def write_unique_old_urls_csv(unique_old_urls_data, output_file):
         for data in unique_old_urls_data:
             writer.writerow([data['old_url'], data['path_to_new_markdown_file'], data['new_url']])
 
+
+def find_new_markdown_paths(unique_old_urls_data):
+    """Iterate over unique_old_urls_data to find new markdown file paths based on old_url data."""
+    # This method will be used to find the new markdown file path based on the old_url data
+    # For now, we'll just iterate over the records
+    for data in unique_old_urls_data:
+        old_url = data['old_url']
+        # TODO: Implement the logic to find the new markdown file path
+        # For now, we just iterate through the data
+        print(f"Processing old_url: {old_url}")
+
 def main():
     search_dir = '_posts'
     output_file = 'convert_blogger_to_jekyll_url_mappings_results.csv'
@@ -70,6 +81,9 @@ def main():
                 'new_url': ''
             })
             seen_old_urls.add(old_url)
+
+    # Iterate over unique_old_urls_data to find new markdown file paths
+    find_new_markdown_paths(unique_old_urls_data)
 
     write_unique_old_urls_csv(unique_old_urls_data, unique_output_file)
     print(f"Unique old_url values written to '{unique_output_file}'")
