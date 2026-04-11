@@ -2,7 +2,7 @@
 source "https://rubygems.org"
 
 # Use Jekyll 4.3.4
-gem "jekyll", "~> 4.3.4"
+gem "jekyll", "~> 4.4.1"
 gem "jekyll-sitemap", "~> 1.4"
 gem "jekyll-gist", "~> 1.5"
 gem "jekyll-feed", "~> 0.17"
