@@ -1,0 +1,72 @@
+---
+layout: post
+title: 'More CSS 4-panel layout using DIVs (attempt #2)'
+date: '2004-06-12T18:38:00.000-05:00'
+author: Thomas Harold
+category:
+- Tech
+tags:
+- Technology
+---
+
+
+<div style="clear:both;"></div>1) Removed the "Main" DIV tag from the previous attempt.  (Go look at [BlueRobot.com's 2-panel layout](http://bluerobot.com/web/layouts/layout1.html).)
+
+2) Decided that I liked the look of [CSS Layout Techniques: for Fun and Profit](http://glish.com/css/) where the side-bar menu is on the right, which allows text to fill the width of the window once you scroll down past the end.  That looks more natural then a left side menu with a fixed left margin.  Internet Explorer 6 also seems to like that layout a bit better.  ([BlueRobot.com's 2-panel right menu layout](http://bluerobot.com/web/layouts/layout2.html))
+
+HTML and CSS ([see what it looks like](/techblog/css_4panel_layout_example2_Jun2004.shtml), [short-body version](/techblog/css_4panel_layout_example2short_Jun2004.shtml)):
+<code>
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;CSS 4-panel layout example #2 (June 2004)&lt;/title&gt;
+&lt;style media="screen" type="text/css"&gt;
+body {
+background-color: White;
+color: Black;
+font-family: verdana, arial, helvetica, sans-serif;
+}
+#TopNav {
+background-color: Fuchsia;
+padding: 2px;
+}
+#SideBar {
+background-color: Gray;
+float: right;
+width: 15%;
+}
+#BlogBody {
+background-color: Orange;
+padding: 2px;
+}
+#Footer {
+background-color: Purple;
+clear: right;
+padding: 2px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id="TopNav"&gt;foo foo foo foo foo foo&lt;/div&gt;
+&lt;div id="SideBar"&gt;sidebar&lt;br&gt;sidebar&lt;br&gt;&lt;br&gt;sidebar&lt;br&gt;sidebar&lt;br&gt;sidebar&lt;br&gt;sidebar&lt;/div&gt;
+&lt;div id="BlogBody"&gt;
+blog body blog body blog
+&lt;/div&gt;
+&lt;div id="Footer"&gt;footer-copyright&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+Bugs:<ol>
+<li>
+<b>[IE5/Windows]</b>: It's possible that this layout will not work properly on Internet Explorer 5 for MS-Windows.  I suspect that IE5's quirks won't really matter in this particular layout, but I have yet to test it.
+
+</li>
+</ol>
+<div style="clear:both; padding-bottom:0.25em"></div>
+Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>
+		<div class="Byline">
+			posted by Thomas at 
+			[18:38](http://www.tgharold.com/techblog/2004/06/more-css-4-panel-layout-using-divs.shtml)
+
+		</div>
