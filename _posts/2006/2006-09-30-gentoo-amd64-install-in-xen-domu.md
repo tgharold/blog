@@ -14,7 +14,8 @@ tags:
 
 Disk preparation: I'm installing the Gentoo guest OSs into LVM volumes managed by the Dom0 hypervisor domain.  Each guest OS gets a single partition for root that is exported to the guest OS as /dev/sda1.  In rare cases, I'm also providing a 2nd and 3rd LVM partition for the guest OS which are exported as /dev/sda2 and /dev/sda3.
 
-<code>xena-adele thomas # lvcreate -L4G vgmirror -n domu-svn1root
+```
+xena-adele thomas # lvcreate -L4G vgmirror -n domu-svn1root
   Logical volume "domu-svn1root" created
 xena-adele thomas # mke2fs -j /dev/vgmirror/domu-svn1root
 mke2fs 1.39 (29-May-2006)
@@ -40,7 +41,8 @@ This filesystem will be automatically checked every 20 mounts or
 180 days, whichever comes first.  Use tune2fs -c or -i to override.
 xena-adele thomas # mkdir /mnt/gentoo
 mkdir: cannot create directory `/mnt/gentoo': File exists
-xena-adele thomas # mount /dev/vgmirror/domu-svn1root /mnt/gentoo</code>
+xena-adele thomas # mount /dev/vgmirror/domu-svn1root /mnt/gentoo
+```
 
 That takes care of the first 4 sections in the handbook.  In my case, the vgmirror group is an LVM volume group backed by software RAID (RAID1+hotspare) that the Dom0 hypervisor manages using mdadm.
 
@@ -50,10 +52,12 @@ I already had the portage and stage3 *.bz2 files downloaded from last month, so 
 
 Extraction of the 2 bz2 files is simple:
 
-<code># cd /mnt/gentoo
+```
+# cd /mnt/gentoo
 # ls -l *.bz2
 # tar xvjpf stage3-*.tar.bz2
-# tar xvjf portage-*.tar.bz2 -C /mnt/gentoo/usr</code>
+# tar xvjf portage-*.tar.bz2 -C /mnt/gentoo/usr
+```
 
 That puts us at step 5e in the Gentoo Handbook.  You can remove the *.bz2 files from /mnt/gentoo, but you'll probably want to back them up somewhere safe so you can reference them when building the next DomU.
 
@@ -61,7 +65,8 @@ Edit your make.conf file and configure the GENTOO_MIRROR=, SYNC=, and USE= lines
 
 Now you're ready to prepare for the chroot.
 
-<code># cp -L /etc/resolv.conf /mnt/gentoo/etc/resolv.conf
+```
+# cp -L /etc/resolv.conf /mnt/gentoo/etc/resolv.conf
 # mount -t proc none /mnt/gentoo/proc
 # mount -o bind /dev /mnt/gentoo/dev
 # chroot /mnt/gentoo /bin/bash
@@ -69,19 +74,24 @@ Now you're ready to prepare for the chroot.
 &gt;&gt; Regenerating /etc/ld.so.cache...
 # source /etc/profile
 # export PS1="(chroot) $PS1"
-# emerge --sync</code>
+# emerge --sync
+```
 
 That will go pretty quick if you have a local rsync mirror.
 
-<code># ln -sf /usr/share/zoneinfo/EST5EDT /etc/localtime</code>
+```
+# ln -sf /usr/share/zoneinfo/EST5EDT /etc/localtime
+```
 
 You can skip configuration of the kernel and installing grub/lilo since both of those tasks are handled by the hypervisor domain.  The only exception to this guideline is if you have kernel modules that need to be installed and loaded.  This should be a rare occurance in a Xen guest domain.
 
 The fstab should be pretty simple.  Especially if you have the system configured with a single partition.  In my case, /etc/fstab looks like:
 
-<code>/dev/sda1               /               ext3            noatime         0 1
+```
+/dev/sda1               /               ext3            noatime         0 1
 proc                    /proc           proc            defaults        0 0
-shm                     /dev/shm        tmpfs           nodev,nosuid,noexec     0 0</code>
+shm                     /dev/shm        tmpfs           nodev,nosuid,noexec     0 0
+```
 
 Now for some final clean-up work:
 
@@ -125,6 +135,8 @@ Time to exit the chroot, unmount everything, and try to start the guest domain. 
 
 I strongly suggest running GNU "screen" in the Dom0 hypervisor domain.  That will allow you to create a new screen to test out the install ([Ctrl-A][C] to create a new screen).  Then you can simply start the new guest domain with:
 
-<code># xm create -c mydomainconfigfile</code>
+```
+# xm create -c mydomainconfigfile
+```
 
 You can then shutdown (and exit) the domain by logging in as root and typing "shutdown -h now".  Once the guest domain seems to be working, fire it up without the "-c" option to get it running in the background.

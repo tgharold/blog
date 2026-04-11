@@ -14,8 +14,10 @@ This was a slightly odd one that did not show up on Google at all.  We had a bun
 
 In the Scheduled Tasks window, we saw a result code of "0x57" in the Last Result column.  In the schedule log (Scheduled Tasks, Advanced, View Log):
 
-<code>"Backup-FileServer-DailyAppend-Week2.job" (ntbackup.exe)
+```
+"Backup-FileServer-DailyAppend-Week2.job" (ntbackup.exe)
     Finished 7/28/2006 8:30:48 PM
-    Result: The task completed with an exit code of (57).</code>
+    Result: The task completed with an exit code of (57).
+```
 
 We checked a few things and finally took a very close look at the "Run" field in the task.  Turns out that we were missing a double-quote in the middle of the NTBACKUP command line.

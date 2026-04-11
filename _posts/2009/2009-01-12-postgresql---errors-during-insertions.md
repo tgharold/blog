@@ -22,13 +22,15 @@ Well, troubleshooting steps.
 
 1) `# grep "was terminated" /var/lib/pgsql/data/pg_log/*.log`
 
-<code>postgresql-2008-12-23_125649.log:LOG:  server process (PID 15996) was terminated by signal 6: Aborted
+```
+postgresql-2008-12-23_125649.log:LOG:  server process (PID 15996) was terminated by signal 6: Aborted
 
 postgresql-2008-12-28_131324.log:LOG:  server process (PID 25745) was terminated by signal 6: Aborted
 
 postgresql-2009-01-01_212245.log:LOG:  startup process (PID 27003) was terminated by signal 6: Aborted
 
-postgresql-2009-01-01_212334.log:LOG:  startup process (PID 27097) was terminated by signal 6: Aborted</code>
+postgresql-2009-01-01_212334.log:LOG:  startup process (PID 27097) was terminated by signal 6: Aborted
+```
 
 All of my terminate statements are due to "signal 6: aborted", so I don't think there's anything to be seen there.
 

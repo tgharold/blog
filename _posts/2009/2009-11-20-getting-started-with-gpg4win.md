@@ -33,7 +33,8 @@ Unfortunately, the default creation options in GnuPG will assign the same expira
 
 <b>Creating a GPG key</b>
 
-<code>gpg --gen-key
+```
+gpg --gen-key
 gpg (GnuPG) 2.0.12; Copyright (C) 2009 Free Software Foundation, Inc.
 This is free software: you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
@@ -43,28 +44,35 @@ Please select what kind of key you want:
    (2) DSA and Elgamal
    (3) DSA (sign only)
    (4) RSA (sign only)
-Your selection?</code>
+Your selection?
+```
 
 Unless you have a strong reason to use DSA/Elgamal, you may as well use the defaults in GPG v2 and pick "RSA and RSA".
 
-<code>RSA keys may be between 1024 and 4096 bits long.
-What keysize do you want? (2048)</code>
+```
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (2048)
+```
 
 If you're creating a key that will expire in the next 5 years, I recommend 2048 bits.  For longer durations, you may wish to use 3172 or 4096 bits.
 
-<code>Please specify how long the key should be valid.
+```
+Please specify how long the key should be valid.
          0 = key does not expire
       <n>  = key expires in n days
       <n>w = key expires in n weeks
       <n>m = key expires in n months
       <n>y = key expires in n years
-Key is valid for? (0)</n></n></n></n></code>
+Key is valid for? (0)</n></n></n></n>
+```
 
 For an initial key where you're not protecting anything super critical, I suggest starting with a 25 year (entered as "25y") expiration date.  You will be asked to confirm the expiration date (enter "y" to continue).
 
-<code>GnuPG needs to construct a user ID to identify your key.
+```
+GnuPG needs to construct a user ID to identify your key.
 
-Real name:</code>
+Real name:
+```
 
 For personal use, I suggest just entering your name (i.e. "Thomas Harold").  But if you're creating a key for corporate/business use, I suggest adding a bit more information in this field to make things easier for others if they have more then one key with similar names.  I recommend against using parenthesis in this field as it can be confusing later on.  Square brackets "[]", curly braces "{}", or angle brackets "&lt;&gt;" are all good choices to set elements off from each other.  Some examples:
 
@@ -75,11 +83,15 @@ Thomas Harold {Example LTD}
 
 Remember, that this and the next two fields are all public information that will be visible to everyone who uses your public key to send you things, or who uses your signing key to verify a signature.
 
-<code>EMail address:</code>
+```
+EMail address:
+```
 
 This is very simple, you should enter the primary email address that you want associated with this key (i.e. "tgh@tgharold.com").  If you need to add additional email addresses, you can do that later using the "gpg --edit-key" command.
 
-<code>Comment:</code>
+```
+Comment:
+```
 
 The comment field is a <b>public</b> field and will be seen by others.  I recommend putting website information here, or the full company name, or a combination of the two.  Keep in mind that the contents of this field are typically displayed as enclosed in parenthesis, so avoid using parenthesis or brackets/braces here.  Some examples:
 
@@ -87,10 +99,12 @@ www.tgharold.com
 Acme Corporation - www.acme.corp
 Example LTD, www.example.com
 
-<code>You selected this USER-ID:
+```
+You selected this USER-ID:
     "Thomas Harold [Acme] (Acme Corporate Sales - www.acme.corp) <tgh>"
 
-Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit?</tgh></code>
+Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit?</tgh>
+```
 
 After entering those three values, you will be presented with how it might look to another user.  As you can see, the comment gets wrapped in parenthesis while the email address gets presented inside of angled brackets.  Once you are satisfied with how it looks, enter "O" for "Okay" to continue.
 
@@ -98,14 +112,16 @@ GnuPG will then pop-up a window that prompts you for a passphrase.  <b>This is e
 
 You will eventually be presented with something that looks like:
 
-<code>gpg: checking the trustdb
+```
+gpg: checking the trustdb
 gpg: 3 marginal(s) needed, 1 complete(s) needed, PGP trust model
 gpg: depth: 0  valid:   2  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 2u
 gpg: next trustdb check due at 2009-12-16
 pub   3200R/AAFA2876 2009-11-21 [expires: 2009-12-16]
       Key fingerprint = 0324 917E C27D 2FB0 DDEF  ABFA 4DEE 71F0 AAFA 2876
 uid                  Thomas Harold [Acme] (Acme Corporate Sales - www.acme.corp) <tgh>
-sub   3200R/1972B360 2009-11-21 [expires: 2009-12-16]</tgh></code>
+sub   3200R/1972B360 2009-11-21 [expires: 2009-12-16]</tgh>
+```
 
 This means that GnuPG has finished generating your key and has saved it to your keyring.  This sample key (both the encryption key and the signing key) will expire Dec 16, 2009.
 
@@ -115,15 +131,20 @@ The key fingerprint is an important piece of information that should be given to
 
 In order to edit your key using GnuPG, you must know the 8-digit key ID.  In the above example it is listed on the line that starts with "pub".  For example, the key that I just created has a key ID of "AAFA2876":
 
-<code>pub   3200R/AAFA2876 2009-11-21 [expires: 2009-12-16]</code>
+```
+pub   3200R/AAFA2876 2009-11-21 [expires: 2009-12-16]
+```
 
 In order to edit the key, you will use the following command:
 
-<code>gpg --edit-key aaFa2876</code>
+```
+gpg --edit-key aaFa2876
+```
 
 As you can see, the key ID is not case sensitive as it is merely an 8-digit hexadecimal string.
 
-<code>gpg (GnuPG) 2.0.12; Copyright (C) 2009 Free Software Foundation, Inc.
+```
+gpg (GnuPG) 2.0.12; Copyright (C) 2009 Free Software Foundation, Inc.
 This is free software: you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
 
@@ -134,7 +155,8 @@ pub  3200R/AAFA2876  created: 2009-11-21  expires: 2009-12-16  usage: SC
 sub  3200R/1972B360  created: 2009-11-21  expires: 2009-12-16  usage: E
 [ultimate] (1). Thomas Harold [Acme] (Acme Corporate Sales - www.acme.corp) <tgh>
 
-Command&gt;</tgh></code>
+Command&gt;</tgh>
+```
 
 This shows us a bunch of information.  The line that starts with "pub" gives us the following information:
 
@@ -154,15 +176,18 @@ quit - exit without making changes
 
 By default, all operations will occur to the primary key (the "pub" line) in this keyset.  So before you edit a subkey, you need to tell GnuPG to work with that key.  These keys are simply numbered 1-N as they are shown in the list.  
 
-<code>Command&gt; key 1
+```
+Command&gt; key 1
 
 pub  3200R/AAFA2876  created: 2009-11-21  expires: 2009-12-16  usage: SC
                      trust: ultimate      validity: ultimate
-sub* 3200R/1972B360  created: 2009-11-21  expires: 2009-12-16  usage: E</code>
+sub* 3200R/1972B360  created: 2009-11-21  expires: 2009-12-16  usage: E
+```
 
 This puts an asterisk by the "sub*" line telling us that we're going to work on the subkey with ID "1972B360".
 
-<code>Command&gt; expire
+```
+Command&gt; expire
 Changing expiration time for a subkey.
 Please specify how long the key should be valid.
          0 = key does not expire
@@ -180,7 +205,8 @@ user: "Thomas Harold [Acme] (Acme Corporate Sales - www.acme.corp) <tgh>"
 
 pub  3200R/AAFA2876  created: 2009-11-21  expires: 2009-12-16  usage: SC
                      trust: ultimate      validity: ultimate
-sub* 3200R/1972B360  created: 2009-11-21  expires: 2010-05-20  usage: E</tgh></n></n></n></n></code>
+sub* 3200R/1972B360  created: 2009-11-21  expires: 2010-05-20  usage: E</tgh></n></n></n></n>
+```
 
 As you can see, the subkey's expiration date changed from "2009-12-16" to "2010-05-20".  If we had wanted to change the primary key's expiration date, we would've entered "key 0" then "expire" at the "Command&gt;" prompt.
 
@@ -190,30 +216,37 @@ Once you are happy with the new expiration dates, enter "save" to save and quit 
 
 Let's say that you want to add a second email address to your key pairs.  As before, you're going to use the "gpg --edit-key" command to do this.
 
-<code>gpg --edit-key AaFa2876</code>
+```
+gpg --edit-key AaFa2876
+```
 
 Then you'll issue the "adduid" command.
 
-<code>Command&gt; adduid
+```
+Command&gt; adduid
 Real name: Thomas Harold [Example]
 Email address: tgh@example.com
 Comment: www.example.com
 You selected this USER-ID:
     "Thomas Harold [Example] (www.example.com) <tgh>"
 
-Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O</tgh></code>
+Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O</tgh>
+```
 
 Your key will now look like:
 
-<code>pub  3200R/AAFA2876  created: 2009-11-21  expires: 2012-11-20  usage: SC
+```
+pub  3200R/AAFA2876  created: 2009-11-21  expires: 2012-11-20  usage: SC
                      trust: ultimate      validity: ultimate
 sub  3200R/1972B360  created: 2009-11-21  expires: 2010-05-20  usage: E
 [ultimate] (1)  Thomas Harold [Acme] (Acme Corporate Sales - www.acme.corp) <tgh>
-[ unknown] (2). Thomas Harold [Example] (www.example.com) <tgh></tgh></tgh></code>
+[ unknown] (2). Thomas Harold [Example] (www.example.com) <tgh></tgh></tgh>
+```
 
 Now that we have two User IDs associated with this key, we should flag one of them as the primary.
 
-<code>Command&gt; uid 2
+```
+Command&gt; uid 2
 Command&gt; primary
 Command&gt; uid 0
 
@@ -221,7 +254,8 @@ pub  3200R/AAFA2876  created: 2009-11-21  expires: 2012-11-20  usage: SC
                      trust: ultimate      validity: ultimate
 sub  3200R/1972B360  created: 2009-11-21  expires: 2010-05-20  usage: E
 [ultimate] (1)  Thomas Harold [Example] (www.example.com) <tgh>
-[ultimate] (2). Thomas Harold [Acme] (Acme Corporate Sales - www.acme.corp) <tgh></tgh></tgh></code>
+[ultimate] (2). Thomas Harold [Acme] (Acme Corporate Sales - www.acme.corp) <tgh></tgh></tgh>
+```
 
 The asterisk by the number in parenthesis is the currently selected user ID.  If you see a dot/period after the number in parenthesis, that indicates which user ID is the primary.  
 
@@ -229,10 +263,14 @@ The asterisk by the number in parenthesis is the currently selected user ID.  If
 
 The following command allows you to export your secret key to an ASCII armored text file.  
 
-<code>gpg -a --export-secret-keys aafa2876 &gt;&gt; my-secret-key.asc</code>
+```
+gpg -a --export-secret-keys aafa2876 &gt;&gt; my-secret-key.asc
+```
 
 You should also export your currently usable public encryption key.
 
-<code>gpg -a --export aafa2876 &gt;&gt; my-public-key.asc</code>
+```
+gpg -a --export aafa2876 &gt;&gt; my-public-key.asc
+```
 
 You should print these files out as well as keeping an electronic copy in a secure location such as a safe or safe-deposit box.  Don't leave the secret key ASCII file laying around.  A sealed security envelope with a phrase and the current date written across the sealed flap and then covered with transparent tape is a good countermeasure to detect tampering.

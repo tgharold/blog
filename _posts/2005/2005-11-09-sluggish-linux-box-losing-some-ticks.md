@@ -12,7 +12,8 @@ tags:
 
 Messages seen in my "# dmesg" output.
 
-<code>Losing some ticks... checking if CPU frequency changed.
+```
+Losing some ticks... checking if CPU frequency changed.
 kjournald starting.  Commit interval 5 seconds
 EXT3 FS on dm-2, internal journal
 EXT3-fs: mounted filesystem with ordered data mode.
@@ -30,7 +31,8 @@ skge eth0: Link is up at 1000 Mbps, full duplex, flow control tx and rx
 eth0: no IPv6 routers present
 warning: many lost ticks.
 Your time source seems to be instable or some driver is hogging interupts
-rip __do_softirq+0x48/0xb0</code>
+rip __do_softirq+0x48/0xb0
+```
 
 The system is very sluggish, even at the console.  In addition, the rebuild of my one mirror set is only proceeding at a sedate 3MB/s rather then 10-20MB/s.  Looking at "top -n1" shows CPU utilization issues.  Compare the first example here (a normal working system) with my trouble system (2nd example):
 

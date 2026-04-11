@@ -22,18 +22,22 @@ We keep our user-specific Sieve scripts in a "Home" folder under that location.
 
 So obviously, we want to version the Home folder under each user.  But we don't want to version the other MailDir folders at all.  The trick to this is that because our folder structure is predictable, we can do it in a handful of FSVS ignore patterns.
 
-<code># cd /
-# fsvs ignore dump &gt;&gt; /root/fsvs-ignore-yyyymmdd.txt</code>
+```
+# cd /
+# fsvs ignore dump &gt;&gt; /root/fsvs-ignore-yyyymmdd.txt
+```
 
 That makes a backup of your current rules, just in case you decide that you don't like your changes (they can be reloaded with "fsvs ignore load &lt; filename").
 
-<code># cd /
+```
+# cd /
 # fsvs ignore group:ignore,./var/vmail/lost+found
 # fsvs ignore group:take,./var/vmail/*
 # fsvs ignore group:take,./var/vmail/*/*
 # fsvs ignore group:take,./var/vmail/*/*/Home
 # fsvs ignore group:take,./var/vmail/*/*/Home/**
-# fsvs ignore group:ignore,./var/vmail/**</code>
+# fsvs ignore group:ignore,./var/vmail/**
+```
 
 Line 1 "group:ignore,./var/vmail/lost+found": In our setup /var/vmail is a separate mount point, so we'll want to ignore the lost+found folder.
 

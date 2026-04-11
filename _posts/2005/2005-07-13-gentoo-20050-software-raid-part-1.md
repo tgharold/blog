@@ -28,7 +28,8 @@ Then I SSH in using SecureCRT and start my install.
 
 As always, I start by blowing away any existing partitions by using "fdisk" or Derik's Boot and Nuke (a bootable CD which you can use to erase hard drives).  Then I'll re-create my partitions and start in on the installation.
 
-<code># fdisk /dev/hda
+```
+# fdisk /dev/hda
 
 Command: n
 Command action: p
@@ -68,7 +69,8 @@ Hex code: fd
 
 Command: p
 
-Command: w</code>
+Command: w
+```
 
 This gives me a 128MB boot area, a 2GB swap area, a 2GB root area, with the rest of the disk set aside for my LVM partitions. Repeat the above commands to configure the 2nd disk in the same fashion. Note that I'm using a different partition type then that shown in chapter 4.c. The 'fd' partition type is what I need to use since all 4 partitions on hda/hdc are going to be put into a software RAID1 set.
 

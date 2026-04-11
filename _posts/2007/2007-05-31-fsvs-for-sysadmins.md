@@ -211,7 +211,8 @@ You can use the "fsvs ignore dump" and "fsvs ignore load" commands to backup you
 
 My initial listing on CentOS5 is:
 
-<code>./backup
+```
+./backup
 ./dev
 ./lost+found
 ./media
@@ -222,7 +223,8 @@ My initial listing on CentOS5 is:
 ./tmp
 ./var/named/chroot/proc
 ./var/spool
-./var/tmp</code>
+./var/tmp
+```
 
 <b>Putting /etc under version control</b>
 
@@ -247,7 +249,8 @@ Create a test file in /etc
 
 Now delete the test file
 
-<code># rm testfile.txt
+```
+# rm testfile.txt
 # fsvs status .
 D...         4  ./etc/testfile
 .mC.       dir  ./etc
@@ -255,7 +258,8 @@ D...         4  ./etc/testfile
 Committing to svn+ssh://sys-fw1-pri@svn.example.com/sys-fw1-pri
 .mC.       dir  ./etc
 D...         4  ./etc/testfile
-committed revision      7 on 2007-06-04T00:17:13.808327Z as sys-fw1-pri</code>
+committed revision      7 on 2007-06-04T00:17:13.808327Z as sys-fw1-pri
+```
 
 That just scratches the surface, but covers the majority of day-to-day use.  Unlike SVN, FSVS knows (assumes) that when a file is missing that it should implicity do a "delete" operation in the repository to make the repository match the file system.
 

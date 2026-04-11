@@ -45,7 +45,8 @@ For example, I want to see what file contexts are defined for Nagios:
 
 You can also use the <b>seinfo</b> tool:
 
-<code># seinfo -t | grep "nagios"
+```
+# seinfo -t | grep "nagios"
 Rule loading disabled
    nagios_spool_t
    httpd_nagios_script_ra_t
@@ -60,11 +61,14 @@ Rule loading disabled
    nagios_exec_t
    httpd_nagios_script_exec_t
    nagios_etc_t
-   nagios_log_t</code>
+   nagios_log_t
+```
 
 Another tool is sesearch, i.e.: 
 
-<code># sesearch -a | grep "nagios" | sort | uniq</code>
+```
+# sesearch -a | grep "nagios" | sort | uniq
+```
 
 <b>Troubleshooting and fixing things</b>
 
@@ -72,22 +76,26 @@ Thus, step #1 is generally that we need to figure out whether (A) the AVC denial
 
 Here's an example of what setroubleshoot log messages look like in the /var/log/messages file.
 
-<code># grep "setroubleshoot" /var/log/messages
+```
+# grep "setroubleshoot" /var/log/messages
 setroubleshoot: SELinux is preventing the status.cgi from using potentially mislabeled files ./objects.cache (var_t). For complete SELinux messages. run sealert -l ce49f540-0b35-412c-862c-b901a274a421
 
 setroubleshoot: SELinux is preventing ping (ping_t) "read write" to /var/nagios/spool/checkresults/checkZKmcmr (var_t). For complete SELinux messages. run sealert -l cf227199-1595-4775-9970-3935fc761b38
 
-setroubleshoot: SELinux is preventing ping (ping_t) "read write" to /var/nagios/spool/checkresults/checke4tQgY (var_t). For complete SELinux messages. run sealert -l dbdc707e-193a-4f64-9bf2-0bb0d0a807e9</code>
+setroubleshoot: SELinux is preventing ping (ping_t) "read write" to /var/nagios/spool/checkresults/checke4tQgY (var_t). For complete SELinux messages. run sealert -l dbdc707e-193a-4f64-9bf2-0bb0d0a807e9
+```
 
 And here's what they look like in /var/log/audit:
 
-<code># grep "AVC" /var/log/audit/audit.log | tail
+```
+# grep "AVC" /var/log/audit/audit.log | tail
 
 type=AVC msg=audit(1233836684.122:15494): avc:  denied  { read } for  pid=12081 comm="status.cgi" name="objects.cache" dev=md1 ino=1306897 scontext=system_u:system_r:httpd_nagios_script_t:s0 tcontext=user_u:object_r:var_t:s0 tclass=file
 
 type=AVC msg=audit(1233836426.120:15476): avc:  denied  { read write } for  pid=7518 comm="ping" path="/var/nagios/spool/checkresults/checkZKmcmr" dev=md1 ino=1306899 scontext=user_u:system_r:ping_t:s0 tcontext=user_u:object_r:var_t:s0 tclass=file
 
-type=AVC msg=audit(1233836366.097:15454): avc:  denied  { read write } for  pid=20671 comm="ping" path="/var/nagios/spool/checkresults/checke4tQgY" dev=md1 ino=1306899 scontext=user_u:system_r:ping_t:s0 tcontext=user_u:object_r:var_t:s0 tclass=file</code>
+type=AVC msg=audit(1233836366.097:15454): avc:  denied  { read write } for  pid=20671 comm="ping" path="/var/nagios/spool/checkresults/checke4tQgY" dev=md1 ino=1306899 scontext=user_u:system_r:ping_t:s0 tcontext=user_u:object_r:var_t:s0 tclass=file
+```
 
 In this particular case, the fact that the target context is "var_t" generally indicates a labeling issue.  The "var_t" file context is pretty generic and we don't want to give the source context (httpd_nagios_script_t) for status.cgi permissions to all files labeled with var_t (which would be most of /var).
 

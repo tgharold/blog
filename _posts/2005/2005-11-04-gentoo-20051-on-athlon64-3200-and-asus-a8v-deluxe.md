@@ -18,14 +18,16 @@ Now, I'm not sure that I can have both the onboard FastTrak and the SX6000 runni
 
 Tossed the Gentoo 2005.1 boot CD in.  The graphical splash screen loads, and it starts counting through devices.  At "Booting the system (64%)", I get a kernel panic and it stops booting.  The screen now reads (approximately):
 
-<code>kernel BUG at &lt;bad filename&gt;:55433!
+```
+kernel BUG at &lt;bad filename&gt;:55433!
 Invalid operand: 0000 [#1]
 PREEMPT SMP
 Modules linked in: ...
 (bunch of registers)
 Process swapper (pid: 0 ...
 (trace dump)
-&lt;0&gt; Kernel panic - not syncing: Fatal exception in interrupt</code>
+&lt;0&gt; Kernel panic - not syncing: Fatal exception in interrupt
+```
 
 Pressing [F2] does nothing at this point.
 
@@ -67,7 +69,8 @@ I'm currently running DBaN at the moment to test the configuration (PRNG mode, m
 
 Booted into the AMD64 Gentoo CD with zero issues.  My drives are:
 
-<code>livecd ~ # cat /proc/partitions
+```
+livecd ~ # cat /proc/partitions
 major minor  #blocks  name
 
    7     0      49712 loop0
@@ -79,7 +82,8 @@ major minor  #blocks  name
    3     0  293057352 hda
    8     0  293057352 sda
    8    16  199148544 sdb
-livecd ~ #</code>
+livecd ~ #
+```
 
 Basically, hda &amp; sda are my (2) 7200rpm 300GB drives that I'm going to use as my primary RAID1.  The sdb drive is my 200GB 7200rpm SATA which I plan on using for a scratch drive.  The rest of the drives (all ending in "160" blocks) are 5400rpm 300GB IDEs hooked to the Highpoint / Promise PCI cards.
 

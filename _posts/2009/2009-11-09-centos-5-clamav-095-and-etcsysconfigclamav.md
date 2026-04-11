@@ -20,8 +20,10 @@ The /etc/rc.d/init.d/clamav script is still from 2008 and is very old.  It refer
 
 If you were using the /etc/sysconfig/clamav file to turn on the milter in RHEL5, then you will probably see the following error when you upgrade to ClamAV 0.95 or later:
 
-<code>Starting clamav-milter: clamav-milter: unrecognized option `--max-children=10'
+```
+Starting clamav-milter: clamav-milter: unrecognized option `--max-children=10'
 ERROR: Unknown option passed
-ERROR: Can't parse command line options</code>
+ERROR: Can't parse command line options
+```
 
 You'll need to convert your old command line options into configuration file options.

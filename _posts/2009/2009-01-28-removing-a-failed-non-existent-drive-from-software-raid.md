@@ -26,7 +26,9 @@ Oops, we can't do that because we already swapped out the failed drive (sdb).
 
 The answer is found in the mdadm man page for the remove feature:
 
-<code>-r, --remove remove  listed devices.  They must not be active.  i.e. they should be failed or spare devices.  As well  as the name of a device file (e.g.  /dev/sda1) the words failed and detached can be given  to  --remove.  The  first causes all failed device to be removed.  The second causes any device which is no longer connected to the system (i.e an open returns ENXIO) to be removed.  This will only  succeed  for  devices that are spares or have already been marked as failed.</code>
+```
+-r, --remove remove  listed devices.  They must not be active.  i.e. they should be failed or spare devices.  As well  as the name of a device file (e.g.  /dev/sda1) the words failed and detached can be given  to  --remove.  The  first causes all failed device to be removed.  The second causes any device which is no longer connected to the system (i.e an open returns ENXIO) to be removed.  This will only  succeed  for  devices that are spares or have already been marked as failed.
+```
 
 So instead of specifying the name of the failed RAID slice we should instead us the following command:
 

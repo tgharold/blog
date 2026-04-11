@@ -12,7 +12,8 @@ tags:
 
 Well, first glitch. Looking at my boot screen with [Shift-PgUp] / [Shift-PgDn] to find the error. I see that the Software RAID is working fine (it built md0..md3 automatically).
 
-<code>* Mounting proc at /proc [ ok ]
+```
+* Mounting proc at /proc [ ok ]
 * Mounting sysfs at /sys [ !! ]
 can't create lock file /etc/mtab~944: Read-only file system (use -n flag to override)
 * Mounting ramfs at /dev... [ ok ]
@@ -29,7 +30,8 @@ fsck.ext3: No such file or directory while trying to open /dev/md2
 * Filesystem couldn't be fixed :( [ !! ]
 
 Give root password for maintenance
-(or type Control-D for normal startup):</code>
+(or type Control-D for normal startup):
+```
 
 So, according to a quick google, this indicates an issue with /etc/fstab.
 

@@ -42,18 +42,22 @@ Useful links:
 
 Useful commands:
 
-<code># hwclock --show
+```
+# hwclock --show
 # zdump GMT
 # zdump EST5EDT
-# date</code>
+# date
+```
 
 These commands should show you a hardware clock that matches either GMT (if you have things set to UTC) or your local timezone.  I had a misconfigured hardware clock that was set to localtime, while my system was thinking it was UTC/GMT time.
 
 Note that when you look at /var/log/messages, the OpenNTPD messages can be a bit confusing.  You will see lines like:
 
-<code>Dec 19 21:33:10 localhost ntpd[5673]: adjusting local clock by -11.800044s
+```
+Dec 19 21:33:10 localhost ntpd[5673]: adjusting local clock by -11.800044s
 Dec 19 21:36:23 localhost ntpd[5673]: adjusting local clock by -11.691234s
-Dec 19 21:39:36 localhost ntpd[5673]: adjusting local clock by -11.621488s</code>
+Dec 19 21:39:36 localhost ntpd[5673]: adjusting local clock by -11.621488s
+```
 
 What this actually means is that your clock is currently off by approximately 12 seconds.  Eventually, OpenNTPD will adjust your clock to be as close as possible to the official time, but it won't make that adjustment suddenly (all at once).  Instead, it will slowly reduce the error amount to the minimum possible for your system.
 

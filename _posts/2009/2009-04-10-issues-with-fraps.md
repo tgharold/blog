@@ -12,7 +12,9 @@ tags:
 
 I tend to do a lot of FRAPS capture of games that I play for a variety of reasons (the ability to look back, review gameplay, hobby).  However, ever since I upgraded my NVIDIA display drivers a month or two ago, I've started running into the following issue in VirtualDub:
 
-<code>The decompression codec cannot decompress to an RGB format. This is very unusual. Check that any "Force YUY2" options are not enabled in the codec's properties.</code>
+```
+The decompression codec cannot decompress to an RGB format. This is very unusual. Check that any "Force YUY2" options are not enabled in the codec's properties.
+```
 
 Now for the fun symptoms:
 

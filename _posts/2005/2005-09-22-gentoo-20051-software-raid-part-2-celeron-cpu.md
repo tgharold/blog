@@ -14,10 +14,12 @@ Time to [configure the Gentoo kernel](http://www.gentoo.org/doc/en/handbook/hand
 
 Note the use of "emerge lvm2" since I'm using LVM2 on this system during the initial installation.
 
-<code># emerge mdadm
+```
+# emerge mdadm
 # emerge lvm2
 # cd /usr/src/linux
-# make menuconfig</code>
+# make menuconfig
+```
 
 Linux Kernel v2.6.11 Configuration
 (C)ode maturity level options
@@ -67,4 +69,6 @@ Linux Kernel v2.6.11 Configuration
 
 Exit and save your configuration. Then build the kernel (the following command is for 2.6 kernels). Expect the compile to take about an hour.
 
-<code># make &amp;&amp; make modules_install</code>
+```
+# make &amp;&amp; make modules_install
+```

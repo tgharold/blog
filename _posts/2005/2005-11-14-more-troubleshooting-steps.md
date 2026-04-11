@@ -14,10 +14,12 @@ A) [AMD64 / Athlon X2 Opinions](http://forums.gentoo.org/viewtopic-t-385651-high
 
 The LiveCD boots with:
 
-<code>livecd / # dmesg
+```
+livecd / # dmesg
 Bootdata ok (command line is initrd=gentoo.igz root=/dev/ram0 init=/linuxrc looptype=squashfs loop=/livecd.squashfs udev nodevfs dokeymap cdroot vga=791 splash=silent,theme:livecd-2005.1 CONSOLE=/dev/tty1 quiet BOOT_IMAGE=gentoo )
 Linux version 2.6.12-gentoo-r6 (root@poseidon) (gcc version 3.4.3 20041125 (Gentoo 3.4.3-r1, ssp-3.4.3-0, pie-8.7.7)) #1 SMP Mon Aug 1 14:22:17 UTC 2005
-(snip)</code>
+(snip)
+```
 
 B) [Abit AN8 config file](http://home.earthlink.net/~paulsdead/config-vanilla) from [Help with kernel .config (amd64 3000+, s939 nforce4)](http://forums.gentoo.org/viewtopic-t-383692-highlight-lost+ticks.html).  The poster is also using "pci=biosirq pci=irqroute clock=pmtmr notsc" in their kernel config line.
 

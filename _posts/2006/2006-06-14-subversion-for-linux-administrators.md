@@ -39,13 +39,16 @@ The name of the repository can be anything you want.  I tend to name it after th
 
 Creating the repository is easy:
 
-<code># svnadmin create /var/svn/nogitsune</code>
+```
+# svnadmin create /var/svn/nogitsune
+```
 
 Replace "nogitsune" with the preferred name of your repository.  I'd suggest keeping the name as short as possible in case you have to type it by hand later (i.e. "nogitsune", "copper", "alpha", "san1pri", "xen-athens").
 
 <b>Step #2 - Checkout the repository to the root folder</b>
 
-<code>nogitsune etc # cd /
+```
+nogitsune etc # cd /
 nogitsune / # svn co file:///var/svn/nogitsune .
 Checked out revision 0.
 nogitsune / # svn status
@@ -71,11 +74,13 @@ nogitsune / # svn status
 ?      etc
 ?      dev
 ?      sys
-nogitsune / # </code>
+nogitsune / # 
+```
 
 As long as the "svn status" command returns something like the above, we know that we've connected properly to the SubVersion repository.  You can also look for the ".svn" directory in the root.
 
-<code>nogitsune / # ls -la .svn
+```
+nogitsune / # ls -la .svn
 total 40
 drwxr-xr-x   7 root root 4096 Jun 14 21:28 .
 drwxr-xr-x  24 root root 4096 Jun 14 21:28 ..
@@ -99,7 +104,8 @@ nogitsune / # cat .svn/entries
    uuid="21f0cb31-3916-0410-ae38-e44852334012"
    revision="0"/&gt;
 
-nogitsune / #</code>
+nogitsune / #
+```
 
 <b>Step #3 - Adding directories and files to SubVersion</b>
 
@@ -260,27 +266,32 @@ If you want to version control something that is 3 levels deep, you need to "svn
 
 For the second example, I'm going to add everything in /etc to SubVersion.
 
-<code># cd /
+```
+# cd /
 # svn add -N etc
 # cd etc
 # svn add *
-# svn commit -m "Initial snapshot of /etc"</code>
+# svn commit -m "Initial snapshot of /etc"
+```
 
 That's the basics.  For the third example, I'll show how to add custom scripts stored in /usr/local/sbin.
 
-<code># cd /
+```
+# cd /
 # svn add -N usr ; cd usr
 # svn add -N local ; cd local
 # svn add -N sbin ; cd sbin
 # svn add *
 # cd /
-# svn commit -m "Initial snapshot of /usr/local/sbin"</code>
+# svn commit -m "Initial snapshot of /usr/local/sbin"
+```
 
 <b>Step #4 - Creating a cron job to backup your SubVersion repositories</b>
 
 On my systems, I create a folder called /backup which is a separate set of spindles that I mount for quick backups.  Under that folder, I create a sub-folder called "subversion".
 
-<code># ls -l /backup/subversion
+```
+# ls -l /backup/subversion
 total 96
 -rw-r--r--  1 root root 20 Nov 30  2005 dev.svnadmin.dump.2005.11.gz
 -rw-r--r--  1 root root 20 Dec 31 02:00 dev.svnadmin.dump.2005.12.gz
@@ -305,13 +316,15 @@ total 96
 -rw-r--r--  1 root root 20 Mar 31 02:00 web.svnadmin.dump.2006.03.gz
 -rw-r--r--  1 root root 20 Apr 30 02:00 web.svnadmin.dump.2006.04.gz
 -rw-r--r--  1 root root 20 May 31 02:00 web.svnadmin.dump.2006.05.gz
--rw-r--r--  1 root root 20 Jun 14 02:00 web.svnadmin.dump.2006.06.gz</code>
+-rw-r--r--  1 root root 20 Jun 14 02:00 web.svnadmin.dump.2006.06.gz
+```
 
 As you can see from my backup folder, I have 3 repositories being backed up (dev, photo, web) and I rotate to a new backup filename every month.  It's not ideal because a bad backup could cause me to lose up to 30 days of work, but it meets my needs.  More risk-adverse admins may want to switch to a new backup file on a daily basis.
 
 To create this backup, I use the following script:
 
-<code>nogitsune / # cd /usr/local/sbin
+```
+nogitsune / # cd /usr/local/sbin
 nogitsune sbin # ls -l svndaily.sh
 -rwxr-xr-x  1 root root 646 Nov 27  2005 svndaily.sh
 nogitsune sbin # cat svndaily.sh
@@ -328,7 +341,8 @@ svnadmin dump /var/svn/dev | gzip -c &gt; /backup/subversion/dev.svnadmin.dump.$
 svnadmin dump /var/svn/photo | gzip -c &gt; /backup/subversion/photo.svnadmin.dump.${BACKUPDATE}.gz
 svnadmin dump /var/svn/web | gzip -c &gt; /backup/subversion/web.svnadmin.dump.${BACKUPDATE}.gz
 
-nogitsune sbin #</code>
+nogitsune sbin #
+```
 
 Note: Each of the "svnadmin dump" lines should be all on one line and not split across two lines.
 

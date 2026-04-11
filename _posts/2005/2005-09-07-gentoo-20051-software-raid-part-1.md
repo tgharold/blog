@@ -47,7 +47,8 @@ Starting with the usual tricks:
 
 Since these drives were nuked since my last attempt, I have to re-configure the partitions.
 
-<code># fdisk /dev/hda
+```
+# fdisk /dev/hda
 
 Command: n
 Command action: p
@@ -89,7 +90,8 @@ Hex code: fd
 
 Command: p
 
-Command: w</code>
+Command: w
+```
 
 This gives me a 128MB boot area, a 2GB swap area, a root area, with the rest of the disk set aside for my LVM2 partitions. Repeat the above commands to configure the 2nd disk in the same fashion (/dev/hdc or /dev/hde for my 2 systems).
 
@@ -103,49 +105,60 @@ Now I need to configure software RAID. This is a bit easier then last year since
 
 The following loads the 'md' module and creates the nodes (/dev/md*).
 
-<code># modprobe md
+```
+# modprobe md
 # ls /dev/md*
 ls: /dev/md*: No such file or directory
 # for i in 0 1 2 3; do mknod /dev/md$i b 9 $i; done
 # ls /dev/md*
-/dev/md0 /dev/md1 /dev/md2 /dev/md3</code>
+/dev/md0 /dev/md1 /dev/md2 /dev/md3
+```
 
 Now, we create our RAID1 sets.
 
 <b>System A:</b>
-<code># modprobe raid1
+```
+# modprobe raid1
 # mdadm --create /dev/md0 --level=1 --raid-devices=2 /dev/hda1 /dev/hde1
 # mdadm --create /dev/md1 --level=1 --raid-devices=2 /dev/hda2 /dev/hde2
 # mdadm --create /dev/md2 --level=1 --raid-devices=2 /dev/hda3 /dev/hde3
 # mdadm --create /dev/md3 --level=1 --raid-devices=2 /dev/hda4 /dev/hde4
-# cat /proc/mdstat</code>
+# cat /proc/mdstat
+```
 
 <b>System B:</b>
-<code># modprobe raid1
+```
+# modprobe raid1
 # mdadm --create /dev/md0 --level=1 --raid-devices=2 /dev/hda1 /dev/hdc1
 # mdadm --create /dev/md1 --level=1 --raid-devices=2 /dev/hda2 /dev/hdc2
 # mdadm --create /dev/md2 --level=1 --raid-devices=2 /dev/hda3 /dev/hdc3
 # mdadm --create /dev/md3 --level=1 --raid-devices=2 /dev/hda4 /dev/hdc4
-# cat /proc/mdstat</code>
+# cat /proc/mdstat
+```
 
 Seems to be working fine. You can choose to wait until all of the RAID arrays finish processing (recommended) or press onward.
 
 [LinuxDevCenter article on mdadm](http://www.linuxdevcenter.com/pub/a/linux/2002/12/05/RAID.html) explains mdadm in a bit more detail, and shows how to create the config file semi-automatically.  Be sure to change '/dev/hda' and 'dev/hde' to match the 2 disks that you are attempting to RAID.
 
-<code># mdadm --detail --scan &gt;&gt; /etc/mdadm.conf
-# nano -w /etc/mdadm.conf</code>
+```
+# mdadm --detail --scan &gt;&gt; /etc/mdadm.conf
+# nano -w /etc/mdadm.conf
+```
 
 Picking up again with [Chapter 4 of the installation handbook](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=4).  (This also matches what I did back in [June 2004 with Software RAID and LVM2](/blog/2004-06-15-gentoo-install-2-via-epia-me6000/) and [Gentoo 2004.3 on Gigabyte GA-6VA7+ (part 1)](/blog/2005-04-20-gentoo-20043-on-gigabyte-ga-6va7-part-3/).)
 
-<code># mke2fs /dev/md0
+```
+# mke2fs /dev/md0
 # mkswap /dev/md1 ; swapon /dev/md1
 # mke2fs -j /dev/md2
 # mount /dev/md2 /mnt/gentoo
-# mkdir /mnt/gentoo/boot ; mount /dev/md0 /mnt/gentoo/boot</code>
+# mkdir /mnt/gentoo/boot ; mount /dev/md0 /mnt/gentoo/boot
+```
 
 If we're setting up LVM2, we need to now prep the 4th partition and setup the logical volumes inside of LVM2.
 
-<code># modprobe dm-mod
+```
+# modprobe dm-mod
 # pvcreate /dev/md3
 # echo 'devices { filter=["r/cdrom/"] }' &gt; /etc/lvm/lvm.conf
 # vgcreate vgmirror /dev/md3
@@ -171,11 +184,13 @@ If we're setting up LVM2, we need to now prep the 4th partition and setup the lo
 # mkdir /mnt/gentoo/tmp ; mount /dev/vgmirror/tmp /mnt/gentoo/tmp
 # chmod 1777 /mnt/gentoo/tmp
 # mkdir /mnt/gentoo/var/tmp ; mount /dev/vgmirror/vartmp /mnt/gentoo/var/tmp
-# chmod 1777 /mnt/gentoo/var/tmp</code>
+# chmod 1777 /mnt/gentoo/var/tmp
+```
 
 Now we move into [Installation (chapter 5)](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=5) in the handbook. Verify your system date and then start extracting the tarballs.  Notice that the only stage available on the Universal CD is now <b>stage3</b>.
 
-<code># date
+```
+# date
 # ls -l /mnt/cdrom/stages
 total 450586
 -rw-r--r--  1 root root 92520704 Aug  7 04:45 stage3-athlon-xp-2005.1.tar.bz2
@@ -184,17 +199,21 @@ total 450586
 -rw-r--r--  1 root root 92475718 Aug  7 04:46 stage3-pentium4-2005.1.tar.bz2
 -rw-r--r--  1 root root 91866585 Aug  7 04:46 stage3-x86-2005.1.tar.bz2
 # cd /mnt/gentoo
-# tar -xvjpf /mnt/cdrom/stages/stage3-x86-2005.1.tar.bz2</code>
+# tar -xvjpf /mnt/cdrom/stages/stage3-x86-2005.1.tar.bz2
+```
 
 That takes a while to uncompress.  Now we pickup with 5D (Installing Portage).  I'm going to use the portage snapshot on the CD-ROM.
 
-<code># cd /mnt/gentoo
+```
+# cd /mnt/gentoo
 # ls -l /mnt/cdrom/snapshot
-# tar -xvjf /mnt/cdrom/snapshot/portage-2005.1.tar.bz2 -C /mnt/gentoo/usr</code>
+# tar -xvjf /mnt/cdrom/snapshot/portage-2005.1.tar.bz2 -C /mnt/gentoo/usr
+```
 
 Before I configure the make.conf file, I should take a look at my system configuration.
 
-<code># cat /proc/version
+```
+# cat /proc/version
 Linux version 2.6.12-gentoo-r6 (root@poseidon) (gcc version 3.3.5-20050130 (Gentoo 3.3.5.20050130-r1, ssp-3.3.5.20050130-1, pie-8.7.7.1)) #1 SMP Wed Aug 3 20:26:57 UTC 2005
 # cat /proc/cpuinfo
 processor       : 0
@@ -238,24 +257,30 @@ Committed_AS:    15752 kB
 PageTables:        172 kB
 VmallocTotal:   704504 kB
 VmallocUsed:      6856 kB
-VmallocChunk:   696436 kB</code>
+VmallocChunk:   696436 kB
+```
 
 Now to configure compile options (5E in the handbook).  Since we're using a stage3 installation, we'll need to be careful to not touch certain settings in the make.conf file.  I pretty much plan on using the defaults (except for optimizing for size due to the lower cache size in the Celeron and VIA CPUs, which is merely changing -O2 to -Os).  
 
-<code># nano -w /mnt/gentoo/etc/make.conf</code>
+```
+# nano -w /mnt/gentoo/etc/make.conf
+```
 
 Contents of my make.conf file:
 
-<code># These settings were set by the catalyst build script that automatically built this stage
+```
+# These settings were set by the catalyst build script that automatically built this stage
 # Please consult /etc/make.conf.example for a more detailed example
 CFLAGS="-Os -mcpu=i686"
 CHOST="i386-pc-linux-gnu"
 CXXFLAGS="${CFLAGS}"
-MAKEOPTS="-j2"</code>
+MAKEOPTS="-j2"
+```
 
 Now to [Chapter 6 - Installing the Gentoo Base System](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=6).  Time to "chroot".
 
-<code># mirrorselect -i -o &gt;&gt; /mnt/gentoo/etc/make.conf
+```
+# mirrorselect -i -o &gt;&gt; /mnt/gentoo/etc/make.conf
 # mirrorselect -i -r -o &gt;&gt; /mnt/gentoo/etc/make.conf
 # cat /mnt/gentoo/etc/make.conf
 CFLAGS="-Os -mcpu=i686"
@@ -264,11 +289,13 @@ CXXFLAGS="${CFLAGS}"
 MAKEOPTS="-j2"
 
 GENTOO_MIRRORS="http://gentoo.osuosl.org/"
-SYNC="rsync://rsync.namerica.gentoo.org/gentoo-portage"</code>
+SYNC="rsync://rsync.namerica.gentoo.org/gentoo-portage"
+```
 
 Looks good so far.
 
-<code># cp -L /etc/resolv.conf /mnt/gentoo/etc/resolv.conf
+```
+# cp -L /etc/resolv.conf /mnt/gentoo/etc/resolv.conf
 # cp -L /etc/mdadm.conf /mnt/gentoo/etc/mdadm.conf
 (do the next 2 commands if you are using LVM2)
 # mkdir /mnt/gentoo/etc/lvm
@@ -278,20 +305,24 @@ Looks good so far.
 # chroot /mnt/gentoo /bin/bash
 # env-update
 # source /etc/profile
-# emerge --sync</code>
+# emerge --sync
+```
 
 The sync will take a while to run (I generally plan on doing something else for a few hours).
 
 Time to choose a profile.  There shouldn't be much to do at this point since I plan on using the 2.6 kernel which is the default on the 2005.1 Gentoo CDs.
 
-<code># ls -FGg /etc/make.profile
+```
+# ls -FGg /etc/make.profile
 lrwxrwxrwx  1 48 Sep 21 10:22 /etc/make.profile -&gt; ../usr/portage/profiles/default-linux/x86/2005.1/
 # ls -d /usr/portage/profiles/default-linux/x86/2005.1/2.4
-/usr/portage/profiles/default-linux/x86/2005.1/2.4</code>
+/usr/portage/profiles/default-linux/x86/2005.1/2.4
+```
 
 Configuring the USE variable comes next in the handbook.  You'll see that I'm using a very aggressive set of USE flags that restrict a lot of options (since this is a headless server). You can see the [current list of USE flags](http://www.gentoo.org/dyn/use-index.xml) at the Gentoo.org site.  You can find the default set of USE flags via "cat /etc/make.profile/make.defaults".  The default listing in the 2005.1 profile is:
 
-<code>livecd / # ls -l /etc/make.profile
+```
+livecd / # ls -l /etc/make.profile
 lrwxrwxrwx  1 root root 48 Oct 22 21:04 /etc/make.profile -&gt; ../usr/portage/profiles/default-linux/x86/2005.1
 livecd / # cat /etc/make.profile/make.defaults
 # Copyright 1999-2005 Gentoo Foundation
@@ -299,13 +330,16 @@ livecd / # cat /etc/make.profile/make.defaults
 # $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/2005.1/make.defaults,v 1.4 2005/08/29 22:20:25 wolf31o2 Exp $
 
 USE="alsa apm arts avi berkdb bitmap-fonts crypt cups eds emboss encode fortran foomaticdb gdbm gif gnome gpm gstreamer gtk gtk2 imlib ipv6 jpeg kde libg++ libwww mad mikmod motif mp3 mpeg ncurses nls ogg oggvorbis opengl oss pam pdflib perl png python qt quicktime readline sdl spell ssl tcpd truetype truetype-fonts type1-fonts vorbis X xml2 xmms xv zlib"
-livecd / # </code>
+livecd / # 
+```
 
 Here are my current customized USE flags (for a headless server with no GUI shell).
 
-<code># less /usr/portage/profiles/use.desc
+```
+# less /usr/portage/profiles/use.desc
 # echo 'USE="apache2 kerberos ldap postgres samba -alsa -apm -arts -bitmap-fonts -gnome -gtk -gtk2 -kde -mad -mikmod -motif -opengl -oss -qt -quicktime -sdl -truetype -truetype-fonts -type1-fonts -X -xmms -xv"' &gt;&gt; /etc/make.conf
-# nano -w /etc/make.conf</code>
+# nano -w /etc/make.conf
+```
 
 The changes between this time and my last install are:
 
@@ -315,15 +349,19 @@ Removed: -gif -jpeg -mpeg -oggvorbis -pdflib -png
 
 Since I'm starting with a stage 3 tarball, I'm skipping directly to [7. Configuring the Kernel](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=7) in the handbook.
 
-<code># ls /usr/share/zoneinfo
+```
+# ls /usr/share/zoneinfo
 # ln -sf /usr/share/zoneinfo/EST5EDT /etc/localtime
 # date
 # zdump GMT
-# zdump EST5EDT</code>
+# zdump EST5EDT
+```
 
 Pick your kernel using the [kernel guide](http://www.gentoo.org/doc/en/gentoo-kernel.xml).  Last year, I went with development-sources for the kernel in order to get 2.6. This is no longer necessary (and development-sources has been rolled into vanilla-sources). So I'm going to go with the default gentoo-sources.
 
-<code># emerge gentoo-sources
-# ls -l /usr/src</code>
+```
+# emerge gentoo-sources
+# ls -l /usr/src
+```
 
 Next up is configuring the kernel, which I'll cover in another post.

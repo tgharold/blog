@@ -12,7 +12,8 @@ tags:
 
 So, I'm trying to install Gentoo 2005.1 on Software RAID and LVM2.  Everything seems to work up until I do my initial "emerge --sync".
 
-<code>livecd / # emerge --sync
+```
+livecd / # emerge --sync
 ...
 app-benchmarks/bashmark/
 app-benchmarks/bashmark/files/
@@ -41,7 +42,8 @@ app-accessibility/mbrola/Manifest
 mkstemp "/usr/portage/app-accessibility/mbrola/files/.digest-mbrola-3.0.1h-r1.S11U8n" failed: Input/output error
          236 100%    0.00kB/s    0:00:00
 mkstemp "/usr/portage/app-accessibility/mbrola/files/.digest-mbrola-3.0.1h-r3.C8lndQ" failed: Read-only file system
-...</code>
+...
+```
 
 Plan A:
 

@@ -11,8 +11,10 @@ tags:
 
 
 
-<code>Reboot and Select proper Boot device
-or Insert Boot Media in selected Boot device and press a key</code>
+```
+Reboot and Select proper Boot device
+or Insert Boot Media in selected Boot device and press a key
+```
 
 In the process of setting up my 15-disk array, I kept encountering the above error message while attempting to boot into CentOS 5 off of the 3ware 9650SE array.  If I turned off the offending drive (or removed it), the error went away and CentOS would boot properly.
 

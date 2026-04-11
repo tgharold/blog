@@ -19,7 +19,8 @@ hdg - 120GB (backup drive)
 
 During the rebuild of md3 (which is hda4+hde4) I'm getting constant aborts due to a bad block (or blocks) on hda.
 
-<code># tail -n 500 /var/log/messages
+```
+# tail -n 500 /var/log/messages
 Jun 10 23:17:16 coppermine hda: task_in_intr: status=0x59 { DriveReady SeekComplete DataRequest Error }
 Jun 10 23:17:16 coppermine hda: task_in_intr: error=0x40 { UncorrectableError }, LBAsect=100789712, sector=100789712
 Jun 10 23:17:16 coppermine ide: failed opcode was: unknown
@@ -44,11 +45,13 @@ Jun 10 23:17:20 coppermine disk 1, wo:1, o:1, dev:hde4
 Jun 10 23:17:20 coppermine md: syncing RAID array md3
 Jun 10 23:17:20 coppermine md: minimum _guaranteed_ reconstruction speed: 1000 KB/sec/disc.
 Jun 10 23:17:20 coppermine md: using maximum available idle IO bandwith (but not more than 200000 KB/sec) for reconstruction.
-Jun 10 23:17:20 coppermine md: using 128k window, over a total of 115926464 blocks.</code>
+Jun 10 23:17:20 coppermine md: using 128k window, over a total of 115926464 blocks.
+```
 
 And mdadm will continue to attempt to rebuild the array until the end of time.  Which is rather pointless.  So the second step is to more closely examine /dev/hda and see whether we're seeing the same block number.
 
-<code># grep 'hda:' /var/log/messages
+```
+# grep 'hda:' /var/log/messages
 May 29 08:43:06 coppermine hda: Maxtor 4R120L0, ATA DISK drive
 May 29 08:43:06 coppermine hda: max request size: 128KiB
 May 29 08:43:06 coppermine hda: 240121728 sectors (122942 MB) w/2048KiB Cache, CHS=65535/16/63
@@ -86,17 +89,20 @@ Jun 10 23:17:20 coppermine hda: task_in_intr: error=0x40 { UncorrectableError },
 Jun 10 23:17:20 coppermine raid1: hda: unrecoverable I/O read error for block 92537216
 Jun 11 04:08:06 coppermine hda: task_in_intr: status=0x59 { DriveReady SeekComplete DataRequest Error }
 Jun 11 04:08:06 coppermine hda: task_in_intr: error=0x40 { UncorrectableError }, LBAsect=100789712, sector=100789712
-Jun 11 04:08:08 coppermine raid1: hda: unrecoverable I/O read error for block 92537216</code>
+Jun 11 04:08:08 coppermine raid1: hda: unrecoverable I/O read error for block 92537216
+```
 
 This shows me that I have a drive that almost always fails at the same block number each time.  Another grep of the log files makes this even more clear:
 
-<code># <b>grep 'unrecoverable' /var/log/messages</b>
+```
+# <b>grep 'unrecoverable' /var/log/messages</b>
 Jun  8 22:32:05 coppermine raid1: hda: unrecoverable I/O read error for block 72089984
 Jun  9 05:10:39 coppermine raid1: hda: unrecoverable I/O read error for block 92537216
 Jun  9 08:26:42 coppermine raid1: hda: unrecoverable I/O read error for block 46140544
 Jun  9 13:13:55 coppermine raid1: hda: unrecoverable I/O read error for block 92537216
 Jun 10 23:17:20 coppermine raid1: hda: unrecoverable I/O read error for block 92537216
-Jun 11 04:08:08 coppermine raid1: hda: unrecoverable I/O read error for block 92537216</code>
+Jun 11 04:08:08 coppermine raid1: hda: unrecoverable I/O read error for block 92537216
+```
 
 So the first step (<b>after backing up the system</b>) is to stop the software RAID from attempting to constantly rebuild array "md3".  You can do this with the mdadm tool's "manage mode" commands.
 
@@ -105,7 +111,8 @@ Well, maybe not.  I've done a lot of digging in Google, but I can't figure out h
 Note that an excellent resource is:
 [LVM2 and Software RAID in Linux](http://hilli.dk/howtos/lvm2-and-software-raid-in-linux/) (May 2005)
 
-<code>livecd ~ # fdisk -l
+```
+livecd ~ # fdisk -l
 
 Disk /dev/hda: 122.9 GB, 122942324736 bytes
 16 heads, 63 sectors/track, 238216 cylinders
@@ -151,11 +158,13 @@ md0 : active raid1 hda1[0] hde1[1]
       125376 blocks [2/2] [UU]
 
 unused devices: <none>
-livecd ~ # </none></code>
+livecd ~ # </none>
+```
 
 So that starts up the /boot partition.  Now I can check it for errors using e2fsck.  The "-c" checks for bad blocks, the "-C" updates any inodes on the system with bad block information, and "-y" answers 'yes' to any questions.
 
-<code>livecd ~ # e2fsck -c -C -y -v /dev/md0
+```
+livecd ~ # e2fsck -c -C -y -v /dev/md0
 e2fsck 1.37 (21-Mar-2005)
 Checking for bad blocks (read-only test): done                        376
 Pass 1: Checking inodes, blocks, and sizes
@@ -183,11 +192,13 @@ Pass 5: Checking group summary information
        0 sockets
 --------
       31 files
-livecd ~ #</code>
+livecd ~ #
+```
 
 Next, I assemble the RAID1 set for the root volume.
 
-<code>livecd ~ # mdadm --assemble /dev/md2 /dev/hda3 /dev/hde3
+```
+livecd ~ # mdadm --assemble /dev/md2 /dev/hda3 /dev/hde3
 mdadm: /dev/md2 has been started with 2 drives.
 livecd ~ # cat /proc/mdstat
 Personalities : [raid1] 
@@ -229,11 +240,13 @@ Pass 5: Checking group summary information
        0 sockets
 --------
     6425 files
-livecd ~ #</none></code>
+livecd ~ #</none>
+```
 
 The rest of the system is more complex, LVM2 volumes on top of software RAID.
 
-<code>livecd ~ # modprobe dm-mod
+```
+livecd ~ # modprobe dm-mod
 livecd ~ # pvscan
   PV /dev/hdg1   VG vgbackup   lvm2 [114.39 GB / 82.39 GB free]
   Total: 1 [114.39 GB] / in use: 1 [114.39 GB] / in no VG: 0 [0   ]
@@ -274,11 +287,13 @@ Pass 5: Checking group summary information
        0 sockets
 --------
       61 files
-livecd ~ # </code>
+livecd ~ # 
+```
 
 So far so good.  But most of the errors are in /dev/md3.  So I'm going to assemble /dev/md3 using just one of the drives (/dev/hde4).
 
-<code>livecd ~ # mdadm -v --assemble /dev/md3 /dev/hde4      
+```
+livecd ~ # mdadm -v --assemble /dev/md3 /dev/hde4      
 mdadm: looking for devices for /dev/md3
 mdadm: /dev/hde4 is identified as a member of /dev/md3, slot 2.
 mdadm: added /dev/hde4 to /dev/md3 as 2
@@ -296,11 +311,13 @@ md1 : active raid1 hda2[0] hde2[1]
 md0 : active raid1 hda1[0] hde1[1]
       125376 blocks [2/2] [UU]
 
-unused devices: <none></none></code>
+unused devices: <none></none>
+```
 
 Unfortunately, mdadm is refusing to mount /dev/md3 using just /dev/hde4.  So we have to force it:
 
-<code>livecd ~ # mdadm --create /dev/md3 --level 1 --force --raid-disks=1 /dev/hde4
+```
+livecd ~ # mdadm --create /dev/md3 --level 1 --force --raid-disks=1 /dev/hde4
 mdadm: Cannot open /dev/hde4: Device or resource busy
 mdadm: create aborted
 livecd ~ # mdadm --stop /dev/md3
@@ -348,11 +365,13 @@ md0 : active raid1 hda1[0] hde1[1]
       125376 blocks [2/2] [UU]
 
 unused devices: <none>
-livecd ~ #</none></none></code>
+livecd ~ #</none></none>
+```
 
 Now I can scan for LVM2 volumes on the md3 array.
 
-<code>livecd ~ # pvscan
+```
+livecd ~ # pvscan
   PV /dev/md3    VG vgmirror   lvm2 [110.55 GB / 52.55 GB free]
   PV /dev/hdg1   VG vgbackup   lvm2 [114.39 GB / 82.39 GB free]
   Total: 2 [224.95 GB] / in use: 2 [224.95 GB] / in no VG: 0 [0   ]
@@ -389,11 +408,13 @@ livecd ~ # lvchange -a y /dev/vgmirror/www
   /dev/cdrom: open failed: Read-only file system
 livecd ~ # lvchange -a y /dev/vgmirror/svn
   /dev/cdrom: open failed: Read-only file system
-livecd ~ #</code>
+livecd ~ #
+```
 
 Now I can check all of the LVM2 file systems:
 
-<code>livecd ~ # lvscan
+```
+livecd ~ # lvscan
   ACTIVE            '/dev/vgmirror/tmp' [4.00 GB] inherit
   ACTIVE            '/dev/vgmirror/vartmp' [4.00 GB] inherit
   ACTIVE            '/dev/vgmirror/opt' [2.00 GB] inherit
@@ -666,11 +687,14 @@ Pass 5: Checking group summary information
        0 sockets
 --------
      119 files
-livecd ~ #</y></y></y></y></code>
+livecd ~ #</y></y></y></y>
+```
 
 So all of the filesystems on /dev/hde4 check out okay.  Now I want to take a closer look at the drives to verify that they have no bad blocks.  The best way to do this is with a read-only disk test using badblocks.
 
-<code># badblocks -sv /dev/hdg1</code>
+```
+# badblocks -sv /dev/hdg1
+```
 
 From the looks of my testing on the various drives, hda is the problem drive with a few surface errors.  So I'm going to wholy replace drive hda with a fresh 120GB drive.
 
@@ -678,7 +702,8 @@ So I've moved the cables from hda to connect with hde, and I've put a new 120GB 
 
 First we copy the partition layout from hda to hde, then I copy the boot sector from hda to hde.
 
-<code>coppermine thomas # sfdisk -d /dev/hda | sfdisk /dev/hde
+```
+coppermine thomas # sfdisk -d /dev/hda | sfdisk /dev/hde
 Checking that no-one is using this disk right now ...
 OK
 
@@ -734,11 +759,13 @@ Units = cylinders of 1008 * 512 = 516096 bytes
 /dev/hde2             250        4218     2000376   fd  Linux raid autodetect
 /dev/hde3            4219        8187     2000376   fd  Linux raid autodetect
 /dev/hde4            8188      238200   115926552   fd  Linux raid autodetect
-coppermine thomas # </code>
+coppermine thomas # 
+```
 
 Now I need to add the new partitions to the software RAID arrays.
 
-<code>coppermine thomas # cat /proc/mdstat
+```
+coppermine thomas # cat /proc/mdstat
 Personalities : [raid1] 
 md1 : active raid1 hda2[1]
       2000256 blocks [2/1] [_U]
@@ -771,7 +798,8 @@ md0 : active raid1 hde1[2] hda1[1]
       [=&gt;...................]  recovery =  9.7% (12928/125376) finish=0.5min speed=3232K/sec
 
 unused devices: <none>
-coppermine thomas #</none></none></code>
+coppermine thomas #</none></none>
+```
 
 Repeat the above for the other 3 RAID1 arrays that are degraded.
 
@@ -781,7 +809,8 @@ At this point, I'm basically done.  It's time to make another backup and maybe s
 
 The big problem is that md3 is showing up with only a single drive "[U]" instead of "[U_]".  So I need to figure out how to tell mdadm to add /dev/hde4 to the array and force it to resync.  (To fix this, you use the "grow" command of mdadm.)
 
-<code>coppermine thomas # mdadm --grow /dev/md3 --raid-disks=2
+```
+coppermine thomas # mdadm --grow /dev/md3 --raid-disks=2
 coppermine thomas # cat /proc/mdstat
 Personalities : [raid1]
 md1 : active raid1 hde2[0] hda2[1]
@@ -815,4 +844,5 @@ md0 : active raid1 hde1[0] hda1[1]
       125376 blocks [2/2] [UU]
 
 unused devices: <none>
-coppermine thomas #</none></none></code>
+coppermine thomas #</none></none>
+```

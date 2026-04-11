@@ -19,16 +19,20 @@ Time to configure the timezone and setup the kernel, this is [chapter 7 in the G
 
 Timezone for me is EST5EDT, so here's how to set that up.
 
-<code># ls /usr/share/zoneinfo
+```
+# ls /usr/share/zoneinfo
 # ln -sf /usr/share/zoneinfo/EST5EDT /etc/localtime
 # date
 # zdump GMT
-# zdump EST5EDT</code>
+# zdump EST5EDT
+```
 
 Last year, I went with development-sources for the kernel in order to get 2.6.  This is no longer necessary (and development-sources has been rolled into vanilla-sources).  So I'm going to go with the default gentoo-sources.
 
-<code># emerge gentoo-sources
-# ls -l /usr/src</code>
+```
+# emerge gentoo-sources
+# ls -l /usr/src
+```
 
 This takes a while to run (maybe an hour or two).
 

@@ -32,7 +32,8 @@ This was a slightly tricky one.  I'm running CentOS5 with SELinux and I was tryi
     May 27 21:50:48 fw1-hosho setroubleshoot:      SELinux is preventing /usr/sbin/named (named_t) "write" access to named (named_conf_t).      For complete SELinux messages. run sealert -l 663ea169-d194-4c49-a5bb-a6a4bb707990
     May 27 22:39:26 fw1-hosho squid: cache_dir /var/spool/squid: (13) Permission denied
 
-<code># /usr/bin/sealert -l 626e75b4-32aa-4a61-88f7-f36a68fecd35
+```
+# /usr/bin/sealert -l 626e75b4-32aa-4a61-88f7-f36a68fecd35
 Summary
     SELinux is preventing access to files with the label, file_t.
 
@@ -72,7 +73,8 @@ avc: denied { getattr } for comm="squid" dev=dm-0 egid=23 euid=23
 exe="/usr/sbin/squid" exit=-13 fsgid=23 fsuid=23 gid=23 items=0 name="00"
 path="/var/spool/squid/00" pid=9584 scontext=user_u:system_r:squid_t:s0 sgid=23
 subj=user_u:system_r:squid_t:s0 suid=0 tclass=dir
-tcontext=user_u:object_r:file_t:s0 tty=(none) uid=23</code>
+tcontext=user_u:object_r:file_t:s0 tty=(none) uid=23
+```
 
 ...
 

@@ -33,7 +33,8 @@ sys-apps/eject
 sys-apps/smartmontools
 sys-process/atop
 
-<code>san1-azure ~ # emerge -pv bonnie vim colordiff gentoolkit tree subversion iptraf nettop nload ntp dstat eject smartmontools atop
+```
+san1-azure ~ # emerge -pv bonnie vim colordiff gentoolkit tree subversion iptraf nettop nload ntp dstat eject smartmontools atop
 
 These are the packages that I would merge, in order:
 
@@ -66,7 +67,8 @@ Calculating dependencies ...done!
 [ebuild  N    ] sys-process/atop-1.15  102 kB 
 
 Total size of downloads: 20,638 kB
-san1-azure ~ # </code>
+san1-azure ~ # 
+```
 
 That should take all of about 0.1 seconds on this Athlon64 X2.  (I joke, slightly... the box is quite snappy even with only 7200rpm SATA drives.)
 

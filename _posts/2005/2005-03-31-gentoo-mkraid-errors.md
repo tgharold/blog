@@ -15,12 +15,16 @@ tags:
 
 So, I've created my /etc/raidtab file.  I've done the "<b>modprobe md</b>" and "<b>modprobe dm-mod</b>" commands.  I'm able to "<b>cat /proc/mdstat</b>" which shows that I have no personalities and no unused devices.  But, when I try to use the "<b>mkraid</b>" command, I get the following error:
 
-<code># mkraid /dev/md0
-cannot determine md version: no MD device file in /dev.</code>
+```
+# mkraid /dev/md0
+cannot determine md version: no MD device file in /dev.
+```
 
 The fix (according to the wiki is):
 
-<code>cd /dev ; MAKEDEV md</code>
+```
+cd /dev ; MAKEDEV md
+```
 
 The key resource to setting up Gentoo on a RAID:
 

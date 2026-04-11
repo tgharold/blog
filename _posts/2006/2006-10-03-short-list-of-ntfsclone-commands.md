@@ -13,18 +13,24 @@ tags:
 This assumes that you have a hidden Linux partition (ext2/ext3) on the hard drive and that you're creating an image on that hidden drive.  Most of the time that means you're writing to either /dev/hda2 or /dev/sda2, but you should double-check that.
 
 List the partitions on the known hard drives:
-<code># fdisk -l</code>
+```
+# fdisk -l
+```
 
 Mount the hidden Linux partition:
-<code># mkdir /mnt/image
+```
+# mkdir /mnt/image
 # mount /dev/hda2 /mnt/image
 # mkdir /mnt/image/machinename-date
-# cd /mnt/image/machinename-date</code>
+# cd /mnt/image/machinename-date
+```
 
 Image the drive (be very careful with commands!):
-<code># sfdisk -d /dev/hda &gt; machinename-date-hda.sfdisk.dump
+```
+# sfdisk -d /dev/hda &gt; machinename-date-hda.sfdisk.dump
 # dd if=/dev/hda bs=512 count=1 of=machinename-date-hda.mbr
-# ntfsclone -s -o - /dev/hda1 | gzip | split -b 500m - machinename-date-ntfsclone-hda1.img.gz_</code>
+# ntfsclone -s -o - /dev/hda1 | gzip | split -b 500m - machinename-date-ntfsclone-hda1.img.gz_
+```
 
 Notes:
 

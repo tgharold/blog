@@ -12,8 +12,10 @@ tags:
 
 Working on setting up lm_sensors on my Gigabyte GA-6VA7+ (Intel Celeron Coppermine 566Mhz CPU) system.  [First step](http://secure.netroedge.com/~lm78/kernel26.html) is to turn on I2C support in the 2.6 kernel configuration.
 
-<code># cd /usr/src/linux
-# make menuconfig</code>
+```
+# cd /usr/src/linux
+# make menuconfig
+```
 
 Device drivers
 --&gt; I2C Support
@@ -33,23 +35,28 @@ Device drivers
 
 Now, make sure that /boot is mounted, then compile your new kernel.
 
-<code># make &amp;&amp; make modules_install
+```
+# make &amp;&amp; make modules_install
 # mount /boot
 # cp arch/i386/boot/bzImage /boot/kernel-2.6.13-28Nov2005-2037
 # cp System.map /boot/System.map-2.6.13-28Nov2005-2037
 # cp .config /boot/config-2.6.13-28Nov2005-2037
-# nano -w /boot/grub/grub.conf</code>
+# nano -w /boot/grub/grub.conf
+```
 
 Now, this is just a testing configuration and not my final configuration.  After the boot, I'll have to figure out what sensors are actually available and which ones I need to keep.
 
-<code># emerge -pv lm_sensors
-# emerge lm_sensors</code>
+```
+# emerge -pv lm_sensors
+# emerge lm_sensors
+```
 
 While that's compiling, read the [lm_sensors FAQ](http://www2.lm-sensors.nu/~lm78/cvs/lm_sensors2/doc/lm_sensors-FAQ.html).  Section 3.1 (Why so many modules, and how do I cope with them?) explains the basics of how to get started with lm_sensors.
 
 (Notice the warnings at the end of the ebuild.)
 
-<code>&gt;&gt;&gt; /etc/init.d/lm_sensors
+```
+&gt;&gt;&gt; /etc/init.d/lm_sensors
  * 
  * Next you need to run:
  *   /usr/sbin/sensors-detect
@@ -70,11 +77,13 @@ While that's compiling, read the [lm_sensors FAQ](http://www2.lm-sensors.nu/~lm7
 &gt;&gt;&gt; sys-apps/lm_sensors-2.9.2 merged.
 (snip)
 
-# /usr/sbin/sensors-detect</code>
+# /usr/sbin/sensors-detect
+```
 
 The following is output from my Gigabyte motherboard:
 
-<code># sensors-detect revision 1.393 (2005/08/30 18:51:18)
+```
+# sensors-detect revision 1.393 (2005/08/30 18:51:18)
 
 This program will help you determine which I2C/SMBus modules you need to
 load to use lm_sensors most effectively. You need to have i2c and
@@ -245,7 +254,8 @@ modprobe eeprom
 
 Do you want to generate /etc/conf.d/lm_sensors? Enter s to specify other file name?
   (YES/no/s): yes
-Done.</code>
+Done.
+```
 
 I had to add the rc-update command, but the /etc/modules.conf file already had the proper I2C line.
 
@@ -253,7 +263,8 @@ Hmm... got the "No sensors found!" error message.  Yet I'm 95% sure that I did e
 
 Output from dmesg:
 
-<code>vt596_smbus 0000:00:07.3: using Interrupt SMI# for SMBus.
+```
+vt596_smbus 0000:00:07.3: using Interrupt SMI# for SMBus.
 vt596_smbus 0000:00:07.3: SMBREV = 0x0
 vt596_smbus 0000:00:07.3: VT596_smba = 0x5000
 i2c_adapter i2c-0: registered as adapter #0
@@ -300,13 +311,16 @@ i2c_adapter i2c-0: Transaction (post): CNT=00, CMD=3f, ADD=ac, DAT0=06, DAT1=00
 i2c_adapter i2c-0: found normal i2c entry for adapter 0, addr 57
 i2c_adapter i2c-0: Transaction (pre): CNT=00, CMD=3f, ADD=ae, DAT0=06, DAT1=00
 i2c_adapter i2c-0: Error: no response!
-i2c_adapter i2c-0: Transaction (post): CNT=00, CMD=3f, ADD=ae, DAT0=06, DAT1=00</code>
+i2c_adapter i2c-0: Transaction (post): CNT=00, CMD=3f, ADD=ae, DAT0=06, DAT1=00
+```
 
 Output from lsmod:
 
-<code># lsmod
+```
+# lsmod
 Module                  Size  Used by
 eeprom                  5528  - 
 i2c_sensor              2984  - 
 i2c_viapro              7640  - 
-dm_mod                 45340  - </code>
+dm_mod                 45340  - 
+```
