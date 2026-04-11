@@ -16,8 +16,8 @@ So I'm trying to dust off my very rusty (and crusty) C and C++ skills and I've d
 
 Anyway, it took me a bit to figure out how to compile and link a C application where I have (1) module (usage.c and usage.h) and (1) program (main.c).  To compile this into a working .exe file requires the following steps if you're doing it by hand:
 
-gcc -c -o usage.o usage.c
-gcc -c -o main.o main.c
-gcc -o main.exe main.o usage.o
+    gcc -c -o usage.o usage.c
+    gcc -c -o main.o main.c
+    gcc -o main.exe main.o usage.o
 
 Now that I know those basics, I need to remember how to use makefiles...

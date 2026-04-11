@@ -27,12 +27,12 @@ During the install of Windows 2000, I hit F6 during the boot and install both th
 
 Update:  Everything looks fine so far, my first test copy of 2GB worth of data checked out okay with the MD5 tool (copying from the network to the TX2 RAID array as well as from the network to the Sil3112 SATA scratch drive).  Got everything patched and I'm now copying live data files onto the array.
 
-Tyan Trinity KT400 (S2495)
-3x512MB PC2100 RAM
-AthlonXP 1800+ CPU
-Promise FastTrak TX2 PCI IDE card
-2x250GB 7200rpm drives, 8MB cache (o/s)
-Silicon Image Sil3112 SATA ports (built-in)
-200GB SATA 7200rpm drive (scratch)
-IDE CD-RW
-IDE DVD-ROM/CD-RW
+    Tyan Trinity KT400 (S2495)
+    3x512MB PC2100 RAM
+    AthlonXP 1800+ CPU
+    Promise FastTrak TX2 PCI IDE card
+    2x250GB 7200rpm drives, 8MB cache (o/s)
+    Silicon Image Sil3112 SATA ports (built-in)
+    200GB SATA 7200rpm drive (scratch)
+    IDE CD-RW
+    IDE DVD-ROM/CD-RW

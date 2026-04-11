@@ -18,6 +18,6 @@ One of the things I"m not sure about at this stage in the game is how to set the
 
 Anyway, not much to this step, and it's another one that takes a while to run:
 
-emerge system
+    emerge system
 
 Back in a few... ([next entry](/blog/2004-04-28-gentoo-epia-install-part-4/)).

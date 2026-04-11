@@ -14,7 +14,7 @@ We're currently running NovaNet8 Alliance at work for our tape backups, but we'r
 
 So now we're ticked off - and since NN8 seems to be really finicky about whether or not it will successfully backup to tape every night anyway, we're exploring alternatives.  So here's the short list of the products that I know about that support tape, backup to disk, multiple O/S (Windows, Netware at the moment), do media management.  Basically, enterprise level backup software.  It also has to support our Sony SDX-500C AIT2 tape drive (NovaNet 8 didn't bother reading the AIT memory chip, and just played the tape like a dumb tape).
 
-ArcServe by Computer Associates
-NovaNet by NovaStor
-Backup Exec by Veritas
-Tapeware by Yosemite(?)
+- ArcServe by Computer Associates
+- NovaNet by NovaStor
+- Backup Exec by Veritas
+- Tapeware by Yosemite(?)

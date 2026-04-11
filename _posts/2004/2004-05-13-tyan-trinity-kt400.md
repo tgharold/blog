@@ -30,22 +30,22 @@ My next plan is now to try the HighPoint RAID again, possibly updating the HighP
 
 Next error (loading the HPT BIOS).  I run the LOAD.EXE file, enter the BIOS file name (3XXV2351.P5E), it then errors out with:
 
-A:\BIOS&gt; <b>LOAD</b>
-Please input BIOS image file name: 3XXV2351.P5E
-Found adapter at bus 0, device 14
-No loadable EPROM found
-Try '-i' option
+    A:\BIOS&gt; <b>LOAD</b>
+    Please input BIOS image file name: 3XXV2351.P5E
+    Found adapter at bus 0, device 14
+    No loadable EPROM found
+    Try '-i' option
 
-A:\BIOS&gt; <b>LOAD /I 3XXV2351.P5E</b>
-Found adapter at bus 0, device 14
-No loadable EPROM found
-Found adapter at bus 0, device 14
-No loadable EPROM found
+    A:\BIOS&gt; <b>LOAD /I 3XXV2351.P5E</b>
+    Found adapter at bus 0, device 14
+    No loadable EPROM found
+    Found adapter at bus 0, device 14
+    No loadable EPROM found
 
-Hmm... oh, wait... looks like the P4E file is <b>also</b> for the 372N chip.
+    Hmm... oh, wait... looks like the P4E file is <b>also</b> for the 372N chip.
 
-A:\BIOS&gt; <b>LOAD 3XXV2351.P4E</b>
-No supporting host adapter is found
+    A:\BIOS&gt; <b>LOAD 3XXV2351.P4E</b>
+    No supporting host adapter is found
 
 Okay... (drums fingers on desk), eh, forget it for now.  I have v2.345 already, which is reasonably up-to-date.  And this time, the Win2k install seems to have found the partition correctly (only basic difference between now and when it didn't work last night is the motherboard BIOS revision update from 1.02 to 1.05).
 

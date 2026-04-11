@@ -63,19 +63,19 @@ Note: /home, /opt, /usr, and /var can be [handled with LVM](http://www.gentoo.or
 
 Decisions (probably how I'll allocate it):
 
-DISK 1:
-/boot ext2 64MB
-/ (root) ext3 2GB
-LVM #1 24GB
-/opt 2GB
-/usr 4GB
-/var 4GB
-LVM #2 (rest of disk)
-/home
+	DISK 1:
+	/boot ext2 64MB
+	/ (root) ext3 2GB
+	LVM #1 24GB
+	/opt 2GB
+	/usr 4GB
+	/var 4GB
+	LVM #2 (rest of disk)
+	/home
 
-DISK 2:
-(swap) 2GB
-/tmp ext2 4GB
-/var/tmp ext2 8GB
-(root mirror) 2GB
-(backup partition)
+	DISK 2:
+	(swap) 2GB
+	/tmp ext2 4GB
+	/var/tmp ext2 8GB
+	(root mirror) 2GB
+	(backup partition)
