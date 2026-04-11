@@ -10,7 +10,11 @@
       "Bash(./build.sh)",
       "Bash(gem search:*)",
       "WebSearch",
-      "Bash(bundle audit:*)"
+      "Bash(bundle audit:*)",
+      "Read(//.claude/skills/**)"
+    ],
+    "additionalDirectories": [
+      "/scripts"
     ]
   }
 }
