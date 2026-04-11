@@ -87,6 +87,40 @@ def find_new_markdown_paths(unique_old_urls_data):
                 print(f"  Match found: {filename} -> {exactly_matched_file}")
             else:
                 print(f"  No exact match found for {filename}")
+                # Try fuzzy matching
+                if found_files:
+                    import difflib
+                    print(f"  Attempting fuzzy matching with {len(found_files)} candidates...")
+                    # Get the base names for comparison
+                    base_names = [os.path.splitext(os.path.basename(f))[0] for f in found_files]
+                    # Get the best fuzzy matches with scores
+                    matcher = difflib.SequenceMatcher(isjunk=None, a=filename, b=None)
+                    matches_and_scores = []
+                    for base_name in base_names:
+                        matcher.set_seq2(base_name)
+                        ratio = matcher.ratio()
+                        if ratio >= 0.3:  # Only include matches above cutoff
+                            matches_and_scores.append((base_name, ratio))
+
+                    # Sort by score (descending)
+                    matches_and_scores.sort(key=lambda x: x[1], reverse=True)
+
+                    if matches_and_scores:
+                        print(f"  Fuzzy matches found (with scores):")
+                        for base_name, score in matches_and_scores[:5]:  # Show top 5
+                            print(f"    Fuzzy match: {base_name} (score: {score:.2f})")
+
+                        # If there's exactly one high-quality match, use it
+                        if len(matches_and_scores) == 1 and matches_and_scores[0][1] >= 0.6:
+                            matched_file = matches_and_scores[0][0]
+                            # Find the actual file path for this match
+                            for file_path in found_files:
+                                if os.path.splitext(os.path.basename(file_path))[0] == matched_file:
+                                    data['path_to_new_markdown_file'] = file_path
+                                    print(f"  Single high-quality fuzzy match used: {filename} -> {file_path}")
+                                    break
+                    else:
+                        print(f"  No fuzzy matches found for {filename}")
 
         else:
             print(f"Warning: Unable to parse old_url format: {old_url}")
