@@ -53,6 +53,10 @@ To convert archive posts, use the provided conversion scripts:
 - The script uses `convert-archive.rb` for the actual conversion process
 - Conversion follows the skill documentation in `.claude/skills/convert-archive-posts.md`
 
+## Base URL Handling Fix
+**Problem**: Links in the post grid were not working correctly on GitHub Pages deployment due to improper base URL handling.
+**Solution**: Modified `_includes/post-grid.html` to use Jekyll's `relative_url` filter instead of `{{ site.url }}{{ post.url }}` which properly handles the base URL context for both local development and GitHub Pages deployment.
+
 ## Commit Guidelines
 When creating git commits for these conversions, please include the following co-authored by line:
 Co-Authored-By: Qwen3-Coder-30B-A3B-Instruct-MLX-6bit <Claude Code>
