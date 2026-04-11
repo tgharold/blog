@@ -163,6 +163,33 @@ def update_new_urls(unique_old_urls_data):
             data['new_url'] = ""
             print(f"  No path found for {data['old_url']}, leaving new_url empty")
 
+def update_markdown_files_with_new_urls(markdown_files_with_blogger_links, unique_old_urls_data):
+    """Update markdown files by replacing old_url with new_url based on unique_old_urls_data."""
+    for file_path, old_url in markdown_files_with_blogger_links:
+        # Find the corresponding new_url for this old_url
+        new_url = ""
+        for data in unique_old_urls_data:
+            if data['old_url'] == old_url:
+                new_url = data['new_url']
+                break
+
+        if new_url:
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    content = f.read()
+
+                # Replace all occurrences of the old URL with the new URL
+                updated_content = content.replace(f"]({old_url})", f"]({new_url})")
+
+                # Write the updated content back to the file
+                with open(file_path, 'w', encoding='utf-8') as f:
+                    f.write(updated_content)
+
+                print(f"Updated {file_path}: {old_url} -> {new_url}")
+            except Exception as e:
+                print(f"Error updating {file_path}: {e}")
+        else:
+            print(f"No new URL found for {old_url} in {file_path}, skipping update.")
 
 def main():
     search_dir = '_posts'
@@ -206,7 +233,7 @@ def main():
     write_unique_old_urls_csv(unique_old_urls_data, unique_output_file)
     print(f"Unique old_url values written to '{unique_output_file}'")
 
-    
+    update_markdown_files_with_new_urls(markdown_files_with_blogger_links, unique_old_urls_data)
 
 if __name__ == '__main__':
     main()
