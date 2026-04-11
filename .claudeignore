@@ -1,0 +1,24 @@
+# .claudeignore
+# This file specifies files and directories that Claude should ignore when working with the repository
+
+# Ignore vendor directories (gem files)
+vendor/
+
+# Ignore build artifacts and generated files
+_site/
+*.log
+.DS_Store
+.env
+.env.local
+*.tmp
+*.temp
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignore git-related files (already handled by .gitignore)
+.git/
+.gitignore
