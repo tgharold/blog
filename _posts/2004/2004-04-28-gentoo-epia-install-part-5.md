@@ -25,7 +25,7 @@ I'm going with the manual option, so "cd /usr/src/linux" then "make menuconfig".
 	--> (S)ymetric multi-processing support (turned this one OFF)
 	--> M(a)chine Check Exception (turned this OFF)
 	(P)ower management options (ACPI, APM)
-	(B)us options (PCI, PCMCIA, EISA&lt; MCA, ISA)
+	(B)us options (PCI, PCMCIA, EISA< MCA, ISA)
 	(E)xecutable file formats
 	(D)evice drivers
 	--> (P)arallel port support (turned mine OFF)

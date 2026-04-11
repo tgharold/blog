@@ -93,8 +93,8 @@ MAKEOPTS="-j3"
 Now we start in on [Section 6 (Installing the Gentoo Base System)](http://www.gentoo.org/doc/en/handbook/handbook-amd64.xml?part=1&amp;chap=6).  Time to pick mirrors and other things.
 
 ```
-livecd gentoo # mirrorselect -i -o &gt;&gt; /mnt/gentoo/etc/make.conf
-livecd gentoo # mirrorselect -i -r -o &gt;&gt; /mnt/gentoo/etc/make.conf
+livecd gentoo # mirrorselect -i -o >> /mnt/gentoo/etc/make.conf
+livecd gentoo # mirrorselect -i -r -o >> /mnt/gentoo/etc/make.conf
 livecd gentoo # cat /mnt/gentoo/etc/make.conf
 # These settings were set by the catalyst build script that automatically built this stage
 # Please consult /etc/make.conf.example for a more detailed example
@@ -122,7 +122,7 @@ We're ready to chroot and start the build.
 ```
 livecd gentoo # chroot /mnt/gentoo /bin/bash
 livecd / # env-update
-&gt;&gt;&gt; Regenerating /etc/ld.so.cache...
+>>> Regenerating /etc/ld.so.cache...
 livecd / # source /etc/profile
 livecd / # export PS1="(chroot) $PS1"
 (chroot) livecd / #
@@ -134,7 +134,7 @@ Read the next section carefully!  I use an extremely limited USE flag (that turn
 (chroot) livecd / # emerge --sync
 
 (chroot) livecd / # ls -FGg /etc/make.profile
-lrwxrwxrwx  1 50 Aug 25 22:10 /etc/make.profile -&gt; ../usr/portage/profiles/default-linux/amd64/2006.0/
+lrwxrwxrwx  1 50 Aug 25 22:10 /etc/make.profile -> ../usr/portage/profiles/default-linux/amd64/2006.0/
 (chroot) livecd / # nano -w /etc/make.conf
 USE="-alsa -apm -arts -bitmap-fonts -gnome -gtk -gtk2 -kde -mad -mikmod -motif -opengl -oss -qt -quicktime -sdl -truetype -truetype-fonts -type1-fonts -X -xmms -xv"
 (chroot) livecd / # ls /usr/share/zoneinfo

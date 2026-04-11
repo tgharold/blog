@@ -92,11 +92,11 @@ mdadm: array /dev/md1 started.
 Personalities : [raid1] 
 md1 : active raid1 hdc2[1] hda2[0]
       2000256 blocks [2/2] [UU]
-      [==&gt;..................]  resync = 13.8% (277760/2000256) finish=3.6min speed=7920K/sec
+      [==>..................]  resync = 13.8% (277760/2000256) finish=3.6min speed=7920K/sec
 md0 : active raid1 hdc1[1] hda1[0]
       125376 blocks [2/2] [UU]
 
-unused devices: &lt;none&gt;
+unused devices: <none>
 ```
 
 Seems to be working fine.  Once each RAID set finishes initialization, I'll create the next one in the series using the following commands:

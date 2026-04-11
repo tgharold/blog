@@ -47,7 +47,7 @@ The LVM2 area on /dev/md4 is already created as well:
 Create the basic mdadm configuration file.  While mdadm is able to figure out most things automatically, it's useful to give it hints.
 
 ```
-# mdadm --detail --scan &gt;&gt; /etc/mdadm.conf
+# mdadm --detail --scan >> /etc/mdadm.conf
 # vi /etc/mdadm.conf
 ```
 

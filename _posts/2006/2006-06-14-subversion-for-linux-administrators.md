@@ -95,14 +95,14 @@ drwxr-xr-x   6 root root 4096 Jun 14 21:28 tmp
 drwxr-xr-x   2 root root 4096 Jun 14 21:28 wcprops
 nogitsune / # cat .svn/entries
 <?xml version="1.0" encoding="utf-8"?>
-<wc-entries></wc-entries>   xmlns="svn:"&gt;
+<wc-entries></wc-entries>   xmlns="svn:">
 <entry></entry>   committed-rev="0"
    name=""
    committed-date="2006-06-15T01:26:51.238552Z"
    url="file:///var/svn/nogitsune"
    kind="dir"
    uuid="21f0cb31-3916-0410-ae38-e44852334012"
-   revision="0"/&gt;
+   revision="0"/>
 
 nogitsune / #
 ```
@@ -134,7 +134,7 @@ drwxr-xr-x  24 root root    4096 Jun 14 21:28 ..
 -rw-r--r--   1 root root  890145 Nov 29  2005 System.map-2.6.13-29Nov2005-2148
 -rw-r--r--   1 root root  916779 Nov  8  2005 System.map-2.6.13-8Nov2005
 -rw-r--r--   1 root root  919480 Nov  9  2005 System.map-2.6.13-9Nov2005
-lrwxrwxrwx   1 root root       1 Nov  8  2005 boot -&gt; .
+lrwxrwxrwx   1 root root       1 Nov  8  2005 boot -> .
 -rw-r--r--   1 root root   23975 Nov 12  2005 config-2.6.13-12Nov2005
 -rw-r--r--   1 root root   23749 Nov 12  2005 config-2.6.13-12Nov2005-2300
 -rw-r--r--   1 root root   23738 Nov 12  2005 config-2.6.13-12Nov2005-2330
@@ -338,10 +338,10 @@ nogitsune sbin # cat svndaily.sh
 BACKUPDATE=`date +%Y.%m`
 #echo $BACKUPDATE
 
-# svnadmin dump /var/svn/reponame | gzip -c &gt; /backup/subversion/reponame.svnadmin.dump.${BACKUPDATE}.gz
-svnadmin dump /var/svn/dev | gzip -c &gt; /backup/subversion/dev.svnadmin.dump.${BACKUPDATE}.gz
-svnadmin dump /var/svn/photo | gzip -c &gt; /backup/subversion/photo.svnadmin.dump.${BACKUPDATE}.gz
-svnadmin dump /var/svn/web | gzip -c &gt; /backup/subversion/web.svnadmin.dump.${BACKUPDATE}.gz
+# svnadmin dump /var/svn/reponame | gzip -c > /backup/subversion/reponame.svnadmin.dump.${BACKUPDATE}.gz
+svnadmin dump /var/svn/dev | gzip -c > /backup/subversion/dev.svnadmin.dump.${BACKUPDATE}.gz
+svnadmin dump /var/svn/photo | gzip -c > /backup/subversion/photo.svnadmin.dump.${BACKUPDATE}.gz
+svnadmin dump /var/svn/web | gzip -c > /backup/subversion/web.svnadmin.dump.${BACKUPDATE}.gz
 
 nogitsune sbin #
 ```

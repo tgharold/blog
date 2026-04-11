@@ -27,7 +27,7 @@ Mount the hidden Linux partition:
 
 Image the drive (be very careful with commands!):
 ```
-# sfdisk -d /dev/hda &gt; machinename-date-hda.sfdisk.dump
+# sfdisk -d /dev/hda > machinename-date-hda.sfdisk.dump
 # dd if=/dev/hda bs=512 count=1 of=machinename-date-hda.mbr
 # ntfsclone -s -o - /dev/hda1 | gzip | split -b 500m - machinename-date-ntfsclone-hda1.img.gz_
 ```

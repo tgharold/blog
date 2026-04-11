@@ -67,7 +67,7 @@ Naturally, we should create a sub-folder under /backup for each machine and poss
 <li># mkdir <i>todaysdate</i> ; cd <i>todaysdate</i>
 
 </li>
-<li># fdisk -l &gt; fdisk.txt
+<li># fdisk -l > fdisk.txt
 
 </li>
 </ol>
@@ -84,10 +84,10 @@ Now to grab the boot loader and image the two critical partitions (boot and root
 <li>dd if=/dev/sdb bs=512 count=1 of=machinename-date-sdc.mbr
 
 </li>
-<li>dd if=/dev/sda1 | gzip &gt; machinename-date-ddcopy-sda1.img.gz
+<li>dd if=/dev/sda1 | gzip > machinename-date-ddcopy-sda1.img.gz
 
 </li>
-<li>dd if=/dev/sda2 | gzip &gt; machinename-date-ddcopy-sda2.img.gz
+<li>dd if=/dev/sda2 | gzip > machinename-date-ddcopy-sda2.img.gz
 
 </li>
 </ol>

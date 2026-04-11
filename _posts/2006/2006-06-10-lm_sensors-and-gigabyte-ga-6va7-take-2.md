@@ -17,7 +17,7 @@ There's a new version of lm_sensors out (2.10) while I'm still running the old 2
 Output of the end of the emerge process:
 
 ```
-&gt;&gt;&gt; /etc/init.d/fancontrol
+>>> /etc/init.d/fancontrol
  * 
  * Next you need to run:
  *   /usr/sbin/sensors-detect
@@ -25,7 +25,7 @@ Output of the end of the emerge process:
  *   /etc/conf.d/lm_sensors
  * 
  * You will also need to run the above command if you're upgrading from
- * &lt;=lm_sensors-2.9.0, as the needed entries in /etc/conf.d/lm_sensors has
+ * <=lm_sensors-2.9.0, as the needed entries in /etc/conf.d/lm_sensors has
  * changed.
  * 
  * Be warned, the probing of hardware in your system performed by
@@ -34,32 +34,32 @@ Output of the end of the emerge process:
  * 
  * Please see the lm_sensors documentation and website for more information.
  * 
-&gt;&gt;&gt; Regenerating /etc/ld.so.cache...
-&gt;&gt;&gt; sys-apps/lm_sensors-2.10.0 merged.
+>>> Regenerating /etc/ld.so.cache...
+>>> sys-apps/lm_sensors-2.10.0 merged.
 
  sys-apps/lm_sensors
     selected: 2.9.2
    protected: 2.10.0
      omitted: none
 
-&gt;&gt;&gt; 'Selected' packages are slated for removal.
-&gt;&gt;&gt; 'Protected' and 'omitted' packages will not be removed.
+>>> 'Selected' packages are slated for removal.
+>>> 'Protected' and 'omitted' packages will not be removed.
 
-&gt;&gt;&gt; Waiting 5 seconds before starting...
-&gt;&gt;&gt; (Control-C to abort)...
-&gt;&gt;&gt; Unmerging in: 5 4 3 2 1 
-&gt;&gt;&gt; Unmerging sys-apps/lm_sensors-2.9.2...
+>>> Waiting 5 seconds before starting...
+>>> (Control-C to abort)...
+>>> Unmerging in: 5 4 3 2 1 
+>>> Unmerging sys-apps/lm_sensors-2.9.2...
 No package files given... Grabbing a set.
 --- !mtime obj /usr/share/man/man8/sensors-detect.8.gz
 ...
 (snip)
 ...
 --- !targe sym /usr/lib/libsensors.so
-&gt;&gt;&gt; Regenerating /etc/ld.so.cache...
-&gt;&gt;&gt; Regenerating /etc/ld.so.cache...
-&gt;&gt;&gt; Auto-cleaning packages ...
+>>> Regenerating /etc/ld.so.cache...
+>>> Regenerating /etc/ld.so.cache...
+>>> Auto-cleaning packages ...
 
-&gt;&gt;&gt; No outdated packages were found on your system.
+>>> No outdated packages were found on your system.
 
  * GNU info directory index is up-to-date.
  * IMPORTANT: 14 config files in /etc need updating.

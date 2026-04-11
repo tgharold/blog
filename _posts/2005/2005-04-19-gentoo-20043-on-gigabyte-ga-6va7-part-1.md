@@ -29,9 +29,9 @@ Links:
 The LinuxDevCenter article actually explains how to create the mdadm.conf file yourself (semi-automatically).  Notice the use of wild cards that lets me compactly express that I want all 4 partitions on /dev/hda and /dev/hdc to be used in arrays.  You will need to edit the results to match the syntax of the mdadm.conf file.
 
 ```
-# echo 'DEVICES /dev/hda*' &gt;&gt; /etc/mdadm.conf
-# echo 'DEVICES /dev/hdc*' &gt;&gt; /etc/mdadm.conf
-# mdadm --detail --scan &gt;&gt; /etc/mdadm.conf
+# echo 'DEVICES /dev/hda*' >> /etc/mdadm.conf
+# echo 'DEVICES /dev/hdc*' >> /etc/mdadm.conf
+# mdadm --detail --scan >> /etc/mdadm.conf
 # nano -w /etc/mdadm.conf
 ```
 
@@ -63,7 +63,7 @@ Now, we initialize the 4th raid partition for LVM2 operations.  See [Gentoo LVM2
 ```
 # modprobe dm-mod
 # pvcreate /dev/md3
-# echo 'devices { filter=["r/cdrom/"] }' &gt;/etc/lvm/lvm.conf
+# echo 'devices { filter=["r/cdrom/"] }' >/etc/lvm/lvm.conf
 # vgcreate vgmirror /dev/md3
 # vgscan
 ```
@@ -198,8 +198,8 @@ USE="apache2 kerberos ldap -apm -gif -gnome -gtk -jpeg -kde -mad -mikmod -mpeg -
 Pick up again with [Installing the Gentoo Base System](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=6) in the handbook.  Where we pick a mirror and start the move from stage1 to stage3.  I see that the mirrorselect command has changed between 2004.0 and 2004.3.
 
 ```
-# mirrorselect -i -o &gt;&gt; /mnt/gentoo/etc/make.conf
-# mirrorselect -i -r -o &gt;&gt; /mnt/gentoo/etc/make.conf
+# mirrorselect -i -o >> /mnt/gentoo/etc/make.conf
+# mirrorselect -i -r -o >> /mnt/gentoo/etc/make.conf
 ```
 
 This should have dumped 2 extra lines into your make.conf file (cat /mnt/gentoo/etc/make.conf).  Here is what got added to my make.conf file:

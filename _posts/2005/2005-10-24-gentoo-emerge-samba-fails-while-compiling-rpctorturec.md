@@ -98,7 +98,7 @@ Now to create the backup copy of the broken Samba ebuild.  If you have not alrea
 
 ```
 # cd /etc
-etc # echo 'PORTDIR_OVERLAY="/usr/local/portage"' &gt;&gt; /etc/make.conf
+etc # echo 'PORTDIR_OVERLAY="/usr/local/portage"' >> /etc/make.conf
 etc # cd /usr/local
 local # ls /usr/portage/net-fs/samba/
 local # mkdir portage ; cd portage
@@ -151,25 +151,25 @@ Create the ebuild digest (MD5 signatures) for the patched package.
 
 ```
 samba # ebuild /usr/local/portage/net-fs/samba/samba-3.0.14a-r2.ebuild digest 
-&gt;&gt;&gt; Generating digest file...
-&lt;&lt;&lt; samba-3.0.14a.tar.gz
-&lt;&lt;&lt; samba-vscan-0.3.6.tar.bz2
-&lt;&lt;&lt; samba-3-gentoo-0.3.3.tar.bz2
-&gt;&gt;&gt; Generating manifest file...
-&lt;&lt;&lt; ChangeLog
-&lt;&lt;&lt; metadata.xml
-&lt;&lt;&lt; samba-3.0.14a-r2.ebuild
-&lt;&lt;&lt; samba-3.0.14a-r3.ebuild
-&lt;&lt;&lt; samba-3.0.20-r1.ebuild
-&lt;&lt;&lt; samba-3.0.20a.ebuild
-&lt;&lt;&lt; samba-3.0.20b.ebuild
-&lt;&lt;&lt; files/digest-samba-3.0.14a-r2
-&lt;&lt;&lt; files/README.gentoo
-&lt;&lt;&lt; files/digest-samba-3.0.14a-r3
-&lt;&lt;&lt; files/digest-samba-3.0.20-r1
-&lt;&lt;&lt; files/digest-samba-3.0.20a
-&lt;&lt;&lt; files/digest-samba-3.0.20b
-&gt;&gt;&gt; Computed message digests.
+>>> Generating digest file...
+<<< samba-3.0.14a.tar.gz
+<<< samba-vscan-0.3.6.tar.bz2
+<<< samba-3-gentoo-0.3.3.tar.bz2
+>>> Generating manifest file...
+<<< ChangeLog
+<<< metadata.xml
+<<< samba-3.0.14a-r2.ebuild
+<<< samba-3.0.14a-r3.ebuild
+<<< samba-3.0.20-r1.ebuild
+<<< samba-3.0.20a.ebuild
+<<< samba-3.0.20b.ebuild
+<<< files/digest-samba-3.0.14a-r2
+<<< files/README.gentoo
+<<< files/digest-samba-3.0.14a-r3
+<<< files/digest-samba-3.0.20-r1
+<<< files/digest-samba-3.0.20a
+<<< files/digest-samba-3.0.20b
+>>> Computed message digests.
 
 samba # emerge -pv samba
 

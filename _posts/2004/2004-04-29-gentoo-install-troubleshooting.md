@@ -38,7 +38,7 @@ So... time to put the LiveCD back in, walk through the commands to get me back t
     env-update
     source /etc/profile 
 
-At this point, I'm back to where I'm ready to configure the kernel ([previous attempt](/blog/2004-04-28-gentoo-epia-install-part-5/)).  I don't need to emerge the kernel sources again (AFAIK), just reconfigure.  Flip back to [chapter 7c in the gentoo handbook](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=7).  I think my old configuration should be in /usr/src/linux/.config (that's a hidden file).  First thing I did was make a copy of that file "cat .config &gt;&gt; my-first-config".  Then I did the "make menuconfig" command, which did load my existing settings from the .config file.
+At this point, I'm back to where I'm ready to configure the kernel ([previous attempt](/blog/2004-04-28-gentoo-epia-install-part-5/)).  I don't need to emerge the kernel sources again (AFAIK), just reconfigure.  Flip back to [chapter 7c in the gentoo handbook](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=7).  I think my old configuration should be in /usr/src/linux/.config (that's a hidden file).  First thing I did was make a copy of that file "cat .config >> my-first-config".  Then I did the "make menuconfig" command, which did load my existing settings from the .config file.
 
 Under (F)ile systems, (P)seudo filesystems, I had to turn on "/dev file system suppport (OBSOLETE)".  Apparently, while obsolete, it's still required by 2.6.3.  I also turned on "Automatically mount at boot".  Exited, saved changes, re-make the kernel, re-install the kernel.
 

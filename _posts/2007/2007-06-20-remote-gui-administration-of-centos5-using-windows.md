@@ -51,9 +51,9 @@ I'll make the assumption that you're going to use a PuTTY public-key pair.  If y
 
     (login as yourself or as root and then "su" to your username)
     # cd ~/.ssh
-    # cat &gt; machinename@svn.pub
+    # cat > machinename@svn.pub
     (paste in PuTTY key)
-    # ssh-keygen -i -f machinename@svn.pub &gt;&gt; authorized_keys
+    # ssh-keygen -i -f machinename@svn.pub >> authorized_keys
     (Ctrl-D to exit)
 <ol>
 
@@ -63,7 +63,7 @@ I'll make the assumption that you're going to use a PuTTY public-key pair.  If y
 <li>Enter the hostname (i.e. 192.168.1.1)
 
 </li>
-<li>Go to the Connection -&gt; SSH -&gt; X11 tab
+<li>Go to the Connection -> SSH -> X11 tab
 
 </li>
 <li>Turn ON "X11 forwarding"

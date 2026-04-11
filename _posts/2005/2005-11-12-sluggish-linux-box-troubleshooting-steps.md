@@ -48,17 +48,17 @@ So I went and looked at the differences between my Nov 8th kernel (which works, 
 ```
 nogitsune linux # diff /boot/config-2.6.13-8Nov2005 /boot/config-2.6.13-9Nov2005
 4c4
-&lt; # Tue Nov  8 18:19:03 2005
+< # Tue Nov  8 18:19:03 2005
 ---
-&gt; # Wed Nov  9 05:13:43 2005
+> # Wed Nov  9 05:13:43 2005
 416c416
-&lt; # CONFIG_CHR_DEV_SG is not set
+< # CONFIG_CHR_DEV_SG is not set
 ---
-&gt; CONFIG_CHR_DEV_SG=y
+> CONFIG_CHR_DEV_SG=y
 456c456
-&lt; # CONFIG_SCSI_SATA_PROMISE is not set
+< # CONFIG_SCSI_SATA_PROMISE is not set
 ---
-&gt; CONFIG_SCSI_SATA_PROMISE=y
+> CONFIG_SCSI_SATA_PROMISE=y
 nogitsune linux #
 ```
 
@@ -99,7 +99,7 @@ livecd ~ # chmod 1777 /mnt/gentoo/var/tmp
 livecd ~ # mount -t proc none /mnt/gentoo/proc
 livecd ~ # chroot /mnt/gentoo /bin/bash
 livecd / # env-update
-&gt;&gt;&gt; Regenerating /etc/ld.so.cache...
+>>> Regenerating /etc/ld.so.cache...
 livecd / # source /etc/profile
 ```
 

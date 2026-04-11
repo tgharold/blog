@@ -34,9 +34,9 @@ A) Install PuTTY on the Win2003 server
 # mkdir .ssh
 # chmod 700 .ssh
 # cd .ssh
-# cat &gt; machinename@svn.pub
+# cat > machinename@svn.pub
 (paste in PuTTY key)
-# ssh-keygen -i -f machinename@svn.pub &gt;&gt; authorized_keys
+# ssh-keygen -i -f machinename@svn.pub >> authorized_keys
 # vi authorized_keys
 (add command="svnserve -t" to the front of the new key line)
 # chmod 600 *

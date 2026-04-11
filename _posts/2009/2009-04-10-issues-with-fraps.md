@@ -24,6 +24,6 @@ Now for the fun symptoms:
 
 - A task that failed to encode the first time, will often work the second time.  So there's a random element of chance here.
 
-- When things are screwy, sometimes the VirtualDub menu will disappear while using the "File -&gt; Append AVI segment" menu option.  This symptom may or not actually be related to the issue.  By vanish, I mean that the preview window will bleed through from the background and wipe out the dropped down File menu.  But you can still select menu options by moving the mouse up/down.
+- When things are screwy, sometimes the VirtualDub menu will disappear while using the "File -> Append AVI segment" menu option.  This symptom may or not actually be related to the issue.  By vanish, I mean that the preview window will bleed through from the background and wipe out the dropped down File menu.  But you can still select menu options by moving the mouse up/down.
 
 All of this points to problems in the video codec rendering path.  It's made mass conversion of FRAPS video a real PITA in VirtualDub, because I'm doing 2-pass XVid encoding so a failure in the 1st pass means that the 2nd pass also needs to be tossed.

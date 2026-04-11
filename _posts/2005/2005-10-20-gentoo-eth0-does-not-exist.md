@@ -24,14 +24,14 @@ During that build, I didn't touch network devices at all. It had automatically s
 ```
 
 (D)evice drivers
---&gt; N(e)tworking support
---&gt; --&gt; N(e)twork device support (should already be BUILT-IN)
---&gt; --&gt; --&gt; (E)thernet (10 or 100Mbit)
---&gt; --&gt; --&gt; --&gt; (T)ulip family network device support
---&gt; --&gt; --&gt; --&gt; --&gt; "(T)ulip" family network device support (turn ON as BUILT-IN)
---&gt; --&gt; --&gt; --&gt; --&gt; --&gt; (D)ECchip Tulip (dc2114x) PCI support (turn ON as BUILT-IN)
---&gt; --&gt; --&gt; --&gt; --&gt; --&gt; --&gt; (I left the sub-options alone)
---&gt; --&gt; --&gt; --&gt; (E)ISA, VLB, PCI and on board controllers (turn OFF)
+--> N(e)tworking support
+--> --> N(e)twork device support (should already be BUILT-IN)
+--> --> --> (E)thernet (10 or 100Mbit)
+--> --> --> --> (T)ulip family network device support
+--> --> --> --> --> "(T)ulip" family network device support (turn ON as BUILT-IN)
+--> --> --> --> --> --> (D)ECchip Tulip (dc2114x) PCI support (turn ON as BUILT-IN)
+--> --> --> --> --> --> --> (I left the sub-options alone)
+--> --> --> --> (E)ISA, VLB, PCI and on board controllers (turn OFF)
 
 Now, make sure that /boot is mounted, then compile your new kernel.
 

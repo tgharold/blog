@@ -149,7 +149,7 @@ $ cd ~/
 $ mkdir .ssh
 $ chmod 700 .ssh
 $ cd .ssh
-$ cat &gt;&gt; authorized_keys
+$ cat >> authorized_keys
 (paste in the SSH key from the other server)
 $ chmod 600 authorized_keys
 ```

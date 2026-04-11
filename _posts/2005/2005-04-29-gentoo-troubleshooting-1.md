@@ -42,7 +42,7 @@ livecd root # mount /dev/md1 /mnt/gentoo
 livecd root # mount /dev/md0 /mnt/gentoo/boot
 livecd root # modprobe dm-mod
 livecd root # mkdir /etc/lvm
-livecd root # echo 'devices { filter=["r/cdrom/"] }' &gt;/etc/lvm/lvm.conf
+livecd root # echo 'devices { filter=["r/cdrom/"] }' >/etc/lvm/lvm.conf
 livecd / # lvscan
 livecd / # lvchange -ay vgmirror
 ```
@@ -100,7 +100,7 @@ livecd / # reboot
 Now to see if it works.  No luck.  Redoing the above, but going to re-do my LVM2, but changing to be 'static' per the wiki.
 
 ```
-# echo 'sys-fs/lvm2 static' &gt;&gt; /etc/portage/package.use
+# echo 'sys-fs/lvm2 static' >> /etc/portage/package.use
 # emerge lvm2
 ```
 

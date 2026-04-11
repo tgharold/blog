@@ -28,7 +28,7 @@ Received: from gawab.com (www.gawab.com [204.97.230.36])
 	by precept.geekmail.cc (8.12.10/8.12.9) with SMTP id i2A5uUHS022829
 	for <tgh>; Tue, 9 Mar 2004 21:56:31 -0800
 Received: (qmail 96472 invoked by uid 1004); 10 Mar 2004 05:59:54 -0000
-Message-ID: &lt;20040310055954.96471.qmail@gawab.com&gt;
+Message-ID: <20040310055954.96471.qmail@gawab.com>
 Received: from 82.128.1.170 by gawab.com with HTTP;
 	Wed, 10 Mar 2004 05:59:54 GMT
 From: "DAVID WINK" <rev_davidwink8>

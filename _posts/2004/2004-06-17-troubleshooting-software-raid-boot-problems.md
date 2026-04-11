@@ -12,13 +12,13 @@ tags:
 
 First problem is that the system boots straight into "grub".  Probably due to a missing "grub.conf" file, which I'm pretty sure I had written to the proper location earlier in the install. So I'll load the kernel by hand and fix the config file once I get the box to boot properly.
 ```
-grub&gt;
-grub&gt; cat /boot/grub/grub.conf
+grub>
+grub> cat /boot/grub/grub.conf
 (no file found)
 
-grub&gt; root (hd0,0)
-grub&gt; kernel /kernel-2.6.6-gentoo root=/dev/md2
-grub&gt; boot
+grub> root (hd0,0)
+grub> kernel /kernel-2.6.6-gentoo root=/dev/md2
+grub> boot
 ```
 
 This starts the kernel boot process, which will then lead me to my second error.  In the meantime, if you use [shift-PgUp] and [shift-PgDn] you can scroll back and forth through the boot messages.  A minor problem is that since the raid didn't shutdown cleanly, there are numerous "md: md<i>x</i>: raid array is not clean -- starting background reconstruction" messages.  And I can't even begin to troubleshoot the "Kernel panic: No init found" error until resync is done (that's a 2.5-3.0 hour process).
@@ -58,7 +58,7 @@ livecd root # ls /mnt/gentoo/boot
 (if you have files already in /boot, this verifies that you mounted in the proper order)
 
 livecd root # mkdir /etc/lvm
-livecd root # echo 'devices { filter=["r/cdrom/"] }' &gt; /etc/lvm/lvm.conf
+livecd root # echo 'devices { filter=["r/cdrom/"] }' > /etc/lvm/lvm.conf
 livecd root # vgscan
 (verify that it found your existing volume group or groups)
 
@@ -101,7 +101,7 @@ livecd gentoo # cp /mnt/cdrom/distfiles/* /mnt/gentoo/usr/portage/distfiles/
 livecd gentoo # nano -w /mnt/gentoo/etc/make.conf
 (repeat your make.conf from the initial install)
 
-livecd gentoo # mirrorselect -a -s4 -o | grep -ve '^Netselect' &gt;&gt; /mnt/gentoo/etc/make.conf
+livecd gentoo # mirrorselect -a -s4 -o | grep -ve '^Netselect' >> /mnt/gentoo/etc/make.conf
 livecd gentoo # cp -L /mnt/gentoo/etc/make.conf /mnt/gentoo/boot/make.conf-backupcopy
 livecd gentoo # cp -L /etc/resolv.conf /mnt/gentoo/etc/resolv.conf
 livecd gentoo # cp -L /etc/raidtab /mnt/gentoo/etc/raidtab

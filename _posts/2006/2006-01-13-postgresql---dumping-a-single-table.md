@@ -10,8 +10,8 @@ tags:
 ---
 
 
-$ pg_dump -Fp -U postgres --table=TABLENAME DATABASENAME &gt; TABLENAME.sql
+$ pg_dump -Fp -U postgres --table=TABLENAME DATABASENAME > TABLENAME.sql
 
-$ pg_dump -Fp -U postgres --table=TABLENAME DATABASENAME | gzip -c &gt; TABLENAME.sql.gz
+$ pg_dump -Fp -U postgres --table=TABLENAME DATABASENAME | gzip -c > TABLENAME.sql.gz
 
 Useful for dumping out individual tables from a particular database in plain-text (SQL) format.

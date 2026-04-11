@@ -77,8 +77,8 @@ id_rsa.pub
 
 6. Now append the contents of these files to the ".ssh/authorized_keys" file on the host server.
 
-type id_dsa.pub &gt;&gt; authorized_keys
-type id_rsa.pub &gt;&gt; authorized_keys
+type id_dsa.pub >> authorized_keys
+type id_rsa.pub >> authorized_keys
 
 7. Now to configure SSHD on the host server.  You will need to find and edit the sshd_config file (probably in "C:\Program Files\cwRsyncServer\etc").  The following changes should be made in the current version default settings.
 

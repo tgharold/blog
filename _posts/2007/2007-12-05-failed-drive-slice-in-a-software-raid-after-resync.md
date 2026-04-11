@@ -20,13 +20,13 @@ The script is very simple, and you can even fire off the command by writing "che
 # This deals with the issue where a seldom-read disk block has gone bad
 # by doing a daily/weekly verification of the array.
 
-echo check &gt; /sys/block/md0/md/sync_action
-echo check &gt; /sys/block/md1/md/sync_action
-echo check &gt; /sys/block/md2/md/sync_action
-echo check &gt; /sys/block/md3/md/sync_action
-echo check &gt; /sys/block/md4/md/sync_action
-echo check &gt; /sys/block/md5/md/sync_action
-echo check &gt; /sys/block/md6/md/sync_action
+echo check > /sys/block/md0/md/sync_action
+echo check > /sys/block/md1/md/sync_action
+echo check > /sys/block/md2/md/sync_action
+echo check > /sys/block/md3/md/sync_action
+echo check > /sys/block/md4/md/sync_action
+echo check > /sys/block/md5/md/sync_action
+echo check > /sys/block/md6/md/sync_action
 ```
 
 In this particular case, all of my RAID slices verified correctly, except for one of them.  In this particular situation I'm running a triple-active RAID1 array.  (Instead of using a hot-spare disk, I'm putting live data onto all three disks and using all three actively.)
@@ -60,7 +60,7 @@ md7 : active raid1 sdf1[2] sde1[1] sdd1[0]
 md1 : active raid1 sdc2[3](F) sdb2[1] sda2[0]
       12289600 blocks [3/2] [UU_]
 
-unused devices: &lt;none&gt;
+unused devices: <none>
 ```
 
 The md1 array is my / (root) partition.  Since the rest of the disk slices appear to be fine, I'm going to proceed with the assumption that it was a minor glitch.
@@ -205,7 +205,7 @@ ATA Version is:   7
 ATA Standard is:  ATA/ATAPI-7 T13 1532D revision 4a
 Local Time is:    Wed Dec  5 09:43:36 2007 EST
 
-==&gt; WARNING: May need -F samsung or -F samsung2 enabled; see manual for details.
+==> WARNING: May need -F samsung or -F samsung2 enabled; see manual for details.
 
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled

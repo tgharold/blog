@@ -26,47 +26,47 @@ Linux Kernel v2.6.13-gentoo-r5 Configuration
 (G)eneral setup
 (L)oadable module support
 (P)rocessor type and features
---&gt; (P)rocessor family (changed to "AMD-Opteron/Athlon64")
---&gt; (S)ymetric multi-processing support (turned this one OFF)
+--> (P)rocessor family (changed to "AMD-Opteron/Athlon64")
+--> (S)ymetric multi-processing support (turned this one OFF)
 (P)ower management options (ACPI, APM)
 (B)us options (PCI, etc.)
 (E)xecutable file formats
 (D)evice drivers
---&gt; ATA/ATAPI/MFM/RLL support
---&gt; --&gt; (g)eneric/default IDE chipset support (should already be ON)
---&gt; (S)CSI device support
---&gt; --&gt; (S)CSI generic support (turn this ON)
---&gt; --&gt; (S)CSI low-level drivers
---&gt; --&gt; --&gt; (S)erial ATA (SATA) support (should already be ON)
---&gt; --&gt; --&gt; --&gt; (I)ntel PIIX/ICH SATA support (turn OFF)
---&gt; --&gt; --&gt; --&gt; (P)romise SATA TX2/TX4 support (turn ON as BUILT-IN)
---&gt; M(u)lti-device support (should already be ON)
---&gt; --&gt; (R)AID support (turn it ON as BUILT-IN)
---&gt; --&gt; --&gt; (R)AID-1 mirroring mode (turn it ON as BUILT-IN)
---&gt; --&gt; (D)evice mapper support (set to MODULE or BUILT-IN)
---&gt; N(e)tworking support
---&gt; --&gt; (E)thernet (10 or 100Mbit)
---&gt; --&gt; --&gt; (E)thernet (10 or 100Mbit) (Turn OFF)
---&gt; --&gt; (E)thernet (1000Mbit)
---&gt; --&gt; --&gt; (I)ntel(R) PRO/1000 Gigabit Ethernet support (turn OFF)
---&gt; --&gt; --&gt; N(e)w SysKonnect GigaEthernet support (EXPERIMENTAL) (turn ON as BUILT-IN)
---&gt; --&gt; --&gt; (B)roadcom Tigon3 support (turn OFF)
---&gt; (C)haracter Devices
---&gt; --&gt; (I)ntel/AMD/VIA HW Random Number Generator (should be ON)
---&gt; --&gt; (I)ntel 440LX/BX/GX, I8xx and E7x05 chipset support (turn it OFF)
---&gt; (S)ound
---&gt; --&gt; (S)ound card support (turn OFF)
+--> ATA/ATAPI/MFM/RLL support
+--> --> (g)eneric/default IDE chipset support (should already be ON)
+--> (S)CSI device support
+--> --> (S)CSI generic support (turn this ON)
+--> --> (S)CSI low-level drivers
+--> --> --> (S)erial ATA (SATA) support (should already be ON)
+--> --> --> --> (I)ntel PIIX/ICH SATA support (turn OFF)
+--> --> --> --> (P)romise SATA TX2/TX4 support (turn ON as BUILT-IN)
+--> M(u)lti-device support (should already be ON)
+--> --> (R)AID support (turn it ON as BUILT-IN)
+--> --> --> (R)AID-1 mirroring mode (turn it ON as BUILT-IN)
+--> --> (D)evice mapper support (set to MODULE or BUILT-IN)
+--> N(e)tworking support
+--> --> (E)thernet (10 or 100Mbit)
+--> --> --> (E)thernet (10 or 100Mbit) (Turn OFF)
+--> --> (E)thernet (1000Mbit)
+--> --> --> (I)ntel(R) PRO/1000 Gigabit Ethernet support (turn OFF)
+--> --> --> N(e)w SysKonnect GigaEthernet support (EXPERIMENTAL) (turn ON as BUILT-IN)
+--> --> --> (B)roadcom Tigon3 support (turn OFF)
+--> (C)haracter Devices
+--> --> (I)ntel/AMD/VIA HW Random Number Generator (should be ON)
+--> --> (I)ntel 440LX/BX/GX, I8xx and E7x05 chipset support (turn it OFF)
+--> (S)ound
+--> --> (S)ound card support (turn OFF)
 (F)ile systems
---&gt; N(e)twork File Systems
---&gt; --&gt; (S)MB file system support (turn ON as BUILT-IN)
---&gt; --&gt; (C)IFS support (turn ON as BUILT-IN)
+--> N(e)twork File Systems
+--> --> (S)MB file system support (turn ON as BUILT-IN)
+--> --> (C)IFS support (turn ON as BUILT-IN)
 (P)rofiling support
 (K)ernel hacking
 (S)ecurity options
 (C)ryptographic options
---&gt; (C)ryptographic API (turn ON)
---&gt; --&gt; HM(A)C support (NEW) (turn ON as BUILT-IN)
---&gt; --&gt; (turn ON all other options as MODULE)
+--> (C)ryptographic API (turn ON)
+--> --> HM(A)C support (NEW) (turn ON as BUILT-IN)
+--> --> (turn ON all other options as MODULE)
 (L)ibrary routines
 
 Exit and save your configuration. Then build the kernel (the following command is for 2.6 kernels). Expect the compile to take almost no time at all on an AMD64 chip.  I used to wait an hour for all this to happen on my old VIA EPIA.
@@ -102,10 +102,10 @@ Add your new kernel.  I'd recommend always leaving the configuration for your ol
 This is fixed by adding:
 
 (D)evice drivers
---&gt; (S)CSI device support
---&gt; --&gt; (S)CSI low-level drivers
---&gt; --&gt; --&gt; (S)erial ATA (SATA) support (should already be ON)
---&gt; --&gt; --&gt; --&gt; (P)romise SATA TX2/TX4 support (turn ON as BUILT-IN)
+--> (S)CSI device support
+--> --> (S)CSI low-level drivers
+--> --> --> (S)erial ATA (SATA) support (should already be ON)
+--> --> --> --> (P)romise SATA TX2/TX4 support (turn ON as BUILT-IN)
 
 1b) However, once you've turned on that particular driver (CONFIG_SCSI_SATA_PROMISE=y), your system will slow down and become very sluggish anytime that mdadm is rebuilding an array with drives attached to that controller.  You will also start to see the following messages in your "dmesg" output:
 
@@ -122,15 +122,15 @@ rip __do_softirq+0x48/0xb0
 Key things to look for in menuconfig for Rocket133 might be:
 
 (D)evice drivers
---&gt; ATA/ATAPI/MFM/RLL support                                                                     
---&gt; --&gt; SCSI emulation support                                                                    
---&gt; --&gt; generic/default IDE chipset support                                                       
---&gt; --&gt; PCI IDE chipset support                                                                   
---&gt; --&gt; Generic PCI IDE Chipset Support
+--> ATA/ATAPI/MFM/RLL support                                                                     
+--> --> SCSI emulation support                                                                    
+--> --> generic/default IDE chipset support                                                       
+--> --> PCI IDE chipset support                                                                   
+--> --> Generic PCI IDE Chipset Support
 
 Probably the only one that matters is (CONFIG_BLK_DEV_HPT366=y):
 
---&gt; --&gt; HPT36X/37X chipset support (turn this ON as BUILT-IN)
+--> --> HPT36X/37X chipset support (turn this ON as BUILT-IN)
 
 Yes, the Rocket 133SB (Rocket133SB) HPT302 chip is apparently supported by the HPT366.c file.  You can find this by grepping the kernel sources:
 

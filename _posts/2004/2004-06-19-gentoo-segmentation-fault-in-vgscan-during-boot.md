@@ -16,7 +16,7 @@ Now for the other error that I got during the initial bootup.
 * Loading module dm-mod...                                                 [ ok ]
 * Autoloaded 1 module(s)
 * Setting up the Logical Volume Manager...
-/sbin/rc: line 429: 4422 Segmentation Fault /sbin/vgscan &gt;/dev/nul         [ ok ]
+/sbin/rc: line 429: 4422 Segmentation Fault /sbin/vgscan >/dev/nul         [ ok ]
 * Starting up RAID devices: ...
 * Checking all filesystems...
 /dev/md0: clean, 39/18072 files, 5573/72192 blocks
@@ -38,7 +38,7 @@ Looking closer at the boot screen, I can see the "md:" lines correctly autodetec
 
 <b>Attempt #1:</b> 
 
-Moved things around in /etc/init.d/checkfs.  No change in the end-result, except that the messages are re-ordered ("Starting up RAID devices" now appears before "Setting up the Logical Volume Manager") and the error message changes to "4422 Segmentation Fault /sbin/vgscan &gt;/dev/nul".  Probably a dry-hole in terms of finding and fixing the real problem.
+Moved things around in /etc/init.d/checkfs.  No change in the end-result, except that the messages are re-ordered ("Starting up RAID devices" now appears before "Setting up the Logical Volume Manager") and the error message changes to "4422 Segmentation Fault /sbin/vgscan >/dev/nul".  Probably a dry-hole in terms of finding and fixing the real problem.
 
 <b>Attempt #2:</b> 
 

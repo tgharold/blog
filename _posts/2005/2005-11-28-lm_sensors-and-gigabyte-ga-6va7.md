@@ -18,20 +18,20 @@ Working on setting up lm_sensors on my Gigabyte GA-6VA7+ (Intel Celeron Coppermi
 ```
 
 Device drivers
---&gt; I2C Support
---&gt; --&gt; I2C Support (turn ON as BUILT-IN)
---&gt; --&gt; --&gt; I2C device interface
---&gt; --&gt; --&gt; --&gt; (turn all sub-options on as MODULE)
---&gt; --&gt; --&gt; I2C Algorithms
---&gt; --&gt; --&gt; --&gt; (turn all sub-options on as MODULE)
---&gt; --&gt; --&gt; I2C Hardware Bus support  
---&gt; --&gt; --&gt; --&gt; (turn all sub-options on as MODULE)
---&gt; --&gt; Miscellaneous I2C Chip support
---&gt; --&gt; --&gt; (turn all sub-options on as MODULE)
---&gt; --&gt; I2C Core debugging messages (turn ON as BUILT-IN)
---&gt; --&gt; I2C Algorithm debugging messages (turn ON as BUILT-IN)
---&gt; --&gt; I2C Bus debugging messages (turn ON as BUILT-IN)
---&gt; --&gt; I2C Chip debugging messages (turn ON as BUILT-IN)
+--> I2C Support
+--> --> I2C Support (turn ON as BUILT-IN)
+--> --> --> I2C device interface
+--> --> --> --> (turn all sub-options on as MODULE)
+--> --> --> I2C Algorithms
+--> --> --> --> (turn all sub-options on as MODULE)
+--> --> --> I2C Hardware Bus support  
+--> --> --> --> (turn all sub-options on as MODULE)
+--> --> Miscellaneous I2C Chip support
+--> --> --> (turn all sub-options on as MODULE)
+--> --> I2C Core debugging messages (turn ON as BUILT-IN)
+--> --> I2C Algorithm debugging messages (turn ON as BUILT-IN)
+--> --> I2C Bus debugging messages (turn ON as BUILT-IN)
+--> --> I2C Chip debugging messages (turn ON as BUILT-IN)
 
 Now, make sure that /boot is mounted, then compile your new kernel.
 
@@ -56,7 +56,7 @@ While that's compiling, read the [lm_sensors FAQ](http://www2.lm-sensors.nu/~lm7
 (Notice the warnings at the end of the ebuild.)
 
 ```
-&gt;&gt;&gt; /etc/init.d/lm_sensors
+>>> /etc/init.d/lm_sensors
  * 
  * Next you need to run:
  *   /usr/sbin/sensors-detect
@@ -64,7 +64,7 @@ While that's compiling, read the [lm_sensors FAQ](http://www2.lm-sensors.nu/~lm7
  *   /etc/conf.d/lm_sensors
  * 
  * You will also need to run the above command if you're upgrading from
- * &lt;=lm_sensors-2.9.0, as the needed entries in /etc/conf.d/lm_sensors has
+ * <=lm_sensors-2.9.0, as the needed entries in /etc/conf.d/lm_sensors has
  * changed.
  * 
  * Be warned, the probing of hardware in your system performed by
@@ -73,8 +73,8 @@ While that's compiling, read the [lm_sensors FAQ](http://www2.lm-sensors.nu/~lm7
  * 
  * Please see the lm_sensors documentation and website for more information.
  * 
-&gt;&gt;&gt; Regenerating /etc/ld.so.cache...
-&gt;&gt;&gt; sys-apps/lm_sensors-2.9.2 merged.
+>>> Regenerating /etc/ld.so.cache...
+>>> sys-apps/lm_sensors-2.9.2 merged.
 (snip)
 
 # /usr/sbin/sensors-detect

@@ -58,9 +58,9 @@ LegendI[localhost.system.users]: Users
 Legend1[localhost.system.users]: Approximate number of users logged in
 ShortLegend[localhost.system.users]: ~
 Title[localhost.system.users]: firewall:Users - Approximate System Users
-PageTop[localhost.system.users]: &lt;h1&gt;firewall: Approximate System Users&lt;/h1&gt;
-&#160;&#160;&#160;&#160;&lt;div id="sysdetails"&gt;
-&#160;&#160;&#160;&#160;&lt;/div&gt;
+PageTop[localhost.system.users]: <h1>firewall: Approximate System Users</h1>
+&#160;&#160;&#160;&#160;<div id="sysdetails">
+&#160;&#160;&#160;&#160;</div>
 
 #Target[localhost.system.processes]: hrSystemProcesses.0&amp;hrSystemProcesses.0:public@localhost
 Target[localhost.system.processes]: .1.3.6.1.2.1.25.1.6.0&amp;.1.3.6.1.2.1.25.1.6.0:public@localhost
@@ -70,9 +70,9 @@ LegendI[localhost.system.processes]: Processes
 Legend1[localhost.system.processes]: Approximate number of processes
 ShortLegend[localhost.system.processes]: ~
 Title[localhost.system.processes]: firewall:Procs - Approximate System Processes
-PageTop[localhost.system.processes]: &lt;h1&gt;firewall: Approximate System Processes&lt;/h1&gt;
-&#160;&#160;&#160;&#160;&lt;div id="sysdetails"&gt;
-&#160;&#160;&#160;&#160;&lt;/div&gt;
+PageTop[localhost.system.processes]: <h1>firewall: Approximate System Processes</h1>
+&#160;&#160;&#160;&#160;<div id="sysdetails">
+&#160;&#160;&#160;&#160;</div>
 ```
 
 <b>Real Memory in Use</b>

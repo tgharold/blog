@@ -41,7 +41,7 @@ Support for sparse working copies got even better in 1.6 because now you can tri
 <b>Populating your working copy:</b>
 <ol>
 
-<li>Right-click anywhere inside your working copy and bring up the TortoiseSVN Repository Browser (TSVN -&gt; Repo-Browser).
+<li>Right-click anywhere inside your working copy and bring up the TortoiseSVN Repository Browser (TSVN -> Repo-Browser).
 
 </li>
 <li>In the Repo-Browser, navigate to the project tree that you want to bring to your working copy.  
@@ -63,7 +63,7 @@ Note: Sometimes the Repo-Browser will lose track of what has / hasn't been broug
 <li>Right-click on the folder that you want to remove from your working copy and do an "SVN Commit".  This is to make sure that there's nothing in the working copy that you have forgotten to commit.
 
 </li>
-<li>Right-click on the folder that you want to remove from your working copy and use the TortoiseSVN -&gt; Update to revision option.
+<li>Right-click on the folder that you want to remove from your working copy and use the TortoiseSVN -> Update to revision option.
 
 </li>
 <li>Change the "Update Depth" to "Exclude" and click the "OK" button.
