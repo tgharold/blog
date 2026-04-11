@@ -133,16 +133,6 @@ def find_new_markdown_paths(unique_old_urls_data):
                                         data['path_to_new_markdown_file'] = file_path
                                         print(f"  High-quality fuzzy match used (score: {best_match[1]:.2f}): {filename} -> {file_path}")
                                         break
-                            # If no high-quality matches, but there are multiple matches, use the best one
-                            else:
-                                best_match = matches_and_scores[0]
-                                matched_file = best_match[0]
-                                # Find the actual file path for this match
-                                for file_path in found_files:
-                                    if os.path.splitext(os.path.basename(file_path))[0] == matched_file:
-                                        data['path_to_new_markdown_file'] = file_path
-                                        print(f"  Using best fuzzy match (score: {best_match[1]:.2f}): {filename} -> {file_path}")
-                                        break
                     else:
                         print(f"  No fuzzy matches found for {filename}")
 
