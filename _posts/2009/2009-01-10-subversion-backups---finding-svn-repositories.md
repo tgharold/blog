@@ -20,21 +20,21 @@ Caveat #2: I'm making the assumption that all of your repositories are stored in
 
 This is pretty simple, we're just going to use find and grep.
 
-# find /var/svn -name uuid | grep "db/uuid"
+    # find /var/svn -name uuid | grep "db/uuid"
 
-/var/svn/tgh-photo/db/uuid
-/var/svn/tgh-dev/db/uuid
-/var/svn/tgh-web/db/uuid
+    /var/svn/tgh-photo/db/uuid
+    /var/svn/tgh-dev/db/uuid
+    /var/svn/tgh-web/db/uuid
 
 <b>Step #2 - Clean up the pathnames</b>
 
 Even better, we can tack a sed command onto the end to trim off the "/db/uuid" portion, which gets us exactly what we need for passing to the "svnadmin hotcopy" command.
 
-# find /var/svn -name uuid | grep "db/uuid" | sed 's/\/db\/uuid//'
+    # find /var/svn -name uuid | grep "db/uuid" | sed 's/\/db\/uuid//'
 
-/var/svn/tgh-photo
-/var/svn/tgh-dev
-/var/svn/tgh-web
+    /var/svn/tgh-photo
+    /var/svn/tgh-dev
+    /var/svn/tgh-web
 
 (Make sure that you get all of the "\" and "/" in the right places.)
 
@@ -44,13 +44,13 @@ Since I'm going to create a script variable called "BASE" that equals "/var/svn/
 
 However, we'll need to convert the BASE variable into something that sed can properly deal with.  Otherwise the slashes won't be escaped properly for the sed replacement.
 
-# echo "/var/svn/" | sed 's/\//\\\//g'
-\/var\/svn\/
+    # echo "/var/svn/" | sed 's/\//\\\//g'
+    \/var\/svn\/
 
-# find /var/svn -name uuid | grep "db/uuid" | sed 's/\/db\/uuid//' | sed 's/^\/var\/svn\///'
-tgh-photo
-tgh-dev
-tgh-web
+    # find /var/svn -name uuid | grep "db/uuid" | sed 's/\/db\/uuid//' | sed 's/^\/var\/svn\///'
+    tgh-photo
+    tgh-dev
+    tgh-web
 
 Or, even better, we can use a different delimiter for sed.  That gives us a search line of:
 

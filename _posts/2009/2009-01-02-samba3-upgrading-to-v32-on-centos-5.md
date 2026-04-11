@@ -20,8 +20,8 @@ What I've found that looks promising is:
 
 Which has a .repo file and looks like it might be usable as a repository for yum.  (See "[Get the latest Samba from Sernet](https://secure.linux.ncsu.edu/moin/SambaRepos)" for confirmation of this.)
 
-# cd /etc/yum.repos.d/
-# wget http://ftp.sernet.de/pub/samba/recent/centos/5/sernet-samba.repo
+    # cd /etc/yum.repos.d/
+    # wget http://ftp.sernet.de/pub/samba/recent/centos/5/sernet-samba.repo
 
 Now, the major change is that the RedHat/CentOS packages are named "samba.x86_64" while the sernet.de packages are named "samba3.x86_64".  Also, the sernet.de folks don't sign their packages, so you will need to add "gpgcheck=0" to the end of the .repo file.
 
@@ -29,8 +29,8 @@ Now, the major change is that the RedHat/CentOS packages are named "samba.x86_64
 
 Note: As always, before doing a major upgrade like this, <b>make backups</b>.  At a minimum, make sure you have good backups of your Samba configuration files.  We use FSVS with a SVN backend for all of our configuration files, which makes an excellent change tracking tool for Linux servers.
 
-# yum remove samba.x86_64
-# yum install samba3.x86_64
-# service smb start
+    # yum remove samba.x86_64
+    # yum install samba3.x86_64
+    # service smb start
 
 With luck, you should now be up and running with v3.2 of Samba.  You can verify this by looking at the latest log file in the /var/log/samba/ directory.

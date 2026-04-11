@@ -34,7 +34,7 @@ The major downside of JBOD mode is that write caching is always disabled by defa
 
 Now, you can enable write caching for JBOD drives, but the unit has to be told to do that after every reboot.  The command (assuming that your controller is "c0" and the unit is "u12") is:
 
-# tw_cli /c0/u12 set cache=on
+    # tw_cli /c0/u12 set cache=on
 
 A final note.  If you're going to use write caching, you should spring for the BBU (Battery Backup Unit).
 
@@ -48,16 +48,20 @@ Of course, due to the strange geometry of a disk touched by the 3ware controller
 
 Anyway, some key commands when using the tw_cli application:
 
-# tw_cli show
+    # tw_cli show
+    
 - Displays the list of controllers installed.  Make note of the "c#" nomenclature as you will use those "c#" labels in later commands to refer to a specific controller.
 
-# tw_cli /c0 show
+    # tw_cli /c0 show
+
 - Displays units/ports for the *first* controller installed.
 
-# tw_cli /c0 rescan
+    # tw_cli /c0 rescan
+
 - Use this after inserting/removing a disk using a hot-swap enclosure.
 
-# tw_cli /c0/ux show all
+    # tw_cli /c0/ux show all
+
 - Displays configuration information for whichever unit # you provided.  Replace the "x" with the unit # that you want to look at (such as /c0/u3 or /c0/u12).
 
 Problem #4 - Performance (a.k.a. I/O wait hell)

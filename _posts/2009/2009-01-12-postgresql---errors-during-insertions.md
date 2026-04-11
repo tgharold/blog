@@ -20,7 +20,7 @@ Running into this issue while doing heavy inserts on a table.  The error also sh
 
 Well, troubleshooting steps.
 
-1) # grep "was terminated" /var/lib/pgsql/data/pg_log/*.log
+1) `# grep "was terminated" /var/lib/pgsql/data/pg_log/*.log`
 
 <code>postgresql-2008-12-23_125649.log:LOG:  server process (PID 15996) was terminated by signal 6: Aborted
 
@@ -34,7 +34,7 @@ All of my terminate statements are due to "signal 6: aborted", so I don't think 
 
 2) Going to look for "Could not open file" in the log files.  The command is: 
 
-# grep "Could not open file" /var/lib/pgsql/data/pg_log/*.log
+    # grep "Could not open file" /var/lib/pgsql/data/pg_log/*.log
 
 <pre>postgresql-2009-01-11_000000.log:DETAIL:  Could not open file "pg_clog/0050": No such file or directory.
 
@@ -56,22 +56,22 @@ A) Shutdown the database, make sure you have good backups.
 
 B) Find out the size of the pg_clog files.  The following shows that ours are 256KB in size.
 
-# ls -lk /var/lib/pgsql/data/pg_clog/ | head
+    # ls -lk /var/lib/pgsql/data/pg_clog/ | head
 
--rw------- 1 postgres postgres 256 Dec 29 17:56 007E
--rw------- 1 postgres postgres 256 Dec 29 19:05 007F
--rw------- 1 postgres postgres 256 Dec 29 20:15 0080
--rw------- 1 postgres postgres 256 Dec 29 21:23 0081
--rw------- 1 postgres postgres 256 Dec 29 22:29 0082
--rw------- 1 postgres postgres 256 Dec 29 23:23 0083
--rw------- 1 postgres postgres 256 Dec 30 00:15 0084
--rw------- 1 postgres postgres 256 Dec 30 01:08 0085
+    -rw------- 1 postgres postgres 256 Dec 29 17:56 007E
+    -rw------- 1 postgres postgres 256 Dec 29 19:05 007F
+    -rw------- 1 postgres postgres 256 Dec 29 20:15 0080
+    -rw------- 1 postgres postgres 256 Dec 29 21:23 0081
+    -rw------- 1 postgres postgres 256 Dec 29 22:29 0082
+    -rw------- 1 postgres postgres 256 Dec 29 23:23 0083
+    -rw------- 1 postgres postgres 256 Dec 30 00:15 0084
+    -rw------- 1 postgres postgres 256 Dec 30 01:08 0085
 
 C) Create the missing clog file:
 
-# dd if=/dev/zero of=/var/lib/pgsql/data/pg_clog/0050 bs=1k count=256
-# chmod 600 /var/lib/pgsql/data/pg_clog/0050
-# chown postgres:postgres /var/lib/pgsql/data/pg_clog/0050
+    # dd if=/dev/zero of=/var/lib/pgsql/data/pg_clog/0050 bs=1k count=256
+    # chmod 600 /var/lib/pgsql/data/pg_clog/0050
+    # chown postgres:postgres /var/lib/pgsql/data/pg_clog/0050
 
 D) Restart the pgsql service.
 

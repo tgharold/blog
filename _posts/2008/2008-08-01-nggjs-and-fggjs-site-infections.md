@@ -14,22 +14,22 @@ One of our users visited a website that was infected with the ngg.js and fgg.js 
 
 We've blocked it in our squid configuration by:
 
-# squid.conf
+    # squid.conf
 
-acl blocked_urls dstdomain "/etc/squid/blocked_urls.squid"
-acl blocked_regex urlpath_regex "/etc/squid/blocked_regex.squid"
+    acl blocked_urls dstdomain "/etc/squid/blocked_urls.squid"
+    acl blocked_regex urlpath_regex "/etc/squid/blocked_regex.squid"
 
-# Block some URLs
-http_access deny blocked_urls
-http_access deny blocked_regex
+    # Block some URLs
+    http_access deny blocked_urls
+    http_access deny blocked_regex
 
-# blocked_urls.squid
-.bjxt.ru
-.njep.ru
-.uhwc.ru
+    # blocked_urls.squid
+    .bjxt.ru
+    .njep.ru
+    .uhwc.ru
 
-# blocked_regexp.squid
-/fgg\.js
-/ngg\.js
+    # blocked_regexp.squid
+    /fgg\.js
+    /ngg\.js
 
 I won't explain this too much except to say that the blocked_urls file is designed to block top-level domains, while the regexp file is for blocking URLs using a regular expression.

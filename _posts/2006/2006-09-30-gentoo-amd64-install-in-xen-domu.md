@@ -85,6 +85,7 @@ shm                     /dev/shm        tmpfs           nodev,nosuid,noexec     
 
 Now for some final clean-up work:
 
+```
 (chroot) livecd linux # nano -w /etc/conf.d/hostname
 (chroot) livecd linux # nano -w /etc/conf.d/net
 config_eth7=( "192.168.142.100 netmask 255.255.255.0" )
@@ -116,6 +117,7 @@ passwd: password updated successfully
 # rc-update add sshd default
 # useradd -m -G users,wheel,audio -s /bin/bash username
 (then put your user's public key file in their ~/.ssh folder)
+```
 
 Time to exit the chroot, unmount everything, and try to start the guest domain.  Odds are high that you will have trouble completely dismounting /mnt/gentoo (even if you umount /mnt/gentoo/proc and /mnt/gentoo/dev first).  So you'll likely have to restart the entire machine to get things clean.
 
