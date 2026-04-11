@@ -111,7 +111,7 @@ def find_new_markdown_paths(unique_old_urls_data):
                             print(f"    Fuzzy match: {base_name} (score: {score:.2f})")
 
                         # If there's exactly one high-quality match, use it
-                        if len(matches_and_scores) == 1 and matches_and_scores[0][1] >= 0.6:
+                        if len(matches_and_scores) == 1 and matches_and_scores[0][1] >= 0.5:
                             matched_file = matches_and_scores[0][0]
                             # Find the actual file path for this match
                             for file_path in found_files:
@@ -122,7 +122,7 @@ def find_new_markdown_paths(unique_old_urls_data):
                         # For multiple matches, implement enhanced logic
                         elif len(matches_and_scores) > 1:
                             # If there's at least one high-quality match (score >= 0.8), use the best one
-                            high_quality_matches = [match for match in matches_and_scores if match[1] >= 0.75]
+                            high_quality_matches = [match for match in matches_and_scores if match[1] >= 0.65]
                             if high_quality_matches:
                                 # Use the highest scoring match among high-quality matches
                                 best_match = max(high_quality_matches, key=lambda x: x[1])
