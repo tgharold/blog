@@ -10,6 +10,6 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>We're experiencing odd delays when talking to our mail server over SMTPS (SSL).  I just found this post which helps us debug it.
+We're experiencing odd delays when talking to our mail server over SMTPS (SSL).  I just found this post which helps us debug it.
 
 [How to debug SSL SMTP - by S](http://www.wains.be/index.php/2007/08/11/how-to-debug-ssl-smtp/)

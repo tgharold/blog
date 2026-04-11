@@ -60,3 +60,11 @@ To convert archive posts, use the provided conversion scripts:
 ## Commit Guidelines
 When creating git commits for these conversions, please include the following co-authored by line:
 Co-Authored-By: Qwen3-Coder-30B-A3B-Instruct-MLX-6bit <Claude Code>
+
+## Blogger Cleanup
+During the migration from Blogger to Jekyll, various artifacts were left behind in the blog post content. These included:
+- Blogger taglines (Labels: with tag links)
+- Byline information (posted by Thomas at [timestamp])
+- Formatting divs (<div style="clear:both; padding-bottom:0.25em"></div>)
+
+To clean up these conversion artifacts, a Python script was created and run to remove all instances of these elements from the blog posts, leaving only the clean, original content.

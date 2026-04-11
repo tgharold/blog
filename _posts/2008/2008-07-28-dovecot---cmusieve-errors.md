@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>After upgrading our CentOS 5 box to the latest revisions this week (including Dovecot 1.1), we're seeing the following error message in the log files.  Sieve was working fine with Dovecot 1.0.
+After upgrading our CentOS 5 box to the latest revisions this week (including Dovecot 1.1), we're seeing the following error message in the log files.  Sieve was working fine with Dovecot 1.0.
 
 # cat /var/vmail/dovecot-deliver.log
 
@@ -32,10 +32,4 @@ Not sure yet what went wrong during the upgrade.
 
 Update: The problem was that we had made a copy of Dovecot's "deliver" executable to make it setuid to work with virtual user local delivery.  After the update, we forgot to update this copy of the exectuable.
 
-Once we updated the setuid copy of "deliver", things worked fine.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2008.shtml">2008</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Dovecot.shtml">Dovecot</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SMTP.shtml">SMTP</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[11:17](http://www.tgharold.com/techblog/2008/07/dovecot-cmusieve-errors.shtml)
-
-		</div>
+Once we updated the setuid copy of "deliver", things worked fine.

@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Here's a list of the current ignore patterns that I use on my CentOS5 box.
+Here's a list of the current ignore patterns that I use on my CentOS5 box.
 
 # fsvs ignore dump
 ./backup
@@ -101,10 +101,4 @@ After mucking with a new box for a week, here's the set of ignore filters that I
 ./var/svn/
 ./var/tmp/
 ./var/www/
-[root@fw1-shimo /]#<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2007.shtml">2007</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/CentOS5.shtml">CentOS5</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/FSVS.shtml">FSVS</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[10:47](http://www.tgharold.com/techblog/2007/06/fsvs-ignore-patterns-v115.shtml)
-
-		</div>
+[root@fw1-shimo /]#

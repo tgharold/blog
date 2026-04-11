@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>
+
 [Extending a Logical Volume](http://www.netadmintools.com/art366.html)
 
 The basic (3) commands are:
@@ -30,10 +30,4 @@ For example, I have /home that is currently a 4GB partition mounted in my vgmirr
 # resize2fs /dev/vgmirror/home
 # mount /home</code>
 
-Now, for /home, odds are high that you will have to boot a LiveCD due to the volume being in use.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2005.shtml">2005</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/ext3.shtml">ext3</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[11:31](http://www.tgharold.com/techblog/2005/12/resizing-ext3-partition-in-lvm2-volume.shtml)
-
-		</div>
+Now, for /home, odds are high that you will have to boot a LiveCD due to the volume being in use.

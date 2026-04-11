@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>([previous entry](/techblog/2004/04/gentoo-epia-install-part-5.shtml))
+([previous entry](/techblog/2004/04/gentoo-epia-install-part-5.shtml))
 
 Now to start with [chapter 7e, installing extra kernel modules](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=7).  I didn't see any extra modules that needed to be emerge'd, so I skipped straight to the editing of the autoload file.  Actually I lie, I have to add in LVM2 module support.  So I need to follow the steps in [step 13 of the LVM install guide](http://www.gentoo.org/doc/en/lvm2.xml) and add LVM to the auto-load listing.
 
@@ -110,10 +110,4 @@ cd /
 umount ... (insert list of mounted file systems)
 reboot
 
-Reboot, go into the BIOS and change the boot order to bypass the CD-ROM (or simply remove the LiveCD), and refer to [chapter 12, where do I go from here](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=12) in the gentoo handbook.  I might jot down some additional notes in the future, but we'll have to see.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/VIAEPIA.shtml">VIAEPIA</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[22:28](http://www.tgharold.com/techblog/2004/04/gentoo-epia-install-part-6.shtml)
-
-		</div>
+Reboot, go into the BIOS and change the boot order to bypass the CD-ROM (or simply remove the LiveCD), and refer to [chapter 12, where do I go from here](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=12) in the gentoo handbook.  I might jot down some additional notes in the future, but we'll have to see.

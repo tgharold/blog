@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Now there were a few minor things that I had to fix after the reboot before I could SSH back in.  I hadn't pointed my swap line in /etc/fstab at the proper mdadm RAID volume, the 3c509 moved from eth7 to eth4 after the reboot, I had to use the "noapic" kernel option and I'm still getting the IRQ7 warning.
+Now there were a few minor things that I had to fix after the reboot before I could SSH back in.  I hadn't pointed my swap line in /etc/fstab at the proper mdadm RAID volume, the 3c509 moved from eth7 to eth4 after the reboot, I had to use the "noapic" kernel option and I'm still getting the IRQ7 warning.
 
 But the system is mostly in a workable state at this point.  So it's time to start installing administration packages and cleaning up the install.  I'll save the existing kernel as my "base" configuration in case I screw things up.
 
@@ -77,10 +77,4 @@ Now I'm going to [configure SubVersion](/techblog/2006/06/subversion-for-linux-a
 /usr/local/sbin (local sysadmin scripts that you create)
 /usr/src (the .config file, make sure you add the actual directory with "svn add -N" before adding the "linux" symbolic link)
 
-I know there are other folders to add, but I typically add them on the fly as I start customizing the system.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[06:45](http://www.tgharold.com/techblog/2006/08/gentoo-amd64-on-asus-m2n32_115658999475830052.shtml)
-
-		</div>
+I know there are other folders to add, but I typically add them on the fly as I start customizing the system.

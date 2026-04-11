@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>So here's my first stab at a SAN unit that can hold 14 or 17 SATA drives.  All of the drives will be mounted in hot-swap trays which should make things much easier.  Some of the components are a bit overkill (such as the pair of dual-port server NICs) but I'm planning ahead to when we have two gigabit switches and we want to connect multiple gigabit ports together for speed.
+So here's my first stab at a SAN unit that can hold 14 or 17 SATA drives.  All of the drives will be mounted in hot-swap trays which should make things much easier.  Some of the components are a bit overkill (such as the pair of dual-port server NICs) but I'm planning ahead to when we have two gigabit switches and we want to connect multiple gigabit ports together for speed.
 
 For the case, motherboard and misc parts:
 
@@ -66,10 +66,4 @@ I may also expand the memory in the SAN boxes to 6GB or 8GB down the road to max
 
 For home use, I wouldn't bother to build a 2nd SAN unit for redundancy.  Downtime in case of a blown power-supply would only be about 2 hours (assuming you have one on-hand) to a day or two.  I could also cut some costs by going with less expensive NICs or SATA controllers.  But that doesn't gain you much.
 
-The other advantage of building out slowly is that you can take advantage of the 1TB and 2TB drives that might appear in 2007-2009.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/iSCSI.shtml">iSCSI</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SAN.shtml">SAN</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[23:17](http://www.tgharold.com/techblog/2006/08/starting-iscsi-san-unit.shtml)
-
-		</div>
+The other advantage of building out slowly is that you can take advantage of the 1TB and 2TB drives that might appear in 2007-2009.

@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Well, first glitch. Looking at my boot screen with [Shift-PgUp] / [Shift-PgDn] to find the error. I see that the Software RAID is working fine (it built md0..md3 automatically).
+Well, first glitch. Looking at my boot screen with [Shift-PgUp] / [Shift-PgDn] to find the error. I see that the Software RAID is working fine (it built md0..md3 automatically).
 
 <code>* Mounting proc at /proc [ ok ]
 * Mounting sysfs at /sys [ !! ]
@@ -33,10 +33,4 @@ Give root password for maintenance
 
 So, according to a quick google, this indicates an issue with /etc/fstab.
 
-I'll be digging into this in a few days when I get a chance.  (See [Troubleshooting 1](http://www.blogger.com/techblog/2005/04/gentoo-troubleshooting-1.shtml).)<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2005.shtml">2005</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[00:10](http://www.tgharold.com/techblog/2005/04/gentoo-cant-create-lock-file.shtml)
-
-		</div>
+I'll be digging into this in a few days when I get a chance.  (See [Troubleshooting 1](http://www.blogger.com/techblog/2005/04/gentoo-troubleshooting-1.shtml).)

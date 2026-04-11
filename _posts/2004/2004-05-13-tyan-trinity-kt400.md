@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>So I'm finally ditching the very troublesome Asus A7V266-E motherboard in my one file server.  I went with the [Tyan Trinity KT400](ftp://ftp.tyan.com/datasheets/d_s2495_105.pdf) because it was relatively inexpensive and I was able to simply move my AthlonXP 1800+ CPU and my 512MB PC2100 memory modules over to the new motherboard.
+So I'm finally ditching the very troublesome Asus A7V266-E motherboard in my one file server.  I went with the [Tyan Trinity KT400](ftp://ftp.tyan.com/datasheets/d_s2495_105.pdf) because it was relatively inexpensive and I was able to simply move my AthlonXP 1800+ CPU and my 512MB PC2100 memory modules over to the new motherboard.
 
 The old A7V266-E is a VIA-based chipset that was notorious for problems with the PCI bus ([search around for KT266 and PCI latency](http://www.google.com/search?hl=en&amp;q=via+kt266+pci+bus+latency&amp;btnG=Google+Search), or check the [PCI Latency Patch](http://adsl.cutw.net/dlink-dsl200-via.html) page).  (And that's on top of the issue that the A7V266-E Promise FastTrak100 Lite only supports 127GB and smaller drives.)  For me, it manifested itself as an incompatibility with my add-in Adaptec USB card.  Anytime I had activity on the USB bus, the entire machine would halt for a few seconds at a time.  Extremely annoying and the only way that I got around it was to not install the Adaptec 3100 USB PCI card.
 
@@ -49,5 +49,4 @@ No supporting host adapter is found
 
 Okay... (drums fingers on desk), eh, forget it for now.  I have v2.345 already, which is reasonably up-to-date.  And this time, the Win2k install seems to have found the partition correctly (only basic difference between now and when it didn't work last night is the motherboard BIOS revision update from 1.02 to 1.05).
 
-Created my 16GB C: partition, and I'm off and installing.  Later, I get to test my recovery strategy (going to try to restore the system state through a non-authoritative restore).<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>		<div class="Byline">			posted by Thomas at 			[02:51](http://www.tgharold.com/techblog/2004/05/tyan-trinity-kt400.shtml)								</div>
+Created my 16GB C: partition, and I'm off and installing.  Later, I get to test my recovery strategy (going to try to restore the system state through a non-authoritative restore).

@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>As part of my server setup, I like to make sure that plans are working as expected...  which means intentionally breaking things like RAID sets.
+As part of my server setup, I like to make sure that plans are working as expected...  which means intentionally breaking things like RAID sets.
 
 In this particular case I have a triple-active RAID1 mirror set on the first 3 disks in the system (/dev/sda, /dev/sdb, /dev/sdc).  In this RAID1 set, all 3 disks are active, with no hot-spare.  I prefer this over a (2) active (1) hot-spare setup because it allows for up to 2 disks to fail before you lose data.  And if I'm already dedicating a hot-spare spindle solely for the use of the RAID1 set, I may as well get to use it.  The output of /proc/mdstat looks similar to (note that none of the slices are tagged with a "(S)").:
 
@@ -37,10 +37,4 @@ After which, you can use the "mdadm" command to add the new slices to the existi
 
 # mdadm --add /dev/mdX /dev/sdYZ 
 
-Last, don't forget to install GRUB to the MBR on the new disk.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2007.shtml">2007</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SoftwareRAID.shtml">SoftwareRAID</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[08:03](http://www.tgharold.com/techblog/2007/05/dealing-with-failed-software-raid.shtml)
-
-		</div>
+Last, don't forget to install GRUB to the MBR on the new disk.

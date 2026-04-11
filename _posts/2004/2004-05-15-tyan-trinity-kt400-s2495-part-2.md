@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>More fun with the Tyan Trinity KT400 S2495 board.  While attempting to add the Promise FastTrak TX2 PCI RAID card, everything is happy until I go and connect drives to it and define an array.  After that, if the Adaptec 2930CU PCI SCSI card is <b>also</b> installed, the system will not boot.  I have the HighPoint HPT372N IDE RAID ports disabled in the BIOS and the Silicon Image Sil3112 SATA ports enabled.
+More fun with the Tyan Trinity KT400 S2495 board.  While attempting to add the Promise FastTrak TX2 PCI RAID card, everything is happy until I go and connect drives to it and define an array.  After that, if the Adaptec 2930CU PCI SCSI card is <b>also</b> installed, the system will not boot.  I have the HighPoint HPT372N IDE RAID ports disabled in the BIOS and the Silicon Image Sil3112 SATA ports enabled.
 
 Symptom of the boot issue is that the Sil3112 BIOS splash will not appear during the boot process.  System will then hang before or at the ESCD/DMI update point (right before it boots from a device).
 
@@ -35,10 +35,4 @@ Promise FastTrak TX2 PCI IDE card
 Silicon Image Sil3112 SATA ports (built-in)
 200GB SATA 7200rpm drive (scratch)
 IDE CD-RW
-IDE DVD-ROM/CD-RW<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[21:35](http://www.tgharold.com/techblog/2004/05/tyan-trinity-kt400-s2495-part-2.shtml)
-
-		</div>
+IDE DVD-ROM/CD-RW

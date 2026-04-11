@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Since I can't seem to find instructions on how to do this (yet)...
+Since I can't seem to find instructions on how to do this (yet)...
 
 I'm going to create a 4-disk RAID10 array using Linux Software RAID and mdadm.  The old way is to create individual RAID1 volumes and then stripe a RAID0 volume over the RAID1 arrays.  That requires creating extra /dev/mdN nodes which can be confusing to the admin that follows you.
 
@@ -43,10 +43,4 @@ A final note.  My mdadm.conf file is completely empty on this system.  That work
 
 <b>Updates:</b>
 
-Most of the arrays that I've built have been based on 7200 RPM SATA drives.  For small arrays (4 disks w/ a hot spare), often you can find enough ports on the motherboard.  For larger arrays, you'll need to look for PCIe SATA controllers.  I've used Promise and 3ware SATA RAID cards.  Basically any card that allows the SATA drives to be seen and is supported directly in the Linux kernel are good bets (going forward we're going to switch to Areca at work).<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SoftwareRAID.shtml">SoftwareRAID</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[13:25](http://www.tgharold.com/techblog/2006/08/creating-4-disk-raid10-using-mdadm.shtml)
-
-		</div>
+Most of the arrays that I've built have been based on 7200 RPM SATA drives.  For small arrays (4 disks w/ a hot spare), often you can find enough ports on the motherboard.  For larger arrays, you'll need to look for PCIe SATA controllers.  I've used Promise and 3ware SATA RAID cards.  Basically any card that allows the SATA drives to be seen and is supported directly in the Linux kernel are good bets (going forward we're going to switch to Areca at work).

@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>
+
 <b>Notes:</b> This entry was based on v1.1.4.  The 1.1.5 and later versions of FSVS also place a few files in /etc/fsvs.  
 
 <b>Original post follows</b>
@@ -259,10 +259,4 @@ committed revision      7 on 2007-06-04T00:17:13.808327Z as sys-fw1-pri</code>
 
 That just scratches the surface, but covers the majority of day-to-day use.  Unlike SVN, FSVS knows (assumes) that when a file is missing that it should implicity do a "delete" operation in the repository to make the repository match the file system.
 
-Other useful commands to know are "fsvs unversion" and "fsvs diff".<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2007.shtml">2007</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/CentOS5.shtml">CentOS5</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/FSVS.shtml">FSVS</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SubVersion.shtml">SubVersion</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SystemAdministration.shtml">SystemAdministration</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[10:09](http://www.tgharold.com/techblog/2007/05/fsvs-for-sysadmins.shtml)
-
-		</div>
+Other useful commands to know are "fsvs unversion" and "fsvs diff".

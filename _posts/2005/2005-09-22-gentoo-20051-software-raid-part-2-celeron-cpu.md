@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Time to [configure the Gentoo kernel](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=7).  I'm configuring this for my Celeron motherboard.
+Time to [configure the Gentoo kernel](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=7).  I'm configuring this for my Celeron motherboard.
 
 Note the use of "emerge lvm2" since I'm using LVM2 on this system during the initial installation.
 
@@ -67,10 +67,4 @@ Linux Kernel v2.6.11 Configuration
 
 Exit and save your configuration. Then build the kernel (the following command is for 2.6 kernels). Expect the compile to take about an hour.
 
-<code># make &amp;&amp; make modules_install</code><div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2005.shtml">2005</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SoftwareRAID.shtml">SoftwareRAID</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[23:31](http://www.tgharold.com/techblog/2005/09/gentoo-20051-software-raid-part-2.shtml)
-
-		</div>
+<code># make &amp;&amp; make modules_install</code>

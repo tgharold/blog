@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>At the office we're working on setting up [cwRSync](http://www.itefix.no/) on the web server array to push the daily web/ftp/smtp log files back to a central point for archiving.  Right now, since all of the web servers are on the same LAN segment at the hosting facility, we're just sending the plain text data across the wire to the rsync port (tcp/873).  Since the previous solution was to use FTP to move the log files around, it's no worse then the old solution from a security standpoint.  (It is, however, much faster and more efficient.)  Security is handled solely thorugh the rsyncd.conf "hosts allow" setting (only the internal IP addresses are allowed to be used to transfer the data) with no passwords or shared keys.
+At the office we're working on setting up [cwRSync](http://www.itefix.no/) on the web server array to push the daily web/ftp/smtp log files back to a central point for archiving.  Right now, since all of the web servers are on the same LAN segment at the hosting facility, we're just sending the plain text data across the wire to the rsync port (tcp/873).  Since the previous solution was to use FTP to move the log files around, it's no worse then the old solution from a security standpoint.  (It is, however, much faster and more efficient.)  Security is handled solely thorugh the rsyncd.conf "hosts allow" setting (only the internal IP addresses are allowed to be used to transfer the data) with no passwords or shared keys.
 
 However, since the next step is that we want to setup pulling those log files automatically back to the main office, we need to look into locking it down further and putting encryption in place (e.g. routing rsync traffic over an ssh tunnel). 
 
@@ -24,10 +24,4 @@ That being said, I'm going to explore some other packages.  All of which will ei
 
 Links:
 
-[Rsync wrapper for Win32](http://footboot.net/rsync-win/) - Uses the cygwin DLLs, but doesn't require a full cygwin install, includes SSH.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/RSync.shtml">RSync</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[10:18](http://www.tgharold.com/techblog/2004/06/securing-cwrsync.shtml)
-
-		</div>
+[Rsync wrapper for Win32](http://footboot.net/rsync-win/) - Uses the cygwin DLLs, but doesn't require a full cygwin install, includes SSH.

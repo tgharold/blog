@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Trying to decide how to allocate disks within the SAN unit.  I have (14) or (17) slots.  For now, I'll assume that the 5:3 bay units work which will give me a total of 17 disks.
+Trying to decide how to allocate disks within the SAN unit.  I have (14) or (17) slots.  For now, I'll assume that the 5:3 bay units work which will give me a total of 17 disks.
 
 <pre>-------------------------------------------------
 BAYS / DRIVE CONFIGURATION (2 INT, 15 BAY-COOLER)
@@ -60,10 +60,4 @@ B) The second configuration sets up a 8-disk RAID6 array
 
 The RAID0 over (3) RAID1 sets (a.k.a. RAID 10) should give me roughly 3x the performance of a regular RAID1 volume.  Reads and writes should both see a 3x improvement over a simple RAID1.
 
-For the RAID6 volume, I estimate that read performance will be 6x that of the RAID1 set but I'm not sure what write performance will be.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/iSCSI.shtml">iSCSI</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/RAID.shtml">RAID</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SAN.shtml">SAN</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[15:40](http://www.tgharold.com/techblog/2006/08/san-design-part-2.shtml)
-
-		</div>
+For the RAID6 volume, I estimate that read performance will be 6x that of the RAID1 set but I'm not sure what write performance will be.

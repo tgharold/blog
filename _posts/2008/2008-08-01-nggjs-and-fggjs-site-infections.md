@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>One of our users visited a website that was infected with the ngg.js and fgg.js codes (they get injected into the HTML files on the server towards the end of the page).
+One of our users visited a website that was infected with the ngg.js and fgg.js codes (they get injected into the HTML files on the server towards the end of the page).
 
 We've blocked it in our squid configuration by:
 
@@ -32,10 +32,4 @@ http_access deny blocked_regex
 /fgg\.js
 /ngg\.js
 
-I won't explain this too much except to say that the blocked_urls file is designed to block top-level domains, while the regexp file is for blocking URLs using a regular expression.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2008.shtml">2008</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Security.shtml">Security</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Squid.shtml">Squid</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[14:51](http://www.tgharold.com/techblog/2008/08/nggjs-and-fggjs-site-infections.shtml)
-
-		</div>
+I won't explain this too much except to say that the blocked_urls file is designed to block top-level domains, while the regexp file is for blocking URLs using a regular expression.

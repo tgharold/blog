@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>
+
 <b># /sbin/ip link</b>
 
 This Linux command will display information about your interfaces.  When doing network analysis, the primary information that we're interested in is whether the interface is running in promiscuous mode.  An adapter that is running in promiscuous mode can capture any packets that pass by on the wire, not just the ones destined for its MAC address.  Here's an example of a ethernet adapter that is in promiscuous mode:
@@ -30,10 +30,4 @@ The nload utility is a console application that will graph the inbound and outbo
 
 <b>/usr/sbin/nettop -d 5 -i eth0</b>
 
-This is another console utility that you can add to a Linux firewall.  Nettop displays a tree-like listing of all activity on a particular interface, with the packets grouped by protocol and then port/service.  This gives you a quick idea of what services are abusing your bandwidth.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2007.shtml">2007</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Firewalls.shtml">Firewalls</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[11:45](http://www.tgharold.com/techblog/2007/06/identifying-bandwidth-abusers-in-linux.shtml)
-
-		</div>
+This is another console utility that you can add to a Linux firewall.  Nettop displays a tree-like listing of all activity on a particular interface, with the packets grouped by protocol and then port/service.  This gives you a quick idea of what services are abusing your bandwidth.

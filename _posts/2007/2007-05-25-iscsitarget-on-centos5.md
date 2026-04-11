@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Setting up our test iSCSI SAN box this week.  The original plans were to run this on top of Gentoo (which is very powerful and flexible) but after 3 years, I'm not very pleased with Gentoo as a server OS.  Which is a whole different topic.  So we've migrated over to using CentOS5, which is derived from Red Hat Enterprise Linux 5, a distro that is more suited for corporate use.
+Setting up our test iSCSI SAN box this week.  The original plans were to run this on top of Gentoo (which is very powerful and flexible) but after 3 years, I'm not very pleased with Gentoo as a server OS.  Which is a whole different topic.  So we've migrated over to using CentOS5, which is derived from Red Hat Enterprise Linux 5, a distro that is more suited for corporate use.
 
 There's not much to talk about in terms of the base system.  It's a pretty vanilla 64bit CentOS5 install (from DVD) running on top of a dual-CPU dual-core pair of Socket F Opterons.  The primary packages that I've installed so far are "Yum Extender" (from stock repositories) and "rdiff-backup" (downloaded as an RPM).  The OS runs on top of a 3-disk RAID1 (mirror, all drives active) Software RAID for safety.
 

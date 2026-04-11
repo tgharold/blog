@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>(I'm assuming that you've already created a working Xen Dom0 domain and that you already have a Xen DomU kernel with which you can boot the Gentoo guest OS.  I'm skipping a lot of steps and doing what I think works based on previous Gentoo installs.)
+(I'm assuming that you've already created a working Xen Dom0 domain and that you already have a Xen DomU kernel with which you can boot the Gentoo guest OS.  I'm skipping a lot of steps and doing what I think works based on previous Gentoo installs.)
 
 Disk preparation: I'm installing the Gentoo guest OSs into LVM volumes managed by the Dom0 hypervisor domain.  Each guest OS gets a single partition for root that is exported to the guest OS as /dev/sda1.  In rare cases, I'm also providing a 2nd and 3rd LVM partition for the guest OS which are exported as /dev/sda2 and /dev/sda3.
 
@@ -125,10 +125,4 @@ I strongly suggest running GNU "screen" in the Dom0 hypervisor domain.  That wil
 
 <code># xm create -c mydomainconfigfile</code>
 
-You can then shutdown (and exit) the domain by logging in as root and typing "shutdown -h now".  Once the guest domain seems to be working, fire it up without the "-c" option to get it running in the background.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[12:11](http://www.tgharold.com/techblog/2006/09/gentoo-amd64-install-in-xen-domu.shtml)
-
-		</div>
+You can then shutdown (and exit) the domain by logging in as root and typing "shutdown -h now".  Once the guest domain seems to be working, fire it up without the "-c" option to get it running in the background.

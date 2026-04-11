@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>This is a follow-up to [SELinux - dealing with exceptions](/techblog/2008/09/selinux-dealing-with-exceptions.shtml).
+This is a follow-up to [SELinux - dealing with exceptions](/techblog/2008/09/selinux-dealing-with-exceptions.shtml).
 
 First off, a few basics:
 
@@ -105,10 +105,4 @@ References:
 
 [Red Hat Enterprise Linux 4: Red Hat SELinux Guide](http://www.redhat.com/docs/manuals/enterprise/RHEL-4-Manual/selinux-guide/rhlcommon-chapter-0007.html)
 
-[How to: Install and Setup XEN Virtualization Software on CentOS Linux 5](http://www.cyberciti.biz/tips/rhel-centos-xen-virtualization-installation-howto.html) - Covers how to use semanage to grant the Xen process access to a directory where it will store the DomU storage as files.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2009.shtml">2009</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SELinux.shtml">SELinux</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[07:03](http://www.tgharold.com/techblog/2009/02/selinux-troubleshooting-file-labeling.shtml)
-
-		</div>
+[How to: Install and Setup XEN Virtualization Software on CentOS Linux 5](http://www.cyberciti.biz/tips/rhel-centos-xen-virtualization-installation-howto.html) - Covers how to use semanage to grant the Xen process access to a directory where it will store the DomU storage as files.

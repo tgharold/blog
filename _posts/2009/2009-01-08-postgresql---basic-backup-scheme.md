@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Here's a basic backup scheme.  We're using pg_dump in plain-text mode, compressing the output with bzip2, and writing the results out to files named after the database, schema and table name.  It's not the most efficient method, but allows us to go back to:
+Here's a basic backup scheme.  We're using pg_dump in plain-text mode, compressing the output with bzip2, and writing the results out to files named after the database, schema and table name.  It's not the most efficient method, but allows us to go back to:
 
 - any of the past 7 days
 - any Sunday within the past month
@@ -119,10 +119,4 @@ do
     done
 done</pre>
 
-We tried using gzip instead of bzip2, but found that bzip2 worked a little better even though it uses up more CPU.  We use a block size of only 200k for bzip2 in order to be more friendly to an rsync push to an external server.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2009.shtml">2009</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Backups.shtml">Backups</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/PostgreSQL.shtml">PostgreSQL</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[08:24](http://www.tgharold.com/techblog/2009/01/postgresql-basic-backup-scheme.shtml)
-
-		</div>
+We tried using gzip instead of bzip2, but found that bzip2 worked a little better even though it uses up more CPU.  We use a block size of only 200k for bzip2 in order to be more friendly to an rsync push to an external server.

@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>So, I've got a system that isn't booting yet.  The boot error is:
+So, I've got a system that isn't booting yet.  The boot error is:
 
 <code>* Mounting proc at /proc [ ok ]
 * Mounting sysfs at /sys [ !! ]
@@ -100,10 +100,4 @@ Nope.
 
 Attempt #5 - using [this thread over at the gentoo forums](http://forums.gentoo.org/viewtopic-t-318344-highlight-mtab.html), I added some more information to my kernel line in the grub.conf file.
 
-Nope.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2005.shtml">2005</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[11:44](http://www.tgharold.com/techblog/2005/04/gentoo-troubleshooting-1.shtml)
-
-		</div>
+Nope.

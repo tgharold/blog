@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>I'm not going to get into the full details of configuring a time server for your Windows 2000 or Windows 2003 domains, but the basic idea is that your PDC (Primary Domain Controller) at the root of your Active Directory forest should be synchronized with an external time source.  Microsoft includes a service to do this called "Windows Time" (a.k.a. W32Time).  It's not as nice as the official NTPD service that you can get from ntp.org, but it generally works.
+I'm not going to get into the full details of configuring a time server for your Windows 2000 or Windows 2003 domains, but the basic idea is that your PDC (Primary Domain Controller) at the root of your Active Directory forest should be synchronized with an external time source.  Microsoft includes a service to do this called "Windows Time" (a.k.a. W32Time).  It's not as nice as the official NTPD service that you can get from ntp.org, but it generally works.
 
 By default, Windows client computers that are members of a domain should get their time from the domain controllers within the domain.  So once you get the domain controllers keeping time properly you won't have to deal with bad time on the desktops.
 
@@ -97,10 +97,4 @@ The key line in the above output is "Error -45702ms" which shows us how much the
 
 In my opinion, W32Time is "good enough" for most purposes.  At least for small offices or home networks.  If you're going to be dealing with more then a dozen servers or 50 workstations, then you should definitely look into setting up a real "ntpd" server.  (In reality, you should have at least 4 ntpd servers in your infrastructure so that they can keep an eye on each other and alert you to ntpd servers that are not keeping time properly.)
 
-Here's my previous posting dealing with time issues: [NTP daemons for Gentoo](http://www.tgharold.com/techblog/2005/11/ntp-daemons-for-gentoo.shtml)<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2005.shtml">2005</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/NTP.shtml">NTP</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[21:21](http://www.tgharold.com/techblog/2005/12/windows-domain-time-server-w32time.shtml)
-
-		</div>
+Here's my previous posting dealing with time issues: [NTP daemons for Gentoo](http://www.tgharold.com/techblog/2005/11/ntp-daemons-for-gentoo.shtml)

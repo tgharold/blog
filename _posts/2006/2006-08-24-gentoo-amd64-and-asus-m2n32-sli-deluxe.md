@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Finally got my Asus M2N32-SLI Deluxe motherboard setup and ready for installation.  Tossed the 2006.0 Gentoo AMD64 CD in and told it to use 80x25 for the old PCI video card that I have in it.  Unforunately, it hangs after a bit.
+Finally got my Asus M2N32-SLI Deluxe motherboard setup and ready for installation.  Tossed the 2006.0 Gentoo AMD64 CD in and told it to use 80x25 for the old PCI video card that I have in it.  Unforunately, it hangs after a bit.
 
 So my first plan of attack is to update the Asus BIOS from 0406 to 0603 (which is 2 revisions newer).  The 0603 revision was released on June 29, 2006.  The Asus BIOS includes an EZ-FLASH tool in the BIOS Setup (Tools menu), all I have to do is burn the BIOS file to a CD-ROM or diskette.
 
@@ -37,10 +37,4 @@ Hmm... still hangs.  Off to do some more research.
 
 Update #3: Finally got a system that seems to be working.
 
-Reverted the BIOS from the 0604 revision back to the 0503 revision.  Now I can boot the Gentoo AMD64 2006.0 minimal CD using the options <b>gentoo-nofb noapic</b>.  I still get the IRQ7 error that seems to be bugging other Gentoo users, but the system is stable enough to start the install.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[14:24](http://www.tgharold.com/techblog/2006/08/gentoo-amd64-and-asus-m2n32-sli-deluxe.shtml)
-
-		</div>
+Reverted the BIOS from the 0604 revision back to the 0503 revision.  Now I can boot the Gentoo AMD64 2006.0 minimal CD using the options <b>gentoo-nofb noapic</b>.  I still get the IRQ7 error that seems to be bugging other Gentoo users, but the system is stable enough to start the install.

@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>([previous entry](/techblog/2004/04/gentoo-epia-install-part-4.shtml))
+([previous entry](/techblog/2004/04/gentoo-epia-install-part-4.shtml))
 
 Well, that took somewhere around 2 hours to import and build the kernel from the development-sources package.    Now I need to [configure the kernel](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=7) (per chapter 7c of the handbook).  There are also notes over at [epiawiki.org](http://www.epiawiki.org/wiki/tiki-index.php?page=EpiaTheEpiaKernel) and [building a small MP3 server](http://www.ath0.com/meta/prose/mp3-server/part3.html) about configuring that I'll need to investigate (specifically looking at [their copy of the make config file](http://www.ath0.com/meta/prose/mp3-server/m10000-kernel-config-meta) which goes in "/usr/src/linux/.config").
 
@@ -57,10 +57,4 @@ Hit "Exit" when done and save your new kernel configuration.  Use "make &amp;&am
 # cp System.map /boot/System.map-2.6.3-gentoo
 # cp .config /boot/config-2.6.3-gentoo
 
-([next entry](/techblog/2004/04/gentoo-epia-install-part-6.shtml))<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/VIAEPIA.shtml">VIAEPIA</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[20:20](http://www.tgharold.com/techblog/2004/04/gentoo-epia-install-part-5.shtml)
-
-		</div>
+([next entry](/techblog/2004/04/gentoo-epia-install-part-6.shtml))

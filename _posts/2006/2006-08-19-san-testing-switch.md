@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>For testing out the SAN, it looks like I can make use of either a 
+For testing out the SAN, it looks like I can make use of either a 
 SMC SMCGS16-SMART or SMC SMCGS24-SMART switch.  These are 16/24 port gigabit switches that support link aggragation.  Price on the 16-port unit is only $260 or so and the 24-port switch sells for $320.
 
 I'm still figuring out how I want to support bonding in the unit.  I have the (4) ports from the Intel Pro adapters plus the (2) ports on the motherboard.  My initial plan is to bond the Intel adapters together into a two pairs, then hook each pair to a different switch for fault-tolerance.  That would give me either 200MB/s of bandwidth or 400MB/s of bandwidth.
@@ -35,10 +35,4 @@ RAID10 (sequential reads/writes)
 12-spindle: 360MB/s
 16-spindle: 480MB/s
 
-Those are big S.W.A.G. estimates.  In reality, performance will probably be closer to the semi-random performance numbers.  Which means that the first set of drives needs to be configured into an 8-spindle RAID10 in order to be viable.  A PCI motherboard would choke on this amount of bandwidth, but the newer PCIe motherboards should be able to handle it.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[19:39](http://www.tgharold.com/techblog/2006/08/san-testing-switch.shtml)
-
-		</div>
+Those are big S.W.A.G. estimates.  In reality, performance will probably be closer to the semi-random performance numbers.  Which means that the first set of drives needs to be configured into an 8-spindle RAID10 in order to be viable.  A PCI motherboard would choke on this amount of bandwidth, but the newer PCIe motherboards should be able to handle it.

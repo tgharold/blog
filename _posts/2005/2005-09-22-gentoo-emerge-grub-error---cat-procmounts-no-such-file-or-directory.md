@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>During my initial Gentoo installation, I ran into the following issue after trying to "emerge grub".
+During my initial Gentoo installation, I ran into the following issue after trying to "emerge grub".
 
 <code>...
 &gt;&gt;&gt; Completed installing grub-0.96-r2 into /var/tmp/portage/grub-0.96-r2/image/
@@ -56,10 +56,4 @@ livecd gentoo # chroot /mnt/gentoo /bin/bash
 livecd / # env-update
 &gt;&gt;&gt; Regenerating /etc/ld.so.cache...
 livecd / # source /etc/profile
-livecd / # emerge grub</code><div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2005.shtml">2005</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[20:49](http://www.tgharold.com/techblog/2005/09/gentoo-emerge-grub-error-cat.shtml)
-
-		</div>
+livecd / # emerge grub</code>

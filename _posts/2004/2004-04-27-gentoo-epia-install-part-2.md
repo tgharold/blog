@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Picking up at [chapter 5c of the Gentoo Handbook, Using a Stage from the LiveCD](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=5).  (Also see my [previous post](/techblog/2004/04/gentoo-epia-install-part-1.shtml) where I configured the disks.)  Here is where it gets fun...  I'm going to try starting with the x86 stage1 file:
+Picking up at [chapter 5c of the Gentoo Handbook, Using a Stage from the LiveCD](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=5).  (Also see my [previous post](/techblog/2004/04/gentoo-epia-install-part-1.shtml) where I configured the disks.)  Here is where it gets fun...  I'm going to try starting with the x86 stage1 file:
 
 cd /mnt/gentoo
 tar -xvjpf /mnt/cdrom/stages/stage1-x86-20040218.tar.bz2
@@ -36,11 +36,3 @@ USE=""
 CXXFLAGS="$(CFLAGS)"
 
 Onward to step 6, [Installing the Gentoo Base System](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=6).  The mirrorselect application chose "pair.com" as my mirror (which is fine, that's where I downloaded the ISOs from).  Alternate site is datapipe.net.  Not going to muck with the default USE flags at the moment, instead I'm going to step right into 6c (progressing from stage1 to stage2).  This will take a while (if it works!).
-
-([Next blog entry](/techblog/2004/04/gentoo-epia-install-part-3.shtml))<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/VIAEPIA.shtml">VIAEPIA</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[18:31](http://www.tgharold.com/techblog/2004/04/gentoo-epia-install-part-2.shtml)
-
-		</div>

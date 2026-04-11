@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Taking another stab at setting up RSync and SSH on our Windows 2003 servers.  The goal is that we can upload web files to a central server and then have it synchronize the other servers in the array.  Once again, I'm going to use the [cwRsync and copSSH packages](http://www.itefix.no/) (latest version is 2.0.9).
+Taking another stab at setting up RSync and SSH on our Windows 2003 servers.  The goal is that we can upload web files to a central server and then have it synchronize the other servers in the array.  Once again, I'm going to use the [cwRsync and copSSH packages](http://www.itefix.no/) (latest version is 2.0.9).
 
 Installation on a Windows 2003 Domain Controller:
 <ol>
@@ -83,10 +83,4 @@ type id_rsa.pub &gt;&gt; authorized_keys
 7. Now to configure SSHD on the host server.  You will need to find and edit the sshd_config file (probably in "C:\Program Files\cwRsyncServer\etc").  The following changes should be made in the current version default settings.
 
 PermitRootLogin no
-PasswordAuthentication no<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/RSync.shtml">RSync</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[11:55](http://www.tgharold.com/techblog/2006/08/rsync-and-ssh-on-windows-2003-server.shtml)
-
-		</div>
+PasswordAuthentication no

@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>So, I'm working on installing our first Windows 2003 server as a domain controller in an existing Windows 2000 Active Directory domain.  Now, if I remember correctly, when I first tried this last fall, it errored out due to the AD domain not having all of the schema details needed for a Windows 2003 domain controller.
+So, I'm working on installing our first Windows 2003 server as a domain controller in an existing Windows 2000 Active Directory domain.  Now, if I remember correctly, when I first tried this last fall, it errored out due to the AD domain not having all of the schema details needed for a Windows 2003 domain controller.
 
 Ah, here we go... got the error message:
 
@@ -32,10 +32,4 @@ So... off we go to research this.  The server already exists as a member server 
 
 The second link is the most helpful of the bunch for this particular case (an existing Windows 2000 domain where I'm trying to add new domain controllers that are running Windows 2003).
 
-However, since there are potential issues with Mac clients when upgrading to Windows 2003 domain servers, I'm going to hold off on the upgrade until my next trip to the main office.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[20:01](http://www.tgharold.com/techblog/2006/04/windows-2003-domain-servers-in-windows.shtml)
-
-		</div>
+However, since there are potential issues with Mac clients when upgrading to Windows 2003 domain servers, I'm going to hold off on the upgrade until my next trip to the main office.

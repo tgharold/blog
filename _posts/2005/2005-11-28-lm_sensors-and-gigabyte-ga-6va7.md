@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Working on setting up lm_sensors on my Gigabyte GA-6VA7+ (Intel Celeron Coppermine 566Mhz CPU) system.  [First step](http://secure.netroedge.com/~lm78/kernel26.html) is to turn on I2C support in the 2.6 kernel configuration.
+Working on setting up lm_sensors on my Gigabyte GA-6VA7+ (Intel Celeron Coppermine 566Mhz CPU) system.  [First step](http://secure.netroedge.com/~lm78/kernel26.html) is to turn on I2C support in the 2.6 kernel configuration.
 
 <code># cd /usr/src/linux
 # make menuconfig</code>
@@ -309,10 +309,4 @@ Module                  Size  Used by
 eeprom                  5528  - 
 i2c_sensor              2984  - 
 i2c_viapro              7640  - 
-dm_mod                 45340  - </code><div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2005.shtml">2005</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[20:47](http://www.tgharold.com/techblog/2005/11/lmsensors-and-gigabyte-ga-6va7.shtml)
-
-		</div>
+dm_mod                 45340  - </code>

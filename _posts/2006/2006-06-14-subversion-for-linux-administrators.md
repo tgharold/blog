@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Updated: 26 Aug 2006
+Updated: 26 Aug 2006
 
 I *think* I have this figured out.  After banging my head against the wall for a few months, I finally figured out how to put my /etc configuration folder (and config files) into SubVersion so that I have version control over them.
 
@@ -332,10 +332,4 @@ nogitsune sbin #</code>
 
 Note: Each of the "svnadmin dump" lines should be all on one line and not split across two lines.
 
-As far as I know, svndump is adequate to the task of backing up SubVersion repositories.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SubVersion.shtml">SubVersion</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[21:23](http://www.tgharold.com/techblog/2006/06/subversion-for-linux-administrators.shtml)
-
-		</div>
+As far as I know, svndump is adequate to the task of backing up SubVersion repositories.

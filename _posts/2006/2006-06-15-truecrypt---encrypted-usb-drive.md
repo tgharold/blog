@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>TrueCrypt comes in handy for securing external USB or Firewire drives.  Especially when those drives are used for backups of sensitive files or if you are going to ship the drives from point A to point B.  Or even if you are worried about someone swiping the drive and mounting it on another workstation to access files that you have stored there.
+TrueCrypt comes in handy for securing external USB or Firewire drives.  Especially when those drives are used for backups of sensitive files or if you are going to ship the drives from point A to point B.  Or even if you are worried about someone swiping the drive and mounting it on another workstation to access files that you have stored there.
 
 Plus, as long as you know the passphrase and/or have the keyfiles used to decrypt the volume, you can move the USB device from workstation to workstation without losing access to the content.
 
@@ -80,10 +80,4 @@ C. Create the TrueCrypt drive on the partition
 </li>
 </ol>
 
-Once the partition has been formatted with TrueCrypt you can then return to the TrueCrypt window and mount the drive to a drive letter.  If this drive is always connected to the system you may wish to mount it upon login by making it a "favorite" volume in TrueCrypt.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Encryption.shtml">Encryption</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Security.shtml">Security</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/TrueCrypt.shtml">TrueCrypt</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[10:36](http://www.tgharold.com/techblog/2006/06/truecrypt-encrypted-usb-drive.shtml)
-
-		</div>
+Once the partition has been formatted with TrueCrypt you can then return to the TrueCrypt window and mount the drive to a drive letter.  If this drive is always connected to the system you may wish to mount it upon login by making it a "favorite" volume in TrueCrypt.

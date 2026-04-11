@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>([previous post](/techblog/2004/06/gentoo-install-3-bootstrapping.shtml))
+([previous post](/techblog/2004/06/gentoo-install-3-bootstrapping.shtml))
 
 Picking up with [7. Configuring the Kernel](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=7).  If your system crashes after this point, I do have a few notes jotted down on [how to get back to here without rebuilding everything](/techblog/2004/04/gentoo-epia-install-part-4.shtml).  (Since this is where I screwed up last time and put the machine into an unusable state.)
 
@@ -27,10 +27,4 @@ Next, [pick your kernel](http://www.gentoo.org/doc/en/gentoo-kernel.xml).  For m
 
 This will take a while to run.  Last time I think it took somewhere around 2 hours, this time it only took 30-40 minutes.  So my previous estimate was probably a bit off (or it took longer to download last time).
 
-([next step](/techblog/2004/06/gentoo-install-5-manual-kernel.shtml))<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/VIAEPIA.shtml">VIAEPIA</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[10:00](http://www.tgharold.com/techblog/2004/06/gentoo-install-4-installing-kernel.shtml)
-
-		</div>
+([next step](/techblog/2004/06/gentoo-install-5-manual-kernel.shtml))

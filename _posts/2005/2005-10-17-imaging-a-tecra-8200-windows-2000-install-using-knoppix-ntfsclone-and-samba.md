@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>One of the more annoying things that our users do is to get their Windows workstations into an unworkable state after 9 months or so.  We've tried user education, we use things like spyware removers, eliminating the use of Internet Explorer, etc, but there are a lot of times where it's less time and trouble for us to reset the machine back to a known point.  Now, there are a few ways to do this such as paying for programs like Norton Ghost or Acronis True Image.  Both of those work but they cost $50/seat roughly.  But I'd like to do it for less.  Or at least take a shot at doing it for less.
+One of the more annoying things that our users do is to get their Windows workstations into an unworkable state after 9 months or so.  We've tried user education, we use things like spyware removers, eliminating the use of Internet Explorer, etc, but there are a lot of times where it's less time and trouble for us to reset the machine back to a known point.  Now, there are a few ways to do this such as paying for programs like Norton Ghost or Acronis True Image.  Both of those work but they cost $50/seat roughly.  But I'd like to do it for less.  Or at least take a shot at doing it for less.
 
 (I do use Acronis True Image on a few of my systems.  It's good for making more frequent snapshots without having to reboot to a seperate operating system.  It also has an incremental mode that can be used to keep a single image up to date.  For user simplicity, it's hands-down the winner over Ghost.)
 
@@ -109,10 +109,4 @@ Notes:
 - You'll probably want to use the underscore ("_") on the end of the image filename so that split adds the 2-letter suffix (aa, ab, ac, etc) in a way that is not confusing.
 - Note, I also hit the 2GB limit (even though I was writing to a share on an NTFS volume).  So I went ahead and backed off to 1GB splits.
 
-(FIXME) (to be continued)<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2005.shtml">2005</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[19:07](http://www.tgharold.com/techblog/2005/10/imaging-tecra-8200-windows-2000.shtml)
-
-		</div>
+(FIXME) (to be continued)

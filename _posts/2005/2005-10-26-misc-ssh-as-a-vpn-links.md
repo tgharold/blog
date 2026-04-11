@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Just collecting some links that look interesting.  My plan is to use SSH as a VPN server and I'll need to figure out how Mac and Windows clients can connect in.
+Just collecting some links that look interesting.  My plan is to use SSH as a VPN server and I'll need to figure out how Mac and Windows clients can connect in.
 
 [Using a Linux L2TP/IPsec VPN server](http://www.jacco2.dds.nl/networking/freeswan-l2tp.html)
 
@@ -18,10 +18,4 @@ tags:
 
 [about.com - VPN Setup](http://compnetworking.about.com/cs/vpnsetup/)
 
-[Q&amp;A on using the VPN service (www.doc.ic.ac.uk/csg/faqs/)](http://www.doc.ic.ac.uk/csg/faqs/vpn.html)<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2005.shtml">2005</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SSH.shtml">SSH</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/VPN.shtml">VPN</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[21:21](http://www.tgharold.com/techblog/2005/10/misc-ssh-as-vpn-links.shtml)
-
-		</div>
+[Q&amp;A on using the VPN service (www.doc.ic.ac.uk/csg/faqs/)](http://www.doc.ic.ac.uk/csg/faqs/vpn.html)

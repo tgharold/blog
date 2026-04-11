@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>This is a record of the kernel flags that I'm going to use for my AMD64 system.  It's an Asus A8V (K8T800Pro and VT8237) with an Athlon64 3200+ chip along with 2GB of RAM.  Hard drives are hooked up to the onboard Promise controller (PDC20378), the onboard SATA controller and the onboard IDE controller.  Plus the motherboard has an onboard gigabit ethernet NIC (Marvell 88E8001).
+This is a record of the kernel flags that I'm going to use for my AMD64 system.  It's an Asus A8V (K8T800Pro and VT8237) with an Athlon64 3200+ chip along with 2GB of RAM.  Hard drives are hooked up to the onboard Promise controller (PDC20378), the onboard SATA controller and the onboard IDE controller.  Plus the motherboard has an onboard gigabit ethernet NIC (Marvell 88E8001).
 
 In addition, I have even more hard drives hooked up to a Promise Ultra133 TX2 PCI card (PDC20269) and some HighPoint Rocket133SB PCI cards (HPT302).
 
@@ -146,10 +146,4 @@ One key line that look interesting:
 
 Sharing PCI IDE interrupts support (CONFIG_IDEPCI_SHARE_IRQ)
 
-Turned that on, but still haven't fixed the sluggishness or the lost ticks issue.  I'm very tempted to give up on the PDC20378 chip, except that I know it worked on the LiveCD.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2005.shtml">2005</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SoftwareRAID.shtml">SoftwareRAID</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[17:06](http://www.tgharold.com/techblog/2005/11/gentoo-20051-software-raid-part-2.shtml)
-
-		</div>
+Turned that on, but still haven't fixed the sluggishness or the lost ticks issue.  I'm very tempted to give up on the PDC20378 chip, except that I know it worked on the LiveCD.

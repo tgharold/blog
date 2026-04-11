@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>
+
 [EMail-Security using GnuPG for Windows](http://www.gpg4win.org/) - GPG4Win offers better integration of GnuPG into Windows them past products (such as using WinPT with the command-line version of GnuPG).  That means that the user experience is a lot nicer and it doesn't seem as clunky.
 
 You can [download GPG4Win here](http://www.gpg4win.org/download.html).  The current version is: 1.0.2
@@ -249,10 +249,3 @@ Backing up your secret key and passphrase on paper
 
 </li>
 </ol>
-<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Encryption.shtml">Encryption</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/GnuPG.shtml">GnuPG</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Security.shtml">Security</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[10:47](http://www.tgharold.com/techblog/2006/06/getting-started-with-gpg4win.shtml)
-
-		</div>

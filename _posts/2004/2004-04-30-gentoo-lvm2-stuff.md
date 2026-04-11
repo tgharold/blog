@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>
+
 <b>vgscan</b> - displays the list of volume groups allocated on the system (for my box, I have vgos, vguser, vgtmp and vgmedia)
 <b>lvscan</b> - displays the list of virtual partitions inside of the volume groups (for my box, I have 6)
 <b>vgdisplay</b> - displays a lot of data bout the volume groups, a good place to find out how much space is free within a particular volume group (vgos has 12GB free, vguser 19GB free, vgtmp 7GB free, vgmedia 92GB free).
@@ -23,10 +23,4 @@ mke2fs -j -c /dev/vgmedia/media
 mkdir /media
 mount /dev/vgmedia/media /media
 
-Now I'm ready to configure Samba.  See the [gentoo documentation about Samba](http://www.gentoo.org/doc/en/desktop.xml#doc_chap7).<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/LVM.shtml">LVM</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[15:28](http://www.tgharold.com/techblog/2004/04/gentoo-lvm2-stuff.shtml)
-
-		</div>
+Now I'm ready to configure Samba.  See the [gentoo documentation about Samba](http://www.gentoo.org/doc/en/desktop.xml#doc_chap7).

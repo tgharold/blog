@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Re-ripping my CDs to a lossless format for permanent archival (I had ripped them all as 128kbps a few years ago, then reripped at 160kbps, now I'm going lossless).  Here's two links that I found useful.
+Re-ripping my CDs to a lossless format for permanent archival (I had ripped them all as 128kbps a few years ago, then reripped at 160kbps, now I'm going lossless).  Here's two links that I found useful.
 
 [Comparison of lossless audio codecs](http://members.home.nl/w.speek/comparison.htm) - Compares most of the popular lossless codecs such as FLAC
 
@@ -18,10 +18,4 @@ tags:
 
 Right now, I'm probably going to rip at compression level = 5 using Easy CD-DA Extractor's Audio CD Ripper.  My M.I.B. CD weighed in at  436MB with FLAC(5) compared to about 485MB with compression level zero.  That means I'll be able to archive about (8) albums on a DVD-R (compared to 20-30 using 160kbps MP3).  If I had ripped it to 320kbps CBR MP3, it would've ended up as 151MB.
 
-[AliveAudio - Getting to know FLAC](https://www.aliveaudio.net/flac.html) - Lists information about players and ripping utilities.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[09:59](http://www.tgharold.com/techblog/2004/08/flac-audio.shtml)
-
-		</div>
+[AliveAudio - Getting to know FLAC](https://www.aliveaudio.net/flac.html) - Lists information about players and ripping utilities.

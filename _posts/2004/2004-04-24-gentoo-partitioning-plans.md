@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>
+
 [ [gentoo-user] Help with new system](http://groups.google.com/groups?hl=en&amp;lr=&amp;ie=UTF-8&amp;oe=UTF-8&amp;c2coff=1&amp;selm=16ucP-pC-7%40gated-at.bofh.it) (discusses partition sizes)
 
 Possible partitions:
@@ -78,10 +78,4 @@ DISK 2:
 /tmp ext2 4GB
 /var/tmp ext2 8GB
 (root mirror) 2GB
-(backup partition)<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[02:49](http://www.tgharold.com/techblog/2004/04/gentoo-partitioning-plans.shtml)
-
-		</div>
+(backup partition)

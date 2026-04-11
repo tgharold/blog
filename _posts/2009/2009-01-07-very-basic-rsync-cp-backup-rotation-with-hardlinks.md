@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Here's a very basic script that I use with RSync that makes use of hard links to reduce the overall size of the backup folder.  The limitations are:
+Here's a very basic script that I use with RSync that makes use of hard links to reduce the overall size of the backup folder.  The limitations are:
 
 - Every morning, a server copies the current version of all files across SSH (using scp) into a "current" folder.  There are two folders on the source server that get backed up daily (/home and /local).
 
@@ -67,10 +67,4 @@ References:
 
 [Easy Automated Snapshot-Style Backups with Linux and Rsync](http://www.mikerubel.org/computers/rsync_snapshots/)
 
-[Local incremental snap shots with rsync](http://www.synology.at/enu/forum/viewtopic.php?f=9&amp;t=11471&amp;p=48163)<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2009.shtml">2009</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Backups.shtml">Backups</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/RSync.shtml">RSync</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[05:12](http://www.tgharold.com/techblog/2009/01/very-basic-rsync-cp-backup-rotation.shtml)
-
-		</div>
+[Local incremental snap shots with rsync](http://www.synology.at/enu/forum/viewtopic.php?f=9&amp;t=11471&amp;p=48163)

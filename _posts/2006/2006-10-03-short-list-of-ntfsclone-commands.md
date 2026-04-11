@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>This assumes that you have a hidden Linux partition (ext2/ext3) on the hard drive and that you're creating an image on that hidden drive.  Most of the time that means you're writing to either /dev/hda2 or /dev/sda2, but you should double-check that.
+This assumes that you have a hidden Linux partition (ext2/ext3) on the hard drive and that you're creating an image on that hidden drive.  Most of the time that means you're writing to either /dev/hda2 or /dev/sda2, but you should double-check that.
 
 List the partitions on the known hard drives:
 <code># fdisk -l</code>
@@ -32,10 +32,4 @@ Notes:
 
 - You'll probably want to use the underscore ("_") on the end of the image filename so that split adds the 2-letter suffix (aa, ab, ac, etc) in a way that is not confusing.
 
-- Note, the split size of 500MB is used in order to avoid the 2GB limit when writing to SMB network shares.  Plus it lets you spread the files across multiple disks if needed.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/NTFSClone.shtml">NTFSClone</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[14:08](http://www.tgharold.com/techblog/2006/10/short-list-of-ntfsclone-commands.shtml)
-
-		</div>
+- Note, the split size of 500MB is used in order to avoid the 2GB limit when writing to SMB network shares.  Plus it lets you spread the files across multiple disks if needed.

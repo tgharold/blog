@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>The instructions over at [cwRSync's install page](http://www.itefix.no/cwrsync/) are a bit vague, so I'm going to jot down the steps that I use.  These steps are for installing rsync in a <b>server</b> configuration.  Since the install process needs to (optionally) create an user account and create a new service, you'll need administrative access to the machine that you are using.  (I'm not sure whether members of the Power Users group have enough privileges.)
+The instructions over at [cwRSync's install page](http://www.itefix.no/cwrsync/) are a bit vague, so I'm going to jot down the steps that I use.  These steps are for installing rsync in a <b>server</b> configuration.  Since the install process needs to (optionally) create an user account and create a new service, you'll need administrative access to the machine that you are using.  (I'm not sure whether members of the Power Users group have enough privileges.)
 <ol>
 <li>Download cwRSync, open up the ZIP file, then extract/run <b>cwRsync_x.x.x_Installer.exe</b>.
 
@@ -91,5 +91,4 @@ read only = false
 
 That allows <b>any client</b> who manages to authenticate with the rsync service to write the E:\Backup\Joe on the rsync server.  That is not exactly secure and you should take additional steps to lock it down through the use of "hosts allow", "auth users", "secrets file" and perhaps ssh.  Securing your box is a bit beyond the scope of this post.  It's also a bit beyond my experience level since I'm just getting started with rsync.
 
-(Update: See [Securing cwRSync](/techblog/2004/06/securing-cwrsync.shtml).)<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/RSync.shtml">RSync</a>		<div class="Byline">			posted by Thomas at 			[10:29](http://www.tgharold.com/techblog/2004/06/installing-cwrsync-on-windows-2000.shtml)								</div>
+(Update: See [Securing cwRSync](/techblog/2004/06/securing-cwrsync.shtml).)

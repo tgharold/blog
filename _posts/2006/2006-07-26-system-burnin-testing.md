@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>One of the key things I try to do when setting up a new system is to really hammer it for a few days prior to delivering it to the main office and installing it.  That means exercising the disks, keeping an eye on temps, making the CPU run at 100% utilization and running data to/from the memory.  To do this, there are (4) programs that I use under Windows:
+One of the key things I try to do when setting up a new system is to really hammer it for a few days prior to delivering it to the main office and installing it.  That means exercising the disks, keeping an eye on temps, making the CPU run at 100% utilization and running data to/from the memory.  To do this, there are (4) programs that I use under Windows:
 
 1) [SpeedFan](http://www.almico.com/speedfan.php) - Which does an excellent job at allowing you to see what your CPU and hard drive temperatures are.  You can also display graphs of historical temperatures so that you can see the rise/fall as the component is put under a load.  Configuration is fairly easy, the hard part is identifying which temperature sensor is which.
 
@@ -38,10 +38,4 @@ For example:  The WD Raptor 10k SATA that I installed today shows a minimum temp
 
 5) Check the other temperature sensors inside the case.  Different CPUs run at different temperatures, so it is hard to make ballpark recommendations.  The Athlon64 X2 4200+ in a system that I'm burning in right now runs at 60-61C under full load.
 
-6) Watch the Prime95 windows and look for error indicators.  An error in Prime95 indicates that there is a problem with either your RAM or your CPU.  It could be as simple as incorrect timings or maybe the "fast" RAM that you bought isn't as fast as it says it is (and backing off on memory timings will make the system stable).  In general, Prime95 is extremely sensitive to marginal hardware, where MemTest86 might give it a "pass" Prime95 will throw a warning.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[22:24](http://www.tgharold.com/techblog/2006/07/system-burnin-testing.shtml)
-
-		</div>
+6) Watch the Prime95 windows and look for error indicators.  An error in Prime95 indicates that there is a problem with either your RAM or your CPU.  It could be as simple as incorrect timings or maybe the "fast" RAM that you bought isn't as fast as it says it is (and backing off on memory timings will make the system stable).  In general, Prime95 is extremely sensitive to marginal hardware, where MemTest86 might give it a "pass" Prime95 will throw a warning.

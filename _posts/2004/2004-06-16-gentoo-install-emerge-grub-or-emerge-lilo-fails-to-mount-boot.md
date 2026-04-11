@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Sometimes "emerge grub" or "emerge lilo" fails with the following error and you are attempting to mount "/boot" on a software RAID1 partition:
+Sometimes "emerge grub" or "emerge lilo" fails with the following error and you are attempting to mount "/boot" on a software RAID1 partition:
 <pre>*
 * Cannot automatically mount your /boot partition.
 * Your boot partition has to be mounted rw before the installation
@@ -48,10 +48,4 @@ The root-cause was that back when I did the first part of the install, not only 
 
 Links:
 
-[www.gentoo.pl](http://www.gentoo.pl/?id=forum&amp;id_watek=1669&amp;posty=1) - This page might've had the answer, but unfortunately it was written in polish.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/GRUB.shtml">GRUB</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[15:26](http://www.tgharold.com/techblog/2004/06/gentoo-install-emerge-grub-or-emerge.shtml)
-
-		</div>
+[www.gentoo.pl](http://www.gentoo.pl/?id=forum&amp;id_watek=1669&amp;posty=1) - This page might've had the answer, but unfortunately it was written in polish.

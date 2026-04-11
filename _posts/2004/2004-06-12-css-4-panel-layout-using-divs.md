@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>You'd think it would be simple, right?  Oh, young grasshopper, you have much to learn!  Actually, it's not all <em>that</em> bad, just tedious to get a layout up and running.  Took me about 2 hours of trial-n-error, and looking at some of the sites over at the [CSS Zen Garden](http://www.mezzoblue.com/zengarden/).  Finally, [Michael Pick's blog entry about the CSS Zen Garden](http://www.mikepick.com/news/archives/000086.html) proved to be the most useful as I teased apart his DIVs and his CSS file.  Mike's page was already close to the layout that I wanted and his CSS file was pretty simple.
+You'd think it would be simple, right?  Oh, young grasshopper, you have much to learn!  Actually, it's not all <em>that</em> bad, just tedious to get a layout up and running.  Took me about 2 hours of trial-n-error, and looking at some of the sites over at the [CSS Zen Garden](http://www.mezzoblue.com/zengarden/).  Finally, [Michael Pick's blog entry about the CSS Zen Garden](http://www.mikepick.com/news/archives/000086.html) proved to be the most useful as I teased apart his DIVs and his CSS file.  Mike's page was already close to the layout that I wanted and his CSS file was pretty simple.
 
 My goal for this blog's design is a navigation bar across the top of the page, a footer at the bottom of the page, a side-bar containing links to the various archive pages, and a main body that is 80-85% of the page width.  This is somewhat similar to the diagram under [section 9.6.1 (Fixed positioning)](http://www.w3.org/TR/REC-CSS2/visuren.html#fixed-positioning) of the [W3C.org CSS2 Specification](), except that I don't want to use fixed positioning.
 
@@ -80,10 +80,3 @@ Bugs:<ol>
 
 </li>
 </ol>
-<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[17:44](http://www.tgharold.com/techblog/2004/06/css-4-panel-layout-using-divs.shtml)
-
-		</div>

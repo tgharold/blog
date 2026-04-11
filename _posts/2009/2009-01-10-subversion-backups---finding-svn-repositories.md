@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>The first trick when backing up SVN repositories is finding them so that you can run the svnadmin hotcopy command.  Well, you *could* just setup a list of export DIRS in your backup script - but as you add new SVN repositories, you have to constantly edit that script.
+The first trick when backing up SVN repositories is finding them so that you can run the svnadmin hotcopy command.  Well, you *could* just setup a list of export DIRS in your backup script - but as you add new SVN repositories, you have to constantly edit that script.
 
 Caveat #1: This setup probably only works for FSFS repositories.  I don't use BerkleyDB repositories (a.k.a. BDB) so I can't guarantee that it correctly locates them.  I've chosen to look for folders that contain the "db/uuid" file as our "marker" file.  Which should result in zero false-positives or mis-identified repositories.
 
@@ -111,10 +111,4 @@ done
 
 # insert rdiff-backup line here</pre>
 
-Hopefully that works out.  Note the use of "rm -r", which could cause data loss if there are errors in the script.  You will want  to be very careful while working on the script.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2009.shtml">2009</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Backups.shtml">Backups</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/bash.shtml">bash</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SubVersion.shtml">SubVersion</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[07:59](http://www.tgharold.com/techblog/2009/01/subversion-backups-finding-svn.shtml)
-
-		</div>
+Hopefully that works out.  Note the use of "rm -r", which could cause data loss if there are errors in the script.  You will want  to be very careful while working on the script.

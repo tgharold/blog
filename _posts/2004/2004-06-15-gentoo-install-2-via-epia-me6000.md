@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>([Previous post about fdisk and setting up the software RAID](/techblog/2004/06/gentoo-install-1-via-epia-me6000.shtml).)
+([Previous post about fdisk and setting up the software RAID](/techblog/2004/06/gentoo-install-1-via-epia-me6000.shtml).)
 
 At this point, we've partitioned the disk and setup the "/etc/raidtab" file.  It's a good idea to jot down everything in that file and put it in a safe place.  You should also "cat /proc/mdstat" and jot that information down too.
 
@@ -111,10 +111,4 @@ Next we're ready to install the base system, see [6. Installing the Gentoo Base 
 # source /etc/profile
 # emerge sync</pre>
 
-Synchronization of the portage tree will take a while (depending on the speed of your internet connection and how fast your system is).  My system downloaded 60MB or so worth of updates and took 30-60 minutes (at a guess).  Meanwhile, I'll continue this topic in [my next post](/techblog/2004/06/gentoo-install-3-bootstrapping.shtml).<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/VIAEPIA.shtml">VIAEPIA</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[15:53](http://www.tgharold.com/techblog/2004/06/gentoo-install-2-via-epia-me6000.shtml)
-
-		</div>
+Synchronization of the portage tree will take a while (depending on the speed of your internet connection and how fast your system is).  My system downloaded 60MB or so worth of updates and took 30-60 minutes (at a guess).  Meanwhile, I'll continue this topic in [my next post](/techblog/2004/06/gentoo-install-3-bootstrapping.shtml).

@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Got the following error while trying to emerge samba into my Gentoo box.
+Got the following error while trying to emerge samba into my Gentoo box.
 
 <code>Compiling torture/rpctorture.c
 make: *** Waiting for unfinished jobs....
@@ -173,10 +173,4 @@ Portage overlays:
 
 samba # emerge samba</code>
 
-(crosses fingers)<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2005.shtml">2005</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Samba.shtml">Samba</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[12:59](http://www.tgharold.com/techblog/2005/10/gentoo-emerge-samba-fails-while.shtml)
-
-		</div>
+(crosses fingers)

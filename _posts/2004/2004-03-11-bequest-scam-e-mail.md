@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Now here's a really new one... a message that Mozilla Thunderbird 0.4 thinks is spam, where the sender claims that I'm eligible for a 2.5 million bequest by some bloke who passed away last year.  I've been digging through the message text a few times trying to find the "gotcha" and it doesn't seem to be real obvious as to what the intent is other then them trying to find easy marks for further attempts.
+Now here's a really new one... a message that Mozilla Thunderbird 0.4 thinks is spam, where the sender claims that I'm eligible for a 2.5 million bequest by some bloke who passed away last year.  I've been digging through the message text a few times trying to find the "gotcha" and it doesn't seem to be real obvious as to what the intent is other then them trying to find easy marks for further attempts.
 
 The message is in HTML format, but I'm going to strip the codes and merely post the text version.
 
@@ -116,5 +116,4 @@ Other useful searches which turn up additional versions of the scam spam:
 "[John Ryerson made you a beneficiary to his will](http://www.google.com/search?hl=en&amp;lr=&amp;ie=UTF-8&amp;oe=UTF-8&amp;c2coff=1&amp;q=%22John+Ryerson+made+you+a+beneficiary+to+his+will%22&amp;btnG=Google+Search)"
 "[Being a widely traveled man](http://www.google.com/search?hl=en&amp;lr=&amp;ie=UTF-8&amp;oe=UTF-8&amp;c2coff=1&amp;q=%22Being+a+widely+traveled+man%22&amp;btnG=Google+Search)"
 "[former managing director and pioneer staff of a giant construction company](http://www.google.com/search?hl=en&amp;lr=&amp;ie=UTF-8&amp;oe=UTF-8&amp;c2coff=1&amp;q=%22former+managing+director+and+pioneer+staff+of+a+giant+construction+company%22&amp;btnG=Google+Search)"
-"[died on the 9th day of February 2002](http://www.google.com/search?hl=en&amp;lr=&amp;ie=UTF-8&amp;oe=UTF-8&amp;c2coff=1&amp;q=%22died+on+the+9th+day+of+February+2002%22&amp;btnG=Google+Search)"<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>		<div class="Byline">			posted by Thomas at 			[08:41](http://www.tgharold.com/techblog/2004/03/bequest-scam-e-mail.shtml)								</div>	</rev_davidwink8></tgh></tgh></tgh></rev_davidwink8>
+"[died on the 9th day of February 2002](http://www.google.com/search?hl=en&amp;lr=&amp;ie=UTF-8&amp;oe=UTF-8&amp;c2coff=1&amp;q=%22died+on+the+9th+day+of+February+2002%22&amp;btnG=Google+Search)"

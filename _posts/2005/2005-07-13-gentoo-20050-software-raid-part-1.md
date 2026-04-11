@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>
+
 <i>Note: As always, these are works-in-progress.  They might work, or they might not and are mostly here so that I can keep track of what I did or didn't do during an install.</i>
 
 Gentoo 2005.0 Software RAID (part 1) - Going to try again with Gentoo 2005.0 in a software RAID with LVM configuration.  There's a [post](http://forums.gentoo.org/viewtopic-t-358713.html) on the Gentoo forums that indicates it may now be possible to get it up and running (seems to indicate there was a bug with kernels prior to 2.6.12).
@@ -72,10 +72,4 @@ Command: w</code>
 
 This gives me a 128MB boot area, a 2GB swap area, a 2GB root area, with the rest of the disk set aside for my LVM partitions. Repeat the above commands to configure the 2nd disk in the same fashion. Note that I'm using a different partition type then that shown in chapter 4.c. The 'fd' partition type is what I need to use since all 4 partitions on hda/hdc are going to be put into a software RAID1 set.
 
-<i>(Eventually ran out of time to get this working due to other projects, now waiting on 2005.1 release.)</i><div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2005.shtml">2005</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SoftwareRAID.shtml">SoftwareRAID</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[12:37](http://www.tgharold.com/techblog/2005/07/gentoo-20050-software-raid-part-1.shtml)
-
-		</div>
+<i>(Eventually ran out of time to get this working due to other projects, now waiting on 2005.1 release.)</i>

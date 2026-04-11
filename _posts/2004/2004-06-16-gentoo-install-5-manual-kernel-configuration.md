@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>([previous post - building the kernel](/2004/06/gentoo-install-4-installing-kernel.shtml))
+([previous post - building the kernel](/2004/06/gentoo-install-4-installing-kernel.shtml))
 
 Note: This is for a VIA EPIA ME6000 motherboard being used as a headless server.  All of the multimedia and graphic options are disabled.  (See my [previous install](/techblog/2004/04/gentoo-epia-install-part-5.shtml).)  If this is your first install, you should probably use the "genkernel" method rather then manual configuration.  The [Gentoo docs explain configuring the kernel](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=7#doc_chap3).  They recommend being familiar with the "<b>cat /proc/pci</b>" and "<b>lsmod</b>" commands which is something I missed on my [previous install](/2004/04/gentoo-epia-install-part-5.shtml).
 <pre># cd /usr/src/linux
@@ -124,10 +124,4 @@ Change your hostname, domainname, and the default run level.
 Onward to [chapter 9, configuring the bootloader](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=9).  Here's where I ran into trouble; ["emerge grub" or "emerge lilo" failed with "cannot automatically mount your /boot partition"](/techblog/2004/06/gentoo-install-emerge-grub-or-emerge.shtml).
 <pre># emerge grub</pre>
 
-([continued in my next post](/techblog/2004/06/gentoo-install-6-grub-system-tools.shtml))<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/VIAEPIA.shtml">VIAEPIA</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[10:37](http://www.tgharold.com/techblog/2004/06/gentoo-install-5-manual-kernel.shtml)
-
-		</div>
+([continued in my next post](/techblog/2004/06/gentoo-install-6-grub-system-tools.shtml))

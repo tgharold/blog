@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>So after playing with the Motorola Q for a few more hours, I have the following thoughts:
+So after playing with the Motorola Q for a few more hours, I have the following thoughts:
 
 - No pocket quicken for the Smartphone yet (only PPC version of WM5).  So there are 2 versions of WM5... One for PPC one for SmartPhone.  Maybe Landware will get around to porting it one of these days.
 
@@ -36,10 +36,4 @@ This is something that I didn't know when I bought the phone (that there are 2 v
 
 - EVDO looks promising.  I installed a free map program that pulls over EVDO and works a lot like Google Maps.
 
-- Software availability for the SmartPhone version of WM5 is slim.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/MotorolaQ.shtml">MotorolaQ</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[12:32](http://www.tgharold.com/techblog/2006/11/motoq-more-thoughts.shtml)
-
-		</div>
+- Software availability for the SmartPhone version of WM5 is slim.
