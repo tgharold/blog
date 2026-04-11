@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>So, I'm trying to install Gentoo 2005.1 on Software RAID and LVM2.  Everything seems to work up until I do my initial "emerge --sync".
+So, I'm trying to install Gentoo 2005.1 on Software RAID and LVM2.  Everything seems to work up until I do my initial "emerge --sync".
 
 <code>livecd / # emerge --sync
 ...
@@ -59,10 +59,4 @@ Use smaller disks.  I did some more digging and the Gigabyte motherboard almost 
 
 I have (3) 120GB disks on order and will be dropping them into this system when they arrive.  That will take care of the issue and still allow me to put this older hardware into use.
 
-Update #1: DBaN is reporting errors on the (2) 160GB disks attached to the Promise FastTrak66 card, but not for the drive connected directly to the motherboard.  (Method: PRNG Stream, Verify: All Passes)<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2005.shtml">2005</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[12:50](http://www.tgharold.com/techblog/2005/09/gentoo-emerge-sync-errors-during.shtml)
-
-		</div>
+Update #1: DBaN is reporting errors on the (2) 160GB disks attached to the Promise FastTrak66 card, but not for the drive connected directly to the motherboard.  (Method: PRNG Stream, Verify: All Passes)

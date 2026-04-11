@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Links:
+Links:
 
 [Linux Logical Volume Manager (LVM) on Software RAID](http://www.aplawrence.com/Linux/lvm.html) - explains the benefits of using LVM, and also how to get LVM running on top of software RAID in RedHat 8.
 
@@ -34,10 +34,4 @@ There's a special set of command that need to be done in "grub" if you want to b
 
 Replacing a failed disk in a software RAID1 array requires partitioning the drive by hand prior to rebuilding the array.  This is also mentioned in the [gentoo forums thread about software RAID](http://forums.gentoo.org/viewtopic.php?t=8813&amp;postdays=0&amp;postorder=asc&amp;highlight=raid&amp;start=100), look for the post by "hover". 
 
-Searching around on my Gentoo 2004.0 Universal CD, I don't see the "mdadm" tools anywhere, but I do see "raidtools".<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/LVM.shtml">LVM</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SoftwareRAID.shtml">SoftwareRAID</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[11:18](http://www.tgharold.com/techblog/2004/06/lvm-and-software-raid.shtml)
-
-		</div>
+Searching around on my Gentoo 2004.0 Universal CD, I don't see the "mdadm" tools anywhere, but I do see "raidtools".

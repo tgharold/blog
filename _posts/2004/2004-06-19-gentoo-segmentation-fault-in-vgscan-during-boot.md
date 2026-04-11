@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Now for the other error that I got during the initial bootup.
+Now for the other error that I got during the initial bootup.
 <pre>* Using /etc/modules.autoload.d/kernel-2.6 as config:
 * Loading module dm-mod...                                                 [ ok ]
 * Autoloaded 1 module(s)
@@ -62,10 +62,4 @@ Links:
 
 [Example of lvm.conf file](https://www.redhat.com/archives/linux-lvm/2003-December/msg00009.html) - shows a more complex lvm.conf file, complete with multiple filters.
 
-[A more complete example lvm.conf file](http://gondor.com/lvm/lvm.conf)<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/LVM.shtml">LVM</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[14:31](http://www.tgharold.com/techblog/2004/06/gentoo-segmentation-fault-in-vgscan.shtml)
-
-		</div>
+[A more complete example lvm.conf file](http://gondor.com/lvm/lvm.conf)

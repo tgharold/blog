@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>There are currently (3) basic methods for getting a remote control GUI on a Linux server (like we do with Remote Desktop for Windows servers):
+There are currently (3) basic methods for getting a remote control GUI on a Linux server (like we do with Remote Desktop for Windows servers):
 
 1) X-Windows over TCP/IP
 
@@ -32,10 +32,4 @@ The downsides of VNC are:
 
 A company called NoMachines came out with a different solution called "NX".  NX is a protocol that is very similar to RDP and the client works rather similar to Remote Desktop.  You used to have to pay for the product, but over the years, they've opened up the source code.  So now there are (3) different server implementations (NX, FreeNX, and another) and you can download the NX client from NoMachines for free. 
 
-The big advantage here is that security is better and performance is better over slow WAN links.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2008.shtml">2008</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/FreeNX.shtml">FreeNX</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Linux.shtml">Linux</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/NX.shtml">NX</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/VNC.shtml">VNC</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/X11.shtml">X11</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[18:53](http://www.tgharold.com/techblog/2008/04/methods-ofr-remote-gui-control-of-linux.shtml)
-
-		</div>
+The big advantage here is that security is better and performance is better over slow WAN links.

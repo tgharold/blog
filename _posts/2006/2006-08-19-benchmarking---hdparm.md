@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>So as I prepare for the iSCSI build, I need to start gathering tools to help me find bottlenecks.  As well as establishing baseline performance estimates.
+So as I prepare for the iSCSI build, I need to start gathering tools to help me find bottlenecks.  As well as establishing baseline performance estimates.
 
 <b>hdparm -tT {blockdevice name}</b> - This tool ships standard with most (all?) versions of Linux.  It's a read-only, non-destructive (if used properly), command that can be used to test raw read performance from any block device.  So you can check individual drives in a RAID array as well as doing a quick check of the over all RAID array performance.  Run time is generally around 10 seconds.
 
@@ -150,10 +150,4 @@ nogitsune etc # hdparm -tT /dev/sdb1
  Timing cached reads:   3232 MB in  2.00 seconds = 1615.90 MB/sec
  Timing buffered disk reads:  162 MB in  3.01 seconds =  53.85 MB/sec</code>
 
-What we see here is that for the RAID1 arrays, speed is equivalent to the disks within the array.  But for the RAID5 array with (3) disks, speed is 2x that of the single disks within the array.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[14:47](http://www.tgharold.com/techblog/2006/08/benchmarking-hdparm.shtml)
-
-		</div>
+What we see here is that for the RAID1 arrays, speed is equivalent to the disks within the array.  But for the RAID5 array with (3) disks, speed is 2x that of the single disks within the array.

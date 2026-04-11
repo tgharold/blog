@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>I've pretty much given up on trying to extract the key bits from Cygwin in order to setup a SSHD server.  The [OpenSSH for Windows](http://sshwindows.sourceforge.net/) project at SourceForge seems to have what I'm looking for, they just don't have the RSync application included.
+I've pretty much given up on trying to extract the key bits from Cygwin in order to setup a SSHD server.  The [OpenSSH for Windows](http://sshwindows.sourceforge.net/) project at SourceForge seems to have what I'm looking for, they just don't have the RSync application included.
 
 For an excellent introduction to SSH, check out [OpenSSH for the impatient](http://www.ypsolog.com/docs/openssh.html).
 
@@ -30,10 +30,4 @@ b) RSAAuthentication - setting this to no will disable the ability to login with
 
 c) PasswordAuthentication - you may want to change this to "no" and force users to setup a public/private key pair in order to login to the server.
 
-(note: this post was never completed... so use with a grain of salt)<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[17:01](http://www.tgharold.com/techblog/2004/07/openssh-for-windows.shtml)
-
-		</div>
+(note: this post was never completed... so use with a grain of salt)

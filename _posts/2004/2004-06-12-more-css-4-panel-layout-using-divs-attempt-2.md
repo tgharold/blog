@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>1) Removed the "Main" DIV tag from the previous attempt.  (Go look at [BlueRobot.com's 2-panel layout](http://bluerobot.com/web/layouts/layout1.html).)
+1) Removed the "Main" DIV tag from the previous attempt.  (Go look at [BlueRobot.com's 2-panel layout](http://bluerobot.com/web/layouts/layout1.html).)
 
 2) Decided that I liked the look of [CSS Layout Techniques: for Fun and Profit](http://glish.com/css/) where the side-bar menu is on the right, which allows text to fill the width of the window once you scroll down past the end.  That looks more natural then a left side menu with a fixed left margin.  Internet Explorer 6 also seems to like that layout a bit better.  ([BlueRobot.com's 2-panel right menu layout](http://bluerobot.com/web/layouts/layout2.html))
 
@@ -63,10 +63,3 @@ Bugs:<ol>
 
 </li>
 </ol>
-<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[18:38](http://www.tgharold.com/techblog/2004/06/more-css-4-panel-layout-using-divs.shtml)
-
-		</div>

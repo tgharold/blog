@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Based on what I've read elsewhere (links in my [previous posting](/techblog/2004/06/rsync-and-windows.shtml)), I think I can pull the relevant pieces out of the [Cygwin package](http://cygwin.com/mirrors.html).  I'll try to keep good notes as to what worked and what didn't, but let me know if you find any errors.  [Rsync wrapper for Win32](http://footboot.net/rsync-win/) seems to be a good starting point for which DLLs and files I'll need to pull out of the standard Cygwin release.
+Based on what I've read elsewhere (links in my [previous posting](/techblog/2004/06/rsync-and-windows.shtml)), I think I can pull the relevant pieces out of the [Cygwin package](http://cygwin.com/mirrors.html).  I'll try to keep good notes as to what worked and what didn't, but let me know if you find any errors.  [Rsync wrapper for Win32](http://footboot.net/rsync-win/) seems to be a good starting point for which DLLs and files I'll need to pull out of the standard Cygwin release.
 
 You can download the files off of any of the [Cygwin public mirrors](http://cygwin.com/mirrors.html).  Grab the following  archives and extract them to a temporary directory on your machine.  
 
@@ -41,10 +41,4 @@ If you have a log file, there should now be an entry indicating that rsync has s
 To do:
 - create the user account to use for the rsync service
 - setup rsync to run as a service (need the SRVANY.EXE file, I think)
-- figure out how to get rsync talking through an SSHD server<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/RSync.shtml">RSync</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[18:53](http://www.tgharold.com/techblog/2004/07/hacking-together-minimal-rsync-for.shtml)
-
-		</div>
+- figure out how to get rsync talking through an SSHD server

@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Going back to the 2004.3 Gentoo Universal boot CD.  Trying to get past my previous issue [bd_claim issues when setting up a software RAID](/techblog/2005/03/installing-gentoo-on-software-raid.shtml).  This is on my Gigabyte GA-6VA7+ motherboard ([notes on the Gigabyte GA-6VA7+ motherboard and other hardware](/techblog/2005/03/gentoo-20050-on-gigabyte-ga-6va7-part.shtml)).
+Going back to the 2004.3 Gentoo Universal boot CD.  Trying to get past my previous issue [bd_claim issues when setting up a software RAID](/techblog/2005/03/installing-gentoo-on-software-raid.shtml).  This is on my Gigabyte GA-6VA7+ motherboard ([notes on the Gigabyte GA-6VA7+ motherboard and other hardware](/techblog/2005/03/gentoo-20050-on-gigabyte-ga-6va7-part.shtml)).
 
 Starting with the usual tricks:
 
@@ -98,10 +98,4 @@ Seems to be working fine.  Once each RAID set finishes initialization, I'll crea
 <code># mdadm --create /dev/md2 --level=1 --raid-devices=2 /dev/hda3  /dev/hdc3
 # mdadm --create /dev/md3 --level=1 --raid-devices=2 /dev/hda4 /dev/hdc4</code>
 
-The last RAID set will take a while to initialize (2 hours?), so I'm going to go work on other things while it runs.  I also need to go back and review the documentation to see what else I need to do when doing software RAID.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2005.shtml">2005</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SoftwareRAID.shtml">SoftwareRAID</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[11:04](http://www.tgharold.com/techblog/2005/04/gentoo-and-software-raid-20043.shtml)
-
-		</div>
+The last RAID set will take a while to initialize (2 hours?), so I'm going to go work on other things while it runs.  I also need to go back and review the documentation to see what else I need to do when doing software RAID.

@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Today's trick is moving a CentOS5 system from an old set of disks over to a new set of disks.  Along the way, I'll create an image of the system to allow me to restore it later on.
+Today's trick is moving a CentOS5 system from an old set of disks over to a new set of disks.  Along the way, I'll create an image of the system to allow me to restore it later on.
 
 The CentOS5 system is a fresh install running RAID-1 across (3) disks using Linux Software RAID (mdadm).  There are (4) primary partitions (boot, root, swap, LVM) with no data on the LVM partition.
 
@@ -185,10 +185,4 @@ Getting the Software RAID back up and happy is the trickiest of the steps.
 </li>
 </ol>
 
-Note: If your triple mirror RAID array puts the additional disks in as spares, make sure that you have (a) grown the number of raid devices to 3 for the RAID1 set and (b) make sure that there are no other arrays synchronizing as the same time.  It's also best to add the elements one at a time, rather then adding both at the same time.  I'm not sure if it's a bug in mdadm or just the way it works, but it took me two tries to get my triple mirror back up with all disks marked as "active" instead of (2) active and (1) hot-spare.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2007.shtml">2007</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Backups.shtml">Backups</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/CentOS5.shtml">CentOS5</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/DisasterRecovery.shtml">DisasterRecovery</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SoftwareRAID.shtml">SoftwareRAID</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[10:52](http://www.tgharold.com/techblog/2007/05/brute-force-disaster-recovery-for.shtml)
-
-		</div>
+Note: If your triple mirror RAID array puts the additional disks in as spares, make sure that you have (a) grown the number of raid devices to 3 for the RAID1 set and (b) make sure that there are no other arrays synchronizing as the same time.  It's also best to add the elements one at a time, rather then adding both at the same time.  I'm not sure if it's a bug in mdadm or just the way it works, but it took me two tries to get my triple mirror back up with all disks marked as "active" instead of (2) active and (1) hot-spare.

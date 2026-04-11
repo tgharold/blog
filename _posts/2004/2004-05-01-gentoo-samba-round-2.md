@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>([Gentoo samba page](http://www.gentoo.org/doc/en/desktop.xml#doc_chap7), [attempt #1](/techblog/2004/05/gentoo-samba-with-ads.shtml))
+([Gentoo samba page](http://www.gentoo.org/doc/en/desktop.xml#doc_chap7), [attempt #1](/techblog/2004/05/gentoo-samba-with-ads.shtml))
 
 Well, rebuilding the kernel didn't really do anything other then teach me how to rebuild the kernel...  I'm still getting the "net: command not found" error when trying to add the box the AD domain.  (And I'm not sure what I missed during the installation.)
 
@@ -26,10 +26,4 @@ Ah ha!  Now it indicates that it will install net-fs/samba-3.0.2a-r2, but first 
 Shows me that I have 2.0.50-r1 and the latest is 2.0.50.r6 and that the size of the download is 219KB.
 
 # emerge portage
-# emerge samba<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Samba.shtml">Samba</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[04:39](http://www.tgharold.com/techblog/2004/05/gentoo-samba-round-2.shtml)
-
-		</div>
+# emerge samba

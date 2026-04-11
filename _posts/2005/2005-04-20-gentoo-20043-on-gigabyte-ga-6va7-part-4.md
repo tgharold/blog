@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>
+
 <b>Note: These directions are works-in-progress... in fact, they might not even work at all until I find out why I'm ending up with non-bootable systems (looks like a bug in the 2.6 kernel).</b>
 
 (previous step)
@@ -140,10 +140,4 @@ Now, some misc stuff:
 
 (add a user called 'john' and set a password)</code>
 
-(next step)<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2005.shtml">2005</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gigabyte-GA-6VA7%2B.shtml">Gigabyte-GA-6VA7+</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[20:43](http://www.tgharold.com/techblog/2005/04/gentoo-20043-on-gigabyte-g_111404509792475776.shtml)
-
-		</div>
+(next step)

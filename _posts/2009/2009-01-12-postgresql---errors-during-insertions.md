@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>ERROR:  could not access status of transaction 84344832
+ERROR:  could not access status of transaction 84344832
 DETAIL:  Could not open file "pg_clog/0050": No such file or directory.
 
 ERROR:  could not access status of transaction 84344832
@@ -79,10 +79,4 @@ D) Restart the pgsql service.
 
 Final notes.  This is probably absolutely NOT the proper way to fix this error.  Proceed at your own risk.  The chance of lost data is VERY HIGH.
 
-For us, it was a table that was append only, that we were filling out with test data.  So I'm not all that concerned.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2009.shtml">2009</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/PostgreSQL.shtml">PostgreSQL</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[11:43](http://www.tgharold.com/techblog/2009/01/postgresql-errors-during-insertions.shtml)
-
-		</div>
+For us, it was a table that was append only, that we were filling out with test data.  So I'm not all that concerned.

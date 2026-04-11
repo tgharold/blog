@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>First problem is that the system boots straight into "grub".  Probably due to a missing "grub.conf" file, which I'm pretty sure I had written to the proper location earlier in the install. So I'll load the kernel by hand and fix the config file once I get the box to boot properly.
+First problem is that the system boots straight into "grub".  Probably due to a missing "grub.conf" file, which I'm pretty sure I had written to the proper location earlier in the install. So I'll load the kernel by hand and fix the config file once I get the box to boot properly.
 <pre>grub&gt;
 grub&gt; cat /boot/grub/grub.conf
 (no file found)
@@ -111,10 +111,4 @@ livecd / # emerge sync
 livecd / # cd /usr/portage
 livecd / # scripts/bootstrap.sh</pre>
 
-If bootstrap runs correctly (and it should now that I re-formatted the /opt, /usr, /var, /home, /tmp, and /var/tmp volumes), I can pick back up with the [rest of my original install process](/techblog/2004/06/gentoo-install-3-bootstrapping.shtml)<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SoftwareRAID.shtml">SoftwareRAID</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[01:08](http://www.tgharold.com/techblog/2004/06/troubleshooting-software-raid-boot.shtml)
-
-		</div>
+If bootstrap runs correctly (and it should now that I re-formatted the /opt, /usr, /var, /home, /tmp, and /var/tmp volumes), I can pick back up with the [rest of my original install process](/techblog/2004/06/gentoo-install-3-bootstrapping.shtml)

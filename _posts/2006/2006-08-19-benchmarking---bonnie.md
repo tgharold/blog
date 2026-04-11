@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>The first test is done on /dev/md3 (composed of partitions on /dev/hda and /dev/sda).
+The first test is done on /dev/md3 (composed of partitions on /dev/hda and /dev/sda).
 
 <pre>nogitsune tmp # bonnie -s 16384 -m nogitsune-vgmirror
 File './Bonnie.9315', size: 17179869184
@@ -88,10 +88,3 @@ Seeker 1...Seeker 2...Seeker 3...start 'em...done...done...done...
 Machine    MB K/sec %CPU K/sec %CPU K/sec %CPU K/sec %CPU K/sec %CPU  /sec %CPU
 direct   2047  4517 83.2 11374 58.1  9073 54.7  6932 98.6 36154 52.7  99.8  3.2
 coppermine backup #</pre>
-<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[15:06](http://www.tgharold.com/techblog/2006/08/benchmarking-bonnie.shtml)
-
-		</div>

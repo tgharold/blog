@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>I now have a few sample kernel configs from kind folks in alt.os.linux.gentoo.  There are two that I've focused in on (mostly because they posted first and they gave background on the config files).
+I now have a few sample kernel configs from kind folks in alt.os.linux.gentoo.  There are two that I've focused in on (mostly because they posted first and they gave background on the config files).
 
 [2005_1-LiveCDConfig.txt](/techblog/Gentoo/AMD64/2005_1-LiveCDConfig.txt) - This is the .config file from the AMD64 2005.1 LiveCD.  Since I know this kernel works, it's a prime starting point for researching why I'm having the issues that I'm having.
 
@@ -92,10 +92,4 @@ Probably not an issue.  The Anton config sets this to "Y"/"M" instead of "Y"/"Y"
 
 Updates:
 
-None of the above settings seem to have made any difference.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2005.shtml">2005</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[22:05](http://www.tgharold.com/techblog/2005/11/troubleshooting-comparison-of-kernel.shtml)
-
-		</div>
+None of the above settings seem to have made any difference.

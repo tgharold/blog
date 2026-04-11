@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>At the office, we're using a virtual Dovecot server where each person's mail folders are owned by an unique user in the Linux account system.  
+At the office, we're using a virtual Dovecot server where each person's mail folders are owned by an unique user in the Linux account system.  
 
 [Dovecot: Virtual Users](http://wiki.dovecot.org/VirtualUsers) - covers the basics
 
@@ -101,10 +101,3 @@ The steps that we take when we update Dovecot are then:
 <b>grep "AVC" /var/log/audit/audit.log | tail -n 50</b> - look for any errors relating to Dovecot</li>
 
 </ol>
-<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2008.shtml">2008</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Dovecot.shtml">Dovecot</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[11:57](http://www.tgharold.com/techblog/2008/11/dovecot-upgrading-notes.shtml)
-
-		</div>

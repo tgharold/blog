@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Picking up with part 7c after [compiling the kernel](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=7).  Now you need to install your kernel into the boot partition. Change the "2.6.12-Sep2005" portion of the filenames to whatever you want.
+Picking up with part 7c after [compiling the kernel](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=7).  Now you need to install your kernel into the boot partition. Change the "2.6.12-Sep2005" portion of the filenames to whatever you want.
 
 <code># cp arch/i386/boot/bzImage /boot/kernel-2.6.12-Sep2005
 # cp System.map /boot/System.map-2.6.12-Sep2005
@@ -137,10 +137,4 @@ livecd / # umount /mnt/gentoo/proc
 livecd / # umount /mnt/gentoo
 livecd / # reboot</code>
 
-Pull the CD-ROM at this point, otherwise the LiveCD will probably boot.  Then cross your fingers and watch the console for errors.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2005.shtml">2005</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SoftwareRAID.shtml">SoftwareRAID</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[16:18](http://www.tgharold.com/techblog/2005/09/gentoo-20051-software-raid-part-3.shtml)
-
-		</div>
+Pull the CD-ROM at this point, otherwise the LiveCD will probably boot.  Then cross your fingers and watch the console for errors.

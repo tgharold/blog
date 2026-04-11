@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>So after installing the 2nd round of patches (first round of patches was installing SP4 using WindowsUpdate), the system fails to start:
+So after installing the 2nd round of patches (first round of patches was installing SP4 using WindowsUpdate), the system fails to start:
 
 Windows 2000 could not start because the following file is missing or corrupt:
 (something)\System32\Ntoskrnl.exe
@@ -47,10 +47,4 @@ Unfortunately, no matter what combination of scsi(x) or multi(x) I tried at the 
 
 Hint: The boot diskette is great for testing out BOOT.INI changes, it boots up quickly compared to waiting for the system to boot.
 
-I'm going to try plan B, which is to reinstall... but during the Setup CD when I hit F6, I'm going to install both the HighPoint and the Silicon Image drivers.  That way, setup will see all of the disks in the system during the initial install and will hopefully write out a correct BOOT.INI file.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[21:43](http://www.tgharold.com/techblog/2004/05/tyan-kt400-windows-2000-boot-failure.shtml)
-
-		</div>
+I'm going to try plan B, which is to reinstall... but during the Setup CD when I hit F6, I'm going to install both the HighPoint and the Silicon Image drivers.  That way, setup will see all of the disks in the system during the initial install and will hopefully write out a correct BOOT.INI file.

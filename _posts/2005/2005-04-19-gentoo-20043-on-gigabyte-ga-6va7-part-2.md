@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>([Continuation of part 1](/techblog/2005/04/gentoo-20043-on-gigabyte-ga-6va7-part.shtml))
+([Continuation of part 1](/techblog/2005/04/gentoo-20043-on-gigabyte-ga-6va7-part.shtml))
 
 <code># ls -l /etc/make.profile</code>
 
@@ -25,10 +25,4 @@ This will take a while to run (I estimate a few hours, maybe even overnight).  O
 
 Which will also take a few hours.
 
-([next step](/techblog/2005/04/gentoo-20043-on-gigabyte-ga-6va7-part_20.shtml))<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2005.shtml">2005</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gigabyte-GA-6VA7%2B.shtml">Gigabyte-GA-6VA7+</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[18:58](http://www.tgharold.com/techblog/2005/04/gentoo-20043-on-gigabyte-ga-6va7-part_19.shtml)
-
-		</div>
+([next step](/techblog/2005/04/gentoo-20043-on-gigabyte-ga-6va7-part_20.shtml))

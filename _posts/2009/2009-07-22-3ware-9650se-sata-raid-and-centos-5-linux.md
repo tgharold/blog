@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>A few months ago, I picked up a 3ware 9650SE 16-port controller for use in my primary office server which runs CentOS 5.  So far, it's been an up and down ride.
+A few months ago, I picked up a 3ware 9650SE 16-port controller for use in my primary office server which runs CentOS 5.  So far, it's been an up and down ride.
 
 Problem #1 - The boot process could not find the array disks.
 
@@ -84,10 +84,4 @@ Updates:
 
 - Even the 2.6.18-128 RHEL/CentOS kernel displays sluggishness any time that we access units (a RAID 6, 8 drive unit that is the only thing on the array).  We have zero performance problems with drive attached to a different SATA controller running Software RAID.
 
-- I can't recommend using the 9650SE controller with RHEL/CentOS currently.  Performance is absolutely horrid under load.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2009.shtml">2009</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/3ware.shtml">3ware</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/CentOS5.shtml">CentOS5</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SoftwareRAID.shtml">SoftwareRAID</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[08:47](http://www.tgharold.com/techblog/2009/07/3ware-9650se-sata-raid-and-centos-5.shtml)
-
-		</div>
+- I can't recommend using the 9650SE controller with RHEL/CentOS currently.  Performance is absolutely horrid under load.

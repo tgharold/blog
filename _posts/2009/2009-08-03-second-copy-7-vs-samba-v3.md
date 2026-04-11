@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>One of the tools that we use on our desktop machines is [Second Copy 7](http://www.centered.com/), which is a very useful tool for doing file-level backups that are user friendly.  It has a mode where it mirrors the source directory tree to the remote location, along with putting older copies of the files in a second remote location.
+One of the tools that we use on our desktop machines is [Second Copy 7](http://www.centered.com/), which is a very useful tool for doing file-level backups that are user friendly.  It has a mode where it mirrors the source directory tree to the remote location, along with putting older copies of the files in a second remote location.
 
 However, if things are strange, you'll find that Second Copy will end up making repeated copies of files in the "older copies" location every time the profile runs.
 
@@ -32,10 +32,4 @@ Addendum:
 
 - I'm pretty sure that the problem was not due to my referencing the backup location using UNC naming (i.e. \\servername\share\path).
 
-- This issue mostly comes into play when you are backing up from one machine to another (such as a share location on another desktop or a server share).  This is not something that you'll normally run into if you're backing up to a drive hooked directly to the machine.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2009.shtml">2009</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/NTP.shtml">NTP</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Samba.shtml">Samba</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[11:26](http://www.tgharold.com/techblog/2009/08/second-copy-7-vs-samba-v3.shtml)
-
-		</div>
+- This issue mostly comes into play when you are backing up from one machine to another (such as a share location on another desktop or a server share).  This is not something that you'll normally run into if you're backing up to a drive hooked directly to the machine.

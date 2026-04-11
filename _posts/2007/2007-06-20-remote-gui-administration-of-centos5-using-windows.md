@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Over the years, I've become very spoiled by Windows Terminal Services that we use to administer our Windows 2000 and Windows 2003 servers.  It's fast, it's slick, it allows copy-paste and with a bit of command line fu you can connect to the physical display (instead of one of the two virtual sessions).  It also uses built-in Windows authentication and offers encryption.
+Over the years, I've become very spoiled by Windows Terminal Services that we use to administer our Windows 2000 and Windows 2003 servers.  It's fast, it's slick, it allows copy-paste and with a bit of command line fu you can connect to the physical display (instead of one of the two virtual sessions).  It also uses built-in Windows authentication and offers encryption.
 
 So, now that I'm rolling out CentOS 5 servers - I need something similar that allows me to look at the graphical UI on the box from elsewhere.  From what I can tell, my options are:
 
@@ -139,10 +139,4 @@ If all goes well, you should see the Gnome desktop!
 
 <b>Final thoughts (for the moment)</b>
 
-Now, it's still not as slick as Terminal Services.  But it seems to work just fine and gives me a GUI desktop.  I still plan on doing most of my administration from the command line, but this provides a nice GUI for those who follow in my footsteps.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2007.shtml">2007</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/CentOS5.shtml">CentOS5</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SSH.shtml">SSH</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/X11.shtml">X11</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[11:55](http://www.tgharold.com/techblog/2007/06/remote-gui-administration-of-centos5.shtml)
-
-		</div>
+Now, it's still not as slick as Terminal Services.  But it seems to work just fine and gives me a GUI desktop.  I still plan on doing most of my administration from the command line, but this provides a nice GUI for those who follow in my footsteps.

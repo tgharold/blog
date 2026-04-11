@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>I picked up a Motorola Q cell phone today.  
+I picked up a Motorola Q cell phone today.  
 
 [](/Imgs/2000s/MotorolaQ-C20061112-2466.jpg)
 
@@ -50,10 +50,4 @@ Some initial thoughts on the MotoQ:
 
 - NO synchronization of MS Outlook's notes out of the box.  A major and glaring oversight by Microsoft's Windows Mobile O/S for SmartPhones.
 
-- I miss my stylus!  Not having a touchscreen is going to take some getting used to.  I was extremely good at entering notes using Palm's modified alphabet and being able to draw on the screen was useful.  Plus, the PalmOS application designers had a lot more leeway to design useful interfaces where you could tap on the screen with a fingernail.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/MotorolaQ.shtml">MotorolaQ</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[23:22](http://www.tgharold.com/techblog/2006/11/motorola-q-initial-thoughts.shtml)
-
-		</div>
+- I miss my stylus!  Not having a touchscreen is going to take some getting used to.  I was extremely good at entering notes using Palm's modified alphabet and being able to draw on the screen was useful.  Plus, the PalmOS application designers had a lot more leeway to design useful interfaces where you could tap on the screen with a fingernail.

@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Working on a 15-disk system (750GB SATA drives) so this issue came up again:
+Working on a 15-disk system (750GB SATA drives) so this issue came up again:
 
 What is the maximum number of physical extents in LVM?
 
@@ -32,10 +32,4 @@ References:
 
 [LVM Manpage](http://www.fifi.org/cgi-bin/man2html/usr/share/man/man8/lvm.8lvm-10.gz) - Talks about the limit in IA32.
 [Maximum Size Of A Logical Volume In LVM](http://www.walkernews.net/2007/07/02/maximum-size-of-a-logical-volume-in-lvm/) - Walker News (blog entry)
-[Manage Linux Storage with LVM and Smartctl](http://www.enterprisenetworkingplanet.com/nethub/article.php/3733141) - Enterprise Networking Planet<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2009.shtml">2009</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/LVM.shtml">LVM</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[23:40](http://www.tgharold.com/techblog/2009/01/lvm-maximum-number-of-physical-extents.shtml)
-
-		</div>
+[Manage Linux Storage with LVM and Smartctl](http://www.enterprisenetworkingplanet.com/nethub/article.php/3733141) - Enterprise Networking Planet

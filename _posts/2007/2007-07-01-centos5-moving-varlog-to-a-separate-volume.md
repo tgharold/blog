@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>One thing I like to do is put /var/log on its own volume.  That keeps the root volume from overflowing and also gets the log files out of the way.  However, in CentOS5 (and probably RHEL5), SELinux is probably going to complain unless we tell it to "fixup" the new filesystem.
+One thing I like to do is put /var/log on its own volume.  That keeps the root volume from overflowing and also gets the log files out of the way.  However, in CentOS5 (and probably RHEL5), SELinux is probably going to complain unless we tell it to "fixup" the new filesystem.
 <ol>
 
 <li>Create the filesystem (I use ext3, so # /sbin/mke2fs -j /dev/mdX)
@@ -33,10 +33,4 @@ tags:
 </li>
 </ol>
 
-AFAIK, that's the extent of what's needed.  Looking at the directory listings using "ls -lZ" seems to show the correct SELinux flags on the files between the two different directories.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2007.shtml">2007</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/CentOS5.shtml">CentOS5</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SELinux.shtml">SELinux</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/ServerAdministration.shtml">ServerAdministration</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[20:21](http://www.tgharold.com/techblog/2007/07/centos5-moving-varlog-to-separate.shtml)
-
-		</div>
+AFAIK, that's the extent of what's needed.  Looking at the directory listings using "ls -lZ" seems to show the correct SELinux flags on the files between the two different directories.

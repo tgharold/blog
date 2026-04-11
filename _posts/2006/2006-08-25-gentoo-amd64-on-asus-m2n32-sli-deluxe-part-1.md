@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Time to build the base Gentoo Linux O/S.  While I plan on switching over to a Xen hypervisor kernel in a few days, I still need to get a base Gentoo system up and running.  But first, let me document what sort of machine I'm building and the reasoning behind some of the decisions.
+Time to build the base Gentoo Linux O/S.  While I plan on switching over to a Xen hypervisor kernel in a few days, I still need to get a base Gentoo system up and running.  But first, let me document what sort of machine I'm building and the reasoning behind some of the decisions.
 
 The unit is a custom-built system that will serve as a test unit for building out an iSCSI SAN (and eventually serve as part of that SAN if it tests well).  There will be multiple NICs so that I can bond NICs for bandwidth and so that I can connect NICs to multiple switches in the SAN mesh (for fault-tolerance).  Initially, it will have only (2) SATA drives installed, but the eventual loadout will have a total of (14) SATA drives.
 
@@ -87,10 +87,4 @@ Other sysadmin tricks that I plan on using are:
 
 So it's a moderately complex setup, but provides me with multiple fall-back positions and restoration options.  Anything from reverting a configuration file to a newer version, to booting a known-good root partition, to restoring the system from backups.
 
-And there's always the last resort of putting a Gentoo boot CD in the unit, starting networking and the SSH daemon, and attempting to fix the unit remotely.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[10:03](http://www.tgharold.com/techblog/2006/08/gentoo-amd64-on-asus-m2n32-sli-deluxe.shtml)
-
-		</div>
+And there's always the last resort of putting a Gentoo boot CD in the unit, starting networking and the SSH daemon, and attempting to fix the unit remotely.

@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>So... [time to install Gentoo](http://www.gentoo.org/doc/en/handbook/index.xml) (also see [epiawiki.org - Installing Gentoo on an EPIA system](http://www.alterself.com/~epia/wiki/tiki-index.php?page=EpiaInstallingGentoo)).  A good book to have handy during the install is "Linux in a Nutshell", especially for looking up option flags for the various commands.
+So... [time to install Gentoo](http://www.gentoo.org/doc/en/handbook/index.xml) (also see [epiawiki.org - Installing Gentoo on an EPIA system](http://www.alterself.com/~epia/wiki/tiki-index.php?page=EpiaInstallingGentoo)).  A good book to have handy during the install is "Linux in a Nutshell", especially for looking up option flags for the various commands.
 
 Popped the boot CD ([Universal CD](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=2) for 2004.0 Gentoo) in and let it boot up.  It reports my hardware as a "VIA Samuel 2 599MHz, 64KB cache".  It's now sitting at the '#' prompt (er, shell prompt).  When I was setting up the BIOS, I changed the shared memory for the video card from 128MB (default) to 32MB.  I also disabled things like the audio ports, serial ports, parallel port, leaving only ethernet, firewire and USB.
 
@@ -93,10 +93,4 @@ And the "proc" file system (last bit of chapter 4e in the handbook)
 mkdir /mnt/gentoo/proc
 mount -t proc none /mnt/gentoo/proc
 
-Taking a break for a bit. ([continued in next post](/techblog/2004/04/gentoo-epia-install-part-2.shtml))<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/VIAEPIA.shtml">VIAEPIA</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[16:54](http://www.tgharold.com/techblog/2004/04/gentoo-epia-install-part-1.shtml)
-
-		</div>
+Taking a break for a bit. ([continued in next post](/techblog/2004/04/gentoo-epia-install-part-2.shtml))

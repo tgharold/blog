@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>
+
 <b>Note: These directions are works-in-progress... in fact, they might not even work at all until I find out why I'm ending up with non-bootable systems (looks like a bug in the 2.6 kernel).</b>
 
 So, I'm back to re-building my VIA EPIA linux box (it was scavanged for another project for a few months).  Once again, I'm digging out my Gentoo CDs and I'm going to simply build a box where I can house my music MP3s and do some Apache / PostGreSQL work.  Since this is an EPIA box, the [EPIAWiki.org](http://www.epiawiki.org/wiki/tiki-index.php) site comes in handy.  I'll also be referring back to my [April 2004 notes](2004_04_01_archive.shtml) to speed up my setup process.
@@ -88,10 +88,4 @@ First up is BIOS settings:
 - (information only)
 
 <b>Frequency/Voltage Control</b>
-- (left alone)<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2005.shtml">2005</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/VIAEPIA.shtml">VIAEPIA</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[12:55](http://www.tgharold.com/techblog/2005/03/gentoo-epia-install-part-1.shtml)
-
-		</div>
+- (left alone)

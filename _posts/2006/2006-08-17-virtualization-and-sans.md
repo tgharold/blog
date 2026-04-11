@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>One of my next projects at the office is to start migrating us from individual servers with direct attached storage (DAS) to a virtual server running on a storage area network (SAN).
+One of my next projects at the office is to start migrating us from individual servers with direct attached storage (DAS) to a virtual server running on a storage area network (SAN).
 
 <b>Individual servers with DAS</b>
 + Easy configuration
@@ -53,10 +53,4 @@ $2.00/GB - homegrown
 $4.50/GB - pre-built SATA iSCSI solutions
 $13.33/GB - pre-built SCSI iSCSI solutions
 
-Costs for half populated SANs are about double those $/GB values.  The SCSI SAN unit can only hold about 2/5 the capacity of the SATA SAN units.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[21:43](http://www.tgharold.com/techblog/2006/08/virtualization-and-sans.shtml)
-
-		</div>
+Costs for half populated SANs are about double those $/GB values.  The SCSI SAN unit can only hold about 2/5 the capacity of the SATA SAN units.

@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>This was a slightly tricky one.  I'm running CentOS5 with SELinux and I was trying to setup Squid to put its cache_dir on a LVM volume (to keep it from using up space on the root partition).
+This was a slightly tricky one.  I'm running CentOS5 with SELinux and I was trying to setup Squid to put its cache_dir on a LVM volume (to keep it from using up space on the root partition).
 
 # /etc/init.d/squid stop
 # cd /var/spool
@@ -81,10 +81,4 @@ So, the problem is that SELinux had not yet been told to look at the newly creat
 # cd /var/spool/squid
 # /usr/sbin/squid -z
 # /sbin/restorecon -R *
-# /etc/init.d/squid start<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2007.shtml">2007</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/CentOS5.shtml">CentOS5</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SELinux.shtml">SELinux</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Squid.shtml">Squid</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[22:49](http://www.tgharold.com/techblog/2007/05/squid-selinux-and-using-separate-volume.shtml)
-
-		</div>
+# /etc/init.d/squid start

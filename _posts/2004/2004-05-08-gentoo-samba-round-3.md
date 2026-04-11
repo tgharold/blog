@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>([previous post, samba round 2](/techblog/2004/05/gentoo-samba-round-2.shtml))
+([previous post, samba round 2](/techblog/2004/05/gentoo-samba-round-2.shtml))
 
 Well, after a busy week at work, I finally had time to log back into my little VIA EPIA server running Gentoo Linux.  In my previous post, I had re-emerged the latest version of samba (v3), but I never had time to go back and try things out again after the emerge finished.
 
@@ -158,10 +158,4 @@ A bit uglier... samba doesn't have kerberos support included.  And looking back 
 
 Okay, so I'm not sure what the next step is... I'll have to google again later when I'm not as frustrated.  Samba is still complaining that "ADS support is not compiled in".  The only "config.cache" file on the system is from July 2001 and is not in the samba folder.
 
-Update: The missing piece was that I hadn't configured both the kerberos and ldap USE flags in my make.conf file.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gnetoo.shtml">Gnetoo</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Samba.shtml">Samba</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[13:54](http://www.tgharold.com/techblog/2004/05/gentoo-samba-round-3.shtml)
-
-		</div>
+Update: The missing piece was that I hadn't configured both the kerberos and ldap USE flags in my make.conf file.

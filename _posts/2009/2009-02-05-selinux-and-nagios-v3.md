@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>
+
 <b>Note: This post was never finished... so it probably contains lots of errors and incorrect information, with one or two grains of useful information.</b>
 
 Now that Nagios has upgraded to v3, I'm going to revisit my SELinux configuration for it.  Back when I first started I was somewhat clueless about SELinux (and still greatly so) and I created a lot of really bad policy modules.  They were a brute-force approach to fixing the issue using only audit2allow and ignoring labeling issues in the underlying filesystem.
@@ -39,10 +39,4 @@ Enforcing
 # getenforce
 Permissive</code>
 
-Now we can startup Nagios, taking careful note of the time.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2009.shtml">2009</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Nagios.shtml">Nagios</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SELinux.shtml">SELinux</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SystemAdministration.shtml">SystemAdministration</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[08:10](http://www.tgharold.com/techblog/2009/02/selinux-and-nagios-v3.shtml)
-
-		</div>
+Now we can startup Nagios, taking careful note of the time.

@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>With age comes wisdom?  After working with SoftwareRAID and Linux servers for a while, I've changed my preferred disk system design and layout.
+With age comes wisdom?  After working with SoftwareRAID and Linux servers for a while, I've changed my preferred disk system design and layout.
 
 <b>RAID</b>
 
@@ -42,10 +42,4 @@ The other physical partition that I consider necessary is /backup/system.  This 
 
 <b>Summary</b>
 
-This setup tries to walk the fine line between keeping it simple, but having enough flexibility to deal with a large set of potential failures.  Anything from a two-disk failure, to the primary OS being hosed, to both OS partitions having problems all the way up to boot records or the /boot partition being killed.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2007.shtml">2007</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/DisasterRecovery.shtml">DisasterRecovery</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Linux.shtml">Linux</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SoftwareRAID.shtml">SoftwareRAID</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[13:26](http://www.tgharold.com/techblog/2007/03/my-new-preferred-disk-layout-for.shtml)
-
-		</div>
+This setup tries to walk the fine line between keeping it simple, but having enough flexibility to deal with a large set of potential failures.  Anything from a two-disk failure, to the primary OS being hosed, to both OS partitions having problems all the way up to boot records or the /boot partition being killed.

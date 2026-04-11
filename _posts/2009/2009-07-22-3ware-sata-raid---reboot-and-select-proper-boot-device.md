@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>
+
 <code>Reboot and Select proper Boot device
 or Insert Boot Media in selected Boot device and press a key</code>
 
@@ -26,10 +26,4 @@ Updates:
 
 - After playing with a little more, it seems to be a BIOS issue where the BIOS gets confused if the 3ware controller presents more then 12 units to the BIOS.
 
-- The 3ware controller does not "hide the first few cylinders of the drive".  Instead, it seems to store it's metadata for the drive at the end.  Aside from the problem of losing data in the last few cylinders, you can take a drive configured as a "single-unit" and hook it up to a regular SATA controller with no issues.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2009.shtml">2009</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/3ware.shtml">3ware</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/CentOS5.shtml">CentOS5</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[09:36](http://www.tgharold.com/techblog/2009/07/3ware-sata-raid-reboot-and-select.shtml)
-
-		</div>
+- The 3ware controller does not "hide the first few cylinders of the drive".  Instead, it seems to store it's metadata for the drive at the end.  Aside from the problem of losing data in the last few cylinders, you can take a drive configured as a "single-unit" and hook it up to a regular SATA controller with no issues.

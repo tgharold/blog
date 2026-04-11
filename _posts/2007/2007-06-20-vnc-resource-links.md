@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Various links about VNC
+Various links about VNC
 
 [Virtual Network Computing (VNC)](http://en.wikipedia.org/wiki/VNC) - Wikipedia entry about VNC.
 
@@ -24,10 +24,4 @@ tags:
 
 [Geek to Live: Secure VNC with Hamachi](http://lifehacker.com/software/vnc/geek-to-live--secure-vnc-with-hamachi-228862.php)
 
-[Secure VNC with two-factor authentication](http://rootprompt.org/article.php3?article=10969)<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2007.shtml">2007</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/ServerAdministration.shtml">ServerAdministration</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/VNC.shtml">VNC</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[07:47](http://www.tgharold.com/techblog/2007/06/vnc-resource-links.shtml)
-
-		</div>
+[Secure VNC with two-factor authentication](http://rootprompt.org/article.php3?article=10969)

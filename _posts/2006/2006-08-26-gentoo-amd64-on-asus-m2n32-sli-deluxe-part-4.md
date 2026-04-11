@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>This is a record of the kernel flags that I'm going to use for my AMD64 system. It's an Asus M2N32-SLI Deluxe (NVIDIA nForce 590 SLI MCP chipset) with an Athlon64 X2 4200+ chip along with 2GB of RAM. Hard drives are hooked up to the onboard SATA-II controller (NVIDIA nForce 590 SLI MCP chipset). Plus the motherboard has a pair of onboard gigabit ethernet NICs (Marvell 88E1116) and a Silicon Image Sil3132 SATA-II controller.  Other chips on the motherboard are the nVidia C51XE, nVidia MCP55PXE, AD1988B, and TSB43AB22A.
+This is a record of the kernel flags that I'm going to use for my AMD64 system. It's an Asus M2N32-SLI Deluxe (NVIDIA nForce 590 SLI MCP chipset) with an Athlon64 X2 4200+ chip along with 2GB of RAM. Hard drives are hooked up to the onboard SATA-II controller (NVIDIA nForce 590 SLI MCP chipset). Plus the motherboard has a pair of onboard gigabit ethernet NICs (Marvell 88E1116) and a Silicon Image Sil3132 SATA-II controller.  Other chips on the motherboard are the nVidia C51XE, nVidia MCP55PXE, AD1988B, and TSB43AB22A.
 
 In addition, I'll have even more hard drives hooked up to a  HighPoint RocketRAID 2300 PCIe card.  There's also a 3Com 3C905B PCI ethernet card installed along with a pair of Intel PRO/1000 PCIe gigabit NICs.
 
@@ -203,10 +203,4 @@ livecd / # umount /mnt/gentoo/home /mnt/gentoo/var/tmp /mnt/gentoo/tmp
 livecd / # umount /mnt/gentoo/boot /mnt/gentoo/dev /mnt/gentoo/proc /mnt/gentoo
 livecd / # reboot</code>
 
-Remove the LiveCD and cross your fingers.  Success!<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[00:04](http://www.tgharold.com/techblog/2006/08/gentoo-amd64-on-asus-m2n32-sli-deluxe_26.shtml)
-
-		</div>
+Remove the LiveCD and cross your fingers.  Success!

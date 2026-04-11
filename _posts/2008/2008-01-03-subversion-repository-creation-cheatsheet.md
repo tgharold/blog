@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Whenever I setup new SVN repositories, I always create a unix group for people who need read/write access to the repository.  If the repository is named "tgh-public", then I choose to name the group as "svn-tgh-public".
+Whenever I setup new SVN repositories, I always create a unix group for people who need read/write access to the repository.  If the repository is named "tgh-public", then I choose to name the group as "svn-tgh-public".
 
 I also generally designate a single user as the initial owner of the SVN repository folder under /var/svn.  Alternately, you could just leave the repository owned by root.
 
@@ -39,10 +39,3 @@ Notes:
 
 </li>
 </ul>
-<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2008.shtml">2008</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SubVersion.shtml">SubVersion</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[07:39](http://www.tgharold.com/techblog/2008/01/subversion-repository-creation.shtml)
-
-		</div>

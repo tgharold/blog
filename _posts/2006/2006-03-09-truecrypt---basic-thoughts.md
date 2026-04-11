@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Probably the easiest way to get started with on-the-fly encryption is to create a TrueCrypt volume file and mount that as a Windows drive letter.  The volume file (i.e. "mydrive.tc") can be stored on any hard drive and can be easily backed up as long as the volume is not mounted.  Controlling who can mount a volume can be limited by using either a passphrase and/or a set of "keyfiles".
+Probably the easiest way to get started with on-the-fly encryption is to create a TrueCrypt volume file and mount that as a Windows drive letter.  The volume file (i.e. "mydrive.tc") can be stored on any hard drive and can be easily backed up as long as the volume is not mounted.  Controlling who can mount a volume can be limited by using either a passphrase and/or a set of "keyfiles".
 
 Once you have created the volume, you can store files inside it (using the mounted volume's drive letter) just like you would store files on any regular hard drive, USB/Firewire drive, or network share.  It's completely invisible to the application.  This makes it ideal for storing application data such as e-mail, financial programs, or other sensitive data.
 
@@ -58,10 +58,3 @@ Now you are ready to mount your new volume:
 <li>You may now start copying data to your new encrypted volume.</li>
 
 </ol>
-<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Encryption.shtml">Encryption</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Security.shtml">Security</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/TrueCrypt.shtml">TrueCrypt</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[02:02](http://www.tgharold.com/techblog/2006/03/truecrypt-basic-thoughts.shtml)
-
-		</div>

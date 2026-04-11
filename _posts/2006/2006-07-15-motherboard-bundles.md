@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>We've been digging through the junkyard at work (and in my home office) and we're trying to use up some old ATX towers and other misc parts to build new systems this fall.  In some cases, this just means buying a MB/CPU/RAM combo along with a copy of WinXP Pro and Office 2003.  In other cases, the older ATX power-supply can't do the job and we have to purchase a new PSU.
+We've been digging through the junkyard at work (and in my home office) and we're trying to use up some old ATX towers and other misc parts to build new systems this fall.  In some cases, this just means buying a MB/CPU/RAM combo along with a copy of WinXP Pro and Office 2003.  In other cases, the older ATX power-supply can't do the job and we have to purchase a new PSU.
 
 The unit that I'm currently working on is an Athlon64 3000+ system.  The MB/CPU/RAM bundle cost me approximately $265 from MWave for an Athlon64 (BA21443), Kingston 2x512MB (BA19405) and an Asus A8N-VM CSM motherboard (BA22045).  Because the PSU that I'm using is a slightly older ATX+12V PSU (20 pin + 4 pin connectors), I had to also purchase the 20-24 pin PSU adapter (BA20019) for $9.
 
@@ -69,10 +69,4 @@ BA20959 2GB Mwave PC3200 2x1GB RAM
 
 ---
 
-I'm still waiting on Core Duo and Core 2 Duo systems to be sold as motherboard bundles.  The pricing on the chips is still a bit high.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[23:24](http://www.tgharold.com/techblog/2006/07/motherboard-bundles.shtml)
-
-		</div>
+I'm still waiting on Core Duo and Core 2 Duo systems to be sold as motherboard bundles.  The pricing on the chips is still a bit high.

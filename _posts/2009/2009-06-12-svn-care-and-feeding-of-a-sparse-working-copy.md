@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>One of the wonderful (and long awaited for us) features in SVN 1.5 was the addition of "sparse" working copies.  This allows you to create a working copy that checks out from the root of the repository, but without having to bring down the entire repository into your working copy.  Which is a great boon for situations where a large monolithic repository is preferred over having lots of smaller repositories.
+One of the wonderful (and long awaited for us) features in SVN 1.5 was the addition of "sparse" working copies.  This allows you to create a working copy that checks out from the root of the repository, but without having to bring down the entire repository into your working copy.  Which is a great boon for situations where a large monolithic repository is preferred over having lots of smaller repositories.
 
 This was a feature that Visual SourceSafe (VSS) and SourceOffSite (SOS) had for many years prior to SVN 1.5's sparse working copy feature.   We were an SOS shop for a long time prior to switching to SVN back in 2006 and our entire VSS repository was basically monolithic and we'd only bring down what we needed to our local working copies.
 
@@ -71,10 +71,4 @@ Note: Sometimes the Repo-Browser will lose track of what has / hasn't been broug
 </li>
 </ol>
 
-Note: If TortoiseSVN does not remove the folder, then there was something in it that was not committed or that it felt you wanted to keep around.  Which is why I recommend doing an Update and then using the Commit dialog to verify that the working copy folder is clean.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2009.shtml">2009</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SubVersion.shtml">SubVersion</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[15:40](http://www.tgharold.com/techblog/2009/06/svn-care-and-feeding-of-sparse-working.shtml)
-
-		</div>
+Note: If TortoiseSVN does not remove the folder, then there was something in it that was not committed or that it felt you wanted to keep around.  Which is why I recommend doing an Update and then using the Commit dialog to verify that the working copy folder is clean.

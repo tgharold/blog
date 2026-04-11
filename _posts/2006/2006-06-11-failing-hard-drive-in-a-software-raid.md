@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>So today's fun is that I have a drive that is failing in my 566Mhz Celeron server.  This is a small server with (3) 120GB hard drives.
+So today's fun is that I have a drive that is failing in my 566Mhz Celeron server.  This is a small server with (3) 120GB hard drives.
 
 hda - 120GB (primary drive, 4 partitions)
 hdc - CD-ROM
@@ -815,10 +815,4 @@ md0 : active raid1 hde1[0] hda1[1]
       125376 blocks [2/2] [UU]
 
 unused devices: <none>
-coppermine thomas #</none></none></code><div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SoftwareRAID.shtml">SoftwareRAID</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[08:02](http://www.tgharold.com/techblog/2006/06/failing-hard-drive-in-software-raid.shtml)
-
-		</div>
+coppermine thomas #</none></none></code>

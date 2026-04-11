@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>I'm a big fan of using a version control system in conjunction with system administration.  There's a great feeling to know that even if I screw up a configuration file, I have an easily accessible way to revert or track changes.  To accomplish this, I was using [SubVersion (SVN) as an administration tool](http://www.tgharold.com/techblog/2006/06/subversion-for-linux-administrators.shtml).
+I'm a big fan of using a version control system in conjunction with system administration.  There's a great feeling to know that even if I screw up a configuration file, I have an easily accessible way to revert or track changes.  To accomplish this, I was using [SubVersion (SVN) as an administration tool](http://www.tgharold.com/techblog/2006/06/subversion-for-linux-administrators.shtml).
 
 However, SVN comes with some downsides, primarily the issue that it creates ".svn" folders in the directory tree.  Which can cause issues and maybe even lead to security holes (yes/no? unsure about this).
 
@@ -39,10 +39,4 @@ You'll be presented with about a dozen questions, and you'll need to install all
 
 ...
 
-Well, after mucking with this for a few hours and getting self-test errors, I'm going to shelve this for now and go look at FSVS insteadk.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2007.shtml">2007</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SVK.shtml">SVK</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[13:37](http://www.tgharold.com/techblog/2007/05/svk-for-system-management.shtml)
-
-		</div>
+Well, after mucking with this for a few hours and getting self-test errors, I'm going to shelve this for now and go look at FSVS insteadk.

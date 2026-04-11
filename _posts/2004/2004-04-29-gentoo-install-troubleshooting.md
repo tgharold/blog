@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Spoke too soon in my [last post](/techblog/2004/04/gentoo-epia-install-part-6.shtml).  Got a few errors on boot up.  First off, a complaint that the kernel was compiled without DEVFS support (not sure what that means off-hand), and none of my LVM2 stuff loaded.  Too tired to poke at it tonight, so I'm going to take a break and do some searching tomorrow.
+Spoke too soon in my [last post](/techblog/2004/04/gentoo-epia-install-part-6.shtml).  Got a few errors on boot up.  First off, a complaint that the kernel was compiled without DEVFS support (not sure what that means off-hand), and none of my LVM2 stuff loaded.  Too tired to poke at it tonight, so I'm going to take a break and do some searching tomorrow.
 
 I don't expect it to be difficult to resolve, might have to rebuild the kernel and reinstall the kernel.  During bootup, it tells me details about what needs to be done to fix the issue, but that's since scrolled off the screen.  Since my LVM2 volumes didn't mount, I can't look at /var/log/messages to see the boot messages.  Had to hard-reset since shutdown/reboot commands are hosed.
 
@@ -46,10 +46,4 @@ Then cross my fingers and reboot... and it boots!  Saw a few errors related to U
 
 Other things to do:
 
-- Look at /var/run/shutdown.pid, figure out where to stick the umount commands for all of my volumes when I use the shutdown command.  Also mentioned is /dev/initctl.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[00:24](http://www.tgharold.com/techblog/2004/04/gentoo-install-troubleshooting.shtml)
-
-		</div>
+- Look at /var/run/shutdown.pid, figure out where to stick the umount commands for all of my volumes when I use the shutdown command.  Also mentioned is /dev/initctl.

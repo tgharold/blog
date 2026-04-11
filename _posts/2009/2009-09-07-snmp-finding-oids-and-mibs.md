@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>The key tool in the toolbox for exploring MIBs and finding things in SNMP is either "snmpwalk" or looking at the actual MIB text definitions.  On CentOS 5 (and RHEL 5), the net-snmp package installs a default set of MIBs to "/usr/share/snmp/mibs/".
+The key tool in the toolbox for exploring MIBs and finding things in SNMP is either "snmpwalk" or looking at the actual MIB text definitions.  On CentOS 5 (and RHEL 5), the net-snmp package installs a default set of MIBs to "/usr/share/snmp/mibs/".
 
 <code># snmpwalk -v 2c -c public localhost diskIONReadX</code>
 
@@ -39,10 +39,4 @@ diskIONReadX OBJECT-TYPE
 
 # snmptranslate -m +ALL -IR <b>-Ou</b> diskIONReadX
 enterprises.ucdavis.ucdExperimental.ucdDiskIOMIB.diskIOTable.
-    diskIOEntry.diskIONReadX</code><div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2009.shtml">2009</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SNMP.shtml">SNMP</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[18:45](http://www.tgharold.com/techblog/2009/09/snmp-finding-oids-and-mibs.shtml)
-
-		</div>
+    diskIOEntry.diskIONReadX</code>

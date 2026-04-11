@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>In order to lock down the servers like I prefer to, yet still allow FreeNX/NX to work, I have to setup a second copy of the sshd daemon.  The FreeNX/NX client requires that you have sshd running with password access (not just public key), but we prefer to only allow public-key access to our servers.
+In order to lock down the servers like I prefer to, yet still allow FreeNX/NX to work, I have to setup a second copy of the sshd daemon.  The FreeNX/NX client requires that you have sshd running with password access (not just public key), but we prefer to only allow public-key access to our servers.
 
 I did the following on CentOS 5, it should also work for Fedora or Red Hat Enterprise Linux (RHEL).  But proceed at your own risk.
 
@@ -80,10 +80,4 @@ References:
 
 [How to Add a New "sshd_adm" Service on Red Hat Advanced Server 2.1](http://blog.thilelli.net/post/2005/07/04/How-to-Add-a-New-sshd_adm-Service-on-Red-Hat-Advanced-Server-21)
 
-[How to install NX server and client under Ubuntu/Kubuntu Linux (revised)](http://michigantelephone.wordpress.com/2007/10/15/how-to-install-nx-server-and-client-under-ubuntukubuntu-linux/)<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2009.shtml">2009</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/FreeNX.shtml">FreeNX</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/NX.shtml">NX</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SSH.shtml">SSH</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[09:57](http://www.tgharold.com/techblog/2009/01/setup-sshd-to-run-second-instance.shtml)
-
-		</div>
+[How to install NX server and client under Ubuntu/Kubuntu Linux (revised)](http://michigantelephone.wordpress.com/2007/10/15/how-to-install-nx-server-and-client-under-ubuntukubuntu-linux/)

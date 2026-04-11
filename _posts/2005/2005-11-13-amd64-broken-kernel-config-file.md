@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Current broken configuration.  Here is the diff between my current configuration and what was on the LiveCD.  Left side is the LiveCD config file, right side is my kernel's config file.
+Current broken configuration.  Here is the diff between my current configuration and what was on the LiveCD.  Left side is the LiveCD config file, right side is my kernel's config file.
 
 [AMD64 2005.1 Gentoo LiveCD Kernel Config](/techblog/Gentoo/AMD64/2005_1-LiveCDConfig.txt)
 
@@ -1513,10 +1513,4 @@ I'm still trying to puzzle out what is different on the LiveCD (which works, and
 1661c1181
 &lt; CONFIG_LIBCRC32C=m
 ---
-&gt; CONFIG_LIBCRC32C=y<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2005.shtml">2005</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[20:25](http://www.tgharold.com/techblog/2005/11/amd64-broken-kernel-config-file.shtml)
-
-		</div>
+&gt; CONFIG_LIBCRC32C=y

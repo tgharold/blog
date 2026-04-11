@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>CentOS 5 currently only has Samba 3.0.28 in their BASE repository.  The DAG/RPMForge projects don't have updated Samba3 RPMs either (although I do see an OpenPkg RPM).  So the question that I've been dealing with for the past few weeks is "where do I get newer Samba RPMs"?
+CentOS 5 currently only has Samba 3.0.28 in their BASE repository.  The DAG/RPMForge projects don't have updated Samba3 RPMs either (although I do see an OpenPkg RPM).  So the question that I've been dealing with for the past few weeks is "where do I get newer Samba RPMs"?
 
 Ideally, I would get these RPMs from a repository, so that I could be notified via "yum check-update" for when there are security / feature updates.  While I don't mind the occasional source package in .tar.gz or .tar.bz2 format, they rapidly become a maintenance nightmare.  Especially for security-sensitive packages like Samba which tend to be attack targets.
 
@@ -33,10 +33,4 @@ Note: As always, before doing a major upgrade like this, <b>make backups</b>.  A
 # yum install samba3.x86_64
 # service smb start
 
-With luck, you should now be up and running with v3.2 of Samba.  You can verify this by looking at the latest log file in the /var/log/samba/ directory.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2009.shtml">2009</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/CentOS5.shtml">CentOS5</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Samba.shtml">Samba</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[08:22](http://www.tgharold.com/techblog/2009/01/samba3-upgrading-to-v32-on-centos-5.shtml)
-
-		</div>
+With luck, you should now be up and running with v3.2 of Samba.  You can verify this by looking at the latest log file in the /var/log/samba/ directory.

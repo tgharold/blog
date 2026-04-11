@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>As I said [last time](/techblog/2006/08/gentoo-amd64-on-asus-m2n32-sli-deluxe.shtml), I'm setting this unit up with the following partitions on the 2-disk RAID1 set (sda and sdb):
+As I said [last time](/techblog/2006/08/gentoo-amd64-on-asus-m2n32-sli-deluxe.shtml), I'm setting this unit up with the following partitions on the 2-disk RAID1 set (sda and sdb):
 
 sda1 (md0) - 128MB for /boot
 sda2 (md1) - 8GB for the root partition (primary)
@@ -100,10 +100,4 @@ Now for the supplementary volumes (logs, subversion and system backup).  I'm usi
 
 Whew, that's a big packet of LVM partitions.  But it prevents problems down the road.
 
-At this point, everything is setup and ready for the initial install (or a chroot into an existing system for repairs).<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[20:35](http://www.tgharold.com/techblog/2006/08/gentoo-amd64-on-asus-m2n32-sli-deluxe_25.shtml)
-
-		</div>
+At this point, everything is setup and ready for the initial install (or a chroot into an existing system for repairs).

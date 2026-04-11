@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Jottting down some of the V/A power-requirements for some hard-drives.  IBM is nice because they print it on the drive, the Maxtors (usually) aren't as helpful.  I'm also trying to make sure that the little 200W power-supplies in the light-weight servers like the VIA EPIA can handle the load. 
+Jottting down some of the V/A power-requirements for some hard-drives.  IBM is nice because they print it on the drive, the Maxtors (usually) aren't as helpful.  I'm also trying to make sure that the little 200W power-supplies in the light-weight servers like the VIA EPIA can handle the load. 
 
 [Hitachi Deskstar 180GXP](http://www.hitachigst.com/hdd/support/d180gxp/d180gxp.htm) (07N9685) 82.3GB
 7200rpm 8MB cache
@@ -63,10 +63,4 @@ I'm also looking to start cutting some power-usage as my power bill has crept up
 
 Of course, my 19" monitor eats up 140W... a comparable LCD would probably only eat 40W.  I pay 8.3 cents/KWH, so in a 30.4 day month (730 hours), 100W costs me $6.06.  Using 667 KWH in a month is roughly 914W per hour (to check my math).  A newer ViewSonic p90f 19" ($210) only uses 120W.
 
-So every 10W that I can shave off of power usage saves me $0.61/month ($7.27/yr).  Yeah, not a lot, but every little bit does add up.  At least LCD displays have fallen enough that they're worth buying just for the power-savings instead of a regular CRT.  LCD 17" displays are down to $360 (comparable to a 19" monitor), LCD 15" screens are $275.  Power savings is roughly 60-100W, which works out then to $43-$72/yr.  Cost difference pays for itself after about 2-3 years.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[23:29](http://www.tgharold.com/techblog/2004/05/hard-drive-power-requirements.shtml)
-
-		</div>
+So every 10W that I can shave off of power usage saves me $0.61/month ($7.27/yr).  Yeah, not a lot, but every little bit does add up.  At least LCD displays have fallen enough that they're worth buying just for the power-savings instead of a regular CRT.  LCD 17" displays are down to $360 (comparable to a 19" monitor), LCD 15" screens are $275.  Power savings is roughly 60-100W, which works out then to $43-$72/yr.  Cost difference pays for itself after about 2-3 years.

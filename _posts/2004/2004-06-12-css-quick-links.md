@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>
+
 [W3C's Cascading Style Sheets, level 2 CSS2 Specification](http://www.w3.org/TR/REC-CSS2/cover.html#minitoc) - This is <b>the</b> source for what CSS is supposed to look like.  However, it generally avoids talking about what is supported in the real-world.
 
 [EchoEcho.com's CSS Tutorial](http://www.echoecho.com/cssintroduction.htm) - Covers the basics of CSS.

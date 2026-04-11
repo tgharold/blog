@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>It's now time to start refering to the [Gentoo Installation Handbook](http://www.gentoo.org/doc/en/handbook/index.xml) for AMD64.  While I'm pretty sure that my install method works, it's worthwhile verifying against the handbook.  Plus I'm using a minimal CD to do the installation, so things will be slightly different then normal.
+It's now time to start refering to the [Gentoo Installation Handbook](http://www.gentoo.org/doc/en/handbook/index.xml) for AMD64.  While I'm pretty sure that my install method works, it's worthwhile verifying against the handbook.  Plus I'm using a minimal CD to do the installation, so things will be slightly different then normal.
 
 (I use my own recipe for the initial configuration due to the mix of Software RAID + LVM2.  It has served me well over the past few years and works well.)
 
@@ -130,10 +130,4 @@ Read section 7 carefully.  I'm using the default "gentoo-sources" kernel.
 
 <code>(chroot) livecd / # USE="-doc symlink" emerge gentoo-sources</code>
 
-I'll cover configuration of the kernel in the next post.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[21:20](http://www.tgharold.com/techblog/2006/08/gentoo-amd64-on-asus-m2n32_115655834112027898.shtml)
-
-		</div>
+I'll cover configuration of the kernel in the next post.

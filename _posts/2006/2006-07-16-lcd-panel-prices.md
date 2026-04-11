@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>The other half of the upgrade equation is the displays.  Most users at the main office are already using 17" CRTs (mostly running at 1024x768).  I'd like to start converting them to using 17" or 19" LCDs running at least 1280x1024 if not 1600x1200 (20" LCDs).
+The other half of the upgrade equation is the displays.  Most users at the main office are already using 17" CRTs (mostly running at 1024x768).  I'd like to start converting them to using 17" or 19" LCDs running at least 1280x1024 if not 1600x1200 (20" LCDs).
 
 Some key terms to know when searching at BizRate:
 
@@ -27,10 +27,4 @@ Given the prices for the UXGA displays ($375+) there's a good argument for givin
 WSXGA - 1680x1050 (20" $400-$500)
 WUXGA - 1920x1200 (24" $750-$1000)
 
-I'm surprised at the pricing on the WSXGA displays, although there are only 2 on the market.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[00:08](http://www.tgharold.com/techblog/2006/07/lcd-panel-prices.shtml)
-
-		</div>
+I'm surprised at the pricing on the WSXGA displays, although there are only 2 on the market.

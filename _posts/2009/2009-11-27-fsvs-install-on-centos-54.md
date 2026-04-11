@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>(Also see my older post on this: [FSVS - Install on CentOS 5](http://www.tgharold.com/techblog/2008/06/fsvs-install-on-centos-5.shtml).  Or the original post where I explained the power of [FSVS for sysadmins](http://www.tgharold.com/techblog/2007/05/fsvs-for-sysadmins.shtml).)
+(Also see my older post on this: [FSVS - Install on CentOS 5](http://www.tgharold.com/techblog/2008/06/fsvs-install-on-centos-5.shtml).  Or the original post where I explained the power of [FSVS for sysadmins](http://www.tgharold.com/techblog/2007/05/fsvs-for-sysadmins.shtml).)
 
 I'm going to start with the assumption that this is a base CentOS 5.4 install without *any* package groups selected during the initial install.  In my case, this is a DomU that I'm setting up under Xen to serve as testing server for web development.  The only thing I've done so far is setting the root password and configuring it to use a static IP address.
 
@@ -210,10 +210,4 @@ You can check what FSVS is going to version by using the "fsvs status pathname" 
 
 <code># fsvs ci -m "base check-in" /etc</code>
 
-Repeat this for the various top level trees until you have checked everything in.  Then you should do one last check-in at the root level that catches anything you might have missed.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2009.shtml">2009</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/CentOS5.shtml">CentOS5</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/FSVS.shtml">FSVS</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[20:28](http://www.tgharold.com/techblog/2009/11/fsvs-install-on-centos-54.shtml)
-
-		</div>
+Repeat this for the various top level trees until you have checked everything in.  Then you should do one last check-in at the root level that catches anything you might have missed.

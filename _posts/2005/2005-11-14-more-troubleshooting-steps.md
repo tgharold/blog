@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>A) [AMD64 / Athlon X2 Opinions](http://forums.gentoo.org/viewtopic-t-385651-highlight-lost+ticks.html) - Recommends adding "clock=pmtmr notsc" to the kernel parameters in the grub.conf file.  It probably won't help with the sluggishness and lost ticks since those arguments are not being passed on the LiveCD boot.
+A) [AMD64 / Athlon X2 Opinions](http://forums.gentoo.org/viewtopic-t-385651-highlight-lost+ticks.html) - Recommends adding "clock=pmtmr notsc" to the kernel parameters in the grub.conf file.  It probably won't help with the sluggishness and lost ticks since those arguments are not being passed on the LiveCD boot.
 
 The LiveCD boots with:
 
@@ -38,10 +38,4 @@ warning: many lost ticks.
 Your time source seems to be instable or some driver is hogging interupts
 rip scsi_dispatch_cmd+0x1f3/0x250
 
-I had not seen "rip scsi_dispatch_cmd+0x1f3/0x250" yet.  The old message was "rip __do_softirq+0x48/0xb0".  Wow, no google hit for the scsi_dispatch_cmd line.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2005.shtml">2005</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[14:28](http://www.tgharold.com/techblog/2005/11/more-troubleshooting-steps.shtml)
-
-		</div>
+I had not seen "rip scsi_dispatch_cmd+0x1f3/0x250" yet.  The old message was "rip __do_softirq+0x48/0xb0".  Wow, no google hit for the scsi_dispatch_cmd line.

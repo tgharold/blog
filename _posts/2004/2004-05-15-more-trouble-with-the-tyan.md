@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>So... this is definitely a taxing of my patience when installing hardware.
+So... this is definitely a taxing of my patience when installing hardware.
 
 The latest problem is that if I copy a file from the network to the HighPoint RAID 1 array... it gets corrupted.  (Using a MD5 tool to verify content.)  However, if I verify the file up on the network server, it's correct.  And copying it to the SATA scratch drive, it copies cleanly.
 
@@ -32,10 +32,4 @@ So right now, it looks like the data corruption bug is fixed.  (It only affected
 
 Update #2: The system is still corrupting files that as they are written to the HighPoint RAID array.  Especially when the system is under load, copying files to both the HighPoint and the SATA drives at the same time.  Copying from the network to the SATA drive works properly, but copying from the network or the SATA to the IDE RAID causes data corruption.
 
-I'm now going to remove the HPT from the BIOS, and put the drives back on the Promise FastTrak100 TX2 IDE RAID card.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[02:55](http://www.tgharold.com/techblog/2004/05/more-trouble-with-tyan.shtml)
-
-		</div>
+I'm now going to remove the HPT from the BIOS, and put the drives back on the Promise FastTrak100 TX2 IDE RAID card.

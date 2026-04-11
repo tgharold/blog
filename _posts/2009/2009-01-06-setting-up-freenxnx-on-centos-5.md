@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Quick guide to setting up FreeNX/NX.  This the approximate minimums on a fresh CentOS 5.1 box.  We're limiting things to using public-key authentication from the outside and we already have a second ssh daemon running (listening on localhost, allowing password authentication).
+Quick guide to setting up FreeNX/NX.  This the approximate minimums on a fresh CentOS 5.1 box.  We're limiting things to using public-key authentication from the outside and we already have a second ssh daemon running (listening on localhost, allowing password authentication).
 
 Note: If you have ATRPMs configured as a repository, make sure that you exclude nx* and freenx*.  (Add/edit the exclude= line in the ATRPMs .repo file.)
 
@@ -55,10 +55,4 @@ Restart the FreeNX/NX service:
 
 # service freenx-server restart
 
-You should now be able to connect (assuming that you specify the proper SSH port and paste the private key into the configuration).<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2009.shtml">2009</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/CentOS5.shtml">CentOS5</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/FreeNX.shtml">FreeNX</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/NX.shtml">NX</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SSH.shtml">SSH</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[14:29](http://www.tgharold.com/techblog/2009/01/setting-up-freenxnx-on-centos-5.shtml)
-
-		</div>
+You should now be able to connect (assuming that you specify the proper SSH port and paste the private key into the configuration).

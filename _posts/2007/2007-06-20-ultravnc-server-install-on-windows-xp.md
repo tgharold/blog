@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Installing UltraVNC (see also "[UltraVNC Installation](http://www.uvnc.com/install/installation.html)")
+Installing UltraVNC (see also "[UltraVNC Installation](http://www.uvnc.com/install/installation.html)")
 <ol>
 
 <li>Download [UltraVNC](http://www.uvnc.com/) for MS Windows
@@ -93,10 +93,3 @@ AES Encryption plugin (a.k.a. DSM)
 
 </li>
 </ol>
-<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2007.shtml">2007</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/ServerAdministration.shtml">ServerAdministration</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/UltraVNC.shtml">UltraVNC</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/VNC.shtml">VNC</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[08:02](http://www.tgharold.com/techblog/2007/06/ultravnc-server-install-on-windows-xp.shtml)
-
-		</div>

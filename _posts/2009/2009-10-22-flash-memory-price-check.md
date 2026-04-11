@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Flash memory prices have finally dropped below $2.00/GB (around $1.90 at the moment).  
+Flash memory prices have finally dropped below $2.00/GB (around $1.90 at the moment).  
 
 SDHC cards:
 
@@ -33,10 +33,4 @@ $680 256GB
 
 The sweet spot is either 64GB for $145 or 128GB for $280.  SSDs are still a bit above the $2/GB price point.  Probably due to the extra circuitry and packaging of a 2.5" SSD.
 
-Hopefully, by this time next year they'll break the $1/GB mark.  Magnetic 2.5" drives are down around $0.17/GB for 500GB drives.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2009.shtml">2009</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Prices.shtml">Prices</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[23:54](http://www.tgharold.com/techblog/2009/10/flash-memory-price-check.shtml)
-
-		</div>
+Hopefully, by this time next year they'll break the $1/GB mark.  Magnetic 2.5" drives are down around $0.17/GB for 500GB drives.

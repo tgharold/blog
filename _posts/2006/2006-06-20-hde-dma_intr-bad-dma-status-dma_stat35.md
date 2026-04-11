@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Getting the following messages in my system log:
+Getting the following messages in my system log:
 
 <code>nogitsune etc # grep 'Jun 16 07' /var/log/messages
 Jun 16 07:38:51 nogitsune ntpd[6095]: peer 205.166.121.66 now invalid
@@ -61,10 +61,4 @@ nogitsune etc #</code>
 
 Basically, they happen anytime that I put a sustained load onto the 2 drives attached to that PCI card.  At the moment, I'm not sure (might be in the archives) which IDE host adapter I'm using for hde and hdg.
 
-From my limited digging, it appears that it may have something to do with lost interrupts, except that I'm not seeing any other messages in the logs regarding that.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[02:14](http://www.tgharold.com/techblog/2006/06/hde-dmaintr-bad-dma-status-dmastat35.shtml)
-
-		</div>
+From my limited digging, it appears that it may have something to do with lost interrupts, except that I'm not seeing any other messages in the logs regarding that.

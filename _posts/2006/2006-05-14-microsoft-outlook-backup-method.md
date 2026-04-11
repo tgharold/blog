@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>This is how I backup my PST files whenever I login to my laptop.  Because I always have MSOutlook open, I find it difficult to get a good backup of the PST files.
+This is how I backup my PST files whenever I login to my laptop.  Because I always have MSOutlook open, I find it difficult to get a good backup of the PST files.
 
 1) You will want a copy of [Info-Zip's ZIP and UNZIP executables](http://www.info-zip.org/).
 
@@ -56,10 +56,4 @@ e) If you find that ZIP is too slow, you may wish to change the "-u9" to "-u1" i
 
 f) I'm pretty sure the above script is foolproof and correct, but as always you should have a good backup before you attempt things like this.
 
-4) Create a shortcut link to "backupemail.cmd" and place it in your Programs -&gt; Startup folder.  That way it will run as soon as you login.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Backups.shtml">Backups</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[10:17](http://www.tgharold.com/techblog/2006/05/microsoft-outlook-backup-method.shtml)
-
-		</div>
+4) Create a shortcut link to "backupemail.cmd" and place it in your Programs -&gt; Startup folder.  That way it will run as soon as you login.

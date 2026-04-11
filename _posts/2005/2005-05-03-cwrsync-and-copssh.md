@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>
+
 <i>Note: These directions are works-in-progress... in fact, they might not even work at all.  I got side-tracked before I could finish this and will re-visit it at some point in the future.</i>
 
 The folks who created cwRSync ([www.itefix.no](http://www.itefix.no/)) have now released a package called copSSH which is basically SSH for windows and works with cwRSync.  I'll be refering back to my old post about [installing cwRSync](http://www.tgharold.com/techblog/2004/06/installing-cwrsync-on-windows-2000.shtml).  The latest version I have is from late April 2005 and includes bug fixes for Windows Server 2003.
@@ -79,10 +79,3 @@ Now we need to install copSSH.
 
 </li>
 </ol>
-<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2005.shtml">2005</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/RSync.shtml">RSync</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[20:29](http://www.tgharold.com/techblog/2005/05/cwrsync-and-copssh.shtml)
-
-		</div>

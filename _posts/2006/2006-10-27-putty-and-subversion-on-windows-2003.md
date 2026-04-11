@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>One thing we use SubVersion for in the office is for tracking configuration changes to our Linux servers.  Everything under /etc or any other file that we change by hand (or with configuration tools) gets put into SVN which tracks the changes.  It's possible to do the same thing under Windows (although not everything can be tracked).
+One thing we use SubVersion for in the office is for tracking configuration changes to our Linux servers.  Everything under /etc or any other file that we change by hand (or with configuration tools) gets put into SVN which tracks the changes.  It's possible to do the same thing under Windows (although not everything can be tracked).
 
 A) Install PuTTY on the Win2003 server
 
@@ -80,10 +80,4 @@ D:\ svn co svn+ssh://user@svn.example.com/var/svn/repos/D .
 
 C:\ svn add -N Data
 C:\ svn add -N Data\Logs
-C:\ svn ci -m "log folder"<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/PuTTY.shtml">PuTTY</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SSH.shtml">SSH</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SubVersion.shtml">SubVersion</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Win2003.shtml">Win2003</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[20:04](http://www.tgharold.com/techblog/2006/10/putty-and-subversion-on-windows-2003.shtml)
-
-		</div>
+C:\ svn ci -m "log folder"

@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Our backup script for pgsql dumps the databases out in plain text SQL format (my preferred method for a variety of reasons).  The question was, do we leave it as plain text and/or which compressor do we use?
+Our backup script for pgsql dumps the databases out in plain text SQL format (my preferred method for a variety of reasons).  The question was, do we leave it as plain text and/or which compressor do we use?
 
 ...
 
@@ -76,10 +76,4 @@ Ultimately, we ended up going with bzip2 for a variety of reasons.
 
 - Better compression
 - The additional CPU usage was not an issue
-- We could change to a smaller block size (-c2) to be more friendly to rsync<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2009.shtml">2009</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Backups.shtml">Backups</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/PostgreSQL.shtml">PostgreSQL</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[07:45](http://www.tgharold.com/techblog/2009/01/postgresql-backup-speed-tests.shtml)
-
-		</div>
+- We could change to a smaller block size (-c2) to be more friendly to rsync

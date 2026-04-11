@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Trying to configure the new ClamAV 0.95 as a milter for our Postfix install this week.  So I've been doing some digging into the configuration files.  Here's what I've found so far.
+Trying to configure the new ClamAV 0.95 as a milter for our Postfix install this week.  So I've been doing some digging into the configuration files.  Here's what I've found so far.
 
 In order to get the newer ClamAV for Red Hat Enterprise Linux 5 (RHEL5) and CentOS 5, I had to use the RPMForge repository in order to get the 0.95 version.  
 
@@ -24,10 +24,4 @@ If you were using the /etc/sysconfig/clamav file to turn on the milter in RHEL5,
 ERROR: Unknown option passed
 ERROR: Can't parse command line options</code>
 
-You'll need to convert your old command line options into configuration file options.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2009.shtml">2009</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/CentOS5.shtml">CentOS5</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/ClamAV.shtml">ClamAV</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[09:36](http://www.tgharold.com/techblog/2009/11/centos-5-clamav-095-and.shtml)
-
-		</div>
+You'll need to convert your old command line options into configuration file options.

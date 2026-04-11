@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Just a few misc Mozilla 1.7 settings that I've found useful.  All of these need to be added/changed in your <b>prefs.js</b> file in your profile directory.  Make sure that you've exited out of all Mozilla windows, including the QuickLaunch icon in the system tray before making your edits.  Otherwise, when Mozilla exits again later, it will overwrite your changes.
+Just a few misc Mozilla 1.7 settings that I've found useful.  All of these need to be added/changed in your <b>prefs.js</b> file in your profile directory.  Make sure that you've exited out of all Mozilla windows, including the QuickLaunch icon in the system tray before making your edits.  Otherwise, when Mozilla exits again later, it will overwrite your changes.
 
 It's also a good idea to make a backup file of your prefs.js file prior to making changes.
 
@@ -28,11 +28,3 @@ user_pref("mail.identity.id5.fcc_folder_picker_mode", "1");
 2) Displaying an error page instead of just a blank page when a webpage times out.  One of the most annoying features in base Mozilla/Firebird is the way that they handle timeout errors.  Instead of getting an error message on the screen, you get a blank page and the location bar will have been cleared.  Which, if you were trying to load the page in the background for later viewing, means you have to try and remember or figure out what link you were trying to look at.  Adding the following line to your prefs.js file will at least give you an error display that lets you retry the URL:
 
 user_pref("browser.xul.error_pages.enabled", true);
-
-<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[09:49](http://www.tgharold.com/techblog/2004/07/misc-mozilla-bits.shtml)
-
-		</div>

@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>So we're seeing errors in our /var/log/messages like:
+So we're seeing errors in our /var/log/messages like:
 
 Sep 28 03:52:51 fvs-pri setroubleshoot: SELinux is preventing freshclam (freshclam_t) "read" to ./main.cld (var_t). For complete SEL
 inux messages. run sealert -l 10ce7bfb-6c44-473e-94a1-4691c04d2bef
@@ -27,10 +27,4 @@ For example:
 
 # /usr/sbin/semodule -i clam20080930.pp
 
-Note: This is the very quick and dirty way of dealing with exceptions - it really doesn't fix the underlying issue.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2008.shtml">2008</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SELinux.shtml">SELinux</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[11:38](http://www.tgharold.com/techblog/2008/09/selinux-dealing-with-exceptions.shtml)
-
-		</div>
+Note: This is the very quick and dirty way of dealing with exceptions - it really doesn't fix the underlying issue.

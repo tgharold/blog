@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Source links:
+Source links:
 
 [How to setup the secure shell daemon on a Windows 2000 machine?](http://ist.uwaterloo.ca/~kscully/cygwin/CygwinSSHd_win2k.html)
 [Windows Rsync Server Setup](http://www.gaztronics.net/rsync.php)
@@ -37,10 +37,4 @@ tags:
 a) Setup your rsync.conf file (in the "etc" folder)
 b) create a service account for use by the rsync service
 c) create a Windows service using the "cygrunsvc" tool
-d) setup OpenSSH and then re-configure rsync to use it<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/RSync.shtml">RSync</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[19:19](http://www.tgharold.com/techblog/2004/07/minimal-cygwin-install-for-rsync-and.shtml)
-
-		</div>
+d) setup OpenSSH and then re-configure rsync to use it

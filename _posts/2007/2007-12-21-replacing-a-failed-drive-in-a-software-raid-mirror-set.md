@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Like I wrote about last time, I have a [failing drive in my triple active RAID mirror set on my firewall box](/techblog/2007/12/failed-drive-slice-in-software-raid.shtml).  See also "[Failing hard drive in a Software RAID](/techblog/2006/06/failing-hard-drive-in-software-raid.shtml)".  I'm still trying to decide whether the disk has actually failed, or if it is just having issues.
+Like I wrote about last time, I have a [failing drive in my triple active RAID mirror set on my firewall box](/techblog/2007/12/failed-drive-slice-in-software-raid.shtml).  See also "[Failing hard drive in a Software RAID](/techblog/2006/06/failing-hard-drive-in-software-raid.shtml)".  I'm still trying to decide whether the disk has actually failed, or if it is just having issues.
 
 <code># /sbin/badblocks -sv /dev/sdc2</code>
 
@@ -26,10 +26,4 @@ And force mdadm to verify the sync:
 
 <code># echo check &gt; /sys/block/md1/md/sync_action</code>
 
-It seems to be working.  I'm guessing that I finally convinced SMART to re-map the bad sector that was causing problems.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2007.shtml">2007</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SoftwareRAID.shtml">SoftwareRAID</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[07:25](http://www.tgharold.com/techblog/2007/12/replacing-failed-drive-in-software-raid.shtml)
-
-		</div>
+It seems to be working.  I'm guessing that I finally convinced SMART to re-map the bad sector that was causing problems.

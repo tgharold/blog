@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>One benchmark that I used to use is AquaMark3 (a DirectX 9 based benchmark).  Unfortunately, the company behind AquaMark3 is no longer in business.  Which is a shame, because they allowed you to submit your scores to a central database which had some decent search parameters.  (For instance, you could search for equivalent systems that were not overclocked to get an idea of what performance a particular upgrade would give you.)
+One benchmark that I used to use is AquaMark3 (a DirectX 9 based benchmark).  Unfortunately, the company behind AquaMark3 is no longer in business.  Which is a shame, because they allowed you to submit your scores to a central database which had some decent search parameters.  (For instance, you could search for equivalent systems that were not overclocked to get an idea of what performance a particular upgrade would give you.)
 
 Still, since I have it around, I threw it at the new Athlon64 3000+ system that I just built.  I expect that the video scores will be pretty poor since it's using an integrated NVIDIA GeForce 6150 video card that uses 64MB of system RAM.
 
@@ -69,10 +69,4 @@ AMD Opteron 148
 PC3200 2GB (2x1GB) ECC DDR RAM
 Asus SK8N motherboard
 NVIDIA GeForce 7800GS AGP 256MB
-NVIDIA 91.47<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[07:34](http://www.tgharold.com/techblog/2006/07/aquamark3-scores.shtml)
-
-		</div>
+NVIDIA 91.47

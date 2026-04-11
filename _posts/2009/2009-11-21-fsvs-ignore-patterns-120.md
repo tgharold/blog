@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Here's an example of a more complex FSVS ignore/take pattern.
+Here's an example of a more complex FSVS ignore/take pattern.
 
 On our mail server, we store all mail in MailDir folders under the structure of:
 
@@ -45,10 +45,4 @@ Line 4 "group:take,./var/vmail/*/*/Home": Now we grab just the "Home" folder ins
 
 Line 5 "group:take,./var/vmail/*/*/Home/**": Grab everything inside of Home and below that point.  This will grab all of the Sieve scripts or other files that are located there.  If you wanted to exclude certain files in Home, you would insert that ignore rule above this line.
 
-Line 6 "group:ignore,./var/vmail/**": This is the clean-up rule.  Anything not explicitly mentioned above here will now be ignored.  This keeps us from versioning the messages inside the user's MailDir folders.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2009.shtml">2009</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/FSVS.shtml">FSVS</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[17:29](http://www.tgharold.com/techblog/2009/11/fsvs-ignore-patterns-120.shtml)
-
-		</div>
+Line 6 "group:ignore,./var/vmail/**": This is the clean-up rule.  Anything not explicitly mentioned above here will now be ignored.  This keeps us from versioning the messages inside the user's MailDir folders.

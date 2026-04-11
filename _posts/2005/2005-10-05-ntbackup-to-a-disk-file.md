@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>
+
 <i>Note: This post may be incomplete...</i>
 
 Sometimes you have to start simple.  For us, after fighting with tape drives and tape drive software, we've switched back to using NTBACKUP that comes with Windows 2000 Server and Windows 2003 Server.  We've also given up on tape drives for the moment since our backup needs have drastically outstripped what the old tape drive is capable of.
@@ -53,10 +53,4 @@ Microsoft reference links:
 [Windows 2003 Server - NTBackup Command](http://www.microsoft.com/technet/prodtechnol/windowsserver2003/library/ServerHelp/2b8c47c9-a769-46d2-9e26-f4d16f0261f8.mspx)
 [Windows XP - NTBackup Command](http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/ntbackup_command.mspx)
 
-That takes care of the weekly snapshots (a full backup that also resets the archive bit).  For our daily updates, we need to set NTBackup to append to those files and only backup files that have changed since the snapshot was taken.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2005.shtml">2005</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[19:36](http://www.tgharold.com/techblog/2005/10/ntbackup-to-disk-file.shtml)
-
-		</div>
+That takes care of the weekly snapshots (a full backup that also resets the archive bit).  For our daily updates, we need to set NTBackup to append to those files and only backup files that have changed since the snapshot was taken.

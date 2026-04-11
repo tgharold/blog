@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>One of the things that I do periodically on my servers is to run a mdadm resync.  Because this can put a heavy strain on the disk system, I strongly suggest that you have good backups in place.  My home systems run a check about once a month, servers at work run a check early on Tuesday mornings.
+One of the things that I do periodically on my servers is to run a mdadm resync.  Because this can put a heavy strain on the disk system, I strongly suggest that you have good backups in place.  My home systems run a check about once a month, servers at work run a check early on Tuesday mornings.
 
 The script is very simple, and you can even fire off the command by writing "check" to the sync_action variable of the md process.
 
@@ -231,10 +231,4 @@ recommended polling time:        (   2) minutes.
 Extended self-test routine
 recommended polling time:        ( 130) minutes.</code>
 
-Personally, since I know the drive makes clicking noises and throws an error during the dd wipe, I'm going to swap it out.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2007.shtml">2007</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SoftwareRAID.shtml">SoftwareRAID</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[08:43](http://www.tgharold.com/techblog/2007/12/failed-drive-slice-in-software-raid.shtml)
-
-		</div>
+Personally, since I know the drive makes clicking noises and throws an error during the dd wipe, I'm going to swap it out.

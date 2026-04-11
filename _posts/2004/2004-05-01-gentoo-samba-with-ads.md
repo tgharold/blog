@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Trying to setup my Samba box ("emerge samba") so that I can access the shares from Win2000 and WinXP machines in a Win2000 domain (Active Directory Services).  One of the links indicates that I need MIT Kerberos 1.3.1, which can be installed with "emerge mit-krb5" (AFAICT).  So I'll start with installing that...  I also have the <i>The Official Samba-3 HOWTO and Reference Guide</i> book handy, although it's a bit sparse on exactly how to setup Samba to be a file server in an ADS environment.
+Trying to setup my Samba box ("emerge samba") so that I can access the shares from Win2000 and WinXP machines in a Win2000 domain (Active Directory Services).  One of the links indicates that I need MIT Kerberos 1.3.1, which can be installed with "emerge mit-krb5" (AFAICT).  So I'll start with installing that...  I also have the <i>The Official Samba-3 HOWTO and Reference Guide</i> book handy, although it's a bit sparse on exactly how to setup Samba to be a file server in an ADS environment.
 
 (Note: you should emerge the mit-krb5 package prior to emerge the samba package... otherwise you'll have to recompile samba after the mit-krb5 package is installed if you want ADS support... per the official samba howto / reference guide book in the Bruce Peren's series, p 78, section 6.4.3.1.)
 
@@ -73,10 +73,4 @@ Well, samba has finished... yet testparm still complains about the "realm" and "
 
 Helpful links:
 [Authenticating to Samba share using "Active Directory Server"](http://linuxquestions.org/questions/history/161506)
-[[Samba] force user not working](http://www.mail-archive.com/samba@lists.samba.org/msg36617.html)<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/ActiveDirectory.shtml">ActiveDirectory</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Samba.shtml">Samba</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[01:06](http://www.tgharold.com/techblog/2004/05/gentoo-samba-with-ads.shtml)
-
-		</div>
+[[Samba] force user not working](http://www.mail-archive.com/samba@lists.samba.org/msg36617.html)

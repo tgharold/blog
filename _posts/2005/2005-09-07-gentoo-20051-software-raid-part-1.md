@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>
+
 <b>Note: These directions are works-in-progress... in fact, they might not even work at all.  The big change that I'm trying this time around is using the 2005.1 release.  I'm also going to skip LVM2 on the initial installation.  I'm now in the process of updating this to include instructions for both with and without LVM2.</b>
 
 Now that the 2005.1 release is out, I'm going to take yet another swing at getting a software RAID configuration up and running on a pair of ATA disks. I'm working on two different systems.
@@ -326,10 +326,4 @@ Pick your kernel using the [kernel guide](http://www.gentoo.org/doc/en/gentoo-ke
 <code># emerge gentoo-sources
 # ls -l /usr/src</code>
 
-Next up is configuring the kernel, which I'll cover in another post.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2005.shtml">2005</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SoftwareRAID.shtml">SoftwareRAID</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[13:03](http://www.tgharold.com/techblog/2005/09/gentoo-20051-software-raid-part-1.shtml)
-
-		</div>
+Next up is configuring the kernel, which I'll cover in another post.

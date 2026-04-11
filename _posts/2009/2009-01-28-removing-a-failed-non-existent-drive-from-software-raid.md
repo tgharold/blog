@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>So, you have a drive that has failed, you've replaced the drive on the fly (using hot-swap SATA) and now you need to remove the old RAID slice.
+So, you have a drive that has failed, you've replaced the drive on the fly (using hot-swap SATA) and now you need to remove the old RAID slice.
 
 For example:
 
@@ -33,10 +33,4 @@ So instead of specifying the name of the failed RAID slice we should instead us 
 <pre># mdadm /dev/md0 -r detached  
 mdadm: hot removed 8:17</pre>
 
-And there you have it, the failed raid slice that is no longer connected to the system has been removed.  It will not show up in "/proc/mdstat" any more.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2009.shtml">2009</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SoftwareRAID.shtml">SoftwareRAID</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[13:04](http://www.tgharold.com/techblog/2009/01/removing-failed-non-existent-drive-from.shtml)
-
-		</div>
+And there you have it, the failed raid slice that is no longer connected to the system has been removed.  It will not show up in "/proc/mdstat" any more.

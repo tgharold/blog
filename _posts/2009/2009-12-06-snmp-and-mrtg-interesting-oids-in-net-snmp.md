@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>These can all be found via the "snmpwalk" command in CentOS 5.4 (or RHEL 5.4).
+These can all be found via the "snmpwalk" command in CentOS 5.4 (or RHEL 5.4).
 
 <code># snmp -v 1 -c public localhost | less</code>
 
@@ -112,10 +112,4 @@ So by looking at the hrProcessorLoad for nodes 768 &amp; 769, we can track the C
 
 <code># snmpwalk -v 1 -c public localhost -On | egrep "(768|769)" | grep "INTEGER"
 .1.3.6.1.2.1.25.3.3.1.2.768 = INTEGER: 9
-.1.3.6.1.2.1.25.3.3.1.2.769 = INTEGER: 17</code><div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2009.shtml">2009</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/MRTG.shtml">MRTG</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SNMP.shtml">SNMP</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[18:26](http://www.tgharold.com/techblog/2009/12/snmp-and-mrtg-interesting-oids-in-net.shtml)
-
-		</div>
+.1.3.6.1.2.1.25.3.3.1.2.769 = INTEGER: 17</code>

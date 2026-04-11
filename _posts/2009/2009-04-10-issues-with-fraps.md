@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>I tend to do a lot of FRAPS capture of games that I play for a variety of reasons (the ability to look back, review gameplay, hobby).  However, ever since I upgraded my NVIDIA display drivers a month or two ago, I've started running into the following issue in VirtualDub:
+I tend to do a lot of FRAPS capture of games that I play for a variety of reasons (the ability to look back, review gameplay, hobby).  However, ever since I upgraded my NVIDIA display drivers a month or two ago, I've started running into the following issue in VirtualDub:
 
 <code>The decompression codec cannot decompress to an RGB format. This is very unusual. Check that any "Force YUY2" options are not enabled in the codec's properties.</code>
 
@@ -24,10 +24,4 @@ Now for the fun symptoms:
 
 - When things are screwy, sometimes the VirtualDub menu will disappear while using the "File -&gt; Append AVI segment" menu option.  This symptom may or not actually be related to the issue.  By vanish, I mean that the preview window will bleed through from the background and wipe out the dropped down File menu.  But you can still select menu options by moving the mouse up/down.
 
-All of this points to problems in the video codec rendering path.  It's made mass conversion of FRAPS video a real PITA in VirtualDub, because I'm doing 2-pass XVid encoding so a failure in the 1st pass means that the 2nd pass also needs to be tossed.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2009.shtml">2009</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/FRAPS.shtml">FRAPS</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[09:15](http://www.tgharold.com/techblog/2009/08/issues-with-fraps.shtml)
-
-		</div>
+All of this points to problems in the video codec rendering path.  It's made mass conversion of FRAPS video a real PITA in VirtualDub, because I'm doing 2-pass XVid encoding so a failure in the 1st pass means that the 2nd pass also needs to be tossed.

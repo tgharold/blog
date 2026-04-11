@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>A while back I had tried to [configure lm_sensors on an old Gigabyte GA-6VA7+ motherboard](/techblog/2005/11/lmsensors-and-gigabyte-ga-6va7.shtml).  That didn't work out so well, so I'm going to give it another shot.  Which is important because I had a drive overheat this week due to a failed fan.
+A while back I had tried to [configure lm_sensors on an old Gigabyte GA-6VA7+ motherboard](/techblog/2005/11/lmsensors-and-gigabyte-ga-6va7.shtml).  That didn't work out so well, so I'm going to give it another shot.  Which is important because I had a drive overheat this week due to a failed fan.
 
 There's a new version of lm_sensors out (2.10) while I'm still running the old 2.09.  Most of the steps are the same, I'm simply emerging the new version and then following the instructions.  On my slow little 566Mhz Celeron box, this takes a while.  Especially since I'm also rebuilding a failed raid element (thank goodness for Software RAID).
 
@@ -201,10 +201,4 @@ Winbond 83977 (I/O chipset)
 VIA VT82C596B
 VIA VT82C693A
 
-Hmm... those VIA chips are [supposedly supported](http://secure.netroedge.com/~lm78/supported.html) via the [i2c-viapro](http://www2.lm-sensors.nu/~lm78/cvs/lm_sensors2/doc/busses/i2c-viapro) module.  I'll need to reboot at some point and check out my BIOS settings to make sure the proper things are turned on.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[21:11](http://www.tgharold.com/techblog/2006/06/lmsensors-and-gigabyte-ga-6va7-take-2.shtml)
-
-		</div>
+Hmm... those VIA chips are [supposedly supported](http://secure.netroedge.com/~lm78/supported.html) via the [i2c-viapro](http://www2.lm-sensors.nu/~lm78/cvs/lm_sensors2/doc/busses/i2c-viapro) module.  I'll need to reboot at some point and check out my BIOS settings to make sure the proper things are turned on.

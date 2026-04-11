@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Now that it's spring, it's time for us to start building out our preliminary iSCSI SAN unit.  Here's the hardware shopping list:
+Now that it's spring, it's time for us to start building out our preliminary iSCSI SAN unit.  Here's the hardware shopping list:
 
 $0600 Super Micro 4U/TOWER RM EATX BLACK ( CSE-942I-R760B )
 - triple-module redundant PSU w/ 760W
@@ -78,10 +78,4 @@ With an overall cost of around $5500 for the entire unit, the price per gigabyte
 $2.36/GB for (1) RAID10 array
 $1.97/GB for (2) RAID6 arrays
 
-Which is not terribly bad for a starter unit.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2007.shtml">2007</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/iSCSI.shtml">iSCSI</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SAN.shtml">SAN</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[16:51](http://www.tgharold.com/techblog/2007/04/starter-kit-for-iscsi-san.shtml)
-
-		</div>
+Which is not terribly bad for a starter unit.

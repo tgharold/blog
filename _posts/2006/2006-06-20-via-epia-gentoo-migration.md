@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Currently, I was using a VIA EPIA system as my music server, but now I'm thinking about turning it into a smart router for the home office.  This will entail adding a ethernet card to the unit in addition to migrating my hard drives from a pair of 300GB drives to a pair of notebook drives (for less power).  Since I'm using Software RAID, moving from one set of disks to another should be nearly seamless.
+Currently, I was using a VIA EPIA system as my music server, but now I'm thinking about turning it into a smart router for the home office.  This will entail adding a ethernet card to the unit in addition to migrating my hard drives from a pair of 300GB drives to a pair of notebook drives (for less power).  Since I'm using Software RAID, moving from one set of disks to another should be nearly seamless.
 
 The hardware has changed a little bit since my [previous attempt at building the system back in March 2005](/techblog/2005/03/gentoo-epia-install-part-1.shtml), but the BIOS settings are identical.  The current hardware consists of:
 
@@ -49,10 +49,4 @@ I'm going to replace the two 300GB 3.5" drives with less power-hungry 60GB lapto
 </li>
 </ol>
 
-Note: I forgot to install grub on the new disk this last time.  So I need to boot from the LiveCD, chroot into the O/S and re-install grub on the new disks.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/VIAEPIA.shtml">VIAEPIA</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[10:35](http://www.tgharold.com/techblog/2006/06/via-epia-gentoo-migration.shtml)
-
-		</div>
+Note: I forgot to install grub on the new disk this last time.  So I need to boot from the LiveCD, chroot into the O/S and re-install grub on the new disks.

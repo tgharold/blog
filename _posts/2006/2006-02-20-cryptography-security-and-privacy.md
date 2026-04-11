@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>
+
 [infoAnarchy Wiki](http://www.infoanarchy.org/wiki/index.php/Main_Page)
 
 [Eraser - File Wipe Tool](http://www.heidi.ie/eraser/) (Note: I would recommend not using the new 5.8 beta until all the bugs are worked out.)
@@ -35,10 +35,4 @@ Practical uses:
 
 A) Encrypted USB backup drive.  I have a USB hard drive hooked up to my laptop.  This drive contains a single TrueCrypt volume that I mount at login and use as a backup target every few hours.  So if the laptop dies, I just install TrueCrypt on the new laptop/hard drive, mount the backup drive, and I can restore my data.  But I don't have to worry about anyone else getting at the data and restoring it.
 
-B) Encrypted volume on my laptop's hard drive.  I have financial data stored on my laptop (since it's my primary machine).  Needless to say, if someone were to steal my laptop, I worry greatly about their access to that information.  So I have a TrueCrypt volume file in the root of my C: (C:\Personal.tc) that I mount to a drive letter whenever I need to access my financial records.  In order to keep this data safe, I periodically copy the TC file to another drive or to CD-R.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Encryption.shtml">Encryption</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/GnuPG.shtml">GnuPG</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Security.shtml">Security</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/TrueCrypt.shtml">TrueCrypt</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/WindowsEFS.shtml">WindowsEFS</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[15:24](http://www.tgharold.com/techblog/2006/02/cryptography-security-and-privacy.shtml)
-
-		</div>
+B) Encrypted volume on my laptop's hard drive.  I have financial data stored on my laptop (since it's my primary machine).  Needless to say, if someone were to steal my laptop, I worry greatly about their access to that information.  So I have a TrueCrypt volume file in the root of my C: (C:\Personal.tc) that I mount to a drive letter whenever I need to access my financial records.  In order to keep this data safe, I periodically copy the TC file to another drive or to CD-R.

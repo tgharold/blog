@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Shopping around for some removable drive bays (either PATA or SATA).  I definitely don't want anything plastic, which cuts the field a bit.  [StarTech](http://www.startech.com/) seem to make some nice drawers with multiple fans.  
+Shopping around for some removable drive bays (either PATA or SATA).  I definitely don't want anything plastic, which cuts the field a bit.  [StarTech](http://www.startech.com/) seem to make some nice drawers with multiple fans.  
 
 It's a pity that their multi-bay SATA systems aren't ready yet, because that looks interesting.  (Holds 3 SATA drives in removable shells, takes up 2 5.25" drive bays, has a single large fan on the back.)
 
@@ -23,10 +23,4 @@ Extra bays are $20-$30, extra caddies are $50-$60.
 
 Since we'll be using these for backups, we'll probably go with PATA and 5400rpm drives (which run a lot cooler then 7200rpm SATA drives).  I have to allow for ambient temperatures up to 85F at the office and I'm afraid that 7200rpm drives would cook themselves.
 
-Update: I now own a set of the DRW115ATA drawers.  The construction is quite sturdy, but the fit and finish is not always the best.  They can be moderately difficult to slide in and out of the drive bays.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[11:13](http://www.tgharold.com/techblog/2004/07/removable-patasata-drive-bays.shtml)
-
-		</div>
+Update: I now own a set of the DRW115ATA drawers.  The construction is quite sturdy, but the fit and finish is not always the best.  They can be moderately difficult to slide in and out of the drive bays.

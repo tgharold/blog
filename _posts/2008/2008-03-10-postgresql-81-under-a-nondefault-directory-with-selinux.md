@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>So I like to keep my PostgreSQL install in a non-standard location.  Normally, this is as easy as setting PGDATA= in the /etc/sysconfig/pgsql/postgresql file.  But when SELinux is installed, you also have to deal with system context issues.
+So I like to keep my PostgreSQL install in a non-standard location.  Normally, this is as easy as setting PGDATA= in the /etc/sysconfig/pgsql/postgresql file.  But when SELinux is installed, you also have to deal with system context issues.
 
 One symptom of this is that /etc/init.d/postgresql start will fail, but starting the database interactively using the "su postgres" and pg_ctl commands will work.  This is because SELinux is a lot stricter with programs started in the startup scripts vs programs that are started from an interactive shell.
 
@@ -533,10 +533,4 @@ Notes:
 
 - If you ever re-tag the entire filesystem with SELinux, you will (probably) have to go back and re-tag your postgresql data directory.
 
-- Because of the above note, it may be better to mount the LVM or SAN partition for PostgreSQL at the default location of /var/lib/pgsql instead of forcing it into another location.  On the other hand, as long as you know how to fix it and don't re-tag indiscriminately, SELinux should never get in the way again.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2008.shtml">2008</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/PostgreSQL.shtml">PostgreSQL</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SELinux.shtml">SELinux</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[13:42](http://www.tgharold.com/techblog/2008/03/postgresql-81-under-nondefault.shtml)
-
-		</div>
+- Because of the above note, it may be better to mount the LVM or SAN partition for PostgreSQL at the default location of /var/lib/pgsql instead of forcing it into another location.  On the other hand, as long as you know how to fix it and don't re-tag indiscriminately, SELinux should never get in the way again.

@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Messages seen in my "# dmesg" output.
+Messages seen in my "# dmesg" output.
 
 <code>Losing some ticks... checking if CPU frequency changed.
 kjournald starting.  Commit interval 5 seconds
@@ -47,10 +47,4 @@ wa = iowait (time spent waiting for IO to complete)
 hi = hardware interrupts (time spent within hardware interrupt handlers)
 si = softirq (time spent within other critical sections within the kernel)
 
-You can see the 40% "sy" (system) and 52% "si" (softirq) utilizations on the problem box, with only 6% idle.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2005.shtml">2005</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[10:33](http://www.tgharold.com/techblog/2005/11/sluggish-linux-box-losing-some-ticks.shtml)
-
-		</div>
+You can see the 40% "sy" (system) and 52% "si" (softirq) utilizations on the problem box, with only 6% idle.

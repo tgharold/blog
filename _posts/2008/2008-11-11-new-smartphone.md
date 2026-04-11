@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>I'm sorta in the market for a new smartphone.  What I have now is a Motorola Q from 2006.  I've been mostly happy with it (except that it wasn't a touchscreen device), but it's been giving me more and more trouble lately.  And the cell coverage by Verizon is, frankly, horrid at my current place of residence.  Which makes the phone rather useless for me at home.
+I'm sorta in the market for a new smartphone.  What I have now is a Motorola Q from 2006.  I've been mostly happy with it (except that it wasn't a touchscreen device), but it's been giving me more and more trouble lately.  And the cell coverage by Verizon is, frankly, horrid at my current place of residence.  Which makes the phone rather useless for me at home.
 
 Back when I bought the MotoQ, I made the mistake of not researching software requirements before buying.  I didn't understand that the non-touchscreen version of Windows Mobile was not the same as the touchscreen version of Windows Mobile.  Which means that there are a lot of applications that I simply cannot run on the MotoQ (especially Pocket Quicken).
 
@@ -34,10 +34,4 @@ BlackBerry, Windows Mobile, Symbian, J2ME, Palm OS and iPhone/iPod Touch!
 
 <b>[zaTelnet Professional](http://www.zatelnet.com/zap/main.php)</b>
 
-MS Smartphones and Pocket PC<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2008.shtml">2008</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/MotorolaQ.shtml">MotorolaQ</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SmartPhones.shtml">SmartPhones</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[09:07](http://www.tgharold.com/techblog/2008/11/new-smartphone.shtml)
-
-		</div>
+MS Smartphones and Pocket PC

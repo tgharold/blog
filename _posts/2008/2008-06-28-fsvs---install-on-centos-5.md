@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>(Note: This has been mostly superseded by my newer post [FSVS: Install on CentOS 5.4](/techblog/2009/11/fsvs-install-on-centos-54.shtml))
+(Note: This has been mostly superseded by my newer post [FSVS: Install on CentOS 5.4](/techblog/2009/11/fsvs-install-on-centos-54.shtml))
 
 The following should be enough (and is probably overkill) to install all of the dependencies that FSVS 1.1.16 needs on CentOS 5 (and CentOS 5.1)
 
@@ -37,10 +37,4 @@ See `config.log' for more details.
 
 Note the addition of "apr-util-devel" at the end of the "yum install" line.  This fixes the error when you run ./configure for FSVS and get the "can't find APR" error.
 
-In older versions of CentOS 5, we did not need to also specify the apr-util-devel package.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2008.shtml">2008</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/FSVS.shtml">FSVS</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[22:52](http://www.tgharold.com/techblog/2008/06/fsvs-install-on-centos-5.shtml)
-
-		</div>
+In older versions of CentOS 5, we did not need to also specify the apr-util-devel package.

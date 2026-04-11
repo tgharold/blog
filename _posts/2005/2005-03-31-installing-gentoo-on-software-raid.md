@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>I'm currently fighting with this again.  Apparently, there have been some changes between the 2004.0 CD and the 2005.0 CD (mostly related to the 2.6 kernal and the DevFS vs UDev systems).
+I'm currently fighting with this again.  Apparently, there have been some changes between the 2004.0 CD and the 2005.0 CD (mostly related to the 2.6 kernal and the DevFS vs UDev systems).
 
 First off, some tips-n-tricks:
 
@@ -90,10 +90,4 @@ Units = cylinders of 1008 * 512 = 516096 bytes
 /dev/hdc4            8188      148945    70942032   fd  Linux raid autodetect
 livecd root # </code>
 
-All of which looks right and proper.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2005.shtml">2005</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SoftwareRAID.shtml">SoftwareRAID</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[15:48](http://www.tgharold.com/techblog/2005/03/installing-gentoo-on-software-raid.shtml)
-
-		</div>
+All of which looks right and proper.

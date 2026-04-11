@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Found this while examining some code results this week.  
+Found this while examining some code results this week.  
 
 One of our bits of code attempts to generate a negative 32bit integer to be used for a random ID.  The code is pretty standard for Visual Basic, and is used just about everywhere:
 
@@ -21,10 +21,4 @@ The problem with this code is that the end result is <i>always</i> divisible by 
 
 But, if you do some digging, it becomes pretty apparent why this happens.  The Rnd() function returns a value of type "single", which is a 32-bit IEEE floating point value.  (One bit is used for the sign, 8 bits for the exponent, and 23 bits for the mantissa.) The value returned is always &gt;=0 and &lt;1, which is only about 30bits worth of randomness.
 
-So, when you try to eek out a full 31 or 32 bits worth of randomness, you simply don't have the bits to do it.  There are ways to combine two calls to the Rnd() function to get more bits, but I need to do some research rather then posting a broken method of doing this.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2005.shtml">2005</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[11:12](http://www.tgharold.com/techblog/2005/08/visual-basic-rnd-function-tricks-and.shtml)
-
-		</div>
+So, when you try to eek out a full 31 or 32 bits worth of randomness, you simply don't have the bits to do it.  There are ways to combine two calls to the Rnd() function to get more bits, but I need to do some research rather then posting a broken method of doing this.

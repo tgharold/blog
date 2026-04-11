@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Looks like there are two basic choices (according to "emerge -s ntp"), [ntp](http://www.ntp.org/) and [openntpd](http://openntpd.org/).
+Looks like there are two basic choices (according to "emerge -s ntp"), [ntp](http://www.ntp.org/) and [openntpd](http://openntpd.org/).
 
 <pre>*  net-misc/ntp
       Latest version available: 4.2.0.20040617-r3
@@ -59,10 +59,4 @@ What this actually means is that your clock is currently off by approximately 12
 
 If you want your server to synchronize at a faster rate, you should manually set the time using the 'date' command to as close to proper time as you can.  Otherwise, it may take a few days for OpenNTPD to finish synchronizing your machine's local clock.
 
-You should also look up the "hwclock" command, especially the --hctosys and --systohc options.  Also look at "nano -w /etc/conf.d/clock", you should probably set the CLOCK_SYSTOHC flag to "yes" so that your system time gets written to the hardware clock during shutdown.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2005.shtml">2005</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/NTP.shtml">NTP</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[09:18](http://www.tgharold.com/techblog/2005/11/ntp-daemons-for-gentoo.shtml)
-
-		</div>
+You should also look up the "hwclock" command, especially the --hctosys and --systohc options.  Also look at "nano -w /etc/conf.d/clock", you should probably set the CLOCK_SYSTOHC flag to "yes" so that your system time gets written to the hardware clock during shutdown.

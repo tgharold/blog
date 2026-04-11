@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>So, I was going to rebuild my 1Ghz Athlon machine with 640MB, but in the process of transplating hard drives and installing a new (quieter) CPU fan, I seem to have put it down for the count.  Moderate annoyance only as it's an older motherboard and was nearing the end of its lifespan.  (I may try and troubleshoot it next week.)
+So, I was going to rebuild my 1Ghz Athlon machine with 640MB, but in the process of transplating hard drives and installing a new (quieter) CPU fan, I seem to have put it down for the count.  Moderate annoyance only as it's an older motherboard and was nearing the end of its lifespan.  (I may try and troubleshoot it next week.)
 
 Instead, I replaced with an Asus A8V Deluxe (VIA chipset, BIOS version 08.00.09 05/19/05) motherboard with an Athlon64 3200+ and 2GB of RAM.  In addition, I have (8) 300GB hard drives hooked up to this unit.  The (2) RAID1 boot drives are 7200rpm (hooked to the primary IDE port and the 2nd one on the Promise FastTrak RAID port).  The other (6) drives are 5400rpm drives hooked up to a Promise SX6000 card.
 
@@ -83,10 +83,4 @@ livecd ~ #</code>
 
 Basically, hda &amp; sda are my (2) 7200rpm 300GB drives that I'm going to use as my primary RAID1.  The sdb drive is my 200GB 7200rpm SATA which I plan on using for a scratch drive.  The rest of the drives (all ending in "160" blocks) are 5400rpm 300GB IDEs hooked to the Highpoint / Promise PCI cards.
 
-Now I can go ahead and build my system.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2005.shtml">2005</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[18:24](http://www.tgharold.com/techblog/2005/11/gentoo-20051-on-athlon64-3200-and-asus.shtml)
-
-		</div>
+Now I can go ahead and build my system.

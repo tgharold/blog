@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Updated pricing now that AMD released their price cuts on July 24th.  As a result, I'm pushing straight towards basing our low end systems around the AMD Athlon64 X2 3800+ chip.
+Updated pricing now that AMD released their price cuts on July 24th.  As a result, I'm pushing straight towards basing our low end systems around the AMD Athlon64 X2 3800+ chip.
 
 The base costs for the system are (these are common, no matter which CPU we use):
 
@@ -92,10 +92,4 @@ $131 AA15070 WindowsXP Pro OEM
 $299 AA24200 Microsoft Office Pro 2003 OEM
 $45 small hard drives
 $18 DVD-ROM
-$9 Floppy drive<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[17:32](http://www.tgharold.com/techblog/2006/07/new-motherboard-bundle-listing.shtml)
-
-		</div>
+$9 Floppy drive

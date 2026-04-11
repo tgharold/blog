@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>So, oops.  When I built my Celeron box, I didn't include the driver for my Netgear FA310TX Rev-D1 in the kernel build.  The Universal CD automatically detects the network card properly, now I just need to get it configured into my kernel build (using "make menuconfig").  The Universal CD (2005.1) detected and configured it using the Tulip driver (Lite-On 82c168).
+So, oops.  When I built my Celeron box, I didn't include the driver for my Netgear FA310TX Rev-D1 in the kernel build.  The Universal CD automatically detects the network card properly, now I just need to get it configured into my kernel build (using "make menuconfig").  The Universal CD (2005.1) detected and configured it using the Tulip driver (Lite-On 82c168).
 
 So I know it works, I just don't have it right and proper.  My original build for this kernel is:
 
@@ -55,10 +55,4 @@ title=Gentoo Linux 2.6.12 (Sep 22 2005)
 root (hd0,0)
 kernel /kernel-2.6.12-Sep2005 root=/dev/md2</code>
 
-Not technically difficult, if you can find out what device driver to  use.  Which, is why I try to document as much of this stuff as possible.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2005.shtml">2005</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[14:17](http://www.tgharold.com/techblog/2005/10/gentoo-eth0-does-not-exist.shtml)
-
-		</div>
+Not technically difficult, if you can find out what device driver to  use.  Which, is why I try to document as much of this stuff as possible.

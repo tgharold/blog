@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>([previous post about configuring the kernel and setting up the filesystem](/techblog/2004/06/gentoo-install-5-manual-kernel.shtml))
+([previous post about configuring the kernel and setting up the filesystem](/techblog/2004/06/gentoo-install-5-manual-kernel.shtml))
 
 Picking up with [9.b. Default: Using GRUB](http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&amp;chap=9#doc_chap2) in the handbook.  (Also see my [older post about configuring grub](/techblog/2004/04/gentoo-epia-install-part-6.shtml).)  Also take a look at the end of the thread [](http://forums.gentoo.org/viewtopic.php?t=8813&amp;postdays=0&amp;postorder=asc&amp;highlight=raid&amp;start=100) on the gentoo forums (look for user "havoc") where it discusses how to setup grub on both the primary and secondary drives ([see the original article](http://lists.us.dell.com/pipermail/linux-poweredge/2003-July/014331.html)).  Now is also a good time to pull up the [official Software RAID HOWTO](http://unthought.net/Software-RAID.HOWTO/) and review that as well (especially section 7.3).
 <pre># grub --no-floppy
@@ -62,10 +62,4 @@ livecd / # reboot</pre>
 
 If all goes well, the system should shutdown and then restart from the software RAID.  
 
-My system locked up during shutdown on or after "Stopping USB and PCI hotplugging".  Which probably means there was a boot option that I should've entered way back when I booted off the LiveCD (actually it means I didn't properly specify the "nohotplug" option at the "boot:" prompt on the LiveCD).<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2004.shtml">2004</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/VIAEPIA.shtml">VIAEPIA</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[23:25](http://www.tgharold.com/techblog/2004/06/gentoo-install-6-grub-system-tools.shtml)
-
-		</div>
+My system locked up during shutdown on or after "Stopping USB and PCI hotplugging".  Which probably means there was a boot option that I should've entered way back when I booted off the LiveCD (actually it means I didn't properly specify the "nohotplug" option at the "boot:" prompt on the LiveCD).

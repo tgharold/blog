@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Time to sit down and jot some things down so I can figure out which device/driver in my Gentoo AMD64 box is causing issues.  This gets a little complex because I have (5) 5400rpm 300GB PATA drives, (2) 7200rpm 300GB PATA drives and (1) 7200rpm 200GB SATA drive installed.
+Time to sit down and jot some things down so I can figure out which device/driver in my Gentoo AMD64 box is causing issues.  This gets a little complex because I have (5) 5400rpm 300GB PATA drives, (2) 7200rpm 300GB PATA drives and (1) 7200rpm 200GB SATA drive installed.
 
 Back when I finally booted into the AMD64 LiveCD, I got the following information from /proc/partitions:
 
@@ -128,10 +128,4 @@ usb_storage 55616 0 - Live 0xffffffff88026000
 usbhid 27680 0 - Live 0xffffffff8801e000
 ehci_hcd 25864 0 - Live 0xffffffff88016000
 usbcore 86008 7 sl811_hcd,ohci_hcd,uhci_hcd,usb_storage,usbhid,ehci_hcd, Live 0xffffffff88000000
-livecd linux #</code><div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2005.shtml">2005</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Gentoo.shtml">Gentoo</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[12:06](http://www.tgharold.com/techblog/2005/11/sluggish-linux-box-troubleshooting.shtml)
-
-		</div>
+livecd linux #</code>

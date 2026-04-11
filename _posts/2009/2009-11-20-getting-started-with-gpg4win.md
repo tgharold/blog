@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>
+
 [GNU Privacy Guard for Windows Home Page (GPG4Win)](http://www.gpg4win.org/) - The GPG4Win project recently released version 2.0.1 of their product, so I figured it was a good time to reexamine GPG4Win.  There have been a few changes since version 1, most notable for me is that WinPT is no longer part of the GPG4Win distribution.
 
 <b>Installation</b>
@@ -235,11 +235,4 @@ You should also export your currently usable public encryption key.
 
 <code>gpg -a --export aafa2876 &gt;&gt; my-public-key.asc</code>
 
-You should print these files out as well as keeping an electronic copy in a secure location such as a safe or safe-deposit box.  Don't leave the secret key ASCII file laying around.  A sealed security envelope with a phrase and the current date written across the sealed flap and then covered with transparent tape is a good countermeasure to detect tampering.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2009.shtml">2009</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Encryption.shtml">Encryption</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/GnuPG.shtml">GnuPG</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[18:04](http://www.tgharold.com/techblog/2009/11/getting-started-with-gpg4win.shtml)
-
-		</div>
-	</acme>
+You should print these files out as well as keeping an electronic copy in a secure location such as a safe or safe-deposit box.  Don't leave the secret key ASCII file laying around.  A sealed security envelope with a phrase and the current date written across the sealed flap and then covered with transparent tape is a good countermeasure to detect tampering.

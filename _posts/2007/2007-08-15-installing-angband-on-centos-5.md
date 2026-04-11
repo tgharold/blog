@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Installation of Angband 3.0.9 on RedHat or CentOS5.
+Installation of Angband 3.0.9 on RedHat or CentOS5.
 
 1) Grab the latest source release from [http://rephial.org/release](http://rephial.org/release)
 
@@ -40,10 +40,4 @@ Which indicates that you need to install the ncurses library.  You can fix that 
 
 # ./configure --with-setgid=games --with-libpath=/usr/local/games/lib/angband                --bindir=/usr/local/games
 # make
-# make install<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2007.shtml">2007</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Angband.shtml">Angband</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/CentOS5.shtml">CentOS5</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[10:35](http://www.tgharold.com/techblog/2007/08/installing-angband-on-centos-5.shtml)
-
-		</div>
+# make install

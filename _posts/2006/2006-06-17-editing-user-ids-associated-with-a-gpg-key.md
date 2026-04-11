@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>Back when one of my users created their GPG keys, they put some bogus text in the Comment field because they didn't realize the public nature of the field.  So their name looks like:
+Back when one of my users created their GPG keys, they put some bogus text in the Comment field because they didn't realize the public nature of the field.  So their name looks like:
 
 Joe Smith (bogus text) jsmith@example.com
 
@@ -57,10 +57,4 @@ For information on backing up a key, see [my previous post on GPG4Win](/techblog
 
 Note #1: If you have multiple UIDs associated with a key, you can use the "PRIMARY" command to flag one of the UIDs as the default UID to display in the key list.  Simply select "PRIMARY" from the Command list, highlight the UID you want as the primary and click "OK".  However, this only works in WinPT... in most other implementations, the default UID is the last one added to the key.
 
-Note #2: Prior to exporting the key or giving it to anyone else, you can use the DELUID to remove UIDs from the key. But once you have published a UID for a particular key, only the REVUID command will do what you want.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Encryption.shtml">Encryption</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/GnuPG.shtml">GnuPG</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Security.shtml">Security</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[18:29](http://www.tgharold.com/techblog/2006/06/editing-user-ids-associated-with-gpg.shtml)
-
-		</div>
+Note #2: Prior to exporting the key or giving it to anyone else, you can use the DELUID to remove UIDs from the key. But once you have published a UID for a particular key, only the REVUID command will do what you want.

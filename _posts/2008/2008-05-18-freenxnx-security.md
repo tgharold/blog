@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>After mucking around with NX/FreeNX, I have a general understanding of how it works, how to lock down your server and what some of the security ramifications are.
+After mucking around with NX/FreeNX, I have a general understanding of how it works, how to lock down your server and what some of the security ramifications are.
 
 <b>First line of defense - NX user key pair</b>
 
@@ -90,10 +90,4 @@ Now that we've gotten NX working using password authentication, it's time to clo
 
 ...
 
-(Someday I'll finish this post.  Probably have to run 2 copies of sshd, with different security settings.)<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2008.shtml">2008</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/FreeNX.shtml">FreeNX</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/NX.shtml">NX</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/Security.shtml">Security</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[18:55](http://www.tgharold.com/techblog/2008/05/freenxnx-security.shtml)
-
-		</div>
+(Someday I'll finish this post.  Probably have to run 2 copies of sshd, with different security settings.)

@@ -10,7 +10,7 @@ tags:
 ---
 
 
-<div style="clear:both;"></div>For optimal security, it's better to require public keys for logging into a server rather then allowing password authentication.  As long as the user's keep their SSH private key files safe (along with protecting them with a decent passphrase), you're less likely to encounter a break-in of your Unix/Linux servers.
+For optimal security, it's better to require public keys for logging into a server rather then allowing password authentication.  As long as the user's keep their SSH private key files safe (along with protecting them with a decent passphrase), you're less likely to encounter a break-in of your Unix/Linux servers.
 
 The process is similar for PuTTY, but SecureCRT offers a much cleaner interface then PuTTY.  Because of the way things work in SSH2-land, you typically create the SSH2 keys using the client software in Windows, then copy the public key up to your user directory on the server that it will be used for.  (Or you have an admin install the public key for you.)
 
@@ -56,10 +56,4 @@ eecdUWuxInAnMPmEn4f49sUAejO/0E7P8XKx1Mqx2CUYNOyoQ1EsX5lZXg6Hbx2Gc4BW
 1uPFJw13j/9jAfQlRYzAqK80uS/cUwTaH9o=
 ---- END SSH2 PUBLIC KEY ----
 
-9) Make a backup of your private key and public key files.  One option would be to burn them to CD-R (multiple copies on the disk), write the passphrase on the CD-R, then put it all into a sealed envelope in a secure offsite location (safe-deposit box).  Alternately, you may wish to simply print it out on paper and OCR it back if you lose the key files.<div style="clear:both; padding-bottom:0.25em"></div>
-Labels: <a rel="tag" href="http://www.tgharold.com/techblog/labels/2006.shtml">2006</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SecureCRT.shtml">SecureCRT</a>, <a rel="tag" href="http://www.tgharold.com/techblog/labels/SSH.shtml">SSH</a>
-		<div class="Byline">
-			posted by Thomas at 
-			[19:15](http://www.tgharold.com/techblog/2006/11/ssh-authorizedkeys-creating-pub-keys.shtml)
-
-		</div>
+9) Make a backup of your private key and public key files.  One option would be to burn them to CD-R (multiple copies on the disk), write the passphrase on the CD-R, then put it all into a sealed envelope in a secure offsite location (safe-deposit box).  Alternately, you may wish to simply print it out on paper and OCR it back if you lose the key files.
