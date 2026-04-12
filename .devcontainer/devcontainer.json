@@ -3,5 +3,20 @@
 	"image": "mcr.microsoft.com/devcontainers/jekyll:bookworm",
 	"mounts": [
 		"source=${localEnv:HOME}/.claude,target=/home/vscode/.claude,type=bind"
+	],
+	"remoteEnv": {
+		"ANTHROPIC_AUTH_TOKEN": "${localEnv:ANTHROPIC_AUTH_TOKEN}",
+		"ANTHROPIC_BASE_URL": "http://host.docker.internal:1234",
+		"ANTHROPIC_MODEL": "${localEnv:ANTHROPIC_MODEL}"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"Anthropic.claude-code"
+			]
+		}
+	},
+	"runArgs": [
+		"--add-host=host.docker.internal:host-gateway"
 	]
 }
