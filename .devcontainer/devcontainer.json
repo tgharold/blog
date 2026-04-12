@@ -4,20 +4,26 @@
 	"features": {
 		"ghcr.io/devcontainers/features/node:1": {},
 		"ghcr.io/devcontainers/features/python:1": {},
-		"ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {}
+		// "ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {},
+		"ghcr.io/danzilberdan/devcontainers/opencode:latest": {}
 	},
 	"mounts": [
-		"source=${localEnv:HOME}/.claude,target=/home/vscode/.claude,type=bind"
+		//"source=${localEnv:HOME}/.claude,target=/home/vscode/.claude,type=bind"
+		"source=${localEnv:HOME}/.config/opencode,target=/home/vscode/.config/opencode,type=bind",
+		"source=${localEnv:HOME}/.local/share/opencode,target=/home/vscode/.local/share/opencode,type=bind",
+		"source=${localEnv:HOME}/.local/state/opencode,target=/home/vscode/.local/state/opencode,type=bind"
 	],
-	"remoteEnv": {
-		"ANTHROPIC_AUTH_TOKEN": "${localEnv:ANTHROPIC_AUTH_TOKEN}",
-		"ANTHROPIC_BASE_URL": "http://host.docker.internal:1234",
-		"ANTHROPIC_MODEL": "${localEnv:ANTHROPIC_MODEL}"
+	"containerEnv": {
+		//"ANTHROPIC_AUTH_TOKEN": "${localEnv:ANTHROPIC_AUTH_TOKEN}",
+		//"ANTHROPIC_BASE_URL": "http://host.docker.internal:1234",
+		//"ANTHROPIC_MODEL": "${localEnv:ANTHROPIC_MODEL}",
+		"OMLX_API_TOKEN": "${localEnv:OMLX_API_TOKEN}",
+		"OMLX_BASE_URL": "http://host.docker.internal:1234/v1"
 	},
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"Anthropic.claude-code"
+				//"Anthropic.claude-code"
 			]
 		}
 	}
