@@ -61,6 +61,15 @@ To convert archive posts, use the provided conversion scripts:
 When creating git commits for these conversions, please include the following co-authored by line:
 Co-Authored-By: Qwen3-Coder-30B-A3B-Instruct-MLX-6bit <Claude Code>
 
+## Filename Naming Convention
+All blog posts should follow the naming convention:
+- File names should be kebab-case (lowercase with hyphens)
+- File names should be kept to 75 characters or less
+- File names should be based on the title in the frontmatter
+- Format: YYYY-MM-DD-title-in-kebab-case.md (all lowercase)
+
+For example: "macOS 26, VS Code Dev Containers and SSL errors on feature loading" becomes "2026-04-12-macos-26-vs-code-dev-containers-and-ssl-errors-on-feature-loading.md"
+
 ## Blogger Cleanup
 During the migration from Blogger to Jekyll, various artifacts were left behind in the blog post content. These included:
 - Blogger taglines (Labels: with tag links)
