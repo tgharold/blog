@@ -10,3 +10,4 @@ _asset_bundler_cache
 .jekyll-metadata
 _archives
 .claude/settings.local.json
+.opencode/
