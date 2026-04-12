@@ -27,14 +27,14 @@ plugins:
 
 # Site owner
 owner:
-  name:
-  email:
+  name: Thomas Harold
+  email: tgh@tgharold.com
   twitter:
   google:
     ad-client:
     ad-slot:
   bio:
-  avatar: bio-photo.jpg # 160x160 px image for author byline
+  avatar: #bio-photo.jpg # 160x160 px image for author byline
   disqus-shortname:
 
 
