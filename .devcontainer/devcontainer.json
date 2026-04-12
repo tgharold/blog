@@ -1,4 +1,10 @@
 {
 	"name": "Jekyll",
-	"image": "mcr.microsoft.com/devcontainers/jekyll:bookworm"
+	"image": "mcr.microsoft.com/devcontainers/jekyll:bookworm",
+	"features": {
+		"ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {}
+	},
+	"mounts": [
+		"source=${localEnv:HOME}/.claude,target=/home/vscode/.claude,type=bind"
+	]
 }
