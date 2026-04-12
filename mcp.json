@@ -1,9 +1,0 @@
-{
-  "servers": {
-    "duckduckgo-search": {
-      "command": "docker",
-      "args": ["run", "-i", "--rm", "mcp/duckduckgo"]
-    }
-  },
-  "inputs": []
-}
