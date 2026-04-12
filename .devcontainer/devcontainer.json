@@ -8,7 +8,8 @@
 		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
     },
 	"mounts": [
-		"source=${localEnv:HOME}/.claude,target=/home/vscode/.claude,type=bind"
+		"source=${localEnv:HOME}/.claude,target=/home/vscode/.claude,type=bind",
+		"source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
 	],
 	"remoteEnv": {
 		"ANTHROPIC_AUTH_TOKEN": "${localEnv:ANTHROPIC_AUTH_TOKEN}",
