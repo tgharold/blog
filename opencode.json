@@ -1,0 +1,11 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "bash": {
+      "./build.sh": "allow",
+      "bundle exec jekyll build": "allow",
+      "bundle install": "allow",
+      "rm -rf _site": "allow",
+    },
+  }
+}
