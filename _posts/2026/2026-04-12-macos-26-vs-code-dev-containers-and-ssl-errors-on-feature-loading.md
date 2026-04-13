@@ -15,7 +15,7 @@ Here's something that might bite you when trying to get Dev Containers working i
 
 One symptom that you will see is that VS Code will display "Not found..." above the line where you are trying to add the new features entry.  Here I am demonstrating this error by putting the wrong label for `ghcr.io/devcontainers/features/python`:
 
-![\"Not found...\" error on a bad features entry]({{ site.url }}/images/2026/04/2026-04-12-features-not-found-error.png)
+![\"Not found...\" error on a bad features entry]({{ site.url }}{{ site.baseurl }}/images/2026/04/2026-04-12-features-not-found-error.png)
 
 Another symptom will be seen if you forge ahead and try to rebuild the devcontainer after modifying the JSON file.  In this example, I'm trying to install `ghcr.io/anthropics/devcontainer-features/claude-code`.
 
