@@ -59,7 +59,7 @@ To convert archive posts, use the provided conversion scripts:
 
 ## Commit Guidelines
 When creating git commits for these conversions, please include the following co-authored by line:
-Co-Authored-By: Qwen3-Coder-30B-A3B-Instruct-MLX-6bit <Claude Code>
+Co-Authored-By: Qwen3.5-35B-A3B-6bit <Claude Code>
 
 ## Filename Naming Convention
 All blog posts should follow the naming convention:
