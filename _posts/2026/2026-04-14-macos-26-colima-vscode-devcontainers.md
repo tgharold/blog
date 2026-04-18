@@ -1,5 +1,4 @@
 ---
-draft: true
 layout: post
 title: 'Colima on macOS 26 for VS Code Dev Containers'
 date: '2026-04-12T15:38:00.000-04:00'
@@ -14,14 +13,45 @@ tags:
 - Docker
 ---
 
+I'm switching away from Docker Desktop on macOS for my container server and I'm moving over to [Colima](https://colima.run/).  There were other choices like podman and reacher.  Getting this running wasn't too difficult, but still took a few tries.  
+
+Unfortunately, I let this post lie fallow for a week and have forgotten some of the details.
+
 Start with installing Colima, Docker, and the buildx plugin with `brew install colima docker docker-buildx`.
 
 Make sure that `/opt/homebrew/bin` is in your `PATH`, usually by using `export PATH="/opt/homebrew/bin:$PATH"` in your `~/.zshrc` file.  Or use the `export PATH="$(brew --prefix)/bin:$PATH"` command in your `~/.zshrc` file.  This needs to insert the homebrew folder at the start of the path to take precendence over built-in Apple commands.
 
+Another change that I had to make was to `~/.docker/config.json`
+
+```JSON
+{
+	"auths": {},
+	"currentContext": "colima",
+	"cliPluginsExtraDirs": [
+		"/opt/homebrew/lib/docker/cli-plugins"
+	]
+}
+```
+
+Looking at my `~/.zshrc` file, I also see the following
+
+```shell
+export DOCKER_HOST="unix://${HOME}/.colima/default/docker.sock"
+```
+
+Making colima autostart was done with a `brew` command.
+
+```shell
+brew services start colima
+```
+
 ## Checklist
 
-1. [Colima](https://colima.run/) must be installed.
-2. Docker CLI and Docker BuildX must be installed.
+1. [Colima](https://colima.run/).
+2. Docker CLI and Docker BuildX are still needed.
+3. Configuration files for docker CLI.
+4. DOCKER_HOST environment variable.
+5. Autostart colima.
 
 ## docker: unknown command: docker buildx
 
@@ -56,8 +86,3 @@ If you had Docker Desktop installed previously, your `~/.docker/config.json` wil
 
 After removing it, save and quit and retry a `docker pull` command.
 
-## other stuff
-
-`brew install colima docker docker-compose docker-buildx` have to be installed
-
-Colima needs to be started with `colima start --with-docker` and then you can use `docker` commands as normal. 
