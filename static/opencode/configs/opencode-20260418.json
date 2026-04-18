@@ -34,6 +34,8 @@
       "cat *": "allow",
       "echo *": "allow",
       "find *": "allow",
+      "git diff *": "allow",
+      "git log *": "allow",
       "git status": "allow",
       "ls *": "allow",
       "ls -la *": "allow",
