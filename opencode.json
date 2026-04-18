@@ -5,6 +5,8 @@
       "./build.sh": "allow",
       "bundle exec jekyll build": "allow",
       "bundle install": "allow",
+      "git add *": "allow",
+      "git commit -m *": "allow",
       "rm -rf _site": "allow",
     },
   }
