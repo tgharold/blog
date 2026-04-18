@@ -21,7 +21,7 @@ Make sure that `/opt/homebrew/bin` is in your `PATH`, usually by using `export P
 ## Checklist
 
 1. [Colima](https://colima.run/) must be installed.
-2. 
+2. Docker CLI and Docker BuildX must be installed.
 
 ## docker: unknown command: docker buildx
 
