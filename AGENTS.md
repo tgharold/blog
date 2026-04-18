@@ -58,7 +58,7 @@ To convert archive posts, use the provided conversion scripts:
 **Solution**: Modified `_includes/post-grid.html` to use Jekyll's `relative_url` filter instead of `{{ site.url }}{{ post.url }}` which properly handles the base URL context for both local development and GitHub Pages deployment.
 
 ## Commit Guidelines
-When creating git commits for these conversions, include a co-authored-by line that reflects the model and tool currently in use (update dynamically rather than using a static value).
+Keep commit titles to 50 characters or fewer. Allow up to 75 characters per line in the commit body. When creating git commits for these conversions, include a co-authored-by line that reflects the model and tool currently in use (update dynamically rather than using a static value).
 
 ## Filename Naming Convention
 All blog posts should follow the naming convention:
